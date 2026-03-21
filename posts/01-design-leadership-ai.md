@@ -4,7 +4,7 @@ subtitle: A response to Marty Cagan's "Product Coaching and AI" — exploring wh
 category: Design Leadership
 readTime: 7 min read
 image: images/article-01.jpg
-featured: true
+featured: false
 ---
 
 ## The Theatre Lights Are Coming On

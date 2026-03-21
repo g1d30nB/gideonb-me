@@ -22,17 +22,20 @@
 
   let currentPage = 'home';
 
-  // ───── Get first 3 articles for homepage ─────
-  function getFirstThreeArticles() {
-    return ARTICLES.slice(0, 3);
+  // ───── Get articles for homepage (first 3 + latest) ─────
+  function getHomepageArticles() {
+    const first3 = ARTICLES.slice(0, 3);
+    const latest = ARTICLES[ARTICLES.length - 1];
+    // Avoid duplicates if latest is already in first 3
+    if (first3.find(a => a.slug === latest.slug)) return first3;
+    return [...first3, latest];
   }
 
-  // ───── Render article list on homepage (first 3 articles) ─────
+  // ───── Render article list on homepage ─────
   function renderArticlesList() {
-    const articles = getFirstThreeArticles();
+    const articles = getHomepageArticles();
     articlesList.innerHTML = articles.map(a => `
       <div class="article-row reveal" data-article="${a.slug}" role="link" tabindex="0">
-        <span class="article-num">${a.num}</span>
         <span class="article-title-text">${a.title}</span>
         <span class="article-meta">
           <span class="article-category">${a.category}</span><br>
@@ -75,10 +78,10 @@
       card.addEventListener('click', () => navigateTo('article', card.dataset.article));
     });
 
-    // All articles list
-    writingArticlesList.innerHTML = ARTICLES.map(a => `
+    // All articles list (excluding featured, since they're shown as hero cards above)
+    const nonFeatured = ARTICLES.filter(a => !a.featured);
+    writingArticlesList.innerHTML = nonFeatured.map(a => `
       <div class="article-row" data-article="${a.slug}" role="link" tabindex="0">
-        <span class="article-num">${a.num}</span>
         <span class="article-title-text">${a.title}</span>
         <span class="article-meta">
           <span class="article-category">${a.category}</span><br>
