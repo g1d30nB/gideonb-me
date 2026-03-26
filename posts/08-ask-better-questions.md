@@ -19,21 +19,21 @@ Then comes alignment. The model is fine-tuned using human feedback to make it he
 
 Over time, this compresses the model's output range. The diversity from pretraining is still there, but it gets buried. The model learns to default to the most statistically average response every time. The Stanford researchers call this mode collapse.
 
-You have probably experienced this yourself. Ask an AI to give you five ideas for something, and you get five minor variations on the same idea. Change the wording. Raise the temperature. Add more context. Nothing meaningfully shifts. The model keeps serving the median.
+You have probably experienced this yourself. Ask an AI to give you five ideas for something and you get five minor variations on the same idea. Change the wording. Raise the temperature. Add more context. Nothing meaningfully shifts. The model keeps serving the median.
 
-The insight from the Stanford team is that the creativity was never lost. It was suppressed by the very process designed to make these models more useful.
+The paper's key contribution is identifying why this happens at the data level: human annotators exhibit what the researchers call typicality bias. They systematically prefer text that sounds familiar. This is not a flaw in any specific model. It is a structural feature of how alignment training works.
 
-## The fix: eight words
+## What the researchers found
 
-The researchers found that instead of asking for a single response, you can ask the model to generate multiple diverse responses with their probabilities. That is the core of Verbalised Sampling.
+The paper introduces a technique called Verbalized Sampling. The core idea: instead of asking the model for a single response, you ask it to generate multiple responses with their probabilities.
 
-The mechanism is specific. Different prompts collapse to different modes. When you ask for a single instance, the model targets the most stereotypical response. When you ask it to verbalise a probability distribution over multiple responses, it targets a different mode entirely: one that approximates the full distribution learned during pretraining. The diversity resurfaces not because you are asking nicely, but because you have changed which internal distribution the model is aiming at.
+That sounds simple, and it is. But the reason it works is specific. Different prompts cause the model to collapse to different modes. When you ask for one answer, the model targets the most typical response. When you ask it to verbalise a probability distribution over multiple responses, it targets a different mode entirely: one that approximates the full range of outputs learned during pretraining. The diversity resurfaces not because you are asking nicely, but because you have changed which internal distribution the model is aiming at.
 
-The researchers' own recommended prompt is strikingly simple. They instruct the model to generate five responses, each with a probability, and to sample from the tails of the distribution so that no single response dominates. That constraint is what forces the model away from its default. Without it, you get five responses that still cluster around the median.
+The researchers' own recommended prompt instructs the model to generate five responses, each with a probability, and to sample from the tails of the distribution so that no single response dominates. That tail-sampling constraint is what forces the model away from its default. Without it, you still get five responses that cluster around the same safe centre.
 
-The results were significant. Across creative writing, dialogue simulation, open-ended question answering, and synthetic data generation, the technique produced 1.6 to 2.1 times more diverse outputs. Models showed more human-like behaviours: hesitation, resistance, and changing their minds. None of which standard prompting surfaced. The researchers also found that larger, more capable models benefit more from the technique, because they have more suppressed diversity to recover.
+In their experiments across creative writing, dialogue simulation, open-ended question answering, and synthetic data generation, the technique produced between 1.6 and 2.1 times more diverse outputs than standard prompting. They also found that larger, more capable models benefit more, because they have more suppressed diversity to recover.
 
-If you want to read the paper yourself, it is here: [Verbalized Sampling — arXiv:2510.01171](https://arxiv.org/abs/2510.01171)
+The paper is here: [Verbalized Sampling — arXiv:2510.01171](https://arxiv.org/abs/2510.01171)
 
 The researchers have also published their code, datasets, and prompt templates on GitHub: [CHATS-lab/verbalized-sampling](https://github.com/CHATS-lab/verbalized-sampling)
 
@@ -92,13 +92,13 @@ That is it. It works across all your conversations from that point, whether you 
 
 ## How to use it
 
-Add **"use VS"** or **"VS mode"** to any prompt where you want the verbalized sampling pattern applied.
+Add **"use VS"** or **"VS mode"** to any prompt where you want the verbalised sampling pattern applied.
 
 For example: "What should I prioritise in my first 90 days as a design director? Use VS."
 
 Claude will respond with five distinct options, each with a descriptive name and enough detail to evaluate, formatted appropriately for the type of question you have asked. It will close by mapping the decision space rather than picking a winner for you.
 
-You can also say "verbalized sampling" or "give me diverse options with probabilities" if you prefer to be more explicit. The skill recognises all of these phrases.
+You can also say "verbalised sampling" or "give me diverse options with probabilities" if you prefer to be more explicit. The skill recognises all of these phrases.
 
 ## When to use it
 
@@ -110,9 +110,10 @@ Do not use it when you need a specific, correct answer, when you are debugging c
 
 Prompt engineering is not dead. But the mental model behind it has shifted. For the last couple of years, the instinct has been to write longer, more constrained prompts. More context. More rules. More formatting instructions. That was compensating for a problem we did not fully understand.
 
-The models were never uncreative. They were over-aligned, trained to suppress the range that made them powerful. Verbalized sampling does not rewrite the model. It just gives it permission to show you what it already knows.
+The models were never uncreative. They were over-aligned, trained to suppress the range that made them powerful. Verbalised sampling does not rewrite the model. It just gives it permission to show you what it already knows.
 
-Sometimes the best way to get better output from AI is not to write a better instruction. It is to ask a better question.
+Sometimes, the best way to get better output from AI is not to write a better instruction. It is to ask a better question.
 
+---
 
 _Gideon Bullock is a design leader with 25 years of experience building and scaling design organisations inside product and engineering teams. He writes about design leadership, AI-assisted creativity, and how work actually happens inside organisations._
