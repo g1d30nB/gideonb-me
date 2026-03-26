@@ -1,5 +1,5 @@
 ---
-title: Stop Writing Better Prompts. Start Asking Better Questions.
+title: Your AI Has Better Ideas Than It's Telling You
 subtitle:
 category:
   - AI
@@ -114,6 +114,5 @@ The models were never uncreative. They were over-aligned, trained to suppress th
 
 Sometimes the best way to get better output from AI is not to write a better instruction. It is to ask a better question.
 
----
 
 _Gideon Bullock is a design leader with 25 years of experience building and scaling design organisations inside product and engineering teams. He writes about design leadership, AI-assisted creativity, and how work actually happens inside organisations._

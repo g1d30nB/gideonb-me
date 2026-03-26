@@ -33,7 +33,7 @@ const ARTICLES = [
   {
     "slug": "ask-better-questions",
     "num": "08",
-    "title": "Stop Writing Better Prompts. Start Asking Better Questions.",
+    "title": "Your AI Has Better Ideas Than It's Telling You",
     "subtitle": "",
     "category": "AI",
     "readTime": "6 min read",
