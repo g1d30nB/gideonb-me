@@ -137,6 +137,34 @@ section { padding: 80px 0; }
   max-width: 540px;
 }
 
+/* ───── Section Anchors ───── */
+.section-anchors {
+  padding: 0 0 20px;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.65s forwards;
+}
+.section-anchors .container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.section-anchors a {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #b5a08a;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.section-anchors a:hover { color: #1e1a16; }
+.anchor-dot {
+  color: #d4ccc2;
+  font-size: 14px;
+  line-height: 1;
+}
+
 /* ───── Status Cards ───── */
 .status-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 48px; }
 .status-card {
@@ -216,6 +244,38 @@ section { padding: 80px 0; }
   top: -1px;
 }
 @media (max-width: 640px) { .skill-group { grid-template-columns: 1fr; gap: 12px; } }
+
+/* ───── Projects ───── */
+#projects h2 { margin-bottom: 8px; }
+.project-card {
+  padding: 36px 0;
+}
+.project-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1e1a16;
+  margin-bottom: 8px;
+}
+.project-description {
+  font-size: 15px;
+  color: #7a6f63;
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 16px;
+}
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8a7d6e;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.project-link:hover { color: #1e1a16; }
+.project-link svg { transition: transform 0.3s ease; }
+.project-link:hover svg { transform: translate(2px, -2px); }
 
 /* ═══════════════════════════════════════
    Article List (Homepage)

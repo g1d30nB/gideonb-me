@@ -90,6 +90,20 @@ Embedding design into organisations that weren't built for it. Sitting in invest
 - AI integration into design workflows
 :::
 
+::: project-prepcall
+name: PrepCall
+description: An AI-powered interview preparation tool. Analyses job descriptions, researches companies, and generates tailored preparation materials including likely questions, talking points, and strategic advice.
+link: https://prepcall.me
+link-text: Visit project
+:::
+
+::: project-vs-skill
+name: Verbalised Sampling Skill
+description: A Claude skill that implements Stanford's Verbalised Sampling technique, recovering diverse outputs suppressed by alignment training. Generates five genuinely different responses instead of five variations on the same safe idea.
+link: #article/ask-better-questions
+link-text: Read the article
+:::
+
 ::: writing-intro
 Things I've learned across three decades in design, about teams, organisations, craft, and the wider forces that shape how we live and work. The tools change faster than the thinking.
 :::

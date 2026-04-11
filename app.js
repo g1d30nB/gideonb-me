@@ -290,6 +290,14 @@
     }
   }
 
+  // ───── Project article link handlers ─────
+  document.querySelectorAll('[data-nav-article]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      navigateTo('article', link.dataset.navArticle);
+    });
+  });
+
   // ───── Init ─────
   renderArticlesList();
   renderWritingPage();
