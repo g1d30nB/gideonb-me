@@ -334,7 +334,7 @@
       if (hasMouse) return;
       seqIndex = (seqIndex + 1) % sequence.length;
       setFrame(sequence[seqIndex]);
-    }, 2500);
+    }, 10000);
   })();
 
   // ───── Init ─────
