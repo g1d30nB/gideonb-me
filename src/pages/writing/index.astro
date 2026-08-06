@@ -1,0 +1,63 @@
+---
+import Base from '../../layouts/Base.astro';
+import Footer from '../../layouts/Footer.astro';
+import ArticleRow from '../../layouts/ArticleRow.astro';
+import { loadHomepage, inlineMd } from '../../lib/homepage.mjs';
+import { allArticles, categoryLabel, imagePath } from '../../lib/articles.mjs';
+
+const { sections } = loadHomepage();
+const articles = await allArticles();
+const featured = articles.filter((a) => a.data.featured);
+const nonFeatured = articles.filter((a) => !a.data.featured);
+---
+<Base
+  title="Writing — Gideon Bullock"
+  description="Things I've learned across three decades in design, about teams, organisations, craft, and the wider forces that shape how we live and work."
+  ogImage="/images/headshot-frames/all-four-faces-gemini-face01.png"
+  path="/writing/"
+  nav="writing"
+>
+  <main id="writing-page" class="page active">
+    <section class="hero" style="padding-top:80px;padding-bottom:40px">
+      <div class="container">
+        <p class="section-label">Writing</p>
+        <h2>Thinking out loud</h2>
+        <p class="body-text" style="margin-top:12px;max-width:520px" set:html={inlineMd(sections['writing-intro'])} />
+      </div>
+    </section>
+
+    <div class="container">
+      <div id="featured-articles" class="featured-grid">
+        {featured.map((a) => (
+          <a class="featured-card" href={`/writing/${a.id}/`}>
+            <img class="featured-card-img" src={imagePath(a.data.image)} alt="">
+            <div class="featured-card-body">
+              <span class="featured-card-category">{categoryLabel(a.data.category)}</span>
+              <h3 class="featured-card-title">{a.data.title}</h3>
+              <span class="featured-card-meta">{a.data.readTime}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <section style="padding-top:48px">
+      <div class="container">
+        <p class="section-label">All articles</p>
+        <div id="writing-articles-list">
+          {nonFeatured.map((a) => (
+            <ArticleRow
+              slug={a.id}
+              title={a.data.title}
+              category={categoryLabel(a.data.category)}
+              readTime={a.data.readTime}
+              thumb={imagePath(a.data.image)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </main>
+</Base>

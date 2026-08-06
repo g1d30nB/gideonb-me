@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../layouts/Footer.astro';
+---
+<Base
+  title="Page not found — Gideon Bullock"
+  description="This page doesn't exist."
+  ogImage="/images/logos-prev.png"
+  path="/404/"
+  nav="article"
+>
+  <main class="page active">
+    <section class="hero" style="padding-top:100px;padding-bottom:60px">
+      <div class="container">
+        <p class="section-label">404</p>
+        <h2>Page not found</h2>
+        <p class="body-text" style="margin-top:12px;max-width:520px">That page doesn't exist, or it has moved. Articles all live under <a href="/writing/" style="color:#1e1a16">Writing</a>.</p>
+        <a href="/" class="back-link" style="margin-top:24px">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4L6 8L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Home
+        </a>
+      </div>
+    </section>
+    <Footer />
+  </main>
+</Base>

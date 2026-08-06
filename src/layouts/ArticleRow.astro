@@ -1,0 +1,24 @@
+---
+// One row in an article list. Was a <div role="link"> driven by JS; now a
+// real anchor. .article-row already carries text-decoration:none.
+interface Props {
+  slug: string;
+  title: string;
+  category: string;
+  readTime: string;
+  thumb: string;
+  reveal?: boolean;
+}
+const { slug, title, category, readTime, thumb, reveal = false } = Astro.props;
+---
+<a class={reveal ? 'article-row reveal' : 'article-row'} href={`/writing/${slug}/`}>
+  <span class="article-title-text">{title}</span>
+  <span class="article-meta">
+    <span class="article-category">{category}</span><br>
+    <span class="article-read-time">{readTime}</span>
+  </span>
+  <img class="article-thumb" src={thumb} alt="" loading="lazy">
+  <svg class="article-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>

@@ -1,0 +1,321 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../layouts/Footer.astro';
+import ArticleRow from '../layouts/ArticleRow.astro';
+import {
+  loadHomepage,
+  parseKV,
+  paragraphs,
+  bullets,
+  inlineMd,
+  linkifyContact,
+  projectHref,
+} from '../lib/homepage.mjs';
+import {
+  allArticles,
+  homepageArticles,
+  categoryLabel,
+  imagePath,
+} from '../lib/articles.mjs';
+
+const { meta, sections } = loadHomepage();
+const articles = await allArticles();
+const homeList = homepageArticles(articles);
+
+const leftCol = paragraphs(sections['left-column']);
+const rightCol = paragraphs(sections['right-column']);
+const about = paragraphs(sections['about']);
+const earlierWork = paragraphs(sections['earlier-work']);
+const case1 = parseKV(sections['case-1']);
+const case2 = parseKV(sections['case-2']);
+const craft = sections['craft-delivery'];
+const org = sections['organisation-operations'];
+const leadership = sections['leadership-influence'];
+const prepcall = parseKV(sections['project-prepcall']);
+const vsSkill = parseKV(sections['project-vs-skill']);
+const contact = paragraphs(sections['contact']);
+---
+<Base
+  title="Gideon Bullock — Design Leader"
+  description="Nearly thirty years designing products, building teams, and shaping how organisations think about design. From the early web to connected vehicles, startups to global enterprise."
+  ogImage="/images/headshot-frames/all-four-faces-gemini-face02.png"
+  path="/"
+  nav="home"
+>
+  <main id="home-page" class="page active">
+
+    <!-- Hero -->
+    <section class="hero hero-animate">
+      <div class="container">
+        <div class="hero-layout">
+          <div class="hero-text">
+            <p class="section-label">{meta.label}</p>
+            <h1>{meta.name}</h1>
+            <p class="tagline">{meta.tagline}</p>
+          </div>
+          <div class="portrait-wrapper">
+            <img src="/images/headshot-frames/all-four-faces-gemini-face02.png" alt="">
+            <img src="/images/headshot-frames/all-four-faces-gemini-face02.png" alt="Gideon Bullock" class="active">
+            <img src="/images/headshot-frames/all-four-faces-gemini-face01.png" alt="Gideon Bullock">
+          </div>
+        </div>
+
+        <div class="status-cards">
+          <div class="status-card">
+            <div class="card-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              Currently
+            </div>
+            <p>{sections['currently']}</p>
+          </div>
+          <div class="status-card">
+            <div class="card-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              Previously
+            </div>
+            <p>{sections['previously']}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Anchors -->
+    <nav class="section-anchors hero-animate">
+      <div class="container">
+        <a href="#work">Work</a>
+        <span class="anchor-dot">·</span>
+        <a href="#expertise">Expertise</a>
+        <span class="anchor-dot">·</span>
+        <a href="#projects">Projects</a>
+        <span class="anchor-dot">·</span>
+        <a href="#writing">Writing</a>
+        <span class="anchor-dot">·</span>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Philosophy -->
+    <section class="philosophy" style="padding-top:40px">
+      <div class="container">
+        <div class="two-col">
+          <div>
+            {leftCol.map((p, i) => (
+              <p class="body-text reveal" style={i > 0 ? 'margin-top:24px' : undefined} set:html={inlineMd(p)} />
+            ))}
+            <div class="logos-section reveal" style="margin-top:40px;padding:0">
+              <p class="section-label">Places I've Worked</p>
+              <img src="/images/logos-prev.png" alt="Logos of Microsoft, BBC, Skype, and Toyota" style="height:36px;margin-top:12px;opacity:0.7">
+            </div>
+          </div>
+          <div>
+            {rightCol.map((p, i) => (
+              <p class="body-text reveal reveal-delay-1" style={i > 0 ? 'margin-top:24px' : undefined} set:html={inlineMd(p)} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- About -->
+    <section class="philosophy">
+      <div class="container">
+        <p class="section-label reveal">About</p>
+        {about.map((p, i) => (
+          <p class="body-text reveal" style={i > 0 ? 'max-width:620px;margin-top:24px' : 'max-width:620px'} set:html={inlineMd(p)} />
+        ))}
+      </div>
+    </section>
+
+    <div class="divider"></div>
+    <section id="work">
+      <div class="container">
+        <p class="section-label reveal">Work</p>
+        <h2 class="reveal">Leadership case snapshots</h2>
+
+        <div class="case-study reveal">
+          <div class="case-header">
+            <div>
+              <p class="case-number">Case One</p>
+              <p class="case-company">{case1['company']}</p>
+            </div>
+            <div>
+              <div class="case-block">
+                <p class="case-block-label">Context</p>
+                <p set:html={inlineMd(case1['context'])} />
+              </div>
+              <div class="case-block">
+                <p class="case-block-label">What I Built</p>
+                <p set:html={inlineMd(case1['what-i-built'])} />
+              </div>
+              <div class="case-block">
+                <p class="case-block-label">What Changed</p>
+                <p set:html={inlineMd(case1['what-changed'])} />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider" style="margin:0"></div>
+
+        <div class="case-study reveal">
+          <div class="case-header">
+            <div>
+              <p class="case-number">Case Two</p>
+              <p class="case-company">{case2['company']}</p>
+            </div>
+            <div>
+              <div class="case-block">
+                <p class="case-block-label">Context</p>
+                <p set:html={inlineMd(case2['context'])} />
+              </div>
+              <div class="case-block">
+                <p class="case-block-label">What I Built</p>
+                <p set:html={inlineMd(case2['what-i-built'])} />
+              </div>
+              <div class="case-block">
+                <p class="case-block-label">What Changed</p>
+                <p set:html={inlineMd(case2['what-changed'])} />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider" style="margin:0"></div>
+
+        <div class="case-study reveal">
+          <div class="case-header">
+            <div>
+              <p class="case-number">Earlier Work</p>
+            </div>
+            <div>
+              {earlierWork.map((p) => (
+                <div class="case-block">
+                  <p set:html={inlineMd(p)} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Expertise -->
+    <section id="expertise">
+      <div class="container">
+        <div class="expertise-intro">
+          <p class="section-label reveal">Expertise</p>
+          <h2 class="reveal">What I focus on</h2>
+          <p class="body-text reveal" style="margin-top:16px" set:html={inlineMd(sections['expertise-intro'])} />
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>Craft &amp; Delivery</h3>
+          <div>
+            <p class="body-text" style="margin-bottom:20px" set:html={inlineMd(paragraphs(craft)[0])} />
+            <ul class="skill-list">
+              {bullets(craft).map((li) => <li set:html={inlineMd(li)} />)}
+            </ul>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Organisation &amp; Operations</h3>
+          <div>
+            <p class="body-text" style="margin-bottom:20px" set:html={inlineMd(paragraphs(org)[0])} />
+            <ul class="skill-list">
+              {bullets(org).map((li) => <li set:html={inlineMd(li)} />)}
+            </ul>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Leadership &amp; Influence</h3>
+          <div>
+            <p class="body-text" style="margin-bottom:20px" set:html={inlineMd(paragraphs(leadership)[0])} />
+            <ul class="skill-list">
+              {bullets(leadership).map((li) => <li set:html={inlineMd(li)} />)}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" style="margin-top:-40px"></div>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <p class="section-label reveal">Projects</p>
+        <h2 class="reveal">Things I've built</h2>
+
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div>
+              <h3 class="project-name">{prepcall['name']}</h3>
+              <p class="project-description">{prepcall['description']}</p>
+              <a href={projectHref(prepcall['link'])} target="_blank" rel="noopener" class="project-link">
+                {prepcall['link-text']}
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-header">
+            <div>
+              <h3 class="project-name">{vsSkill['name']}</h3>
+              <p class="project-description">{vsSkill['description']}</p>
+              <a href={projectHref(vsSkill['link'])} class="project-link">
+                {vsSkill['link-text']}
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Writing -->
+    <section id="writing">
+      <div class="container">
+        <div class="writing-intro">
+          <p class="section-label reveal">Writing</p>
+          <h2 class="reveal">Thinking out loud</h2>
+          <p class="body-text reveal" set:html={inlineMd(sections['writing-intro'])} />
+        </div>
+        <div id="articles-list">
+          {homeList.map((a) => (
+            <ArticleRow
+              slug={a.id}
+              title={a.data.title}
+              category={categoryLabel(a.data.category)}
+              readTime={a.data.readTime}
+              thumb={imagePath(a.data.image)}
+              reveal={true}
+            />
+          ))}
+        </div>
+        <div class="reveal" style="margin-top:32px">
+          <a href="/writing/" class="view-all-link">View all writing <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <p class="section-label reveal">Get in Touch</p>
+        <p class="bold-statement reveal" set:html={inlineMd(contact[0])} />
+        <p class="body-text reveal" set:html={linkifyContact(contact[1])} />
+      </div>
+    </section>
+
+    <Footer />
+  </main>
+</Base>

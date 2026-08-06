@@ -1,0 +1,63 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { allArticles, categoryLabel, imagePath, description } from '../../lib/articles.mjs';
+
+export async function getStaticPaths() {
+  const articles = await allArticles();
+  return articles.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, subtitle, readTime } = entry.data;
+const category = categoryLabel(entry.data.category);
+const hero = imagePath(entry.data.image);
+---
+<Base
+  title={`${title} — Gideon Bullock`}
+  description={description(entry)}
+  ogImage={hero}
+  ogType="article"
+  path={`/writing/${entry.id}/`}
+  nav="article"
+>
+  <main id="article-page" class="page active article-enter">
+    <article>
+      <div class="container">
+        <a href="/writing/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4L6 8L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to Writing
+        </a>
+
+        <div class="article-header">
+          <div class="article-tag-row">
+            <span class="article-tag">{category}</span>
+            <span class="article-readtime">{readTime}</span>
+          </div>
+          <h1>{title}</h1>
+          <p class="article-subtitle">{subtitle}</p>
+        </div>
+
+        <div class="article-hero">
+          <img src={hero} alt={title}>
+        </div>
+
+        <div class="article-body">
+          <Content />
+        </div>
+
+        <div class="article-footer">
+          <a href="/writing/" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 4L6 8L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Back to Writing
+          </a>
+          <span class="article-tag">{category}</span>
+        </div>
+      </div>
+    </article>
+  </main>
+</Base>

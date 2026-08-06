@@ -9,6 +9,8 @@
     "verify": "node scripts/verify.mjs"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.2.0",
     "pixelmatch": "^7.2.0",
     "playwright": "^1.62.1",
     "pngjs": "^7.0.0"

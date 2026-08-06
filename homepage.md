@@ -105,7 +105,7 @@ link-text: Read the article
 :::
 
 ::: writing-intro
-Things I've learned across three decades in design, about teams, organisations, craft, and the wider forces that shape how we live and work. The tools change faster than the thinking.
+Things I've learned across three decades in design, about teams, organisations, craft, and the wider forces that shape how we live and work.
 :::
 
 ::: contact
