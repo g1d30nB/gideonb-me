@@ -5,7 +5,7 @@ tagline: Nearly thirty years designing products, building teams, and shaping how
 ---
 
 ::: currently
-After seven years at Toyota Connected Europe, where I built a design organisation from scratch to over 40 people, leading product design across connected vehicle apps, in-vehicle systems, and digital services. The team became a core part of how Toyota develops products globally, with full accountability for its structure, performance, and culture. Now looking for the next place where that kind of work is needed.
+Seven years at Toyota Connected Europe, where I built a design organisation from scratch to over 40 people, leading product design across connected vehicle apps, in-vehicle systems, and digital services, with full accountability for its structure, performance, and culture. Since early 2026 I've been building rather than directing: a live AI voice product shipped end to end, and emotion intelligence middleware now in pilot discussion with a tier-one automotive supplier. Looking now for the next design leadership role where that combination is useful.
 :::
 
 ::: previously
@@ -23,7 +23,7 @@ Craft isn't separate from outcomes. A well-considered experience is often what d
 :::
 
 ::: right-column
-AI is collapsing that gap further. I've written more code in the last two months than in the previous twenty years. The tools are changing what's possible across the whole lifecycle: research synthesis that took weeks now takes hours, prototyping that can skip wireframes entirely and go straight to something testable, design systems that can be maintained at a fraction of the previous cost. For design leaders, the question isn't whether to adopt these tools. It's how to do it without losing the judgment and craft that make the output worth anything. I've been writing and thinking about this actively, and it's shaping how I approach what comes next.
+AI is collapsing that gap further. I've written more code this year than in the previous twenty. The tools are changing what's possible across the whole lifecycle: research synthesis that took weeks now takes hours, prototyping that can skip wireframes entirely and go straight to something testable, design systems that can be maintained at a fraction of the previous cost. For design leaders, the question isn't whether to adopt these tools. It's how to do it without losing the judgment and craft that make the output worth anything. I've been writing and thinking about this actively, and it's shaping how I approach what comes next.
 
 The part of the job I care most about is developing people. Setting a clear bar, then giving people the context and autonomy to meet it. Several of the team I built at Toyota have told me it was the best team they'd ever worked in. That matters more to me than most metrics.
 
@@ -63,7 +63,7 @@ My expertise sits across three areas that are hard to find in one person: the cr
 :::
 
 ::: craft-delivery
-Product and service design across app, web, in-vehicle, and embedded systems. I've led teams practising continuous discovery, built design systems that serve multiple platforms, and made accessibility a non-negotiable standard. The focus is always on the quality of the shipped experience, not the volume of output.
+A disjointed end-to-end experience is usually a faithful reflection of a disjointed business. At Toyota my team built a service design framework on a borrowed idea: treat services the way a design system treats interfaces. Reusable building blocks for the standard customer actions, sequenced into reusable service patterns and packaged as playbooks so every team worked from one source of truth. Build the block once rather than solving the same problem three times in three places. Alongside that, design systems serving multiple platforms, and accessibility as a non-negotiable standard.
 - Product and service design across app, web, and embedded
 - UX research strategy and standards
 - Continuous discovery and validation
@@ -92,9 +92,14 @@ Embedding design into organisations that weren't built for it. Sitting in invest
 
 ::: project-prepcall
 name: PrepCall
-description: An AI-powered interview preparation tool. Analyses job descriptions, researches companies, and generates tailored preparation materials including likely questions, talking points, and strategic advice.
+description: An AI voice coach for interview practice. You speak with it for twenty minutes and it returns a coaching report grounded in what you actually said and how you said it. I designed and built it end to end, including the voice interaction model, the report architecture, and the EU AI Act compliance work.
 link: https://prepcall.me
 link-text: Visit project
+:::
+
+::: project-emotrix
+name: Emotrix
+description: Middleware for multimodal emotion intelligence. The engines that read faces and voices are improving fast, but signal is not meaning: a raised brow means one thing in a usability test and another in heavy traffic. Emotrix is the interpretation layer that supplies the missing context, engine-agnostic by design. Early stage, in pilot discussion with a tier-one automotive supplier.
 :::
 
 ::: project-vs-skill

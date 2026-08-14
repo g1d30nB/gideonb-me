@@ -31,8 +31,9 @@ const case2 = parseKV(sections['case-2']);
 const craft = sections['craft-delivery'];
 const org = sections['organisation-operations'];
 const leadership = sections['leadership-influence'];
-const prepcall = parseKV(sections['project-prepcall']);
-const vsSkill = parseKV(sections['project-vs-skill']);
+const projects = Object.keys(sections)
+  .filter((k) => k.startsWith('project-'))
+  .map((k) => parseKV(sections[k]));
 const contact = paragraphs(sections['contact']);
 ---
 <Base
@@ -250,31 +251,31 @@ const contact = paragraphs(sections['contact']);
         <p class="section-label reveal">Projects</p>
         <h2 class="reveal">Things I've built</h2>
 
-        <div class="project-card reveal">
-          <div class="project-header">
-            <div>
-              <h3 class="project-name">{prepcall['name']}</h3>
-              <p class="project-description">{prepcall['description']}</p>
-              <a href={projectHref(prepcall['link'])} target="_blank" rel="noopener" class="project-link">
-                {prepcall['link-text']}
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
+        {projects.map((p) => (
+          <div class="project-card reveal">
+            <div class="project-header">
+              <div>
+                <h3 class="project-name">{p['name']}</h3>
+                <p class="project-description">{p['description']}</p>
+                {p['link'] && (
+                  <a
+                    href={projectHref(p['link'])}
+                    target={p['link'].startsWith('http') ? '_blank' : undefined}
+                    rel={p['link'].startsWith('http') ? 'noopener' : undefined}
+                    class="project-link"
+                  >
+                    {p['link-text']}
+                    {p['link'].startsWith('http') ? (
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    ) : (
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    )}
+                  </a>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-header">
-            <div>
-              <h3 class="project-name">{vsSkill['name']}</h3>
-              <p class="project-description">{vsSkill['description']}</p>
-              <a href={projectHref(vsSkill['link'])} class="project-link">
-                {vsSkill['link-text']}
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
+        ))}
 
       </div>
     </section>
