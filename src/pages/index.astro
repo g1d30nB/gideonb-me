@@ -37,8 +37,8 @@ const projects = Object.keys(sections)
 const contact = paragraphs(sections['contact']);
 ---
 <Base
-  title="Gideon Bullock — Design Leader"
-  description="Nearly thirty years designing products, building teams, and shaping how organisations think about design. From the early web to connected vehicles, startups to global enterprise."
+  title="Gideon Bullock — Product & Design Leader"
+  description="I build AI-native products and the design organisations that ship them. Twenty-five years across consumer platforms, regulated global enterprise and early-stage ventures."
   ogImage="/images/headshot-frames/all-four-faces-gemini-face02.png"
   path="/"
   nav="home"
@@ -53,6 +53,7 @@ const contact = paragraphs(sections['contact']);
             <p class="section-label">{meta.label}</p>
             <h1>{meta.name}</h1>
             <p class="tagline">{meta.tagline}</p>
+            {meta.proof && <p class="hero-proof">{meta.proof}</p>}
           </div>
           <div class="portrait-wrapper">
             <img src="/images/headshot-frames/all-four-faces-gemini-face02.png" alt="">
@@ -77,6 +78,11 @@ const contact = paragraphs(sections['contact']);
             <p>{sections['previously']}</p>
           </div>
         </div>
+
+        <div class="logos-section reveal" style="margin-top:40px;padding:0">
+          <p class="section-label">Places I've Worked</p>
+          <img src="/images/logos-prev.png" alt="Logos of the BBC, Skype and Toyota" style="height:36px;margin-top:12px;opacity:0.7">
+        </div>
       </div>
     </section>
 
@@ -85,9 +91,11 @@ const contact = paragraphs(sections['contact']);
       <div class="container">
         <a href="#work">Work</a>
         <span class="anchor-dot">·</span>
+        <a href="#projects">Projects</a>
+        <span class="anchor-dot">·</span>
         <a href="#expertise">Expertise</a>
         <span class="anchor-dot">·</span>
-        <a href="#projects">Projects</a>
+        <a href="#approach">Approach</a>
         <span class="anchor-dot">·</span>
         <a href="#writing">Writing</a>
         <span class="anchor-dot">·</span>
@@ -95,42 +103,10 @@ const contact = paragraphs(sections['contact']);
       </div>
     </nav>
 
-    <!-- Philosophy -->
-    <section class="philosophy" style="padding-top:40px">
-      <div class="container">
-        <div class="two-col">
-          <div>
-            {leftCol.map((p, i) => (
-              <p class="body-text reveal" style={i > 0 ? 'margin-top:24px' : undefined} set:html={inlineMd(p)} />
-            ))}
-            <div class="logos-section reveal" style="margin-top:40px;padding:0">
-              <p class="section-label">Places I've Worked</p>
-              <img src="/images/logos-prev.png" alt="Logos of Microsoft, BBC, Skype, and Toyota" style="height:36px;margin-top:12px;opacity:0.7">
-            </div>
-          </div>
-          <div>
-            {rightCol.map((p, i) => (
-              <p class="body-text reveal reveal-delay-1" style={i > 0 ? 'margin-top:24px' : undefined} set:html={inlineMd(p)} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-
     <div class="divider"></div>
 
-    <!-- About -->
-    <section class="philosophy">
-      <div class="container">
-        <p class="section-label reveal">About</p>
-        {about.map((p, i) => (
-          <p class="body-text reveal" style={i > 0 ? 'max-width:620px;margin-top:24px' : 'max-width:620px'} set:html={inlineMd(p)} />
-        ))}
-      </div>
-    </section>
-
-    <div class="divider"></div>
-    <section id="work">
+    <!-- Work -->
+    <section id="work" style="padding-top:56px">
       <div class="container">
         <p class="section-label reveal">Work</p>
         <h2 class="reveal">Leadership case snapshots</h2>
@@ -140,6 +116,7 @@ const contact = paragraphs(sections['contact']);
             <div>
               <p class="case-number">Case One</p>
               <p class="case-company">{case1['company']}</p>
+              {case1['dates'] && <p class="case-dates">{case1['dates']}</p>}
             </div>
             <div>
               <div class="case-block">
@@ -165,6 +142,7 @@ const contact = paragraphs(sections['contact']);
             <div>
               <p class="case-number">Case Two</p>
               <p class="case-company">{case2['company']}</p>
+              {case2['dates'] && <p class="case-dates">{case2['dates']}</p>}
             </div>
             <div>
               <div class="case-block">
@@ -199,6 +177,44 @@ const contact = paragraphs(sections['contact']);
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <p class="section-label reveal">Projects</p>
+        <h2 class="reveal">Things I've built</h2>
+
+        {projects.map((p) => (
+          <div class="project-card reveal">
+            <div class="project-header">
+              <div>
+                <h3 class="project-name">{p['name']}</h3>
+                <p class="project-description">{p['description']}</p>
+                {p['link'] && (
+                  <a
+                    href={projectHref(p['link'])}
+                    target={p['link'].startsWith('http') ? '_blank' : undefined}
+                    rel={p['link'].startsWith('http') ? 'noopener' : undefined}
+                    class="project-link"
+                  >
+                    {p['link-text']}
+                    {p['link'].startsWith('http') ? (
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    ) : (
+                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    )}
+                  </a>
+                )}
+                {!p['link'] && p['status'] && <p class="project-status">{p['status']}</p>}
+              </div>
+            </div>
+          </div>
+        ))}
+
       </div>
     </section>
 
@@ -245,38 +261,35 @@ const contact = paragraphs(sections['contact']);
 
     <div class="divider" style="margin-top:-40px"></div>
 
-    <!-- Projects -->
-    <section id="projects">
+    <!-- Approach -->
+    <section id="approach" class="philosophy">
       <div class="container">
-        <p class="section-label reveal">Projects</p>
-        <h2 class="reveal">Things I've built</h2>
-
-        {projects.map((p) => (
-          <div class="project-card reveal">
-            <div class="project-header">
-              <div>
-                <h3 class="project-name">{p['name']}</h3>
-                <p class="project-description">{p['description']}</p>
-                {p['link'] && (
-                  <a
-                    href={projectHref(p['link'])}
-                    target={p['link'].startsWith('http') ? '_blank' : undefined}
-                    rel={p['link'].startsWith('http') ? 'noopener' : undefined}
-                    class="project-link"
-                  >
-                    {p['link-text']}
-                    {p['link'].startsWith('http') ? (
-                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    ) : (
-                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    )}
-                  </a>
-                )}
-              </div>
-            </div>
+        <p class="section-label reveal">Approach</p>
+        <h2 class="reveal" style="margin-bottom:32px">How I think about the job</h2>
+        <div class="two-col">
+          <div>
+            {leftCol.map((p, i) => (
+              <p class="body-text reveal" style={i > 0 ? 'margin-top:24px' : undefined} set:html={inlineMd(p)} />
+            ))}
           </div>
-        ))}
+          <div>
+            {rightCol.map((p, i) => (
+              <p class="body-text reveal reveal-delay-1" style={i > 0 ? 'margin-top:24px' : undefined} set:html={inlineMd(p)} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <div class="divider"></div>
+
+    <!-- About -->
+    <section class="philosophy">
+      <div class="container">
+        <p class="section-label reveal">About</p>
+        {about.map((p, i) => (
+          <p class="body-text reveal" style={i > 0 ? 'max-width:620px;margin-top:24px' : 'max-width:620px'} set:html={inlineMd(p)} />
+        ))}
       </div>
     </section>
 

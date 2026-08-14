@@ -137,6 +137,26 @@ section { padding: 80px 0; }
   max-width: 540px;
 }
 
+/* ───── Hero proof line ───── */
+.hero-proof {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #8a7d6e;
+  margin-top: 16px;
+  max-width: 540px;
+}
+
+/* ───── Case dates ───── */
+.case-dates { font-size: 13px; color: #b5a08a; margin-top: 4px; }
+
+/* ───── Project status (unlinked projects) ───── */
+.project-status {
+  font-size: 14px;
+  font-weight: 500;
+  color: #b5a08a;
+  font-style: italic;
+}
+
 /* ───── Hero Layout with Portrait ───── */
 .hero-layout {
   display: flex;

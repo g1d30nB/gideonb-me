@@ -1,7 +1,8 @@
 ---
-label: Design Leader
-name: Gideon
-tagline: Nearly thirty years designing products, building teams, and shaping how organisations think about design. From the early web to connected vehicles, startups to global enterprise.
+label: Product & Design Leader
+name: Gideon Bullock
+tagline: I build AI-native products and the design organisations that ship them. Twenty-five years across consumer platforms, regulated global enterprise and early-stage ventures.
+proof: Built design at Toyota from zero to 40+ · £10m annual internal revenue, full P&L · Employee #7 at Songkick, seed to Warner Music Group · Shipping AI voice products in 2026
 ---
 
 ::: currently
@@ -38,6 +39,7 @@ I'm at a point in my career where the work I find most rewarding is helping othe
 
 ::: case-1
 company: Toyota Connected Europe
+dates: 2018–2026
 context: Toyota had no digital product design capability. Products were developed in waterfall cycles with no consistent research, discovery, or experience ownership. Design was outsourced or treated as a downstream service.
 what-i-built: A multi-disciplinary design organisation of over 40 people, from scratch. Product design, UX research, service design, and design systems. I defined the operating model, the hiring strategy, the career frameworks, and the leadership structure. I brought in every single person. The team worked across connected vehicle apps, in-vehicle operating systems, multimedia platforms, and the physical-digital service experience, spanning Europe, Japan, and North America.
 what-changed: Design became one of Toyota Connected's three core competencies, contributing over £10 million in annual internal revenue. The team had the highest permanent retention rate of any department in the company. Multiple team members have described it as the best team they've ever worked in. That culture was deliberate. I took chances on people, invested in their development, and built an environment where designers had the context and autonomy to do their best work.
@@ -45,6 +47,7 @@ what-changed: Design became one of Toyota Connected's three core competencies, c
 
 ::: case-2
 company: Songkick
+dates: 2008–2016
 context: I was employee number seven. No design team, no brand, no scalable product process. A Y Combinator-backed startup with a Sequoia investor, a small group of founders, and everything to build.
 what-i-built: The design function from zero. I created the brand, built and led the design team, and worked alongside the co-founders on product strategy throughout. I led design across web, iOS, and Android through multiple pivots, business model changes, and partnerships with Spotify, YouTube, Facebook, and MTV.
 what-changed: The company grew to 130 employees, 15 million users, over $100 million in annual ticket revenue, and was named one of Fast Company's five most innovative companies in music. We raised a $16.6 million Series C and were acquired by Warner Music Group. The co-founder later said she learned everything she knows about brand from working with me. Songkick alumni went on to produce over ten CEOs and founders.
@@ -99,7 +102,8 @@ link-text: Visit project
 
 ::: project-emotrix
 name: Emotrix
-description: Middleware for multimodal emotion intelligence. The engines that read faces and voices are improving fast, but signal is not meaning: a raised brow means one thing in a usability test and another in heavy traffic. Emotrix is the interpretation layer that supplies the missing context, engine-agnostic by design. Early stage, in pilot discussion with a tier-one automotive supplier.
+description: Middleware for multimodal emotion intelligence. The engines that read faces and voices are improving fast, but signal is not meaning: a raised brow means one thing in a usability test and another in heavy traffic. Emotrix is the interpretation layer that supplies the missing context, engine-agnostic by design.
+status: Early stage, in pilot discussion with a tier-one automotive supplier
 :::
 
 ::: project-vs-skill
@@ -114,7 +118,7 @@ Things I've learned across three decades in design, about teams, organisations, 
 :::
 
 ::: contact
-I'm looking for an organisation where design can make a real difference, whether that means building the capability from scratch, transforming how it operates, or taking something good and making it exceptional. If that sounds like what you need, I'd like to hear about it.
+I'm looking for a VP, Head of Design or Design Director role in London, where design needs to become a real function rather than a service desk, and where the AI question is live rather than theoretical. Available now.
 
-Email gideonb@me.com or connect on LinkedIn.
+Email gideonb@me.com, connect on LinkedIn, or download my CV.
 :::

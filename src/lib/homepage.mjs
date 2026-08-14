@@ -74,6 +74,10 @@ export function linkifyContact(text) {
     .replace(
       /LinkedIn/,
       '<a href="https://www.linkedin.com/in/gideonbullock/" target="_blank" rel="noopener">LinkedIn</a>'
+    )
+    .replace(
+      /download my CV/,
+      '<a href="/files/Gideon-Bullock-CV.pdf" download>download my CV</a>'
     );
 }
 
