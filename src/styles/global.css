@@ -242,6 +242,25 @@ section { padding: 80px 0; }
 .status-card .card-label svg { width: 16px; height: 16px; opacity: 0.7; }
 .status-card p { font-size: 15px; color: #6b6057; line-height: 1.7; }
 
+/* ───── Status card list ───── */
+.status-list { list-style: none; margin: 14px 0 0; padding: 0; }
+.status-list li {
+  font-size: 15px;
+  color: #6b6057;
+  line-height: 1.6;
+  padding: 5px 0 5px 18px;
+  position: relative;
+}
+.status-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 6px;
+  height: 1px;
+  background: #b5a08a;
+}
+
 /* ───── Philosophy ───── */
 .philosophy .bold-statement { margin-bottom: 40px; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 48px; }

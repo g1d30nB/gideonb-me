@@ -6,11 +6,14 @@ proof: Built design at Toyota from zero to 40+ · £10m annual internal revenue 
 ---
 
 ::: currently
-Seven years at Toyota Connected Europe, where I built a design organisation from scratch to over 40 people, leading product design across connected vehicle apps, in-vehicle systems, and digital services, with full accountability for its structure, performance, and culture. Since early 2026 I've been building as well as directing: a live AI voice product shipped end to end, emotion intelligence middleware now in pilot discussion with a tier-one automotive supplier, and the operating model for an AI-native venture studio, covering how design, product and engineering divide the work once coding agents make building cheap. Looking now for the next design leadership role where that combination is useful.
+Building at the multimodal AI layer, hands-on. Looking now for the next design leadership role.
+- A live AI voice coaching product, designed and shipped end to end
+- Emotion intelligence middleware, in pilot discussion with a tier-one automotive supplier
+- The operating model for an AI-native venture studio: how design, product and engineering divide the work once coding agents make building cheap
 :::
 
 ::: previously
-Employee #7 at Songkick, where I built design from zero through Series C and acquisition by Warner Music Group. Part of the small design team at Skype during its growth from 11 million to 276 million users. Six years at the BBC, leading design on the homepage, global navigation, and the project that became iPlayer. Chief Design Officer at a fintech startup in Egypt, launching mobile payroll for unbanked workers.
+Seven years at Toyota Connected Europe, building a design organisation from scratch to over 40 people across connected vehicle apps, in-vehicle systems and digital services, with full P&L accountability. Employee #7 at Songkick, from seed through to the Warner Music Group sale. Part of the small design team at Skype during its growth from 11 million to 276 million users. Six years at the BBC, leading design on the homepage, global navigation, and the project that became iPlayer. Chief Design Officer at a fintech in Egypt, launching mobile payroll for unbanked workers.
 :::
 
 ::: left-column
