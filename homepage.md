@@ -2,11 +2,11 @@
 label: Product & Design Leader
 name: Gideon Bullock
 tagline: I build AI-native products and the design organisations that ship them. Twenty-five years across consumer platforms, regulated global enterprise and early-stage ventures.
-proof: Built design at Toyota from zero to 40+ · £10m annual internal revenue, full P&L · Employee #7 at Songkick, seed to Warner Music Group · Shipping AI voice products in 2026
+proof: Built design at Toyota from zero to 40+ · £10m annual internal revenue with full P&L · Employee #7 at Songkick, seed stage to the Warner Music Group sale · Shipped an AI voice product this year, now building multimodal emotion middleware
 ---
 
 ::: currently
-Seven years at Toyota Connected Europe, where I built a design organisation from scratch to over 40 people, leading product design across connected vehicle apps, in-vehicle systems, and digital services, with full accountability for its structure, performance, and culture. Since early 2026 I've been building rather than directing: a live AI voice product shipped end to end, and emotion intelligence middleware now in pilot discussion with a tier-one automotive supplier. Looking now for the next design leadership role where that combination is useful.
+Seven years at Toyota Connected Europe, where I built a design organisation from scratch to over 40 people, leading product design across connected vehicle apps, in-vehicle systems, and digital services, with full accountability for its structure, performance, and culture. Since early 2026 I've been building as well as directing: a live AI voice product shipped end to end, emotion intelligence middleware now in pilot discussion with a tier-one automotive supplier, and the operating model for an AI-native venture studio, covering how design, product and engineering divide the work once coding agents make building cheap. Looking now for the next design leadership role where that combination is useful.
 :::
 
 ::: previously
