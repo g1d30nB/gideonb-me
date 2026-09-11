@@ -18,6 +18,8 @@ title: Building a design organisation, then widening what it was allowed to own
 company: Toyota Connected Europe
 dates: 2018 to 2026
 narrative-label: How the capability grew
+leading-label: Leading at a distance
+people-label: Growing people
 role: Head of Design, Toyota Experience Design. Built from nothing, run for seven years with full P&L.
 :::
 
@@ -48,17 +50,32 @@ I built the function from nothing and ran it for seven years, with full P&L acco
 ::: case1-approach
 - **Build it as a consultancy, not a service desk.** Six disciplines under one roof: product design, design systems, UX research, service design, content and creative, and design leadership. Four engagement models so partner teams could buy the right depth, from long-term embedded partnerships through to time-boxed studio work, specialist augmentation and innovation sprints. A service catalogue, explicit positioning, and a P&L. Design's commercial contribution became visible to senior leadership for the first time.
 - **Sell it, then grow it.** I ran business development across the Toyota ecosystem, held the senior and executive relationships, and expanded the remit into new markets and service areas. Land and expand, in an organisation that had defaulted to agencies for a decade. Every designer I hired was paid for by work I had won, which is a different job from asking for headcount and a materially harder one.
-- **Progression before scale.** Two pathways, practitioner leadership and people leadership, both legitimate, converging at Lead. Written expectations at every level: what they do, how they decide, how they engage clients, what the next level asks for. Leadership endorsed it as aligned to global talent strategy, and it became the backbone of the retention number.
-- **Listening that closed the loop.** An annual survey, then workshops to unpack what it said. 185 pieces of feedback, ten themes, fourteen initiatives mapped across three horizons with named owners, each one traceable back to the feedback that prompted it. The measurable outputs mattered less than the intangible one: people could see their own words in the plan.
 - **Operations as the floor.** DesignOps was the first dedicated operational support the team had. Tooling, capacity planning, project tracking, quality governance. Designers got their time back.
-- **Then position.** I got design into the Connected Technologies strategy team, which owned Gate 0 of the delivery pipeline: strategic research and service design as the entry condition for any product or service idea. Design stopped reporting into strategy and became the strategy's evidence base. Roadmaps and investment decisions started from the problem set my team curated.
-- **Method, standardised.** Continuous discovery in place of the double diamond, a standard validation matrix, three-level journey mapping and content modelling, run as one operating system across the portfolio rather than improvised per project. Service design was made requestable as an internal service with a price against it, which is what turned a capability into an offer.
+- **Then position.** I got design into the Connected Technologies strategy team, which owned Gate 0 of the delivery pipeline: strategic research and service design as the entry condition for any product or service idea. Design stopped reporting into strategy and became the strategy's evidence base. Roadmaps and investment decisions started from the problem set my team curated. When a full-scale app launch was on the table, I argued for a staged, research-led one. That reframing became the validation model for every engagement after it. The 2025/26 strategic plan connected design's goals to the business strategy, and the senior leadership team endorsed it.
+- **Method, standardised.** Continuous discovery in place of the double diamond, a standard validation matrix, three-level journey mapping and content modelling, run as one operating system across the portfolio rather than improvised per project. Quality had a written definition. A scoring method, design pairing alongside critiques, and UX checkpoints inside client delivery pipelines. Service design was made requestable as an internal service with a price against it, which is what turned a capability into an offer.
+- **Innovation as a service.** A senior designer got 48 hours to organise and run an AI innovation initiative. It produced three approved proposals and around £3.5m of projected investment from Toyota's global AI fund. The wider innovation programme generated 29 ideas, and eight of them are now being pursued by Toyota globally, including work for the Paris 2024 Olympics and a product inside Toyota's commercial fleet platform.
 :::
 
 ::: case1-hard
 Designers were embedded in client teams across three regions, often working alone. Cohesion was the hardest thing to sustain, so I ran town halls, a cross-team leads forum, showcases and the listening cycle to keep a distributed team feeling like one team.
 
 Then our largest programme closed overnight, taking revenue and team structure with it. I ran a structured retrospective that turned the shock into a documented wind-down and reassignment method. It became the standard playbook for every client transition that followed. The next disruption was a process rather than a crisis.
+:::
+
+::: case1-leading
+Stepping out of the daily craft to lead at scale was a choice, and I made it early. I owned the standard, the strategic context and the operating model. I owned the quality bar and held it at review points. I owned the investment, the protection of the team's time, and the cover for the hard calls. The leads owned the daily design decisions, the customer-facing detail, the craft end to end, and their own development inside a written progression framework.
+
+When executives wanted to understand a specific change, I brought the designer who had made it. Their accuracy, their ownership, their exposure to leadership. A function where the leader presents everybody's work has a single point of failure, and it is the leader.
+:::
+
+::: case1-people
+I hired every one of the 40+. I built two progression pathways, practitioner leadership and people leadership, both legitimate, converging at Lead, with written expectations at every level covering what people do, how they decide, how they engage clients, and what the next level asks for. Leadership endorsed it as aligned to global talent strategy, and it became the backbone of the retention number. The pathways were deliberately flexible. Designers moved between them as their strengths developed, and some of the best outcomes came from people who stayed on the practitioner track and became genuine specialists.
+
+Two examples of the work itself. I coached a design manager through a significant leadership transition over several months, with documented one-to-ones, structured feedback and coaching on the stakeholders involved, and the transition held. When a discord in one team was heading towards a resignation, I stepped in, dealt with the causes, and kept both the person and the client relationship.
+
+An annual listening cycle turned 185 pieces of feedback into ten themes and fourteen initiatives across three horizons, each with a named owner and each traceable to the feedback that prompted it. People could see their own words in the plan.
+
+The function held the highest permanent retention rate of any department in the company. I shifted it from roughly half contract to two thirds permanent without growing headcount. Several of the team describe it as the best team they have worked in, and the service design capability I created is still running without me.
 :::
 
 ::: case1-stats
@@ -69,7 +86,7 @@ Then our largest programme closed overnight, taking revenue and team structure w
 :::
 
 ::: case1-impact
-Design displaced the incumbent agencies and became one of three recognised core competencies of the business. The function held the highest permanent retention rate of any department in the company, and I shifted it from roughly half contract to two thirds permanent without growing headcount. Several of the team have since described it as the best team they have worked in, which is the outcome I am most attached to.
+Design displaced the incumbent agencies and became one of three recognised core competencies of the business. The chief executive of Toyota Connected Europe called the team "the hidden jewel of the business". The team, the framework and the service design capability are all still there, which is the outcome I am most attached to.
 :::
 
 ::: case2-meta
@@ -159,11 +176,11 @@ PrepCall takes the narrow version. Twenty minutes of live conversation on Hume's
 - **The fix was architectural.** A bounded prompt with hard character budgets, enforced however many sessions a user has had. Designing for a probabilistic system is largely this work, deciding what the model is allowed to carry. The interface is the easy part. The hard part is a product that behaves differently on Tuesday than it did on Monday, and the constraints that keep it trustworthy anyway.
 - **Turning a reading into a response.** One emotional reading supports many possible responses and most of them feel like surveillance. Choosing the one that feels supportive is a design decision, taken every time, and it is most of what the product is.
 - **Regulation as a design input.** PrepCall coaches the candidate. Article 5 of the EU AI Act prohibits emotion inference in the workplace, so assessing someone on behalf of an employer was closed from the start. The regulation chose the product, and it chose well. I owned the compliance layer personally, including the classification and the data protection impact assessment.
-- **Dashboards for the interpretation layer.** Emotrix needed a way to see what the engines report and what the interpretation layer does with it. I designed and built the dashboards that show both together, so a reading and the decision taken from it sit side by side.
+- **A review interface for the interpretation layer.** Emotrix needed a way to see what the engines report and what the reducer makes of it, on one timeline. I designed and built the session review interface that does this. Five construct lanes carry the raw readings, each scored against the participant's own baseline. Two interpreted lines sit above them, an emotion line and a cognitive load line, with a story line at a longer time constant and the turning points it detects. Where the face is lost the lanes are hatched and no reading is asserted. The moments the reducer flags, the transcript, the research protocol and the observer's notes sit on the same axis, so any reading can be checked against its evidence.
 :::
 
 ::: case3-hard
-Early stage. No product in market, no legal entity, no funding, and no results to report. What exists is a thesis, an architecture, a working set of dashboards, and a mutual NDA with a tier one automotive supplier covering a pilot data arrangement.
+Early stage. No product in market, no legal entity, no funding, and no results to report. What exists is a thesis, an architecture, a working session review interface, and a live pilot under NDA.
 
 It is here for the design thinking. Anyone wanting the commercial substance should wait until there is some.
 :::

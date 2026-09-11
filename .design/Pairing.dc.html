@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap">
+  <style>
+    :root{
+      --paper: oklch(0.968 0.006 85);
+      --paper-2: oklch(0.945 0.013 82);
+      --paper-team: oklch(0.962 0.011 195);
+      --ink: oklch(0.229 0.008 65);
+      --body: oklch(0.435 0.015 78);
+      --muted: oklch(0.586 0.018 78);
+      --faint: oklch(0.712 0.032 74);
+      --rule: oklch(0.906 0.008 80);
+      --rule-2: oklch(0.845 0.013 80);
+      --amber: oklch(0.575 0.075 62);
+      --teal: oklch(0.575 0.075 195);
+      --amber-wash: oklch(0.930 0.030 68);
+      --night: oklch(0.185 0.010 70);
+      --night-2: oklch(0.245 0.016 68);
+      --night-ink: oklch(0.930 0.008 82);
+      --night-body: oklch(0.795 0.010 80);
+      --night-muted: oklch(0.640 0.012 80);
+      --night-rule: oklch(0.315 0.010 72);
+      --amber-d: oklch(0.775 0.085 68);
+      --teal-d: oklch(0.775 0.070 190);
+      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px;
+    }
+    body { margin:0; background:var(--paper); color:var(--body);
+      font-family:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-size:15.5px; line-height:1.7; -webkit-font-smoothing:antialiased;
+      font-variant-numeric:tabular-nums; text-wrap:pretty; }
+    a { color:var(--ink); text-decoration:underline; text-decoration-color:var(--rule-2); text-underline-offset:3px; }
+    a:hover { text-decoration-color:var(--ink); }
+    p { margin:0; }
+    .d1 { font-size:clamp(44px,6.2vw,84px); line-height:1.03; font-weight:800; letter-spacing:-0.035em; color:var(--ink); }
+    .d2 { font-size:clamp(32px,3.6vw,48px); line-height:1.1;  font-weight:700; letter-spacing:-0.028em; color:var(--ink); }
+    .d3 { font-size:clamp(24px,2.4vw,32px); line-height:1.2;  font-weight:700; letter-spacing:-0.022em; color:var(--ink); }
+    .d4 { font-size:clamp(19px,1.55vw,22px); line-height:1.35; font-weight:600; letter-spacing:-0.012em; color:var(--ink); }
+    .t1 { font-size:17px; line-height:1.75; color:var(--body); }
+    .t2 { font-size:15.5px; line-height:1.7; color:var(--body); }
+    .t3 { font-size:13px; line-height:1.6; color:var(--muted); }
+    .lbl { font-size:11px; letter-spacing:0.13em; text-transform:uppercase; font-weight:600; color:var(--muted); margin:0; }
+    .stat { font-size:38px; line-height:1; font-weight:700; letter-spacing:-0.035em; color:var(--ink); }
+  </style>
+</helmet>
+<div style="width:1300px;box-sizing:border-box;padding:var(--s7);background:var(--night);"><div style="display:grid;grid-template-columns:7fr 5fr;gap:var(--s7);align-items:start;"><figure style="margin:0;width:100%;"><div style="border:1px solid var(--night-rule);background:var(--night-2);"><img src="emotrix-timeline.jpg" alt="" style="display:block;width:100%;height:auto;"></div><figcaption style="display:flex;flex-direction:column;gap:5px;padding-top:10px;"><span style="font-size:12.5px;line-height:1.5;color:var(--night-ink);font-weight:500;">The reading arrives. Five constructs against the participant&rsquo;s own baseline, two interpreted lines above them, hatched where no reading is asserted.</span><span style="font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--night-muted);line-height:1.5;">Emotrix, real interface, synthetic session</span></figcaption></figure><figure style="margin:0;width:100%;"><div style="border:1px solid var(--night-rule);background:var(--night-2);"><img src="prepcall-report-listening.jpg" alt="" style="display:block;width:100%;height:auto;"></div><figcaption style="display:flex;flex-direction:column;gap:5px;padding-top:10px;"><span style="font-size:12.5px;line-height:1.5;color:var(--night-ink);font-weight:500;">What the product does with it. The listening half of a coaching report: what was said, then how it sounded, then one thing to try.</span><span style="font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--night-muted);line-height:1.5;">PrepCall, illustrative report (real frame to follow)</span></figcaption></figure></div><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--night-rule);"><p style="font-size:17px;line-height:1.7;font-weight:500;color:var(--night-ink);max-width:720px;margin:0;">Signal on the left, meaning on the right. The design work is the layer between them, and it is the same layer in both products.</p><p style="font-size:13px;line-height:1.6;color:var(--night-muted);max-width:300px;text-align:right;margin:0;">Both run on Hume&rsquo;s Empathic Voice Interface. Both built solo.</p></div></div>
+</x-dc>
+</body>
+</html>

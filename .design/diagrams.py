@@ -140,27 +140,18 @@ MODELS=[("Innovation sprints","Fast, exploratory, time-boxed",14,12,"left"),
  ("Embedded partnership","Full design management and operations",86,82,"right")]
 
 def opmodel():
-    dl="".join(
-      f'<div style="padding:var(--s4) 0;border-bottom:1px solid var(--rule);">'
-      f'<p style="font-size:15px;font-weight:600;color:{A if m else "var(--ink)"};margin:0 0 3px;">{n}</p>'
-      f'<p style="font-size:13px;line-height:1.55;color:var(--muted);margin:0;">{d}</p></div>' for n,d,m in DISCIPLINES)
-    pts=[]
-    for n,d,x,y,side in MODELS:
-        big = n=="Embedded partnership"
-        tx = 'transform:translateX(-100%);padding-right:18px;text-align:right;' if side=="right" else ''
-        pts.append(
-          f'<div style="position:absolute;left:{x}%;bottom:{y}%;">'
-          f'<span style="display:block;width:{12 if big else 10}px;height:{12 if big else 10}px;border-radius:50%;background:{INK if big else A};"></span>'
-          f'<div style="margin-top:var(--s2);width:170px;{tx}">'
-          f'<p style="font-size:14px;font-weight:600;color:var(--ink);margin:0 0 2px;">{n}</p>'
-          f'<p style="font-size:12px;line-height:1.5;color:var(--muted);margin:0;">{d}</p></div></div>')
-    plot=(f'<div style="display:flex;gap:14px;">'
-          f'<p style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;letter-spacing:0.13em;text-transform:uppercase;'
-          f'font-weight:600;color:var(--faint);margin:0;text-align:center;height:320px;">Weeks &nbsp;&mdash;&mdash;&mdash;&nbsp; Years</p>'
-          f'<div style="flex-grow:1;"><div style="position:relative;height:320px;border-left:1px solid var(--rule-2);'
-          f'border-bottom:1px solid var(--rule-2);background:linear-gradient(to top right,oklch(0.575 0.075 62 / 0.04),oklch(0.575 0.075 62 / 0.14));">'
-          f'{"".join(pts)}</div>'
-          f'<p class="lbl" style="color:var(--faint);margin-top:10px;text-align:center;">Breadth &nbsp;&mdash;&mdash;&mdash;&nbsp; Depth</p></div></div>')
+    import components as C
+    disc="".join(
+      f'<div style="padding:11px 0;border-bottom:1px solid var(--rule);">'
+      f'<p style="font-size:14.5px;font-weight:600;color:{A if m else "var(--ink)"};margin:0 0 2px;">{n}</p>'
+      f'<p style="font-size:12.5px;line-height:1.5;color:var(--muted);margin:0;">{d}</p></div>' for n,d,m in DISCIPLINES)
+    models="".join(
+      f'<div style="border-top:1px solid var(--rule);padding-top:var(--s3);">'
+      f'<div style="height:8px;background:oklch(0.93 0.030 68);width:{w}%;margin-bottom:8px;"></div>'
+      f'<p style="font-size:14px;font-weight:600;color:var(--ink);margin:0 0 3px;">{n}</p>'
+      f'<p style="font-size:12.5px;line-height:1.5;color:var(--muted);margin:0;">{d}</p></div>'
+      for n,d,w in [("Innovation sprints","Fast, exploratory, time-boxed",28),("Team augmentation","Specialists into an existing team",52),
+                    ("Design studio","A dedicated team, scoped and delivered",76),("Embedded partnership","Full design management and operations",100)])
     foot=("".join(
       f'<div><p class="lbl" style="color:var(--faint);margin-bottom:var(--s2);">{h}</p>'
       f'<p style="font-size:14px;line-height:1.6;color:{c};margin:0;{w}">{t}</p></div>'
@@ -168,13 +159,15 @@ def opmodel():
         ("Positioning","A published service catalogue and sales collateral. Partner teams bought the depth they needed.","var(--body)",""),
         ("Commercial","A P&amp;L. Every designer I hired was paid for by work I had won.","var(--body)",""),
         ("Effect","Design&rsquo;s commercial contribution became visible to senior leadership for the first time.","var(--ink)","font-weight:500;")]))
-    body=(f'<div style="display:grid;grid-template-columns:400px 1fr;gap:60px;align-items:start;">'
-          f'<div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);">Six disciplines, one team</p>{dl}</div>'
-          f'<div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:22px;">Four engagement models</p>{plot}</div></div>'
+    body=(f'<div style="display:grid;grid-template-columns:1.25fr 1fr;gap:var(--s8);align-items:start;">'
+          f'<div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:var(--s4);">One office, embedded pods, one community</p>{C.orgmodel()}</div>'
+          f'<div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);">Six disciplines, one team</p>{disc}</div></div>'
+          f'<p class="lbl" style="margin:var(--s7) 0 var(--s4);padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);">Four engagement models, shallow to deep</p>'
+          f'<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s5);">{models}</div>'
           f'<div style="margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--rule);'
           f'display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6);">{foot}</div>')
     return figure(A,"Case one &middot; how it was run","fill","An internal consultancy, not a service desk",
-      "Six disciplines under one roof, and four ways to buy them. A service catalogue, explicit positioning, and a P&amp;L.",
+      "Six disciplines under one roof, four ways to buy them, and a management office at the centre of embedded teams. A service catalogue, explicit positioning, and a P&amp;L.",
       body, "", right="Toyota Experience Design")
 
 # ---------------------------------------------------------------- EV domain

@@ -9,6 +9,15 @@
         "dev"
       ],
       "port": 4321
+    },
+    {
+      "name": "emotrix-render",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": [
+        "-c",
+        "cd '/private/tmp/claude-501/-Users-gideon-Projects-My-Website-gideonb-me/679d31a1-968d-4f3c-aefe-c7e91f64c3e4/scratchpad/emotrix-render' && npx next dev -p 3111"
+      ],
+      "port": 3111
     }
   ]
 }
