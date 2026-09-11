@@ -1,0 +1,108 @@
+<div style="width:1000px; box-sizing:border-box; background:#f8f6f2; padding-bottom:56px;">
+
+  <div style="background:#f0e9df; padding:10px 40px; display:flex; justify-content:space-between; align-items:baseline;">
+    <p class="lbl" style="color:#8a7d6e;">Direction A</p>
+    <p class="lbl" style="color:#8a7d6e;">The document &nbsp;·&nbsp; a faithful extension of the site</p>
+  </div>
+
+  <div style="border-bottom:1px solid #e8e2da; padding:20px 130px; display:flex; justify-content:space-between; align-items:center;">
+    <p style="font-size:15px; font-weight:600; color:#1e1a16; margin:0; letter-spacing:0.02em;">Gideon Bullock</p>
+    <div style="display:flex; gap:28px;">
+      <p class="lbl" style="font-weight:500; color:#8a7d6e;">Home</p>
+      <p class="lbl" style="font-weight:500; color:#1e1a16;">Work</p>
+      <p class="lbl" style="font-weight:500; color:#8a7d6e;">Writing</p>
+    </div>
+  </div>
+
+  <div style="padding:76px 130px 0;">
+    <p class="lbl" style="margin-bottom:10px;">Selected Work</p>
+    <p style="font-family:'Inter',sans-serif; font-size:52px; font-weight:700; color:#1e1a16; line-height:1.1; letter-spacing:-0.02em; margin:0 0 26px;">Three cases</p>
+    <p style="font-size:17px; line-height:1.75; color:#5c5347; max-width:640px; margin:0 0 18px;">Three cases at three distances from the work. In the first, the organisation is mine and everything in it was my decision. In the second, I won the work and built the team, and other people did the designing. In the third there was nobody else.</p>
+    <p style="font-size:15px; line-height:1.75; color:#7a6f63; max-width:640px; margin:0 0 34px;">Design leadership at this level is mostly the first two. The third is how I keep honest about what the first two are for.</p>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <p class="lbl" style="color:#b5a08a;">The organisation</p><p style="color:#d4ccc2; margin:0;">&middot;</p>
+      <p class="lbl" style="color:#b5a08a;">The product</p><p style="color:#d4ccc2; margin:0;">&middot;</p>
+      <p class="lbl" style="color:#b5a08a;">The craft</p>
+    </div>
+  </div>
+
+  <div style="height:1px; background:#e8e2da; margin:64px 130px 0;"></div>
+
+  <div style="padding:56px 130px 0;">
+    <p class="lbl" style="margin-bottom:12px;">Case One</p>
+    <p style="font-family:'Inter',sans-serif; font-size:30px; font-weight:700; color:#1e1a16; line-height:1.28; letter-spacing:-0.01em; max-width:640px; margin:0 0 12px;">Building a design organisation, then widening what it was allowed to own</p>
+    <p style="font-size:14px; color:#8a7d6e; margin:0 0 6px;">Toyota Connected Europe &nbsp;&middot;&nbsp; 2018 to 2026</p>
+    <p style="font-size:15px; line-height:1.7; color:#6b6057; max-width:600px; margin:0 0 40px; font-style:italic;">Head of Design, Toyota Experience Design. Built from nothing, run for seven years with full P&amp;L.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; border-top:1px solid #e8e2da; border-bottom:1px solid #e8e2da; margin-bottom:44px;">
+      <div style="padding:22px 20px 22px 0; border-right:1px solid #e8e2da;">
+        <p class="num" style="font-size:26px; color:#1e1a16; margin:0 0 4px;">0 to 40+</p>
+        <p style="font-size:13px; line-height:1.5; color:#8a7d6e; margin:0;">designers across six disciplines</p>
+      </div>
+      <div style="padding:22px 20px; border-right:1px solid #e8e2da;">
+        <p class="num" style="font-size:26px; color:#1e1a16; margin:0 0 4px;">&pound;10m+</p>
+        <p style="font-size:13px; line-height:1.5; color:#8a7d6e; margin:0;">annual internal revenue at peak</p>
+      </div>
+      <div style="padding:22px 20px; border-right:1px solid #e8e2da;">
+        <p class="num" style="font-size:26px; color:#1e1a16; margin:0 0 4px;">1 of 3</p>
+        <p style="font-size:13px; line-height:1.5; color:#8a7d6e; margin:0;">recognised core competencies of the business</p>
+      </div>
+      <div style="padding:22px 0 22px 20px;">
+        <p class="num" style="font-size:26px; color:#1e1a16; margin:0 0 4px;">#1</p>
+        <p style="font-size:13px; line-height:1.5; color:#8a7d6e; margin:0;">permanent retention rate in the company</p>
+      </div>
+    </div>
+
+    <p class="lbl" style="color:#b5a08a; margin-bottom:10px;">The challenge</p>
+    <p style="font-size:16px; line-height:1.8; color:#5c5347; max-width:640px; margin:0 0 18px;">Toyota Connected Europe had no digital design capability. Products moved through waterfall cycles with no consistent research, no discovery and no experience ownership. Design was bought in from agencies and treated as a downstream service, called in after the decisions had already been made.</p>
+    <p style="font-size:16px; line-height:1.8; color:#5c5347; max-width:640px; margin:0 0 48px;">The brief I gave myself was not to hire designers. It was to make design a thing the business could not run without.</p>
+  </div>
+
+  <div style="padding:0 60px;">
+    <div style="border:1px solid #e8e2da; background:#fdfcfa; border-radius:6px; padding:34px 36px;">
+      <p class="lbl" style="color:#b5a08a; margin-bottom:8px;">How the capability grew</p>
+      <p style="font-family:'Inter',sans-serif; font-size:21px; font-weight:700; color:#1e1a16; margin:0 0 28px; letter-spacing:-0.01em;">Each capability earned the next</p>
+      <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; align-items:end; margin-bottom:26px;">
+        <div style="border-top:1px solid #d8cec0; padding-top:12px;">
+          <p class="num" style="font-size:13px; color:#b5a08a; margin:0 0 6px;">01</p>
+          <p style="font-size:16px; font-weight:600; color:#1e1a16; margin:0 0 6px;">UX research</p>
+          <p style="font-size:13px; line-height:1.55; color:#8a7d6e; margin:0;">Nothing could be argued without evidence.</p>
+        </div>
+        <div style="border-top:1px solid #d8cec0; padding-top:12px; margin-bottom:24px;">
+          <p class="num" style="font-size:13px; color:#b5a08a; margin:0 0 6px;">02</p>
+          <p style="font-size:16px; font-weight:600; color:#1e1a16; margin:0 0 6px;">UX and interface</p>
+          <p style="font-size:13px; line-height:1.55; color:#8a7d6e; margin:0;">The screens the business knew it wanted.</p>
+        </div>
+        <div style="border-top:1px solid #d8cec0; padding-top:12px; margin-bottom:52px;">
+          <p class="num" style="font-size:13px; color:#b5a08a; margin:0 0 6px;">03</p>
+          <p style="font-size:16px; font-weight:600; color:#1e1a16; margin:0 0 6px;">Product design</p>
+          <p style="font-size:13px; line-height:1.55; color:#8a7d6e; margin:0;">Closer to the core business.</p>
+        </div>
+        <div style="border-top:2px solid #8a7d6e; padding-top:12px; margin-bottom:84px;">
+          <p class="num" style="font-size:13px; color:#8a7d6e; margin:0 0 6px;">04</p>
+          <p style="font-size:16px; font-weight:600; color:#1e1a16; margin:0 0 6px;">Service design</p>
+          <p style="font-size:13px; line-height:1.55; color:#8a7d6e; margin:0;">Nobody asked for this one.</p>
+        </div>
+      </div>
+      <svg viewBox="0 0 800 60" width="100%" height="60" style="display:block;" aria-label="Scope widening">
+        <polygon points="0,28 800,8 800,52 0,36" fill="none" stroke="#c9bfb2" stroke-width="1"></polygon>
+      </svg>
+      <div style="display:flex; justify-content:space-between; margin-top:8px;">
+        <p class="lbl" style="color:#b5a08a;">One screen</p>
+        <p class="lbl" style="color:#8a7d6e;">The business behind it</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin:56px 130px 0; padding-top:24px; border-top:1px solid #e8e2da; display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+    <div>
+      <p class="lbl" style="color:#8a7d6e; margin-bottom:8px;">What this direction argues</p>
+      <p style="font-size:14px; line-height:1.7; color:#6b6057; margin:0;">That restraint is the position. One measure, one typeface, hairlines, no colour beyond the warm neutrals already on the site. The work carries itself; nothing is dressed up. Continuous with the homepage, so /work does not read as a separate site.</p>
+    </div>
+    <div>
+      <p class="lbl" style="color:#8a7d6e; margin-bottom:8px;">What it costs</p>
+      <p style="font-size:14px; line-height:1.7; color:#6b6057; margin:0;">At this length it becomes hard to scan: there are no landmarks, so the three cases blur into one long read. Authorship has to be carried in words every time, which is exactly the paragraph of explanation you wanted to avoid. And it looks like a very good blog post.</p>
+    </div>
+  </div>
+
+</div>

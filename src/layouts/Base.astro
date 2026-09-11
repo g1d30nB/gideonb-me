@@ -7,7 +7,7 @@ interface Props {
   ogImage: string; // site-relative path, e.g. /images/article-10.png
   ogType?: 'website' | 'article';
   path: string; // site-relative canonical path, e.g. /writing/after-the-app-grid/
-  nav?: 'home' | 'article' | 'writing';
+  nav?: 'home' | 'article' | 'writing' | 'work';
 }
 const { title, description, ogImage, ogType = 'website', path, nav = 'home' } = Astro.props;
 const site = 'https://gideonb.me';
@@ -59,21 +59,14 @@ import '../styles/global.css';
     <div class="header-inner">
       <a href="/" class="logo">GB</a>
       <nav id="main-nav">
-        {nav === 'home' ? (
-          <a href="/writing/">Writing</a>
-        ) : (
-          <>
-            <a href="/" class="nav-home">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 4L6 8L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Home
-            </a>
-            {nav === 'writing' ? (
-              <a href="/writing/" style="color:#1e1a16">Writing</a>
-            ) : (
-              <a href="/writing/">Writing</a>
-            )}
-          </>
+        {nav !== 'home' && (
+          <a href="/" class="nav-home">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 4L6 8L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Home
+          </a>
         )}
+        <a href="/work/" style={nav === 'work' ? 'color:#1e1a16' : undefined}>Work</a>
+        <a href="/writing/" style={nav === 'writing' ? 'color:#1e1a16' : undefined}>Writing</a>
       </nav>
     </div>
   </header>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap">
+  <style>
+    :root{
+      --paper: oklch(0.968 0.006 85);
+      --paper-2: oklch(0.945 0.013 82);
+      --paper-team: oklch(0.962 0.011 195);
+      --ink: oklch(0.229 0.008 65);
+      --body: oklch(0.435 0.015 78);
+      --muted: oklch(0.586 0.018 78);
+      --faint: oklch(0.712 0.032 74);
+      --rule: oklch(0.906 0.008 80);
+      --rule-2: oklch(0.845 0.013 80);
+      --amber: oklch(0.575 0.075 62);
+      --teal: oklch(0.575 0.075 195);
+      --amber-wash: oklch(0.930 0.030 68);
+      --night: oklch(0.185 0.010 70);
+      --night-2: oklch(0.245 0.016 68);
+      --night-ink: oklch(0.930 0.008 82);
+      --night-body: oklch(0.795 0.010 80);
+      --night-muted: oklch(0.640 0.012 80);
+      --night-rule: oklch(0.315 0.010 72);
+      --amber-d: oklch(0.775 0.085 68);
+      --teal-d: oklch(0.775 0.070 190);
+      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px;
+    }
+    body { margin:0; background:var(--paper); color:var(--body);
+      font-family:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-size:15.5px; line-height:1.7; -webkit-font-smoothing:antialiased;
+      font-variant-numeric:tabular-nums; text-wrap:pretty; }
+    a { color:var(--ink); text-decoration:underline; text-decoration-color:var(--rule-2); text-underline-offset:3px; }
+    a:hover { text-decoration-color:var(--ink); }
+    p { margin:0; }
+    .d1 { font-size:clamp(44px,6.2vw,84px); line-height:1.03; font-weight:800; letter-spacing:-0.035em; color:var(--ink); }
+    .d2 { font-size:clamp(32px,3.6vw,48px); line-height:1.1;  font-weight:700; letter-spacing:-0.028em; color:var(--ink); }
+    .d3 { font-size:clamp(24px,2.4vw,32px); line-height:1.2;  font-weight:700; letter-spacing:-0.022em; color:var(--ink); }
+    .d4 { font-size:clamp(19px,1.55vw,22px); line-height:1.35; font-weight:600; letter-spacing:-0.012em; color:var(--ink); }
+    .t1 { font-size:17px; line-height:1.75; color:var(--body); }
+    .t2 { font-size:15.5px; line-height:1.7; color:var(--body); }
+    .t3 { font-size:13px; line-height:1.6; color:var(--muted); }
+    .lbl { font-size:11px; letter-spacing:0.13em; text-transform:uppercase; font-weight:600; color:var(--muted); margin:0; }
+    .stat { font-size:38px; line-height:1; font-weight:700; letter-spacing:-0.035em; color:var(--ink); }
+  </style>
+</helmet>
+<div style="width:390px;box-sizing:border-box;background:var(--paper);"><div style="border-bottom:1px solid var(--rule);padding:16px 22px;display:flex;justify-content:space-between;align-items:center;"><p style="font-size:14px;font-weight:600;color:var(--ink);margin:0;">Gideon Bullock</p><div style="display:flex;gap:16px;"><p class="lbl" style="font-size:10px;font-weight:500;">Home</p><p class="lbl" style="font-size:10px;font-weight:500;color:var(--ink);">Work</p><p class="lbl" style="font-size:10px;font-weight:500;">Writing</p></div></div>
+<div style="padding:48px 22px 0px;box-sizing:border-box;"><p class="lbl" style="margin-bottom:var(--s3);">Selected Work</p><p class="d1" style="margin-bottom:var(--s5);">Three cases</p><p style="font-size:17.5px;line-height:1.7;color:var(--body);margin:0 0 var(--s4);">Three cases at three distances from the work. In the first, the organisation is mine and everything in it was my decision. In the second, I won the work and built the team, and other people did the designing. In the third there was nobody else.</p><p style="font-size:15px;line-height:1.8;color:var(--muted);margin:0;">Design leadership at this level is mostly the first two. The third is how I keep honest about what the first two are for.</p></div>
+<div style="padding:44px 22px 56px;box-sizing:border-box;"><p class="lbl" style="font-size:9.5px;margin-bottom:var(--s1);">The business behind the work</p><div style="display:grid;grid-template-columns:22px 1fr;gap:14px;align-items:start;padding:var(--s5) 0;border-top:1px solid var(--rule);"><div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding-top:3px;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--amber);flex-shrink:0;"></span><div style="width:1px;flex-grow:1;min-height:64px;background:var(--rule);"></div></div><div><p class="lbl" style="color:var(--amber);font-size:10.5px;margin-bottom:6px;">Case one</p><p class="d4" style="font-size:23px;margin-bottom:7px;">The organisation</p><p style="font-size:12.5px;line-height:1.6;color:var(--muted);margin:0 0 9px;">Toyota Connected Europe &nbsp;&middot;&nbsp; 2018 to 2026</p><p style="font-size:15px;line-height:1.7;color:var(--body);margin:0;">Everything here is mine. Built from nothing, run for seven years, sold engagement by engagement.</p></div></div><div style="display:grid;grid-template-columns:22px 1fr;gap:14px;align-items:start;padding:var(--s5) 0;border-top:1px solid var(--rule);"><div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding-top:3px;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid var(--teal);box-sizing:border-box;flex-shrink:0;"></span><div style="width:1px;flex-grow:1;min-height:64px;background:var(--rule);"></div></div><div><p class="lbl" style="color:var(--teal);font-size:10.5px;margin-bottom:6px;">Case two</p><p class="d4" style="font-size:23px;margin-bottom:7px;">What the organisation shipped</p><p style="font-size:12.5px;line-height:1.6;color:var(--muted);margin:0 0 9px;">MyToyota and Lexus Link+ &nbsp;&middot;&nbsp; 2023 to 2026</p><p style="font-size:15px;line-height:1.7;color:var(--body);margin:0;">I won it, staffed it, framed it and held the bar. Other people designed it.</p></div></div><div style="display:grid;grid-template-columns:22px 1fr;gap:14px;align-items:start;padding:var(--s5) 0;border-top:1px solid var(--rule);"><div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding-top:3px;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--ink);flex-shrink:0;"></span></div><div><p class="lbl" style="color:var(--ink);font-size:10.5px;margin-bottom:6px;">Case three</p><p class="d4" style="font-size:23px;margin-bottom:7px;">The craft</p><p style="font-size:12.5px;line-height:1.6;color:var(--muted);margin:0 0 9px;">PrepCall &nbsp;&middot;&nbsp; 2026</p><p style="font-size:15px;line-height:1.7;color:var(--body);margin:0;">Built solo. There was nobody else.</p></div></div><p class="lbl" style="font-size:9.5px;text-align:right;padding-top:var(--s4);border-top:1px solid var(--rule);">The drawing itself</p><p class="t3" style="margin-top:var(--s6);padding-top:var(--s4);border-top:1px solid var(--rule);">Toyota work is shown at the level it can be shown publicly. Internal commercial figures and unreleased interface work are held back. Happy to go deeper in person.</p></div></div>
+</x-dc>
+</body>
+</html>

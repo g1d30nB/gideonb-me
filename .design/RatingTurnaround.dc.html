@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap">
+  <style>
+    :root{
+      --paper: oklch(0.968 0.006 85);
+      --paper-2: oklch(0.945 0.013 82);
+      --paper-team: oklch(0.962 0.011 195);
+      --ink: oklch(0.229 0.008 65);
+      --body: oklch(0.435 0.015 78);
+      --muted: oklch(0.586 0.018 78);
+      --faint: oklch(0.712 0.032 74);
+      --rule: oklch(0.906 0.008 80);
+      --rule-2: oklch(0.845 0.013 80);
+      --amber: oklch(0.575 0.075 62);
+      --teal: oklch(0.575 0.075 195);
+      --amber-wash: oklch(0.930 0.030 68);
+      --night: oklch(0.185 0.010 70);
+      --night-2: oklch(0.245 0.016 68);
+      --night-ink: oklch(0.930 0.008 82);
+      --night-body: oklch(0.795 0.010 80);
+      --night-muted: oklch(0.640 0.012 80);
+      --night-rule: oklch(0.315 0.010 72);
+      --amber-d: oklch(0.775 0.085 68);
+      --teal-d: oklch(0.775 0.070 190);
+      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px;
+    }
+    body { margin:0; background:var(--paper); color:var(--body);
+      font-family:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-size:15.5px; line-height:1.7; -webkit-font-smoothing:antialiased;
+      font-variant-numeric:tabular-nums; text-wrap:pretty; }
+    a { color:var(--ink); text-decoration:underline; text-decoration-color:var(--rule-2); text-underline-offset:3px; }
+    a:hover { text-decoration-color:var(--ink); }
+    p { margin:0; }
+    .d1 { font-size:clamp(44px,6.2vw,84px); line-height:1.03; font-weight:800; letter-spacing:-0.035em; color:var(--ink); }
+    .d2 { font-size:clamp(32px,3.6vw,48px); line-height:1.1;  font-weight:700; letter-spacing:-0.028em; color:var(--ink); }
+    .d3 { font-size:clamp(24px,2.4vw,32px); line-height:1.2;  font-weight:700; letter-spacing:-0.022em; color:var(--ink); }
+    .d4 { font-size:clamp(19px,1.55vw,22px); line-height:1.35; font-weight:600; letter-spacing:-0.012em; color:var(--ink); }
+    .t1 { font-size:17px; line-height:1.75; color:var(--body); }
+    .t2 { font-size:15.5px; line-height:1.7; color:var(--body); }
+    .t3 { font-size:13px; line-height:1.6; color:var(--muted); }
+    .lbl { font-size:11px; letter-spacing:0.13em; text-transform:uppercase; font-weight:600; color:var(--muted); margin:0; }
+    .stat { font-size:38px; line-height:1; font-weight:700; letter-spacing:-0.035em; color:var(--ink); }
+  </style>
+</helmet>
+<div style="width:700px;box-sizing:border-box;padding:var(--s6) var(--s6);background:var(--paper);"><div style="padding:0;box-sizing:border-box;border-top:2px solid var(--amber);padding-top:var(--s5);"><div style="display:flex;align-items:center;justify-content:space-between;gap:32px;margin-bottom:var(--s4);"><div style="display:flex;align-items:center;gap:10px;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--amber);flex-shrink:0;"></span><p class="lbl" style="color:var(--amber);">Case two &middot; the public proof</p></div><span></span></div><p class="d3" style="margin-bottom:var(--s3);">What customers actually left behind</p><p class="t2" style="color:var(--muted);max-width:780px;margin-bottom:var(--s7);">The rating is the headline. The composition underneath it is the story.</p><div style="display:flex;align-items:flex-end;gap:var(--s5);margin-bottom:var(--s7);"><div><p class="lbl" style="color:var(--faint);margin-bottom:var(--s1);">At launch</p><p class="stat" style="color:var(--muted);font-size:54px;">1.9&#9733;</p></div><p style="font-size:32px;color:var(--rule-2);padding-bottom:8px;margin:0;">&rarr;</p><div><p class="lbl" style="color:var(--amber);margin-bottom:var(--s1);">August 2025</p><p class="stat" style="font-size:54px;">4.6&#9733;</p></div><p class="t3" style="margin:0 0 10px auto;max-width:190px;text-align:right;">Rating more than doubled over thirteen months.</p></div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:20px;">Share of reviews, by star rating</p><div style="margin-bottom:var(--s5);"><p style="font-size:13px;font-weight:600;color:var(--muted);margin:0 0 7px;">Before</p><div style="display:flex;height:46px;border-radius:3px;overflow:hidden;"><div style="width:67%;background:oklch(0.955 0.011 80);border:1px solid oklch(0.875 0.014 80);box-sizing:border-box;display:flex;align-items:center;padding-left:10px;"><p style="font-size:13px;color:var(--muted);margin:0;">1&#9733; &nbsp;67%</p></div><div style="width:19%;background:oklch(0.835 0.055 72);display:flex;align-items:center;padding-left:10px;"><p style="font-size:13px;color:oklch(0.38 0.030 72);margin:0;">19%</p></div><div style="width:14%;background:oklch(0.475 0.085 62);display:flex;align-items:center;padding-left:12px;"></div></div></div><div style="margin-bottom:var(--s5);"><p style="font-size:13px;font-weight:600;color:var(--ink);margin:0 0 7px;">After</p><div style="display:flex;height:46px;border-radius:3px;overflow:hidden;"><div style="width:4%;background:oklch(0.955 0.011 80);border:1px solid oklch(0.875 0.014 80);box-sizing:border-box;display:flex;align-items:center;padding-left:10px;"></div><div style="width:16%;background:oklch(0.835 0.055 72);display:flex;align-items:center;padding-left:10px;"><p style="font-size:13px;color:oklch(0.38 0.030 72);margin:0;">16%</p></div><div style="width:80%;background:oklch(0.475 0.085 62);display:flex;align-items:center;padding-left:12px;"><p style="font-size:13px;color:oklch(0.96 0.010 80);margin:0;">5&#9733; &nbsp;80%</p></div></div></div><div style="display:flex;gap:20px;align-items:center;padding-top:var(--s4);border-top:1px solid var(--rule);"><div style="display:flex;align-items:center;gap:7px;"><span style="width:11px;height:11px;background:oklch(0.955 0.011 80);border:1px solid oklch(0.875 0.014 80);display:inline-block;"></span><p class="t3" style="font-size:12px;">One star</p></div><div style="display:flex;align-items:center;gap:7px;"><span style="width:11px;height:11px;background:oklch(0.835 0.055 72);display:inline-block;"></span><p class="t3" style="font-size:12px;">Two to four</p></div><div style="display:flex;align-items:center;gap:7px;"><span style="width:11px;height:11px;background:oklch(0.475 0.085 62);display:inline-block;"></span><p class="t3" style="font-size:12px;">Five stars</p></div><p style="font-size:13px;font-weight:600;color:var(--ink);margin:0 0 0 auto;">One star: 2 in 3 &rarr; 1 in 25</p></div><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--rule);"><p style="font-size:16.5px;line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">Five-star reviews grew nearly six-fold, and one-star reviews fell from two thirds of all reviews to four per cent.</p><p class="t3" style="max-width:300px;text-align:right;">Public App Store and Play Store data. Lexus Link+; MyToyota shows the same pattern.</p></div></div></div>
+</x-dc>
+</body>
+</html>

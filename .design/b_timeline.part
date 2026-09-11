@@ -1,0 +1,47 @@
+<div style="width:1200px; box-sizing:border-box; padding:52px 40px 44px; background:#17130f; color:#c8c0b5;">
+
+  <div style="display:flex; align-items:baseline; justify-content:space-between; gap:32px; margin-bottom:8px;">
+    <p class="lbl" style="color:#d9a55f;">Case two · the outcome</p>
+    <p class="lbl" style="color:#6b6157;">Internal customer-experience reporting, Jul 2024 to Aug 2025</p>
+  </div>
+  <p class="disp" style="font-size:34px; color:#f0ebe3; margin-bottom:10px;">Thirteen months from complaint driver to differentiator</p>
+  <p style="font-size:15px; line-height:1.7; color:#9a9086; max-width:800px; margin:0 0 40px;">Design dominated the complaint list when the repurposed app landed. Then it left the list altogether.</p>
+
+  <svg viewBox="0 0 1120 96" width="1120" height="96" style="display:block; margin-bottom:6px;" aria-label="Design inside then outside the top five complaint categories">
+    <polygon points="0,18 700,18 880,64 880,78 700,50 0,50" fill="#3d2f1c"></polygon>
+    <line x1="0" y1="18" x2="700" y2="18" stroke="#d9a55f" stroke-width="1.5"></line>
+    <line x1="700" y1="18" x2="880" y2="64" stroke="#d9a55f" stroke-width="1.5"></line>
+    <line x1="880" y1="64" x2="1120" y2="88" stroke="#d9a55f" stroke-width="1.5" stroke-dasharray="5 5"></line>
+    <line x1="0" y1="86" x2="1120" y2="86" stroke="#332c25" stroke-width="1"></line>
+    <circle cx="60" cy="18" r="5" fill="#d9a55f"></circle>
+    <circle cx="380" cy="18" r="5" fill="#d9a55f"></circle>
+    <circle cx="700" cy="18" r="5" fill="#d9a55f"></circle>
+    <circle cx="1050" cy="86" r="5.5" fill="none" stroke="#6fb0ab" stroke-width="2"></circle>
+    <text x="10" y="40" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="1.4" fill="#8a7a5e">INSIDE THE TOP FIVE COMPLAINT CATEGORIES</text>
+    <text x="1110" y="78" text-anchor="end" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="1.4" fill="#6fb0ab">OUT ENTIRELY</text>
+  </svg>
+
+  <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:34px; padding-top:22px;">
+    <div style="border-top:1px solid #332c25; padding-top:18px;">
+      <p class="lbl" style="color:#d9a55f; margin-bottom:10px;">2024</p>
+      <p style="font-size:17px; font-weight:600; color:#f0ebe3; margin:0 0 10px; line-height:1.35;">Design dominates the complaints</p>
+      <p style="font-size:13px; line-height:1.65; color:#9a9086; margin:0;">The deprecated US app lands in Europe at 1.9 stars. Navigation customers cannot learn, information displays they cannot read, no dark mode, driving analytics nobody understands.</p>
+    </div>
+    <div style="border-top:1px solid #332c25; padding-top:18px;">
+      <p class="lbl" style="color:#d9a55f; margin-bottom:10px;">Spring 2025</p>
+      <p style="font-size:17px; font-weight:600; color:#f0ebe3; margin:0 0 10px; line-height:1.35;">The language shifts</p>
+      <p style="font-size:13px; line-height:1.65; color:#9a9086; margin:0;">&ldquo;Intuitive&rdquo;, &ldquo;simple and effective&rdquo;, &ldquo;very well thought out&rdquo; start appearing in customer feedback where the complaints used to be.</p>
+    </div>
+    <div style="border-top:1px solid #332c25; padding-top:18px;">
+      <p class="lbl" style="color:#d9a55f; margin-bottom:10px;">June 2025</p>
+      <p style="font-size:17px; font-weight:600; color:#f0ebe3; margin:0 0 10px; line-height:1.35;">Design credited by name</p>
+      <p style="font-size:13px; line-height:1.65; color:#9a9086; margin:0;">An internal customer-experience report attributes reduced complaint volume directly to intuitive design. The first time on record that design was the cause rather than the problem.</p>
+    </div>
+    <div style="border-top:1px solid #6fb0ab; padding-top:18px;">
+      <p class="lbl" style="color:#6fb0ab; margin-bottom:10px;">August 2025</p>
+      <p style="font-size:17px; font-weight:600; color:#f0ebe3; margin:0 0 10px; line-height:1.35;">Out of the top five</p>
+      <p style="font-size:13px; line-height:1.65; color:#9a9086; margin:0;">Displaced by backend and connectivity issues outside design&rsquo;s ownership. The 4.6 star rating stabilises.</p>
+    </div>
+  </div>
+
+</div>

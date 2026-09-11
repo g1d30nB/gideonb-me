@@ -1,0 +1,150 @@
+<div style="width:1000px; box-sizing:border-box; background:#f8f6f2; padding-bottom:56px;">
+
+  <div style="background:#f0e9df; padding:10px 40px; display:flex; justify-content:space-between; align-items:baseline;">
+    <p class="lbl" style="color:#b07a3c;">Direction B &nbsp;·&nbsp; recommended</p>
+    <p class="lbl" style="color:#8a7d6e;">The instrument &nbsp;·&nbsp; diagrams as the landmarks</p>
+  </div>
+
+  <div style="border-bottom:1px solid #e8e2da; padding:20px 100px; display:flex; justify-content:space-between; align-items:center;">
+    <p style="font-size:15px; font-weight:600; color:#1e1a16; margin:0; letter-spacing:0.02em;">Gideon Bullock</p>
+    <div style="display:flex; gap:28px;">
+      <p class="lbl" style="font-weight:500; color:#8a7d6e;">Home</p>
+      <p class="lbl" style="font-weight:500; color:#1e1a16;">Work</p>
+      <p class="lbl" style="font-weight:500; color:#8a7d6e;">Writing</p>
+    </div>
+  </div>
+
+  <div style="padding:76px 100px 0;">
+    <p class="lbl" style="margin-bottom:14px;">Selected Work</p>
+    <p class="disp" style="font-size:76px; margin:0 0 26px;">Three cases</p>
+    <p style="font-size:18px; line-height:1.7; color:#5c5347; max-width:600px; margin:0 0 18px;">Three cases at three distances from the work. In the first, the organisation is mine and everything in it was my decision. In the second, I won the work and built the team, and other people did the designing. In the third there was nobody else.</p>
+    <p style="font-size:15px; line-height:1.75; color:#7a6f63; max-width:600px; margin:0 0 52px;">Design leadership at this level is mostly the first two. The third is how I keep honest about what the first two are for.</p>
+  </div>
+
+  <div style="padding:0 100px;">
+    <svg viewBox="0 0 800 62" width="800" height="62" style="display:block;" aria-label="Three cases placed by distance from the drawing">
+      <line x1="0" y1="30" x2="800" y2="30" stroke="#d8cec0" stroke-width="1.5"></line>
+      <line x1="124" y1="30" x2="124" y2="62" stroke="#c9bfb2" stroke-width="1"></line>
+      <line x1="400" y1="30" x2="400" y2="62" stroke="#c9bfb2" stroke-width="1"></line>
+      <line x1="676" y1="30" x2="676" y2="62" stroke="#c9bfb2" stroke-width="1"></line>
+      <circle cx="124" cy="30" r="7" fill="#b07a3c"></circle>
+      <circle cx="400" cy="30" r="7" fill="none" stroke="#3f7d7a" stroke-width="2.5"></circle>
+      <circle cx="676" cy="30" r="7" fill="#1e1a16"></circle>
+      <text x="0" y="16" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="1.4" fill="#8a7d6e">THE BUSINESS BEHIND THE WORK</text>
+      <text x="800" y="16" text-anchor="end" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="1.4" fill="#8a7d6e">THE DRAWING ITSELF</text>
+    </svg>
+    <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:36px; margin-top:4px;">
+      <div>
+        <p class="lbl" style="color:#b07a3c; margin-bottom:6px;">Case one</p>
+        <p class="disp" style="font-size:21px; margin-bottom:6px;">The organisation</p>
+        <p style="font-size:13px; line-height:1.6; color:#8a7d6e; margin:0;">Everything here is mine.</p>
+      </div>
+      <div>
+        <p class="lbl" style="color:#3f7d7a; margin-bottom:6px;">Case two</p>
+        <p class="disp" style="font-size:21px; margin-bottom:6px;">What it shipped</p>
+        <p style="font-size:13px; line-height:1.6; color:#8a7d6e; margin:0;">Other people designed it.</p>
+      </div>
+      <div>
+        <p class="lbl" style="color:#1e1a16; margin-bottom:6px;">Case three</p>
+        <p class="disp" style="font-size:21px; margin-bottom:6px;">The craft</p>
+        <p style="font-size:13px; line-height:1.6; color:#8a7d6e; margin:0;">There was nobody else.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#17130f; color:#c8c0b5; padding:52px 100px 44px; margin-top:64px;">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:16px;">
+      <div style="width:11px; height:11px; border-radius:50%; background:#d9a55f;"></div>
+      <p class="lbl" style="color:#d9a55f;">Case one &nbsp;·&nbsp; the organisation</p>
+    </div>
+    <p class="disp" style="font-size:44px; color:#f0ebe3; max-width:720px; margin:0 0 16px;">Building a design organisation, then widening what it was allowed to own</p>
+    <p style="font-size:14px; color:#9a9086; margin:0 0 10px;">Toyota Connected Europe &nbsp;&middot;&nbsp; 2018 to 2026</p>
+    <p style="font-size:16px; line-height:1.7; color:#c8c0b5; max-width:640px; margin:0 0 44px;">Head of Design, Toyota Experience Design. Built from nothing, run for seven years with full P&amp;L.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:28px; border-top:1px solid #332c25; padding-top:26px;">
+      <div>
+        <p class="disp num" style="font-size:38px; color:#f0ebe3; margin:0 0 6px;">0 to 40+</p>
+        <p style="font-size:13px; line-height:1.5; color:#9a9086; margin:0;">designers across six disciplines</p>
+      </div>
+      <div>
+        <p class="disp num" style="font-size:38px; color:#f0ebe3; margin:0 0 6px;">&pound;10m+</p>
+        <p style="font-size:13px; line-height:1.5; color:#9a9086; margin:0;">annual internal revenue at peak</p>
+      </div>
+      <div>
+        <p class="disp num" style="font-size:38px; color:#f0ebe3; margin:0 0 6px;">1 of 3</p>
+        <p style="font-size:13px; line-height:1.5; color:#9a9086; margin:0;">recognised core competencies</p>
+      </div>
+      <div>
+        <p class="disp num" style="font-size:38px; color:#f0ebe3; margin:0 0 6px;">#1</p>
+        <p style="font-size:13px; line-height:1.5; color:#9a9086; margin:0;">permanent retention in the company</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:56px 100px 0; display:grid; grid-template-columns:150px 1fr; gap:40px;">
+    <div>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+        <div style="width:10px; height:10px; border-radius:50%; background:#b07a3c;"></div>
+        <p class="lbl" style="color:#b07a3c;">My call</p>
+      </div>
+      <p class="lbl" style="color:#b5a08a;">The challenge</p>
+    </div>
+    <div style="max-width:600px;">
+      <p style="font-size:17px; line-height:1.8; color:#5c5347; margin:0 0 18px;">Toyota Connected Europe had no digital design capability. Products moved through waterfall cycles with no consistent research, no discovery and no experience ownership. Design was bought in from agencies and treated as a downstream service, called in after the decisions had already been made.</p>
+      <p style="font-size:17px; line-height:1.8; color:#1e1a16; margin:0; font-weight:500;">The brief I gave myself was not to hire designers. It was to make design a thing the business could not run without.</p>
+    </div>
+  </div>
+
+  <div style="padding:52px 40px 0;">
+    <div style="border:1px solid #e8e2da; background:#fdfcfa; border-radius:4px; padding:32px 34px;">
+      <p class="lbl" style="color:#b07a3c; margin-bottom:8px;">Case one &nbsp;·&nbsp; the spine</p>
+      <p class="disp" style="font-size:28px; margin:0 0 26px;">How the capability grew</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr 30px 1fr; gap:16px; align-items:end; margin-bottom:26px;">
+        <div style="border-top:2px solid #d8cec0; padding-top:12px;">
+          <p class="lbl" style="color:#b5a08a; margin-bottom:8px;">First</p>
+          <p class="disp" style="font-size:20px; margin-bottom:6px;">UX research</p>
+          <p style="font-size:12px; line-height:1.55; color:#8a7d6e; margin:0;">Nothing could be argued without evidence.</p>
+        </div>
+        <div style="border-top:2px solid #d8cec0; padding-top:12px; margin-bottom:34px;">
+          <p class="lbl" style="color:#b5a08a; margin-bottom:8px;">Second</p>
+          <p class="disp" style="font-size:20px; margin-bottom:6px;">UX and interface</p>
+          <p style="font-size:12px; line-height:1.55; color:#8a7d6e; margin:0;">The screens the business knew it wanted.</p>
+        </div>
+        <div style="border-top:2px solid #d8cec0; padding-top:12px; margin-bottom:72px;">
+          <p class="lbl" style="color:#b5a08a; margin-bottom:8px;">Third</p>
+          <p class="disp" style="font-size:20px; margin-bottom:6px;">Product design</p>
+          <p style="font-size:12px; line-height:1.55; color:#8a7d6e; margin:0;">Closer to the core business.</p>
+        </div>
+        <div style="height:230px; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:10px;">
+          <p style="writing-mode:vertical-rl; transform:rotate(180deg); font-size:10px; letter-spacing:0.13em; text-transform:uppercase; font-weight:600; color:#b07a3c; margin:0; white-space:nowrap;">The question changed</p>
+          <div style="width:1px; flex-grow:1; background:repeating-linear-gradient(to bottom,#b07a3c 0 5px,transparent 5px 11px);"></div>
+        </div>
+        <div style="border-top:3px solid #b07a3c; padding-top:12px; margin-bottom:126px;">
+          <p class="lbl" style="color:#b07a3c; margin-bottom:8px;">Fourth · nobody asked</p>
+          <p class="disp" style="font-size:20px; margin-bottom:6px;">Service design</p>
+          <p style="font-size:12px; line-height:1.55; color:#8a7d6e; margin:0;">Did not exist anywhere in Toyota.</p>
+        </div>
+      </div>
+      <svg viewBox="0 0 852 78" width="100%" height="78" style="display:block;" aria-label="Scope widening from one screen to the whole business">
+        <polygon points="0,36 852,4 852,74 0,50" fill="#efe2cf"></polygon>
+        <polygon points="0,36 852,4" fill="none" stroke="#b07a3c" stroke-width="1.5"></polygon>
+      </svg>
+      <div style="display:flex; justify-content:space-between; margin-top:8px;">
+        <p class="lbl" style="color:#8a7d6e;">Scope: one screen</p>
+        <p class="lbl" style="color:#1e1a16;">Scope: the business behind it</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin:56px 100px 0; padding-top:24px; border-top:1px solid #e8e2da; display:grid; grid-template-columns:1fr 1fr; gap:40px;">
+    <div>
+      <p class="lbl" style="color:#8a7d6e; margin-bottom:8px;">What this direction argues</p>
+      <p style="font-size:14px; line-height:1.7; color:#6b6057; margin:0;">That a design leader&rsquo;s portfolio should look engineered rather than decorated. The paper, the measure and the warm palette stay. What is added is structure: a serif display face for the arguments, dark full-bleed bands where the diagrams live, and a two-colour authorship system that says who made the call without a sentence about it.</p>
+    </div>
+    <div>
+      <p class="lbl" style="color:#8a7d6e; margin-bottom:8px;">What it costs</p>
+      <p style="font-size:14px; line-height:1.7; color:#6b6057; margin:0;">More to build and more to maintain: a second typeface, a dark theme, and eight diagrams that have to stay accurate. The dark bands make /work visually distinct from the homepage until the homepage catches up. And a second accent colour is one more thing to get wrong.</p>
+    </div>
+  </div>
+
+</div>

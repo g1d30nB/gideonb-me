@@ -1,0 +1,70 @@
+<div style="width:1200px; box-sizing:border-box; padding:44px 40px 40px; background:#f8f6f2;">
+
+  <div style="display:flex; align-items:baseline; justify-content:space-between; gap:32px; margin-bottom:6px;">
+    <p class="lbl" style="color:#b07a3c;">Case one · the spine</p>
+    <p class="lbl" style="color:#b5a08a;">2018 &nbsp;→&nbsp; 2026</p>
+  </div>
+  <p class="disp" style="font-size:34px; margin-bottom:10px;">How the capability grew</p>
+  <p class="body" style="max-width:720px; color:#6b6057; font-size:15px; margin-bottom:38px;">Four capabilities, in the order they were established. Each one earned the next. Only the last one was never asked for.</p>
+
+  <div style="display:grid; grid-template-columns:249px 249px 249px 44px 249px; gap:20px; align-items:end; margin-bottom:44px;">
+
+    <div style="margin-bottom:0; border-top:2px solid #d8cec0; padding-top:16px;">
+      <p class="lbl" style="color:#b5a08a; margin-bottom:14px;">First</p>
+      <p class="disp" style="font-size:25px; margin-bottom:12px;">UX research</p>
+      <p style="font-size:14px; line-height:1.6; color:#6b6057; margin:0 0 14px;">Nothing could be argued without evidence, so this came first.</p>
+      <p style="font-size:13px; line-height:1.55; color:#8a7d6e; margin:0; padding-top:12px; border-top:1px solid #e8e2da;"><span style="color:#b07a3c;">Earned&nbsp;→</span> the right to frame the problem, not just answer it.</p>
+    </div>
+
+    <div style="margin-bottom:52px; border-top:2px solid #d8cec0; padding-top:16px;">
+      <p class="lbl" style="color:#b5a08a; margin-bottom:14px;">Second</p>
+      <p class="disp" style="font-size:25px; margin-bottom:12px;">UX and interface design</p>
+      <p style="font-size:14px; line-height:1.6; color:#6b6057; margin:0 0 14px;">The screens the business already knew it wanted.</p>
+      <p style="font-size:13px; line-height:1.55; color:#8a7d6e; margin:0; padding-top:12px; border-top:1px solid #e8e2da;"><span style="color:#b07a3c;">Earned&nbsp;→</span> credibility on delivery, and a place beside engineering.</p>
+    </div>
+
+    <div style="margin-bottom:110px; border-top:2px solid #d8cec0; padding-top:16px;">
+      <p class="lbl" style="color:#b5a08a; margin-bottom:14px;">Third</p>
+      <p class="disp" style="font-size:25px; margin-bottom:12px;">Product design</p>
+      <p style="font-size:14px; line-height:1.6; color:#6b6057; margin:0 0 14px;">The team moved closer to the core business.</p>
+      <p style="font-size:13px; line-height:1.55; color:#8a7d6e; margin:0; padding-top:12px; border-top:1px solid #e8e2da;"><span style="color:#b07a3c;">Earned&nbsp;→</span> a close enough view of the business to see what it could not see.</p>
+    </div>
+
+    <div style="margin-bottom:0; height:330px; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; gap:12px;">
+      <p style="writing-mode:vertical-rl; transform:rotate(180deg); font-size:11px; letter-spacing:0.13em; text-transform:uppercase; font-weight:600; color:#b07a3c; margin:0; white-space:nowrap;">The question changed</p>
+      <div style="width:1px; flex-grow:1; background:repeating-linear-gradient(to bottom,#b07a3c 0 5px,transparent 5px 11px);"></div>
+    </div>
+
+    <div style="margin-bottom:186px; border-top:3px solid #b07a3c; padding-top:16px;">
+      <p class="lbl" style="color:#b07a3c; margin-bottom:14px;">Fourth · nobody asked</p>
+      <p class="disp" style="font-size:25px; margin-bottom:12px;">Service design</p>
+      <p style="font-size:14px; line-height:1.6; color:#6b6057; margin:0 0 14px;">Did not exist anywhere in Toyota. I made the case for it and hired into it.</p>
+      <p style="font-size:13px; line-height:1.55; color:#8a7d6e; margin:0; padding-top:12px; border-top:1px solid #e8e2da;"><span style="color:#b07a3c;">Earned&nbsp;→</span> the joins between business units that nobody owned.</p>
+    </div>
+
+  </div>
+
+  <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:10px;">
+    <p class="lbl" style="color:#8a7d6e;">Scope: one screen</p>
+    <p class="lbl" style="color:#1e1a16;">Scope: the business behind it</p>
+  </div>
+
+  <svg viewBox="0 0 1120 96" width="1120" height="96" style="display:block;" aria-label="Scope widening from one screen to the whole business">
+    <polygon points="0,44 1120,4 1120,92 0,60" fill="#efe2cf"></polygon>
+    <polygon points="0,44 1120,4" fill="none" stroke="#b07a3c" stroke-width="1.5"></polygon>
+    <line x1="124" y1="0" x2="124" y2="52" stroke="#c9bfb2" stroke-width="1" stroke-dasharray="3 4"></line>
+    <line x1="393" y1="0" x2="393" y2="42" stroke="#c9bfb2" stroke-width="1" stroke-dasharray="3 4"></line>
+    <line x1="662" y1="0" x2="662" y2="33" stroke="#c9bfb2" stroke-width="1" stroke-dasharray="3 4"></line>
+    <line x1="996" y1="0" x2="996" y2="21" stroke="#b07a3c" stroke-width="1" stroke-dasharray="3 4"></line>
+    <circle cx="124" cy="44" r="3.5" fill="#8a7d6e"></circle>
+    <circle cx="393" cy="34" r="3.5" fill="#8a7d6e"></circle>
+    <circle cx="662" cy="25" r="3.5" fill="#8a7d6e"></circle>
+    <circle cx="996" cy="13" r="5" fill="#b07a3c"></circle>
+  </svg>
+
+  <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:40px; margin-top:22px; padding-top:20px; border-top:1px solid #e8e2da;">
+    <p style="font-size:15px; line-height:1.65; color:#1e1a16; max-width:640px; margin:0; font-weight:500;">The capability arc is the case. Each brief was wider than the last because the last one had worked, and the widest one was the one nobody had asked for.</p>
+    <p class="cap" style="max-width:300px; text-align:right;">Read left to right as seven years, and bottom to top as how much of the customer&rsquo;s experience design was allowed to own.</p>
+  </div>
+
+</div>

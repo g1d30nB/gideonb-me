@@ -5,3 +5,6 @@ dist/
 .astro/
 .migration/current/
 .env*
+
+__pycache__/
+*.pyc

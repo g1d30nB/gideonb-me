@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap">
+  <style>
+    :root{
+      --paper: oklch(0.968 0.006 85);
+      --paper-2: oklch(0.945 0.013 82);
+      --paper-team: oklch(0.962 0.011 195);
+      --ink: oklch(0.229 0.008 65);
+      --body: oklch(0.435 0.015 78);
+      --muted: oklch(0.586 0.018 78);
+      --faint: oklch(0.712 0.032 74);
+      --rule: oklch(0.906 0.008 80);
+      --rule-2: oklch(0.845 0.013 80);
+      --amber: oklch(0.575 0.075 62);
+      --teal: oklch(0.575 0.075 195);
+      --amber-wash: oklch(0.930 0.030 68);
+      --night: oklch(0.185 0.010 70);
+      --night-2: oklch(0.245 0.016 68);
+      --night-ink: oklch(0.930 0.008 82);
+      --night-body: oklch(0.795 0.010 80);
+      --night-muted: oklch(0.640 0.012 80);
+      --night-rule: oklch(0.315 0.010 72);
+      --amber-d: oklch(0.775 0.085 68);
+      --teal-d: oklch(0.775 0.070 190);
+      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px;
+    }
+    body { margin:0; background:var(--paper); color:var(--body);
+      font-family:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-size:15.5px; line-height:1.7; -webkit-font-smoothing:antialiased;
+      font-variant-numeric:tabular-nums; text-wrap:pretty; }
+    a { color:var(--ink); text-decoration:underline; text-decoration-color:var(--rule-2); text-underline-offset:3px; }
+    a:hover { text-decoration-color:var(--ink); }
+    p { margin:0; }
+    .d1 { font-size:clamp(44px,6.2vw,84px); line-height:1.03; font-weight:800; letter-spacing:-0.035em; color:var(--ink); }
+    .d2 { font-size:clamp(32px,3.6vw,48px); line-height:1.1;  font-weight:700; letter-spacing:-0.028em; color:var(--ink); }
+    .d3 { font-size:clamp(24px,2.4vw,32px); line-height:1.2;  font-weight:700; letter-spacing:-0.022em; color:var(--ink); }
+    .d4 { font-size:clamp(19px,1.55vw,22px); line-height:1.35; font-weight:600; letter-spacing:-0.012em; color:var(--ink); }
+    .t1 { font-size:17px; line-height:1.75; color:var(--body); }
+    .t2 { font-size:15.5px; line-height:1.7; color:var(--body); }
+    .t3 { font-size:13px; line-height:1.6; color:var(--muted); }
+    .lbl { font-size:11px; letter-spacing:0.13em; text-transform:uppercase; font-weight:600; color:var(--muted); margin:0; }
+    .stat { font-size:38px; line-height:1; font-weight:700; letter-spacing:-0.035em; color:var(--ink); }
+  </style>
+</helmet>
+<div style="width:700px;box-sizing:border-box;padding:var(--s6) var(--s6);background:var(--paper);"><div style="padding:0;box-sizing:border-box;border-top:2px solid var(--teal);padding-top:var(--s5);"><div style="display:flex;align-items:center;justify-content:space-between;gap:32px;margin-bottom:var(--s4);"><div style="display:flex;align-items:center;gap:10px;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;border:2px solid var(--teal);box-sizing:border-box;flex-shrink:0;"></span><p class="lbl" style="color:var(--teal);">Case two &middot; what the team built</p></div><span></span></div><p class="d3" style="margin-bottom:var(--s3);">Four rounds, against the same task set</p><p class="t2" style="color:var(--muted);max-width:780px;margin-bottom:var(--s7);">System Usability Scale, measured round by round on a fixed set of EV tasks.</p><div style="display:flex;gap:var(--s3);"><div style="flex-grow:1;"><svg viewBox="0 0 540 250" width="100%" height="250" preserveAspectRatio="none" style="display:block;" aria-label="SUS scores rising across rounds"><rect x="420" y="0" width="120" height="250" fill="#efe9e1"></rect><line x1="0" y1="0" x2="540" y2="0" stroke="#e8e2da"></line><line x1="0" y1="125" x2="540" y2="125" stroke="#e8e2da"></line><line x1="0" y1="249" x2="540" y2="249" stroke="#d5cabb"></line><line x1="0" y1="33" x2="540" y2="33" stroke="#a97739" stroke-width="1.5" stroke-dasharray="5 5"></line><line x1="0" y1="183" x2="540" y2="183" stroke="#b09a80" stroke-dasharray="3 5"></line><polyline points="70,142 210,92 350,83" fill="none" stroke="#3f7d7a" stroke-width="2.5"></polyline><circle cx="70" cy="142" r="6" fill="#3f7d7a"></circle><circle cx="210" cy="92" r="6" fill="#3f7d7a"></circle><circle cx="350" cy="83" r="6" fill="#3f7d7a"></circle><line x1="480" y1="70" x2="480" y2="249" stroke="#c5b9a8" stroke-dasharray="3 4"></line><text x="70" y="128" text-anchor="middle" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#1e1a16">73</text><text x="210" y="78" text-anchor="middle" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#1e1a16">79</text><text x="350" y="69" text-anchor="middle" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#1e1a16">80</text><text x="536" y="27" text-anchor="end" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.2" fill="#a97739">TARGET 86</text><text x="536" y="177" text-anchor="end" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.2" fill="#9c8a72">GLOBAL AVERAGE 68</text></svg><div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:var(--s2);"><p class="lbl" style="color:var(--muted);text-align:center;">Round 1</p><p class="lbl" style="color:var(--muted);text-align:center;">Round 2</p><p class="lbl" style="color:var(--muted);text-align:center;">Round 3</p><p class="lbl" style="color:var(--faint);text-align:center;">Round 4</p></div></div><div style="width:34px;display:flex;flex-direction:column;justify-content:space-between;height:250px;padding-bottom:2px;"><p class="lbl" style="color:var(--faint);letter-spacing:0;">90</p><p class="lbl" style="color:var(--faint);letter-spacing:0;">75</p><p class="lbl" style="color:var(--faint);letter-spacing:0;">60</p></div></div><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--rule);"><p style="font-size:16.5px;line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">Mine: funding four rounds against a delivery schedule, and holding the ship gate until performance hit target.</p><p class="t3" style="max-width:300px;text-align:right;">Three reported SUS scores. The fourth round was run to task-completion target rather than a further reading.</p></div></div></div>
+</x-dc>
+</body>
+</html>

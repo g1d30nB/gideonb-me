@@ -1,0 +1,51 @@
+<div style="width:640px; box-sizing:border-box; padding:36px 34px 32px; background:#f8f6f2;">
+  <p class="lbl" style="color:#b07a3c; margin-bottom:8px;">Case two · the public proof</p>
+  <p class="disp" style="font-size:26px; margin-bottom:8px;">What customers actually left behind</p>
+  <p style="font-size:14px; line-height:1.65; color:#6b6057; margin:0 0 30px;">The rating is the headline. The composition underneath it is the story.</p>
+
+  <div style="display:flex; align-items:flex-end; gap:24px; margin-bottom:34px;">
+    <div>
+      <p class="lbl" style="color:#b5a08a; margin-bottom:4px;">At launch</p>
+      <p class="disp num" style="font-size:52px; color:#8a7d6e;">1.9&#9733;</p>
+    </div>
+    <p class="disp" style="font-size:32px; color:#c9bfb2; padding-bottom:8px;">&rarr;</p>
+    <div>
+      <p class="lbl" style="color:#b07a3c; margin-bottom:4px;">August 2025</p>
+      <p class="disp num" style="font-size:52px; color:#1e1a16;">4.6&#9733;</p>
+    </div>
+    <p style="font-size:13px; line-height:1.55; color:#8a7d6e; margin:0 0 10px auto; max-width:180px; text-align:right;">Rating more than doubled over thirteen months.</p>
+  </div>
+
+  <p class="lbl" style="color:#8a7d6e; padding-bottom:12px; border-bottom:1px solid #d8cec0; margin-bottom:20px;">Share of reviews, by star rating</p>
+
+  <div style="margin-bottom:20px;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:7px;">
+      <p style="font-size:13px; font-weight:600; color:#8a7d6e; margin:0;">Before</p>
+    </div>
+    <div style="display:flex; height:44px; border-radius:3px; overflow:hidden;">
+      <div style="width:67%; background:#f2ebe0; border:1px solid #ddd3c5; box-sizing:border-box; display:flex; align-items:center; padding-left:10px;"><p class="num" style="font-size:13px; color:#8a7d6e; margin:0;">1&#9733; &nbsp;67%</p></div>
+      <div style="width:19%; background:#dcc39c; display:flex; align-items:center; padding-left:10px;"><p class="num" style="font-size:13px; color:#5c4a30; margin:0;">19%</p></div>
+      <div style="width:14%; background:#8f5f28; display:flex; align-items:center; padding-left:10px;"><p class="num" style="font-size:13px; color:#f5efe6; margin:0;">14%</p></div>
+    </div>
+  </div>
+
+  <div style="margin-bottom:22px;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:7px;">
+      <p style="font-size:13px; font-weight:600; color:#1e1a16; margin:0;">After</p>
+    </div>
+    <div style="display:flex; height:44px; border-radius:3px; overflow:hidden;">
+      <div style="width:4%; background:#f2ebe0; border:1px solid #ddd3c5; box-sizing:border-box;"></div>
+      <div style="width:16%; background:#dcc39c; display:flex; align-items:center; padding-left:10px;"><p class="num" style="font-size:13px; color:#5c4a30; margin:0;">16%</p></div>
+      <div style="width:80%; background:#8f5f28; display:flex; align-items:center; padding-left:12px;"><p class="num" style="font-size:13px; color:#f5efe6; margin:0;">5&#9733; &nbsp;80%</p></div>
+    </div>
+  </div>
+
+  <div style="display:flex; gap:20px; align-items:center; padding-top:18px; border-top:1px solid #e8e2da;">
+    <div style="display:flex; align-items:center; gap:7px;"><div style="width:11px; height:11px; background:#f2ebe0; border:1px solid #ddd3c5;"></div><p class="cap" style="font-size:12px;">One star</p></div>
+    <div style="display:flex; align-items:center; gap:7px;"><div style="width:11px; height:11px; background:#dcc39c;"></div><p class="cap" style="font-size:12px;">Two to four</p></div>
+    <div style="display:flex; align-items:center; gap:7px;"><div style="width:11px; height:11px; background:#8f5f28;"></div><p class="cap" style="font-size:12px;">Five stars</p></div>
+    <p class="num" style="font-size:13px; color:#1e1a16; margin:0 0 0 auto;">One star: 2 in 3 &rarr; 1 in 25</p>
+  </div>
+
+  <p class="cap" style="margin-top:18px;">Public App Store and Play Store data. Lexus Link+; MyToyota shows the same pattern.</p>
+</div>

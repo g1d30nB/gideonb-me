@@ -1,0 +1,604 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../layouts/Footer.astro';
+import { loadPage, statPairs } from '../lib/page.mjs';
+import {
+  parseKV,
+  paragraphs,
+  bullets,
+  inlineMd,
+  linkifyContact,
+} from '../lib/homepage.mjs';
+
+const { meta, sections } = loadPage('work.md');
+
+const cases = ['case1', 'case2', 'case3'].map((k) => ({
+  id: k,
+  info: parseKV(sections[k + '-meta']),
+  challenge: paragraphs(sections[k + '-challenge']),
+  role: paragraphs(sections[k + '-role']),
+  approach: bullets(sections[k + '-approach']),
+  narrative: sections[k + '-narrative'] ? paragraphs(sections[k + '-narrative']) : [],
+  hard: sections[k + '-hard'] ? paragraphs(sections[k + '-hard']) : [],
+  stats: statPairs(sections[k + '-stats']),
+  impact: paragraphs(sections[k + '-impact']),
+}));
+
+const intro = paragraphs(sections['intro']);
+const closing = paragraphs(sections['closing']);
+const contact = paragraphs(sections['contact']);
+
+const anchors = [
+  { href: '#organisation', label: 'The organisation' },
+  { href: '#product', label: 'The product' },
+  { href: '#craft', label: 'The craft' },
+];
+const anchorFor = { case1: 'organisation', case2: 'product', case3: 'craft' };
+---
+<Base
+  title="Selected Work — Gideon Bullock"
+  description="Three cases: building a design organisation at Toyota, the app turnaround it shipped, and the AI voice product I built solo."
+  ogImage={meta.og}
+  path="/work/"
+  nav="work"
+>
+  <main id="work-page" class="page active">
+
+    <section class="work-hero">
+      <div class="container">
+        <p class="section-label">{meta.label}</p>
+        <h1>{meta.title}</h1>
+        {intro.map((p) => <p class="work-intro" set:html={inlineMd(p)} />)}
+      </div>
+    </section>
+
+    <nav class="section-anchors">
+      <div class="container">
+        {anchors.map((a, i) => (
+          <>
+            {i > 0 && <span class="anchor-dot">·</span>}
+            <a href={a.href}>{a.label}</a>
+          </>
+        ))}
+      </div>
+    </nav>
+
+    <div class="divider"></div>
+
+    {cases.map((c) => (
+      <section id={anchorFor[c.id]} class="case-section">
+        <div class="container">
+
+          <header class="case-intro reveal">
+            <p class="section-label">{c.info['number']}</p>
+            <h2>{c.info['title']}</h2>
+            <p class="case-meta">
+              <span>{c.info['company']}</span>
+              <span class="anchor-dot">·</span>
+              <span>{c.info['dates']}</span>
+            </p>
+            <p class="case-role-line">{c.info['role']}</p>
+          </header>
+
+          <div class="block reveal">
+            <p class="block-label">The challenge</p>
+            {c.challenge.map((p) => <p class="body-text" set:html={inlineMd(p)} />)}
+          </div>
+
+          <div class="block reveal">
+            <p class="block-label">My role</p>
+            {c.role.map((p) => <p class="body-text" set:html={inlineMd(p)} />)}
+          </div>
+
+          {c.narrative.length > 0 && (
+            <div class="block reveal">
+              <p class="block-label">{c.info['narrative-label'] || 'The story'}</p>
+              {c.narrative.map((p) => <p class="body-text" set:html={inlineMd(p)} />)}
+            </div>
+          )}
+
+          {c.id === 'case1' && (
+            <figure class="dgm reveal">
+              <div class="dgm-head">
+                <p class="dgm-title">What design was allowed to own</p>
+                <p class="dgm-sub">Four capabilities, in the order they were established. Each one earned the next.</p>
+              </div>
+              <div class="arc-grid">
+                <div class="arc-step">
+                  <p class="arc-n">01</p>
+                  <p class="arc-name">UX research</p>
+                  <p class="arc-note">Nothing could be argued without evidence, so this came first.</p>
+                </div>
+                <div class="arc-step">
+                  <p class="arc-n">02</p>
+                  <p class="arc-name">UX and interface design</p>
+                  <p class="arc-note">The screens the business already knew it wanted.</p>
+                </div>
+                <div class="arc-step">
+                  <p class="arc-n">03</p>
+                  <p class="arc-name">Product design</p>
+                  <p class="arc-note">Problem framing through to shipped experience, as the team moved closer to the core business.</p>
+                </div>
+                <div class="arc-step arc-step-last">
+                  <p class="arc-n">04</p>
+                  <p class="arc-name">Service design</p>
+                  <p class="arc-note">The joins nobody owned, front stage and back, across business units.</p>
+                </div>
+              </div>
+              <div class="svg-wrap">
+              <svg viewBox="0 0 640 80" role="img" aria-label="A widening wedge showing the scope design was allowed to own, growing from the screen to the business behind it.">
+                <polygon class="wedge" points="8,46 632,14 632,68 8,56"/>
+                <text x="8" y="10" class="wedge-label">The screen</text>
+                <text x="632" y="10" class="wedge-label" text-anchor="end">The business behind it</text>
+              </svg>
+              </div>
+              <figcaption>Service design was the one nobody asked for. It became possible only once the team was close enough to the business to see that Connected Technologies owned one slice of the customer's experience and behaved as though it owned all of it.</figcaption>
+            </figure>
+          )}
+
+          <div class="block reveal">
+            <p class="block-label">How it was done</p>
+            <ol class="approach">
+              {c.approach.map((li) => <li set:html={inlineMd(li)} />)}
+            </ol>
+          </div>
+
+          {c.id === 'case1' && (
+            <figure class="dgm reveal">
+              <div class="dgm-head">
+                <p class="dgm-title">Toyota Experience Design</p>
+                <p class="dgm-sub">Six disciplines under one roof, sold through four engagement models, run against a P&amp;L.</p>
+              </div>
+              <div class="chip-grid">
+                <div class="chip"><span>Product design</span><em>Journeys, flows, interface</em></div>
+                <div class="chip"><span>Design systems</span><em>Tokens, components, governance</em></div>
+                <div class="chip"><span>UX research</span><em>Strategy and insight</em></div>
+                <div class="chip"><span>Service design</span><em>Blueprints, front and back stage</em></div>
+                <div class="chip"><span>Content and creative</span><em>Words, art direction</em></div>
+                <div class="chip"><span>Design leadership</span><em>Vision, planning, delivery</em></div>
+              </div>
+              <p class="dgm-divider-label">Engagement models</p>
+              <div class="model-row">
+                <div class="model">Embedded partnership</div>
+                <div class="model">Design studio</div>
+                <div class="model">Team augmentation</div>
+                <div class="model">Innovation sprints</div>
+              </div>
+              <figcaption>Depth on the left, breadth on the right. Partner teams bought the level of integration they needed.</figcaption>
+            </figure>
+          )}
+
+
+          {c.id === 'case2' && (
+            <figure class="dgm reveal">
+              <div class="dgm-head">
+                <p class="dgm-title">The EV problem, and the shape of the fix</p>
+                <p class="dgm-sub">Four answers to one question, kept in four different places.</p>
+              </div>
+              <div class="svg-wrap">
+              <svg viewBox="0 0 640 250" role="img" aria-label="Before: battery status, home charge, charging schedule and public charging history scattered across the app. After: a single EV domain containing all four.">
+                <text x="0" y="14" class="svg-label">Before</text>
+                <text x="360" y="14" class="svg-label">After</text>
+                <g class="svg-before">
+                  <rect x="0" y="34" width="140" height="46" rx="8"/>
+                  <text x="14" y="62">Battery status</text>
+                  <rect x="170" y="86" width="140" height="46" rx="8"/>
+                  <text x="184" y="114">HomeCharge</text>
+                  <rect x="6" y="140" width="150" height="46" rx="8"/>
+                  <text x="20" y="168">Charging schedule</text>
+                  <rect x="150" y="192" width="160" height="46" rx="8"/>
+                  <text x="164" y="220">Public charge history</text>
+                </g>
+                <g class="svg-thread">
+                  <path d="M140 57 C 220 57, 130 109, 170 109"/>
+                  <path d="M81 80 C 81 120, 220 130, 226 192"/>
+                  <path d="M170 109 C 110 130, 90 130, 81 140"/>
+                  <path d="M310 109 C 350 150, 250 170, 226 192"/>
+                </g>
+                <path class="svg-arrow" d="M322 130 L 348 130 M341 124 L 348 130 L 341 136"/>
+                <g class="svg-after">
+                  <rect x="360" y="34" width="230" height="204" rx="10"/>
+                  <text x="380" y="64" class="svg-hub">EV domain</text>
+                  <line x1="380" y1="80" x2="570" y2="80"/>
+                  <text x="380" y="108">Live charging session</text>
+                  <text x="380" y="140">Charge management</text>
+                  <text x="380" y="172">Schedule, smart and vehicle</text>
+                  <text x="380" y="204">History, home and public</text>
+                </g>
+              </svg>
+              </div>
+              <figcaption>One place for charging, with real-time status. The vehicle, home charger and software complexity stayed. It moved behind the experience rather than into the customer's hands.</figcaption>
+            </figure>
+          )}
+
+          {c.id === 'case2' && (
+            <figure class="dgm reveal">
+              <div class="dgm-head">
+                <p class="dgm-title">Usability, round by round</p>
+                <p class="dgm-sub">System Usability Scale against a fixed task set. Same measure every time.</p>
+              </div>
+              <div class="sus">
+                <div class="sus-row"><span class="sus-key">Round 1</span><div class="sus-track"><div class="sus-fill" style="width:73%"><em>73</em></div></div></div>
+                <div class="sus-row"><span class="sus-key">Round 2</span><div class="sus-track"><div class="sus-fill" style="width:79%"><em>79</em></div></div></div>
+                <div class="sus-row"><span class="sus-key">Round 3</span><div class="sus-track"><div class="sus-fill" style="width:80%"><em>80</em></div></div></div>
+                <div class="sus-row sus-target"><span class="sus-key">Our target</span><div class="sus-track"><div class="sus-ghost" style="width:86%"><em>86</em></div></div></div>
+              </div>
+              <figcaption>Above the global SUS average and inside the good to excellent range, still short of the internal bar set against the in-vehicle system. It shipped when task completion hit target, and the team kept going after that.</figcaption>
+            </figure>
+          )}
+
+          {c.id === 'case2' && (
+            <figure class="dgm reveal">
+              <div class="dgm-head">
+                <p class="dgm-title">Thirteen months, from complaint driver to differentiator</p>
+                <p class="dgm-sub">Top-five complaint categories in internal customer-experience reporting.</p>
+              </div>
+              <div class="timeline">
+                <div class="tl-step">
+                  <p class="tl-date">2024</p>
+                  <p class="tl-body">Design dominates complaints. Unintuitive navigation, unclear information, no dark mode.</p>
+                </div>
+                <div class="tl-step">
+                  <p class="tl-date">Spring 2025</p>
+                  <p class="tl-body">The language shifts. Intuitive, simple and effective start appearing in user feedback.</p>
+                </div>
+                <div class="tl-step">
+                  <p class="tl-date">June 2025</p>
+                  <p class="tl-body">Reduced complaints attributed internally to intuitive design. First time on record.</p>
+                </div>
+                <div class="tl-step">
+                  <p class="tl-date">August 2025</p>
+                  <p class="tl-body">Design out of the top five entirely, displaced by issues outside design's ownership.</p>
+                </div>
+              </div>
+            </figure>
+          )}
+
+          {c.id === 'case2' && (
+            <figure class="dgm reveal">
+              <div class="dgm-head">
+                <p class="dgm-title">The proof, in public rating data</p>
+                <p class="dgm-sub">App Store and Play Store, Lexus Link+. MyToyota shows the same pattern.</p>
+              </div>
+              <div class="ratings">
+                <div class="rating-row">
+                  <span class="rating-key">Before</span>
+                  <div class="rating-track"><div class="rating-fill rating-dim" style="width:38%"></div></div>
+                  <span class="rating-val">1.9<em>/5</em></span>
+                </div>
+                <div class="rating-row">
+                  <span class="rating-key">After</span>
+                  <div class="rating-track"><div class="rating-fill" style="width:92%"></div></div>
+                  <span class="rating-val">4.6<em>/5</em></span>
+                </div>
+              </div>
+              <div class="split">
+                <div class="split-col">
+                  <p class="split-label">Five-star reviews</p>
+                  <p class="split-move"><span class="dim">14%</span> to <span>80%</span></p>
+                </div>
+                <div class="split-col">
+                  <p class="split-label">One-star reviews</p>
+                  <p class="split-move"><span class="dim">2 in 3</span> to <span>1 in 25</span></p>
+                </div>
+              </div>
+            </figure>
+          )}
+
+          {c.id === 'case3' && (
+            <figure class="dgm reveal">
+              <div class="dgm-head">
+                <p class="dgm-title">Context growth, session by session</p>
+                <p class="dgm-sub">System prompt size per user. Nothing was broken. It just kept accumulating.</p>
+              </div>
+              <div class="svg-wrap">
+              <svg viewBox="0 0 640 260" role="img" aria-label="Chart showing system prompt size growing from about 5,600 characters at session one to over 34,000 by session four, against a bounded budget of roughly 8,000 characters.">
+                <g class="grid">
+                  <line x1="70" y1="30" x2="620" y2="30"/>
+                  <line x1="70" y1="90" x2="620" y2="90"/>
+                  <line x1="70" y1="150" x2="620" y2="150"/>
+                  <line x1="70" y1="210" x2="620" y2="210"/>
+                </g>
+                <g class="axis-text">
+                  <text x="60" y="34" text-anchor="end">36k</text>
+                  <text x="60" y="94" text-anchor="end">24k</text>
+                  <text x="60" y="154" text-anchor="end">12k</text>
+                  <text x="60" y="214" text-anchor="end">0</text>
+                  <text x="105" y="236">Session 1</text>
+                  <text x="255" y="236">Session 2</text>
+                  <text x="405" y="236">Session 3</text>
+                  <text x="555" y="236">Session 4</text>
+                </g>
+                <path class="growth" d="M120 182 L 270 156 L 420 112 L 570 40"/>
+                <g class="dots">
+                  <circle cx="120" cy="182" r="4"/>
+                  <circle cx="270" cy="156" r="4"/>
+                  <circle cx="420" cy="112" r="4"/>
+                  <circle cx="570" cy="40" r="4"/>
+                </g>
+                <text x="120" y="204" class="pt-label" text-anchor="middle">5.6k</text>
+                <text x="570" y="28" class="pt-label" text-anchor="middle">34k+</text>
+                <line class="budget" x1="70" y1="170" x2="620" y2="170"/>
+                <text x="620" y="164" class="budget-label" text-anchor="end">Bounded budget, enforced from here on</text>
+              </svg>
+              </div>
+              <figcaption>The fix was a bounded prompt with hard character budgets, applied regardless of how many sessions a user has had. Designing for a probabilistic system is mostly this: deciding what the model is allowed to carry.</figcaption>
+            </figure>
+          )}
+
+          {c.hard.length > 0 && (
+            <div class="block reveal">
+              <p class="block-label">{c.info['aside-label'] || 'The hard part'}</p>
+              {c.hard.map((p) => <p class="body-text" set:html={inlineMd(p)} />)}
+            </div>
+          )}
+
+          <div class="stat-band reveal">
+            {c.stats.map((s) => (
+              <div class="stat">
+                <p class="stat-value">{s.value}</p>
+                <p class="stat-label">{s.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div class="block reveal">
+            <p class="block-label">What changed</p>
+            {c.impact.map((p) => <p class="body-text" set:html={inlineMd(p)} />)}
+          </div>
+
+        </div>
+        <div class="divider"></div>
+      </section>
+    ))}
+
+    <section class="philosophy">
+      <div class="container">
+        <p class="section-label reveal">The through line</p>
+        {closing.map((p) => <p class="bold-statement reveal" set:html={inlineMd(p)} />)}
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <p class="section-label reveal">Get in Touch</p>
+        <p class="bold-statement reveal" set:html={inlineMd(contact[0])} />
+        <p class="body-text reveal" set:html={linkifyContact(contact[1])} />
+      </div>
+    </section>
+
+    <Footer />
+  </main>
+</Base>
+
+<style>
+  .work-hero { padding: 48px 0 40px; }
+  .work-hero h1 { margin-top: 8px; }
+  .work-intro {
+    font-size: 17px;
+    color: #5c5347;
+    line-height: 1.7;
+    margin-top: 20px;
+    max-width: 600px;
+  }
+  .work-intro + .work-intro { font-size: 14px; color: #8a7d6e; }
+
+  .case-section { padding: 64px 0 0; }
+  .case-section .divider { margin-top: 64px; }
+  .case-intro { margin-bottom: 40px; }
+  .case-intro h2 { margin-top: 4px; max-width: 620px; }
+  .case-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #8a7d6e;
+    margin-top: 14px;
+  }
+  .case-role-line { font-size: 14px; color: #b5a08a; margin-top: 2px; }
+
+  .block { margin-bottom: 40px; }
+  .block-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #8a7d6e;
+    margin-bottom: 12px;
+  }
+  .block .body-text + .body-text { margin-top: 16px; }
+
+  ol.approach { list-style: none; counter-reset: step; padding: 0; margin: 0; }
+  ol.approach li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 40px;
+    font-size: 15px;
+    color: #6b6057;
+    line-height: 1.7;
+  }
+  ol.approach li + li { margin-top: 24px; }
+  ol.approach li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #b5a08a;
+    letter-spacing: 0.06em;
+  }
+  ol.approach li :global(strong) { color: #1e1a16; font-weight: 600; }
+
+  /* ───── Diagrams ───── */
+  .dgm {
+    margin: 0 0 44px;
+    padding: 28px 24px 24px;
+    background: #f3ede4;
+    border: 1px solid #e8e2da;
+    border-radius: 12px;
+  }
+  .dgm-head { margin-bottom: 22px; }
+  .dgm-title { font-size: 15px; font-weight: 600; color: #1e1a16; }
+  .dgm-sub { font-size: 13px; color: #8a7d6e; margin-top: 4px; }
+  .dgm figcaption {
+    font-size: 13px;
+    color: #8a7d6e;
+    line-height: 1.6;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #e0d8cc;
+  }
+  .dgm svg { width: 100%; height: auto; display: block; }
+  .svg-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  .arc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .arc-step { background: #f8f6f2; border: 1px solid #e0d8cc; border-radius: 8px; padding: 12px; }
+  .arc-step-last { border-color: #1e1a16; }
+  .arc-n { font-size: 11px; font-weight: 600; color: #b5a08a; letter-spacing: 0.06em; }
+  .arc-name { font-size: 13px; font-weight: 600; color: #1e1a16; margin-top: 4px; }
+  .arc-note { font-size: 12px; color: #8a7d6e; margin-top: 5px; line-height: 1.45; }
+  .wedge { fill: #d4ccc2; }
+  .wedge-label { font-size: 11px; letter-spacing: 0.12em; fill: #b5a08a; text-transform: uppercase; font-family: inherit; }
+
+  .chip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .chip {
+    background: #f8f6f2;
+    border: 1px solid #e0d8cc;
+    border-radius: 8px;
+    padding: 12px 12px 11px;
+  }
+  .chip span { display: block; font-size: 13px; font-weight: 600; color: #1e1a16; }
+  .chip em { display: block; font-style: normal; font-size: 12px; color: #8a7d6e; margin-top: 3px; line-height: 1.45; }
+
+  .dgm-divider-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #b5a08a;
+    margin: 22px 0 10px;
+  }
+  .model-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .model {
+    font-size: 12px;
+    font-weight: 500;
+    color: #5c5347;
+    text-align: center;
+    padding: 10px 8px;
+    border: 1px dashed #cfc4b5;
+    border-radius: 8px;
+    background: #f8f6f2;
+  }
+
+  .svg-before rect { fill: #f8f6f2; stroke: #cfc4b5; }
+  .svg-before text { font-size: 12px; fill: #8a7d6e; font-family: inherit; }
+  .svg-thread path { fill: none; stroke: #cfc4b5; stroke-width: 1.25; stroke-dasharray: 3 3; }
+  .svg-arrow { stroke: #b5a08a; stroke-width: 1.5; fill: none; }
+  .svg-after rect { fill: #f8f6f2; stroke: #1e1a16; stroke-width: 1.5; }
+  .svg-after text { font-size: 12px; fill: #5c5347; font-family: inherit; }
+  .svg-after line { stroke: #e0d8cc; }
+  .svg-after .svg-hub { font-size: 14px; font-weight: 600; fill: #1e1a16; }
+  .svg-label { font-size: 11px; letter-spacing: 0.12em; fill: #b5a08a; text-transform: uppercase; font-family: inherit; }
+
+  .sus-row { display: grid; grid-template-columns: 84px 1fr; align-items: center; gap: 14px; }
+  .sus-row + .sus-row { margin-top: 10px; }
+  .sus-key { font-size: 12px; color: #8a7d6e; }
+  .sus-track { background: #f8f6f2; border: 1px solid #e0d8cc; border-radius: 6px; height: 30px; }
+  .sus-fill {
+    height: 100%;
+    background: #1e1a16;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+  .sus-fill em { font-style: normal; font-size: 12px; font-weight: 600; color: #f8f6f2; }
+  .sus-ghost {
+    height: 100%;
+    border: 1px dashed #b5a08a;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+  .sus-ghost em { font-style: normal; font-size: 12px; font-weight: 600; color: #8a7d6e; }
+
+  .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .tl-step { border-top: 2px solid #e0d8cc; padding-top: 14px; position: relative; }
+  .tl-step::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #b5a08a;
+  }
+  .tl-step:last-child { border-top-color: #1e1a16; }
+  .tl-step:last-child::before { background: #1e1a16; }
+  .tl-date { font-size: 12px; font-weight: 600; color: #1e1a16; }
+  .tl-body { font-size: 12px; color: #8a7d6e; line-height: 1.55; margin-top: 6px; }
+
+  .rating-row { display: grid; grid-template-columns: 60px 1fr 64px; align-items: center; gap: 14px; }
+  .rating-row + .rating-row { margin-top: 12px; }
+  .rating-key { font-size: 12px; color: #8a7d6e; }
+  .rating-track { background: #f8f6f2; border: 1px solid #e0d8cc; border-radius: 6px; height: 14px; }
+  .rating-fill { height: 100%; background: #1e1a16; border-radius: 5px; }
+  .rating-fill.rating-dim { background: #cfc4b5; }
+  .rating-val { font-size: 20px; font-weight: 700; color: #1e1a16; text-align: right; }
+  .rating-val em { font-style: normal; font-size: 12px; font-weight: 500; color: #b5a08a; }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+  .split-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #b5a08a; }
+  .split-move { font-size: 18px; font-weight: 600; color: #1e1a16; margin-top: 6px; }
+  .split-move .dim { color: #b5a08a; font-weight: 500; }
+
+  .grid line { stroke: #e0d8cc; stroke-width: 1; }
+  .axis-text text { font-size: 11px; fill: #b5a08a; font-family: inherit; }
+  .growth { fill: none; stroke: #1e1a16; stroke-width: 2; }
+  .dots circle { fill: #1e1a16; }
+  .pt-label { font-size: 12px; font-weight: 600; fill: #1e1a16; font-family: inherit; }
+  .budget { stroke: #b5a08a; stroke-width: 1.5; stroke-dasharray: 5 4; }
+  .budget-label { font-size: 11px; fill: #8a7d6e; font-family: inherit; }
+
+  /* ───── Stat band ───── */
+  .stat-band {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 26px 0;
+    border-top: 1px solid #e8e2da;
+    border-bottom: 1px solid #e8e2da;
+    margin-bottom: 40px;
+  }
+  .stat-value { font-size: 22px; font-weight: 700; color: #1e1a16; letter-spacing: -0.01em; line-height: 1.2; }
+  .stat-label { font-size: 12px; color: #8a7d6e; margin-top: 6px; line-height: 1.5; }
+
+  @media (max-width: 640px) {
+    .arc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .arc-step { background: #f8f6f2; border: 1px solid #e0d8cc; border-radius: 8px; padding: 12px; }
+  .arc-step-last { border-color: #1e1a16; }
+  .arc-n { font-size: 11px; font-weight: 600; color: #b5a08a; letter-spacing: 0.06em; }
+  .arc-name { font-size: 13px; font-weight: 600; color: #1e1a16; margin-top: 4px; }
+  .arc-note { font-size: 12px; color: #8a7d6e; margin-top: 5px; line-height: 1.45; }
+  .wedge { fill: #d4ccc2; }
+  .wedge-label { font-size: 11px; letter-spacing: 0.12em; fill: #b5a08a; text-transform: uppercase; font-family: inherit; }
+
+  .chip-grid { grid-template-columns: 1fr 1fr; }
+    .model-row { grid-template-columns: 1fr 1fr; }
+    .timeline { grid-template-columns: 1fr 1fr; }
+    .stat-band { grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+    .split { grid-template-columns: 1fr; }
+    .dgm { padding: 22px 16px 20px; }
+    .svg-wrap svg { min-width: 540px; }
+  }
+</style>

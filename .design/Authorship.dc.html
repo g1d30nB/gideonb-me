@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap">
+  <style>
+    :root{
+      --paper: oklch(0.968 0.006 85);
+      --paper-2: oklch(0.945 0.013 82);
+      --paper-team: oklch(0.962 0.011 195);
+      --ink: oklch(0.229 0.008 65);
+      --body: oklch(0.435 0.015 78);
+      --muted: oklch(0.586 0.018 78);
+      --faint: oklch(0.712 0.032 74);
+      --rule: oklch(0.906 0.008 80);
+      --rule-2: oklch(0.845 0.013 80);
+      --amber: oklch(0.575 0.075 62);
+      --teal: oklch(0.575 0.075 195);
+      --amber-wash: oklch(0.930 0.030 68);
+      --night: oklch(0.185 0.010 70);
+      --night-2: oklch(0.245 0.016 68);
+      --night-ink: oklch(0.930 0.008 82);
+      --night-body: oklch(0.795 0.010 80);
+      --night-muted: oklch(0.640 0.012 80);
+      --night-rule: oklch(0.315 0.010 72);
+      --amber-d: oklch(0.775 0.085 68);
+      --teal-d: oklch(0.775 0.070 190);
+      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px;
+    }
+    body { margin:0; background:var(--paper); color:var(--body);
+      font-family:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-size:15.5px; line-height:1.7; -webkit-font-smoothing:antialiased;
+      font-variant-numeric:tabular-nums; text-wrap:pretty; }
+    a { color:var(--ink); text-decoration:underline; text-decoration-color:var(--rule-2); text-underline-offset:3px; }
+    a:hover { text-decoration-color:var(--ink); }
+    p { margin:0; }
+    .d1 { font-size:clamp(44px,6.2vw,84px); line-height:1.03; font-weight:800; letter-spacing:-0.035em; color:var(--ink); }
+    .d2 { font-size:clamp(32px,3.6vw,48px); line-height:1.1;  font-weight:700; letter-spacing:-0.028em; color:var(--ink); }
+    .d3 { font-size:clamp(24px,2.4vw,32px); line-height:1.2;  font-weight:700; letter-spacing:-0.022em; color:var(--ink); }
+    .d4 { font-size:clamp(19px,1.55vw,22px); line-height:1.35; font-weight:600; letter-spacing:-0.012em; color:var(--ink); }
+    .t1 { font-size:17px; line-height:1.75; color:var(--body); }
+    .t2 { font-size:15.5px; line-height:1.7; color:var(--body); }
+    .t3 { font-size:13px; line-height:1.6; color:var(--muted); }
+    .lbl { font-size:11px; letter-spacing:0.13em; text-transform:uppercase; font-weight:600; color:var(--muted); margin:0; }
+    .stat { font-size:38px; line-height:1; font-weight:700; letter-spacing:-0.035em; color:var(--ink); }
+  </style>
+</helmet>
+<div style="width:1200px;box-sizing:border-box;padding:var(--s7);background:var(--paper);"><p class="lbl" style="color:var(--amber);margin-bottom:var(--s2);">The device</p><p class="d2" style="margin-bottom:var(--s3);max-width:940px;">Carrying authorship without a paragraph of explanation</p><p style="font-size:16px;line-height:1.75;color:var(--body);max-width:840px;margin:0 0 var(--s7);">Three carriers, in order of how far they can be read from. The ground a section sits on. The marker and label at the top of each block. And the words themselves, which never leave the job to the other two.</p><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);">One &nbsp;&middot;&nbsp; the distance gauge, once, at the top of the page</p><svg viewBox="0 0 1120 66" width="100%" height="66" preserveAspectRatio="none" style="display:block;margin-top:26px;" aria-label="Three cases placed by distance from the drawing"><line x1="0" y1="30" x2="1120" y2="30" stroke="#d5cabb" stroke-width="1.5"></line><line x1="173" y1="30" x2="173" y2="66" stroke="#c5b9a8"></line><line x1="560" y1="30" x2="560" y2="66" stroke="#c5b9a8"></line><line x1="947" y1="30" x2="947" y2="66" stroke="#c5b9a8"></line><circle cx="173" cy="30" r="7" fill="#9a6a34"></circle><circle cx="560" cy="30" r="7" fill="none" stroke="#3f7d7a" stroke-width="2.5"></circle><circle cx="947" cy="30" r="7" fill="#1e1a16"></circle><text x="0" y="16" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#8a7d6e">THE BUSINESS BEHIND THE WORK</text><text x="1120" y="16" text-anchor="end" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#8a7d6e">THE DRAWING ITSELF</text></svg><div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:42px;margin-bottom:var(--s8);"><div><p class="lbl" style="color:var(--amber);margin-bottom:var(--s2);">Case one</p><p class="d4" style="font-size:25px;margin-bottom:var(--s2);">The organisation</p><p style="font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 10px;">Toyota Connected Europe &nbsp;&middot;&nbsp; 2018 to 2026</p><p style="font-size:15px;line-height:1.7;color:var(--body);margin:0;">Everything here is mine. Built from nothing, run for seven years, sold engagement by engagement.</p></div><div><p class="lbl" style="color:var(--teal);margin-bottom:var(--s2);">Case two</p><p class="d4" style="font-size:25px;margin-bottom:var(--s2);">What the organisation shipped</p><p style="font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 10px;">MyToyota and Lexus Link+ &nbsp;&middot;&nbsp; 2023 to 2026</p><p style="font-size:15px;line-height:1.7;color:var(--body);margin:0;">I won it, staffed it, framed it and held the bar. Other people designed it.</p></div><div><p class="lbl" style="color:var(--ink);margin-bottom:var(--s2);">Case three</p><p class="d4" style="font-size:25px;margin-bottom:var(--s2);">The craft</p><p style="font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 10px;">PrepCall &nbsp;&middot;&nbsp; 2026</p><p style="font-size:15px;line-height:1.7;color:var(--body);margin:0;">Built solo. There was nobody else.</p></div></div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:var(--s6);">Two &nbsp;&middot;&nbsp; the ground, for a section at a time</p><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s7);margin-bottom:var(--s8);"><div style="background:var(--paper);border:1px solid var(--rule);padding:var(--s6);"><div style="display:flex;align-items:center;gap:11px;margin-bottom:var(--s3);"><span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--amber);flex-shrink:0;"></span><p class="lbl" style="color:var(--amber);">My call</p></div><p style="font-size:15.5px;line-height:1.75;margin:0;">Warm paper, the site&rsquo;s own ground. The decision was mine and the accountability sits with me. The whole of case one, the whole of case three, and the framing, funding and gatekeeping in case two.</p></div><div style="background:var(--paper-team);padding:var(--s6);"><div style="display:flex;align-items:center;gap:11px;margin-bottom:var(--s3);"><span style="display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--teal);box-sizing:border-box;flex-shrink:0;"></span><p class="lbl" style="color:var(--teal);">The team&rsquo;s work</p></div><p style="font-size:15.5px;line-height:1.75;color:oklch(0.40 0.020 195);margin:0;">The ground turns very slightly cool and stays that way until the credit line. Case two&rsquo;s craft section runs on it end to end. You know whose work you are looking at before you read a word.</p></div></div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:var(--s6);">Three &nbsp;&middot;&nbsp; the marker, on every block</p><div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s7);margin-bottom:var(--s8);"><div style="border-top:2px solid var(--amber);padding-top:var(--s4);"><div style="display:flex;align-items:center;gap:11px;margin-bottom:var(--s3);"><span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--amber);flex-shrink:0;"></span><p class="lbl" style="color:var(--amber);">My call</p></div><p style="font-size:15px;line-height:1.75;margin:0;">Filled disc, amber rule. Solid ink weight in the copy.</p></div><div style="border-top:2px solid var(--teal);padding-top:var(--s4);"><div style="display:flex;align-items:center;gap:11px;margin-bottom:var(--s3);"><span style="display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--teal);box-sizing:border-box;flex-shrink:0;"></span><p class="lbl" style="color:var(--teal);">The team&rsquo;s work</p></div><p style="font-size:15px;line-height:1.75;margin:0;">Hollow ring, teal rule. The ring is the point: the form differs, so this survives greyscale and colour blindness.</p></div><div style="border-top:2px solid var(--ink);padding-top:var(--s4);"><div style="display:flex;align-items:center;gap:11px;margin-bottom:var(--s3);"><span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--ink);flex-shrink:0;"></span><p class="lbl" style="color:var(--ink);">Solo</p></div><p style="font-size:15px;line-height:1.75;margin:0;">Ink rule, no accent. Case three only, where there was nobody else in the room.</p></div></div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:var(--s6);">Four &nbsp;&middot;&nbsp; how it reads in the page</p><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s7);align-items:start;"><div style="border-top:2px solid var(--amber);padding-top:var(--s4);"><div style="display:flex;align-items:center;gap:11px;margin-bottom:var(--s3);"><span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--amber);flex-shrink:0;"></span><p class="lbl" style="color:var(--amber);">My call &nbsp;&middot;&nbsp; case two</p></div><p style="font-size:16.5px;line-height:1.8;margin:0;">The work did not ship until task performance hit target, and getting there took four rounds of moderated usability testing. Backing that, against a delivery schedule, is most of what a design leader is actually for.</p></div><div style="background:var(--paper-team);padding:var(--s5) var(--s5) var(--s5);margin:-1px -1px 0;"><div style="display:flex;align-items:center;gap:11px;margin-bottom:var(--s3);"><span style="display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--teal);box-sizing:border-box;flex-shrink:0;"></span><p class="lbl" style="color:var(--teal);">What the team built &nbsp;&middot;&nbsp; case two</p></div><p style="font-size:16.5px;line-height:1.8;color:oklch(0.40 0.020 195);margin:0;">The team built one EV domain in place of four scattered locations: a single place for charging status and scheduling, real-time updates, and a live session view mirroring what was happening at the car.</p></div></div><p class="t3" style="margin-top:var(--s7);padding-top:var(--s5);border-top:1px solid var(--rule);max-width:860px;">Block labels are set from each case&rsquo;s <span style="color:var(--ink);">-meta</span> block in work.md, so a new named section needs no template change. Case one uses &ldquo;How the capability grew&rdquo;, case two uses &ldquo;What the team built&rdquo;.</p></div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,325 @@
+{
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Directions"
+    },
+    {
+      "id": "page-2",
+      "name": "The page"
+    },
+    {
+      "id": "page-3",
+      "name": "Structure"
+    },
+    {
+      "id": "page-4",
+      "name": "Diagrams"
+    }
+  ],
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1500,
+      "page": "page-2",
+      "title": "Desktop 1 · Opening"
+    },
+    {
+      "file": "DeskCaseOneA.dc.html",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 4600,
+      "page": "page-2",
+      "title": "Desktop 2 · Case one, the arc"
+    },
+    {
+      "file": "DeskCaseOneB.dc.html",
+      "x": 3120,
+      "y": 0,
+      "w": 1440,
+      "h": 6400,
+      "page": "page-2",
+      "title": "Desktop 3 · Case one, the machinery"
+    },
+    {
+      "file": "DeskCaseTwoA.dc.html",
+      "x": 4680,
+      "y": 0,
+      "w": 1440,
+      "h": 4200,
+      "page": "page-2",
+      "title": "Desktop 4 · Case two, authorship"
+    },
+    {
+      "file": "DeskCaseTwoB.dc.html",
+      "x": 6240,
+      "y": 0,
+      "w": 1440,
+      "h": 6800,
+      "page": "page-2",
+      "title": "Desktop 5 · Case two, the team's work"
+    },
+    {
+      "file": "DeskCaseThree.dc.html",
+      "x": 7800,
+      "y": 0,
+      "w": 1440,
+      "h": 5400,
+      "page": "page-2",
+      "title": "Desktop 6 · Case three and the close"
+    },
+    {
+      "file": "Mobile.dc.html",
+      "x": 0,
+      "y": 8000,
+      "w": 390,
+      "h": 2000,
+      "page": "page-2",
+      "title": "Mobile 1 · Opening"
+    },
+    {
+      "file": "MobCaseOneA.dc.html",
+      "x": 560,
+      "y": 8000,
+      "w": 390,
+      "h": 4800,
+      "page": "page-2",
+      "title": "Mobile 2 · Case one, the arc"
+    },
+    {
+      "file": "MobCaseOneB.dc.html",
+      "x": 1120,
+      "y": 8000,
+      "w": 390,
+      "h": 7600,
+      "page": "page-2",
+      "title": "Mobile 3 · Case one, the machinery"
+    },
+    {
+      "file": "MobCaseTwoA.dc.html",
+      "x": 1680,
+      "y": 8000,
+      "w": 390,
+      "h": 4600,
+      "page": "page-2",
+      "title": "Mobile 4 · Case two, authorship"
+    },
+    {
+      "file": "MobCaseTwoB.dc.html",
+      "x": 2240,
+      "y": 8000,
+      "w": 390,
+      "h": 7800,
+      "page": "page-2",
+      "title": "Mobile 5 · Case two, the team's work"
+    },
+    {
+      "file": "MobCaseThree.dc.html",
+      "x": 2800,
+      "y": 8000,
+      "w": 390,
+      "h": 5200,
+      "page": "page-2",
+      "title": "Mobile 6 · Case three and the close"
+    },
+    {
+      "file": "DirectionA.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1000,
+      "h": 2160,
+      "page": "page-1",
+      "title": "Direction A — The document"
+    },
+    {
+      "file": "DirectionB.dc.html",
+      "x": 1120,
+      "y": 0,
+      "w": 1000,
+      "h": 2380,
+      "page": "page-1",
+      "title": "Direction B — The instrument (superseded)"
+    },
+    {
+      "file": "DirectionC.dc.html",
+      "x": 2240,
+      "y": 0,
+      "w": 1000,
+      "h": 2740,
+      "page": "page-1",
+      "title": "Direction C — The revision (built)"
+    },
+    {
+      "file": "CaseAnatomy.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 2760,
+      "page": "page-3",
+      "title": "Case anatomy"
+    },
+    {
+      "file": "Authorship.dc.html",
+      "x": 1620,
+      "y": 0,
+      "w": 1200,
+      "h": 1620,
+      "page": "page-3",
+      "title": "The authorship device"
+    },
+    {
+      "file": "CapabilityArc.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 1020,
+      "page": "page-4"
+    },
+    {
+      "file": "ServiceGap.dc.html",
+      "x": 1320,
+      "y": 0,
+      "w": 1200,
+      "h": 1400,
+      "page": "page-4"
+    },
+    {
+      "file": "OperatingModel.dc.html",
+      "x": 2640,
+      "y": 0,
+      "w": 1200,
+      "h": 1000,
+      "page": "page-4"
+    },
+    {
+      "file": "EVDomain.dc.html",
+      "x": 0,
+      "y": 1540,
+      "w": 1200,
+      "h": 820,
+      "page": "page-4"
+    },
+    {
+      "file": "ComplaintTimeline.dc.html",
+      "x": 1320,
+      "y": 1540,
+      "w": 1200,
+      "h": 720,
+      "page": "page-4"
+    },
+    {
+      "file": "SUSRounds.dc.html",
+      "x": 0,
+      "y": 2480,
+      "w": 700,
+      "h": 790,
+      "page": "page-4"
+    },
+    {
+      "file": "RatingTurnaround.dc.html",
+      "x": 820,
+      "y": 2480,
+      "w": 700,
+      "h": 820,
+      "page": "page-4"
+    },
+    {
+      "file": "ContextGrowth.dc.html",
+      "x": 1640,
+      "y": 2480,
+      "w": 700,
+      "h": 810,
+      "page": "page-4"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "dir-note",
+      "x": 3360,
+      "y": 0,
+      "w": 320,
+      "page": "page-1",
+      "text": "C is what is built on the other three pages. A and B are kept as the record of the decision.\n\nYou were right about B. The serif was doing the work the structure should have been doing, and it made /work read as a different website rather than the same one with more to say.\n\nC keeps everything that was actually working (the dark bands, the gauge, the authorship system, the diagrams) and changes the two things that made it feel foreign."
+    },
+    {
+      "id": "dir-note-2",
+      "x": 3360,
+      "y": 620,
+      "w": 320,
+      "page": "page-1",
+      "text": "Schibsted Grotesk, everywhere.\n\nNot a second font: a replacement for Inter across the whole site. It is a Norwegian newspaper face, drawn for headlines and for small print in the same family, so it holds a 84px page title at 800 and disappears into body copy at 400.\n\nWhy not just keep Inter: Inter is the default that ships with every generated page, and at this length the page needs its headings to look drawn rather than set. The swap is one CSS change plus a read through the ten articles.\n\nIf you want to hear the argument for staying on Inter instead, say so and I will make it properly rather than assuming."
+    },
+    {
+      "id": "dir-note-3",
+      "x": 3360,
+      "y": 1400,
+      "w": 320,
+      "page": "page-1",
+      "text": "The other change you did not ask for.\n\nB carried authorship on coloured bars down the left edge of blocks. That is the most overused device in this kind of layout and it reads as decoration.\n\nC carries it three ways instead: the ground a whole section sits on, a rule across the top of each block, and a marker whose shape differs (filled disc against hollow ring), so it survives greyscale and colour blindness. The words still say it too."
+    },
+    {
+      "id": "img-note",
+      "x": 3960,
+      "y": 0,
+      "w": 320,
+      "page": "page-4",
+      "text": "No photographs, and no App Store screenshots.\n\nThree reasons. Case two argues that you did not draw the app, so putting its screens on the page invites the opposite reading. The evidence for a structural argument is structural diagrams. And the one piece of imagery that would help, the rating data, is stronger drawn than screenshotted.\n\nIf you want one image on the page, make it a portrait in the contact block, not product work."
+    },
+    {
+      "id": "confid-note",
+      "x": 3960,
+      "y": 600,
+      "w": 320,
+      "page": "page-4",
+      "text": "Confidentiality check on every diagram here.\n\nOut: margin contribution, revenue share by programme, the design-system savings and build-cost comparison, the 300+ properties figure, DesignOps tooling saving, support-call volumes, non-renewal rates, screen counts.\n\nIn: 0 to 40+, £10m+, highest retention, all App Store rating data, the research counts, SUS scores, and the complaint-category timeline. No blueprint, no V3 interface, no colleagues named."
+    },
+    {
+      "id": "sus-note",
+      "x": 2440,
+      "y": 2480,
+      "w": 320,
+      "page": "page-4",
+      "text": "One thing to check before this goes live.\n\nThe decks report SUS at 73, 79, 80 and separately say four rounds. I have plotted the three reported scores and marked round four as run to task-completion target rather than inventing a fourth number.\n\nIf you have the round-four figure, send it and I will plot it. If you would rather not show a target line you missed, say so: 86 was the 24MM benchmark, not a failure."
+    },
+    {
+      "id": "arc-note",
+      "x": 0,
+      "y": -320,
+      "w": 400,
+      "page": "page-4",
+      "text": "The capability arc is the most important object on the page, so it gets two moves the four-cards version did not have: a hinge between the third and fourth capability where the question changed, and a scope wedge underneath that carries the widening from one screen to the business behind it.\n\nNo years against individual capabilities, because I did not want to invent dates. Add them in work.md if you have them."
+    },
+    {
+      "id": "home-note",
+      "x": 1620,
+      "y": 1740,
+      "w": 340,
+      "page": "page-3",
+      "text": "The homepage, as a result.\n\nDrop ::: case-1 and ::: case-2 from homepage.md. Toyota is now told properly at /work and a shallow snapshot competes with it; Songkick is not one of the three cases, so it belongs with BBC, Skype and Dopay in ::: earlier-work.\n\nReplace both with one short block that names the three cases and links to /work. That leaves the homepage as positioning, and /work as evidence.\n\nI have not touched homepage.md. Your call.\n\nSeparately: the typeface swap touches the homepage and all ten articles, so that is one commit, not two."
+    },
+    {
+      "id": "impl-note",
+      "x": 0,
+      "y": -360,
+      "w": 420,
+      "page": "page-2",
+      "text": "This is one continuously scrolling page. It is cut into six here because the canvas caps an artboard at 8,000px and the real page runs to about 15,000.\n\nRead the top row left to right, then the mobile row beneath it. The pale strip at the top of each frame says where you are.\n\nType scale is five steps on clamp: 84 / 48 / 32 / 22 / 17, at least 1.25 between steps. Measure holds at 680px, about 72 characters. Palette is oklch; the two accents are matched at L 0.575 and C 0.075, varying only in hue.\n\nMotion: one orchestrated reveal on scroll, the site's existing .reveal, honouring prefers-reduced-motion. Nothing else moves."
+    },
+    {
+      "id": "copy-note",
+      "x": 9420,
+      "y": 0,
+      "w": 420,
+      "page": "page-2",
+      "text": "Copy check against work.md, run after the last pass.\n\nEvery sentence is accounted for and the three load-bearing passages survive on both desktop and mobile.\n\nFour sentences are no longer prose because a diagram now carries them: the research counts, the EV domain description, and the SUS scores. They still live in work.md; the template feeds them to the diagram instead of setting them as paragraphs.\n\nOne sentence I did change. work.md says the complexity 'did not go away, they moved it behind the experience'. On the diagram it reads 'The team moved it behind the experience', because 'they' was ambiguous at that distance from the sentence that introduced them. Say if you want the original back."
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "page-2"
+  }
+}

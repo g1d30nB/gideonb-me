@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap">
+  <style>
+    :root{
+      --paper: oklch(0.968 0.006 85);
+      --paper-2: oklch(0.945 0.013 82);
+      --paper-team: oklch(0.962 0.011 195);
+      --ink: oklch(0.229 0.008 65);
+      --body: oklch(0.435 0.015 78);
+      --muted: oklch(0.586 0.018 78);
+      --faint: oklch(0.712 0.032 74);
+      --rule: oklch(0.906 0.008 80);
+      --rule-2: oklch(0.845 0.013 80);
+      --amber: oklch(0.575 0.075 62);
+      --teal: oklch(0.575 0.075 195);
+      --amber-wash: oklch(0.930 0.030 68);
+      --night: oklch(0.185 0.010 70);
+      --night-2: oklch(0.245 0.016 68);
+      --night-ink: oklch(0.930 0.008 82);
+      --night-body: oklch(0.795 0.010 80);
+      --night-muted: oklch(0.640 0.012 80);
+      --night-rule: oklch(0.315 0.010 72);
+      --amber-d: oklch(0.775 0.085 68);
+      --teal-d: oklch(0.775 0.070 190);
+      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px;
+    }
+    body { margin:0; background:var(--paper); color:var(--body);
+      font-family:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-size:15.5px; line-height:1.7; -webkit-font-smoothing:antialiased;
+      font-variant-numeric:tabular-nums; text-wrap:pretty; }
+    a { color:var(--ink); text-decoration:underline; text-decoration-color:var(--rule-2); text-underline-offset:3px; }
+    a:hover { text-decoration-color:var(--ink); }
+    p { margin:0; }
+    .d1 { font-size:clamp(44px,6.2vw,84px); line-height:1.03; font-weight:800; letter-spacing:-0.035em; color:var(--ink); }
+    .d2 { font-size:clamp(32px,3.6vw,48px); line-height:1.1;  font-weight:700; letter-spacing:-0.028em; color:var(--ink); }
+    .d3 { font-size:clamp(24px,2.4vw,32px); line-height:1.2;  font-weight:700; letter-spacing:-0.022em; color:var(--ink); }
+    .d4 { font-size:clamp(19px,1.55vw,22px); line-height:1.35; font-weight:600; letter-spacing:-0.012em; color:var(--ink); }
+    .t1 { font-size:17px; line-height:1.75; color:var(--body); }
+    .t2 { font-size:15.5px; line-height:1.7; color:var(--body); }
+    .t3 { font-size:13px; line-height:1.6; color:var(--muted); }
+    .lbl { font-size:11px; letter-spacing:0.13em; text-transform:uppercase; font-weight:600; color:var(--muted); margin:0; }
+    .stat { font-size:38px; line-height:1; font-weight:700; letter-spacing:-0.035em; color:var(--ink); }
+  </style>
+</helmet>
+<div style="width:1200px;box-sizing:border-box;padding:var(--s7) var(--s7);background:var(--paper);"><div style="padding:0;box-sizing:border-box;border-top:2px solid var(--teal);padding-top:var(--s5);"><div style="display:flex;align-items:center;justify-content:space-between;gap:32px;margin-bottom:var(--s4);"><div style="display:flex;align-items:center;gap:10px;"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;border:2px solid var(--teal);box-sizing:border-box;flex-shrink:0;"></span><p class="lbl" style="color:var(--teal);">Case two &middot; what the team built</p></div><p class="lbl" style="color:var(--faint);text-align:right;">Framed by me, drawn by them</p></div><p class="d3" style="margin-bottom:var(--s3);">One EV domain in place of four</p><p class="t2" style="color:var(--muted);max-width:780px;margin-bottom:var(--s7);">For an EV driver the questions are constant: am I charged, can I leave, when will it be ready. The answers were scattered across the app.</p><div style="display:grid;grid-template-columns:600px 1fr;gap:56px;align-items:start;"><div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:20px;">Before &nbsp;&middot;&nbsp; four places, one job</p><svg viewBox="0 0 600 70" width="100%" height="70" preserveAspectRatio="none" style="display:block;margin-bottom:-1px;" aria-label="A single task crossing four separate locations"><path d="M66,66 L66,10 L378,10 L378,66" fill="none" stroke="#b09a80" stroke-width="1.5"></path><path d="M222,66 L222,32 L534,32 L534,66" fill="none" stroke="#b09a80" stroke-width="1.5" stroke-dasharray="4 4"></path><circle cx="66" cy="66" r="3.5" fill="#8a7d6e"></circle><circle cx="222" cy="66" r="3.5" fill="#8a7d6e"></circle><circle cx="378" cy="66" r="3.5" fill="#8a7d6e"></circle><circle cx="534" cy="66" r="3.5" fill="#8a7d6e"></circle></svg><div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s5);"><div style="border:1px solid var(--rule-2);border-radius:9px;background:oklch(0.985 0.004 85);padding:var(--s3) 11px;height:170px;display:flex;flex-direction:column;gap:7px;"><div style="height:7px;border-radius:4px;background:var(--rule);"></div><div style="height:26px;border-radius:5px;background:oklch(0.93 0.030 68);border:1px solid oklch(0.86 0.045 70);"></div><div style="height:7px;border-radius:4px;background:oklch(0.93 0.006 82);width:80%;"></div><div style="height:7px;border-radius:4px;background:oklch(0.93 0.006 82);width:62%;"></div><p style="font-size:12px;line-height:1.45;color:var(--muted);margin:auto 0 0;">Home screen entry point, easy to miss</p></div><div style="border:1px solid var(--rule-2);border-radius:9px;background:oklch(0.985 0.004 85);padding:var(--s3) 11px;height:170px;display:flex;flex-direction:column;gap:7px;"><div style="height:7px;border-radius:4px;background:var(--rule);"></div><div style="height:26px;border-radius:5px;background:oklch(0.93 0.030 68);border:1px solid oklch(0.86 0.045 70);"></div><div style="height:7px;border-radius:4px;background:oklch(0.93 0.006 82);width:80%;"></div><div style="height:7px;border-radius:4px;background:oklch(0.93 0.006 82);width:62%;"></div><div style="height:7px;border-radius:4px;background:oklch(0.93 0.006 82);width:74%;"></div><p style="font-size:12px;line-height:1.45;color:var(--muted);margin:auto 0 0;">Battery status, tied to the default vehicle</p></div><div style="border:1px solid var(--rule-2);border-radius:9px;background:oklch(0.985 0.004 85);padding:var(--s3) 11px;height:170px;display:flex;flex-direction:column;gap:7px;"><div style="height:7px;border-radius:4px;background:var(--rule);"></div><div style="height:26px;border-radius:5px;background:oklch(0.93 0.030 68);border:1px solid oklch(0.86 0.045 70);"></div><div style="height:7px;border-radius:4px;background:oklch(0.93 0.006 82);width:80%;"></div><div style="height:7px;border-radius:4px;background:oklch(0.93 0.006 82);width:62%;"></div><p style="font-size:12px;line-height:1.45;color:var(--muted);margin:auto 0 0;">Home charging, stored somewhere else again</p></div><div style="border:1px solid var(--rule-2);border-radius:9px;background:oklch(0.985 0.004 85);padding:var(--s3) 11px;height:170px;display:flex;flex-direction:column;gap:7px;"><div style="height:7px;border-radius:4px;background:var(--rule);"></div><div style="height:26px;border-radius:5px;background:oklch(0.93 0.030 68);border:1px solid oklch(0.86 0.045 70);"></div><div style="height:7px;border-radius:4px;background:oklch(0.93 0.006 82);width:80%;"></div><div style="height:7px;border-radius:4px;background:oklch(0.93 0.006 82);width:62%;"></div><div style="height:7px;border-radius:4px;background:oklch(0.93 0.006 82);width:74%;"></div><p style="font-size:12px;line-height:1.45;color:var(--muted);margin:auto 0 0;">Charging schedule, split across three settings</p></div></div><p class="t3" style="margin-top:18px;">Grown feature by feature and vehicle generation by vehicle generation. Public and home charging history lived in different places. Charger-only customers saw no range at all.</p></div><div><p class="lbl" style="color:var(--teal);padding-bottom:var(--s3);border-bottom:1px solid oklch(0.84 0.025 195);margin-bottom:20px;">After &nbsp;&middot;&nbsp; one place, at the point of use</p><svg viewBox="0 0 460 70" width="100%" height="70" preserveAspectRatio="none" style="display:block;margin-bottom:-1px;" aria-label="One short path into a single domain"><path d="M230,10 L230,66" fill="none" stroke="#3f7d7a" stroke-width="1.5"></path><circle cx="230" cy="66" r="4.5" fill="#3f7d7a"></circle></svg><div style="border:1.5px solid var(--teal);border-radius:9px;background:oklch(0.975 0.010 195);padding:var(--s4) var(--s4) 14px;height:170px;box-sizing:border-box;display:flex;flex-direction:column;gap:9px;"><p style="font-size:13px;font-weight:600;color:var(--ink);margin:0 0 2px;">EV domain</p><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;"><div style="border:1px solid oklch(0.86 0.022 195);border-radius:5px;background:oklch(0.995 0.002 195);padding:var(--s2) 9px;"><p style="font-size:12px;color:oklch(0.42 0.020 195);margin:0;">Charging status</p></div><div style="border:1px solid oklch(0.86 0.022 195);border-radius:5px;background:oklch(0.995 0.002 195);padding:var(--s2) 9px;"><p style="font-size:12px;color:oklch(0.42 0.020 195);margin:0;">Live session</p></div><div style="border:1px solid oklch(0.86 0.022 195);border-radius:5px;background:oklch(0.995 0.002 195);padding:var(--s2) 9px;"><p style="font-size:12px;color:oklch(0.42 0.020 195);margin:0;">Schedule</p></div><div style="border:1px solid oklch(0.86 0.022 195);border-radius:5px;background:oklch(0.995 0.002 195);padding:var(--s2) 9px;"><p style="font-size:12px;color:oklch(0.42 0.020 195);margin:0;">Home and public</p></div></div><p style="font-size:12px;line-height:1.45;color:var(--teal);margin:auto 0 0;">Real-time status, mirroring what is happening at the car.</p></div><p class="t3" style="margin-top:18px;">The complexity of vehicle generations, home charger integrations and software constraints did not go away. The team moved it behind the experience rather than into the customer&rsquo;s hands.</p></div></div><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--rule);"><p style="font-size:16.5px;line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">My call was that EV had to be solved as one experience rather than patched feature by feature, and that it did not ship until task performance hit target.</p><p class="t3" style="max-width:300px;text-align:right;">Everything drawn here is the team&rsquo;s work.</p></div></div></div>
+</x-dc>
+</body>
+</html>

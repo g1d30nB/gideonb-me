@@ -1,0 +1,86 @@
+<div style="width:1200px; box-sizing:border-box; padding:44px 40px 40px; background:#f8f6f2; border-left:3px solid #3f7d7a;">
+
+  <div style="display:flex; align-items:baseline; justify-content:space-between; gap:32px; margin-bottom:6px;">
+    <p class="lbl" style="color:#3f7d7a;">Case two · what the team built</p>
+    <p class="lbl" style="color:#b5a08a;">Not my work. Framed by me, drawn by them.</p>
+  </div>
+  <p class="disp" style="font-size:34px; margin-bottom:10px;">One EV domain in place of four</p>
+  <p class="body" style="max-width:780px; color:#6b6057; font-size:15px; margin-bottom:40px;">For an EV driver the questions are constant: am I charged, can I leave, when will it be ready. The answers were scattered across the app.</p>
+
+  <div style="display:grid; grid-template-columns:600px 1fr; gap:56px; align-items:start;">
+
+    <div>
+      <p class="lbl" style="color:#8a7d6e; padding-bottom:12px; border-bottom:1px solid #d8cec0; margin-bottom:20px;">Before &nbsp;·&nbsp; four places, one job</p>
+
+      <svg viewBox="0 0 600 70" width="600" height="70" style="display:block; margin-bottom:-1px;" aria-label="A single task crossing four separate locations">
+        <path d="M66,66 L66,10 L378,10 L378,66" fill="none" stroke="#b5a08a" stroke-width="1.5"></path>
+        <path d="M222,66 L222,32 L534,32 L534,66" fill="none" stroke="#b5a08a" stroke-width="1.5" stroke-dasharray="4 4"></path>
+        <circle cx="66" cy="66" r="3.5" fill="#8a7d6e"></circle>
+        <circle cx="222" cy="66" r="3.5" fill="#8a7d6e"></circle>
+        <circle cx="378" cy="66" r="3.5" fill="#8a7d6e"></circle>
+        <circle cx="534" cy="66" r="3.5" fill="#8a7d6e"></circle>
+      </svg>
+
+      <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px;">
+        <div style="border:1px solid #d8cec0; border-radius:9px; background:#fdfcfa; padding:12px 11px; height:168px; display:flex; flex-direction:column; gap:7px;">
+          <div style="height:7px; border-radius:4px; background:#e8e2da;"></div>
+          <div style="height:26px; border-radius:5px; background:#f0e4d2; border:1px solid #ddc9a8;"></div>
+          <div style="height:7px; border-radius:4px; background:#efe9e1; width:80%;"></div>
+          <div style="height:7px; border-radius:4px; background:#efe9e1; width:60%;"></div>
+          <div style="height:7px; border-radius:4px; background:#efe9e1; width:70%;"></div>
+          <p style="font-size:12px; line-height:1.45; color:#8a7d6e; margin:auto 0 0;">Home screen entry point, easy to miss</p>
+        </div>
+        <div style="border:1px solid #d8cec0; border-radius:9px; background:#fdfcfa; padding:12px 11px; height:168px; display:flex; flex-direction:column; gap:7px;">
+          <div style="height:7px; border-radius:4px; background:#e8e2da;"></div>
+          <div style="height:26px; border-radius:5px; background:#f0e4d2; border:1px solid #ddc9a8;"></div>
+          <div style="height:7px; border-radius:4px; background:#efe9e1; width:70%;"></div>
+          <div style="height:7px; border-radius:4px; background:#efe9e1; width:85%;"></div>
+          <p style="font-size:12px; line-height:1.45; color:#8a7d6e; margin:auto 0 0;">Battery status, tied to the default vehicle</p>
+        </div>
+        <div style="border:1px solid #d8cec0; border-radius:9px; background:#fdfcfa; padding:12px 11px; height:168px; display:flex; flex-direction:column; gap:7px;">
+          <div style="height:7px; border-radius:4px; background:#e8e2da;"></div>
+          <div style="height:26px; border-radius:5px; background:#f0e4d2; border:1px solid #ddc9a8;"></div>
+          <div style="height:7px; border-radius:4px; background:#efe9e1; width:90%;"></div>
+          <div style="height:7px; border-radius:4px; background:#efe9e1; width:55%;"></div>
+          <p style="font-size:12px; line-height:1.45; color:#8a7d6e; margin:auto 0 0;">Home charging, stored somewhere else again</p>
+        </div>
+        <div style="border:1px solid #d8cec0; border-radius:9px; background:#fdfcfa; padding:12px 11px; height:168px; display:flex; flex-direction:column; gap:7px;">
+          <div style="height:7px; border-radius:4px; background:#e8e2da;"></div>
+          <div style="height:26px; border-radius:5px; background:#f0e4d2; border:1px solid #ddc9a8;"></div>
+          <div style="height:7px; border-radius:4px; background:#efe9e1; width:75%;"></div>
+          <div style="height:7px; border-radius:4px; background:#efe9e1; width:65%;"></div>
+          <p style="font-size:12px; line-height:1.45; color:#8a7d6e; margin:auto 0 0;">Charging schedule, split across three settings</p>
+        </div>
+      </div>
+      <p style="font-size:13px; line-height:1.6; color:#8a7d6e; margin:18px 0 0;">Grown feature by feature and vehicle generation by vehicle generation. Public and home charging history lived in different places. Charger-only customers saw no range at all.</p>
+    </div>
+
+    <div>
+      <p class="lbl" style="color:#3f7d7a; padding-bottom:12px; border-bottom:1px solid #bcd2d0; margin-bottom:20px;">After &nbsp;·&nbsp; one place, at the point of use</p>
+
+      <svg viewBox="0 0 460 70" width="460" height="70" style="display:block; margin-bottom:-1px;" aria-label="One short path into a single domain">
+        <path d="M230,10 L230,66" fill="none" stroke="#3f7d7a" stroke-width="1.5"></path>
+        <circle cx="230" cy="66" r="4.5" fill="#3f7d7a"></circle>
+      </svg>
+
+      <div style="border:1.5px solid #3f7d7a; border-radius:9px; background:#f2f7f6; padding:16px 16px 14px; height:168px; box-sizing:border-box; display:flex; flex-direction:column; gap:9px;">
+        <p style="font-size:13px; font-weight:600; color:#1e1a16; margin:0 0 2px;">EV domain</p>
+        <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px;">
+          <div style="border:1px solid #bcd2d0; border-radius:5px; background:#ffffff; padding:8px 9px;"><p style="font-size:12px; color:#48504f; margin:0;">Charging status</p></div>
+          <div style="border:1px solid #bcd2d0; border-radius:5px; background:#ffffff; padding:8px 9px;"><p style="font-size:12px; color:#48504f; margin:0;">Live session</p></div>
+          <div style="border:1px solid #bcd2d0; border-radius:5px; background:#ffffff; padding:8px 9px;"><p style="font-size:12px; color:#48504f; margin:0;">Schedule</p></div>
+          <div style="border:1px solid #bcd2d0; border-radius:5px; background:#ffffff; padding:8px 9px;"><p style="font-size:12px; color:#48504f; margin:0;">Home and public</p></div>
+        </div>
+        <p style="font-size:12px; line-height:1.45; color:#3f7d7a; margin:auto 0 0;">Real-time status, mirroring what is happening at the car.</p>
+      </div>
+      <p style="font-size:13px; line-height:1.6; color:#8a7d6e; margin:18px 0 0;">The complexity of vehicle generations, home charger integrations and software constraints did not go away. The team moved it behind the experience rather than into the customer&rsquo;s hands.</p>
+    </div>
+
+  </div>
+
+  <div style="margin-top:34px; padding-top:20px; border-top:1px solid #e8e2da; display:flex; gap:14px; align-items:flex-start;">
+    <div style="width:9px; height:9px; border:1.5px solid #3f7d7a; border-radius:50%; flex-shrink:0; margin-top:6px;"></div>
+    <p style="font-size:14px; line-height:1.65; color:#3f7d7a; margin:0; max-width:900px;">The team&rsquo;s work. My call was that EV had to be solved as one experience rather than patched feature by feature, and that it did not ship until task performance hit target.</p>
+  </div>
+
+</div>

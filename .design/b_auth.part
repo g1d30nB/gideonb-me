@@ -1,0 +1,82 @@
+<div style="width:1200px; box-sizing:border-box; padding:48px 40px 44px; background:#f8f6f2;">
+
+  <p class="lbl" style="color:#b07a3c; margin-bottom:8px;">The device</p>
+  <p class="disp" style="font-size:38px; margin-bottom:12px;">Carrying authorship without a paragraph of explanation</p>
+  <p class="body" style="max-width:820px; color:#6b6057; font-size:15px; margin-bottom:44px;">Two objects do the work. A gauge at the top of the page fixes each case&rsquo;s distance from the drawing. A marker on every block says who made the call. Neither relies on colour alone: the marker forms differ, and every block is labelled in words as well.</p>
+
+  <p class="lbl" style="color:#8a7d6e; padding-bottom:12px; border-bottom:1px solid #d8cec0; margin-bottom:0;">One &nbsp;·&nbsp; the distance gauge</p>
+
+  <svg viewBox="0 0 1120 66" width="1120" height="66" style="display:block; margin-top:26px;" aria-label="Three cases placed by distance from the drawing">
+    <line x1="0" y1="30" x2="1120" y2="30" stroke="#d8cec0" stroke-width="1.5"></line>
+    <line x1="173" y1="30" x2="173" y2="66" stroke="#c9bfb2" stroke-width="1"></line>
+    <line x1="560" y1="30" x2="560" y2="66" stroke="#c9bfb2" stroke-width="1"></line>
+    <line x1="947" y1="30" x2="947" y2="66" stroke="#c9bfb2" stroke-width="1"></line>
+    <circle cx="173" cy="30" r="7" fill="#b07a3c"></circle>
+    <circle cx="560" cy="30" r="7" fill="none" stroke="#3f7d7a" stroke-width="2.5"></circle>
+    <circle cx="947" cy="30" r="7" fill="#1e1a16"></circle>
+    <text x="0" y="16" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="1.4" fill="#8a7d6e">THE BUSINESS BEHIND THE WORK</text>
+    <text x="1120" y="16" text-anchor="end" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="1.4" fill="#8a7d6e">THE DRAWING ITSELF</text>
+  </svg>
+
+  <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px; margin-bottom:52px;">
+    <div>
+      <p class="lbl" style="color:#b07a3c; margin-bottom:8px;">Case one</p>
+      <p class="disp" style="font-size:24px; margin-bottom:8px;">The organisation</p>
+      <p style="font-size:13px; line-height:1.65; color:#8a7d6e; margin:0 0 10px;">Toyota Connected Europe &nbsp;·&nbsp; 2018 to 2026</p>
+      <p style="font-size:14px; line-height:1.65; color:#6b6057; margin:0;">Everything here is mine. Built from nothing, run for seven years, sold engagement by engagement.</p>
+    </div>
+    <div>
+      <p class="lbl" style="color:#3f7d7a; margin-bottom:8px;">Case two</p>
+      <p class="disp" style="font-size:24px; margin-bottom:8px;">What the organisation shipped</p>
+      <p style="font-size:13px; line-height:1.65; color:#8a7d6e; margin:0 0 10px;">MyToyota and Lexus Link+ &nbsp;·&nbsp; 2023 to 2026</p>
+      <p style="font-size:14px; line-height:1.65; color:#6b6057; margin:0;">I won it, staffed it, framed it and held the bar. Other people designed it.</p>
+    </div>
+    <div>
+      <p class="lbl" style="color:#1e1a16; margin-bottom:8px;">Case three</p>
+      <p class="disp" style="font-size:24px; margin-bottom:8px;">The craft</p>
+      <p style="font-size:13px; line-height:1.65; color:#8a7d6e; margin:0 0 10px;">PrepCall &nbsp;·&nbsp; 2026</p>
+      <p style="font-size:14px; line-height:1.65; color:#6b6057; margin:0;">Built solo. There was nobody else.</p>
+    </div>
+  </div>
+
+  <p class="lbl" style="color:#8a7d6e; padding-bottom:12px; border-bottom:1px solid #d8cec0; margin-bottom:24px;">Two &nbsp;·&nbsp; the block marker</p>
+
+  <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px; margin-bottom:52px;">
+    <div style="border-left:3px solid #b07a3c; padding:4px 0 4px 22px;">
+      <div style="display:flex; align-items:center; gap:11px; margin-bottom:10px;">
+        <div style="width:11px; height:11px; border-radius:50%; background:#b07a3c;"></div>
+        <p class="lbl" style="color:#b07a3c;">My call</p>
+      </div>
+      <p style="font-size:15px; line-height:1.7; color:#5c5347; margin:0;">Filled disc, amber spine. The decision was mine and the accountability sits with me. Used across the whole of case one, across case three, and on the framing, funding and gatekeeping blocks in case two.</p>
+    </div>
+    <div style="border-left:3px solid #3f7d7a; padding:4px 0 4px 22px;">
+      <div style="display:flex; align-items:center; gap:11px; margin-bottom:10px;">
+        <div style="width:11px; height:11px; border-radius:50%; border:2px solid #3f7d7a; box-sizing:border-box;"></div>
+        <p class="lbl" style="color:#3f7d7a;">The team&rsquo;s work</p>
+      </div>
+      <p style="font-size:15px; line-height:1.7; color:#5c5347; margin:0;">Hollow ring, teal spine. Somebody else made these calls. Used on the whole of case two&rsquo;s craft section, and on the blueprints and service patterns inside case one.</p>
+    </div>
+  </div>
+
+  <p class="lbl" style="color:#8a7d6e; padding-bottom:12px; border-bottom:1px solid #d8cec0; margin-bottom:24px;">Three &nbsp;·&nbsp; how it reads in the page</p>
+
+  <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px;">
+    <div style="border:1px solid #e8e2da; border-left:3px solid #b07a3c; border-radius:3px; background:#fdfcfa; padding:22px 24px;">
+      <div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;">
+        <div style="width:11px; height:11px; border-radius:50%; background:#b07a3c;"></div>
+        <p class="lbl" style="color:#b07a3c;">My call &nbsp;·&nbsp; case two</p>
+      </div>
+      <p style="font-size:15px; line-height:1.75; color:#5c5347; margin:0;">The work did not ship until task performance hit target, and getting there took four rounds of moderated usability testing. Backing that, against a delivery schedule, is most of what a design leader is actually for.</p>
+    </div>
+    <div style="border:1px solid #e8e2da; border-left:3px solid #3f7d7a; border-radius:3px; background:#fdfcfa; padding:22px 24px;">
+      <div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;">
+        <div style="width:11px; height:11px; border-radius:50%; border:2px solid #3f7d7a; box-sizing:border-box;"></div>
+        <p class="lbl" style="color:#3f7d7a;">What the team built &nbsp;·&nbsp; case two</p>
+      </div>
+      <p style="font-size:15px; line-height:1.75; color:#5c5347; margin:0;">The team built one EV domain in place of four scattered locations: a single place for charging status and scheduling, real-time updates, and a live session view mirroring what was happening at the car.</p>
+    </div>
+  </div>
+
+  <p class="cap" style="margin-top:34px; padding-top:20px; border-top:1px solid #e8e2da; max-width:820px;">The block label is set from the case&rsquo;s <span style="color:#1e1a16;">-meta</span> block in work.md, so a new named section needs no template change: case one uses &ldquo;How the capability grew&rdquo;, case two uses &ldquo;What the team built&rdquo;.</p>
+
+</div>
