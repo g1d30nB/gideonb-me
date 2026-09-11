@@ -29,7 +29,7 @@ def pairing(emotrix_src, prepcall_src, prepcall_pending=True):
     pc_prov = "PrepCall, live product" if not prepcall_pending else "PrepCall, illustrative report (real frame to follow)"
     left = plate(emotrix_src, "The reading arrives. Five constructs against the participant&rsquo;s own baseline, two interpreted lines above them, hatched where no reading is asserted.",
                  "Emotrix, real interface, synthetic session", dark=True)
-    right = plate(prepcall_src, "What the product does with it. The listening half of a coaching report: what was said, then how it sounded, then one thing to try.",
+    right = plate(prepcall_src, "What the product does with it. The listening half of a coaching report. What was said, how it sounded, and one thing to try.",
                   pc_prov, dark=True)
     return (f'<div style="display:grid;grid-template-columns:7fr 5fr;gap:var(--s7);align-items:start;">{left}{right}</div>'
             f'<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--night-rule);">'
@@ -54,7 +54,7 @@ def ownership():
                 f'<p class="lbl" style="color:{colour};">{label}</p></div>{rows}</div>')
     body=(f'<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s8);">'
           f'{col("I owned",A,"fill",OWNED_ME)}{col("The leads owned",T,"ring",OWNED_LEADS)}</div>')
-    return figure(A,"Case one &middot; leading at a distance","fill","Two columns, and the line between them was the job",
+    return figure(A,"Case one &middot; leading at a distance","fill","What I owned, and what the leads owned",
       "Stepping out of the daily craft was a choice. The split below is what it meant in practice.",
       body,
       takeaway("When executives wanted to understand a specific change, I brought the designer who had made it.",
@@ -89,12 +89,12 @@ def people():
     body=(f'<div style="display:grid;grid-template-columns:1.25fr 1fr;gap:var(--s8);align-items:start;">'
           f'<div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:var(--s4);">Two pathways, converging at Lead</p>{path}'
           f'<p class="lbl" style="margin:var(--s5) 0 var(--s2);color:var(--faint);">Written expectations at every level</p>{expect}</div>'
-          f'<div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:var(--s4);">Same headcount, a different team</p>'
+          f'<div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:var(--s4);">Contract to permanent, at the same headcount</p>'
           f'{bar("Roughly, when I started the shift",50,"oklch(0.55 0.075 62)")}{bar("At the end",67,"oklch(0.48 0.085 62)")}'
           f'<p class="lbl" style="margin:var(--s5) 0 var(--s3);color:var(--faint);">The listening cycle, every year</p>'
           f'<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s4);">{loop}</div></div></div>')
-    return figure(A,"Case one &middot; growing people","fill","Every one of the 40+ hired by me, and most of them stayed",
-      "The half of the job that takes years to learn. Progression before scale, listening that closed the loop, and a workforce shaped for the long term.",
+    return figure(A,"Case one &middot; growing people","fill","Hiring, progression and retention",
+      "Progression before scale, a listening cycle that closed the loop, and a shift from contract to permanent at the same headcount.",
       body,
       takeaway("The highest permanent retention rate of any department in the company, and a service design capability still running without me.",
                "Level codes and the framework document itself stay internal."))
@@ -153,10 +153,10 @@ def people():
           f'<div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:var(--s4);">Two pathways, one framework</p>{ladder()}'
           f'<p class="lbl" style="margin:var(--s4) 0 var(--s2);color:var(--faint);">Written expectations at every level</p>{expect}</div>'
           f'<div><p class="lbl" style="padding-bottom:var(--s3);border-bottom:1px solid var(--rule-2);margin-bottom:var(--s4);">Listening that closed the loop</p>{listening()}'
-          f'<p class="lbl" style="margin:var(--s6) 0 var(--s3);color:var(--faint);">Same headcount, a different team</p>'
+          f'<p class="lbl" style="margin:var(--s6) 0 var(--s3);color:var(--faint);">Contract to permanent, at the same headcount</p>'
           f'{bar("Roughly half permanent, when the shift began",50,"oklch(0.55 0.075 62)")}{bar("Two thirds permanent, at the end",67,"oklch(0.48 0.085 62)")}</div></div>')
-    return figure(A,"Case one &middot; growing people","fill","Every one of the 40+ hired by me, and most of them stayed",
-      "The half of the job that takes years to learn. Progression before scale, listening that closed the loop, and a workforce shaped for the long term.",
+    return figure(A,"Case one &middot; growing people","fill","Hiring, progression and retention",
+      "Progression before scale, a listening cycle that closed the loop, and a shift from contract to permanent at the same headcount.",
       body,
       takeaway("The highest permanent retention rate of any department in the company, and a service design capability still running without me.",
                "Redrawn from the framework. Level codes and the document itself stay internal."))

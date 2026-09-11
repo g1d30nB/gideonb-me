@@ -87,7 +87,7 @@ S["DeskTwoA"]=[marker("Continues from case one"), opener(c2,TD,"ring"),
   F(f'<div style="display:grid;grid-template-columns:180px 1fr;gap:44px;align-items:start;"><div><div style="display:flex;align-items:center;gap:10px;">{D.dot(T,"ring",10)}<p class="lbl" style="color:{T};">Authorship</p></div></div>'
     f'<div style="max-width:840px;border-top:2px solid {T};border-bottom:1px solid var(--rule);padding:var(--s6) 0;"><p class="d2" style="margin-bottom:var(--s5);">I did not design this app.</p>'
     f'<p style="font-size:18px;line-height:1.8;color:var(--body);max-width:700px;margin:0;">{role2[0].split("I did not design this app. ",1)[-1]}</p></div></div>', pt=60),
-  F(rail("What I did instead",A,"fill",P(role2[1:])), pt=52), F(rail("How",A,"fill",defgrid(c2["approach"])), pt=60, pb=88)]
+  F(rail("What I did",A,"fill",P(role2[1:])), pt=52), F(rail("How",A,"fill",defgrid(c2["approach"])), pt=60, pb=88)]
 PH=[("mytoyota-01-home.jpg","MyToyota, home","Public App Store listing"),("lexus-01-dashboard.jpg","Lexus Link+, home","Public App Store listing"),
     ("mytoyota-03-car-status.jpg","MyToyota, vehicle status","Public App Store listing"),("lexus-03-vehicle-status.jpg","Lexus Link+, vehicle status","Public App Store listing")]
 phones="".join(f'<div style="margin-top:{[0,40,16,56][i]}px;">{C.plate(s,w,p,aspect="9 / 16",fit="cover",pos="top")}</div>' for i,(s,w,p) in enumerate(PH))

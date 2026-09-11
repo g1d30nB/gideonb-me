@@ -31,7 +31,7 @@ def figure(accent, kick, kind, title, sub, body, tk, right="", ground=None, pad=
 # ---------------------------------------------------------------- capability arc
 ARC_STEPS=[
  ("First","UX research","Nothing could be argued without evidence, so this came first.",
-  "the right to frame the problem, not just answer it.",0,"var(--rule-2)",2),
+  "the right to frame the problem.",0,"var(--rule-2)",2),
  ("Second","UX and interface design","The screens the business already knew it wanted.",
   "credibility on delivery, and a place beside engineering.",56,"var(--rule-2)",2),
  ("Third","Product design","The team moved closer to the core business.",
@@ -118,7 +118,7 @@ def gap():
             f'<p class="lbl" style="color:var(--night-muted);text-align:right;">No Toyota blueprint is shown. This is the shape of the problem.</p></div>'
             f'<p class="d3" style="color:var(--night-ink);margin-bottom:var(--s3);max-width:1000px;">A disjointed experience is a faithful picture of a disjointed business</p>'
             f'<p style="font-size:15.5px;line-height:1.75;color:var(--night-muted);max-width:800px;margin:0 0 var(--s7);">'
-            f'Once we were close enough to the Connected Technologies business to see how it operated, the gap was structural, not visual.</p>'
+            f'Once we were close enough to the Connected Technologies business to see how it operated, the gap was structural.</p>'
             f'<p class="lbl" style="color:var(--night-muted);margin-bottom:var(--s4);">Before &nbsp;&middot;&nbsp; one slice, behaving as though it owned all of them</p>'
             f'{before}{joinnote}'
             f'<p class="lbl" style="color:{TD};margin-bottom:var(--s4);">After &nbsp;&middot;&nbsp; one journey, owned together</p>'
@@ -166,7 +166,7 @@ def opmodel():
           f'<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s5);">{models}</div>'
           f'<div style="margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--rule);'
           f'display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6);">{foot}</div>')
-    return figure(A,"Case one &middot; how it was run","fill","An internal consultancy, not a service desk",
+    return figure(A,"Case one &middot; how it was run","fill","Run as an internal consultancy",
       "Six disciplines under one roof, four ways to buy them, and a management office at the centre of embedded teams. A service catalogue, explicit positioning, and a P&amp;L.",
       body, "", right="Toyota Experience Design")
 
@@ -208,11 +208,11 @@ def ev():
           f'<p style="font-size:12px;line-height:1.45;color:{T};margin:auto 0 0;">Real-time status, mirroring what is happening at the car.</p></div>'
           f'<p class="t3" style="margin-top:18px;">The complexity of vehicle generations, home charger integrations and software constraints did not go away. The team moved it behind the experience rather than into the customer&rsquo;s hands.</p></div></div>')
     return figure(T,"Case two &middot; what the team built","ring","One EV domain in place of four",
-      "For an EV driver the questions are constant: am I charged, can I leave, when will it be ready. The answers were scattered across the app.",
+      "For an EV driver the questions are constant. Am I charged, can I leave, when will it be ready. The answers were scattered across the app.",
       body,
       takeaway("My call was that EV had to be solved as one experience rather than patched feature by feature, and that it did not ship until task performance hit target.",
                "Everything drawn here is the team&rsquo;s work.", colour=INK),
-      right="Framed by me, drawn by them")
+      right="The team&rsquo;s work")
 
 # ---------------------------------------------------------------- SUS rounds
 def sus(w=560):
@@ -239,8 +239,8 @@ def sus(w=560):
     return figure(T,"Case two &middot; what the team built","ring","Four rounds, against the same task set",
       "System Usability Scale, measured round by round on a fixed set of EV tasks.",
       body,
-      takeaway("Mine: funding four rounds against a delivery schedule, and holding the ship gate until performance hit target.",
-               "Three reported SUS scores. The fourth round was run to task-completion target rather than a further reading."))
+      takeaway("My part was funding four rounds against a delivery schedule and holding the ship gate until performance hit target.",
+               "Three reported SUS scores. The fourth round was run to task-completion target."))
 
 # ---------------------------------------------------------------- rating turnaround
 def rating():
@@ -269,8 +269,8 @@ def rating():
           +bar("Before",67,19,14,False)+bar("After",4,16,80,True)
           +f'<div style="display:flex;gap:20px;align-items:center;padding-top:var(--s4);border-top:1px solid var(--rule);">{key}'
           f'<p style="font-size:13px;font-weight:600;color:var(--ink);margin:0 0 0 auto;">One star: 2 in 3 &rarr; 1 in 25</p></div>')
-    return figure(A,"Case two &middot; the public proof","fill","What customers actually left behind",
-      "The rating is the headline. The composition underneath it is the story.", body,
+    return figure(A,"Case two &middot; the public proof","fill","The public rating data",
+      "The rating, and the share of reviews behind it.", body,
       takeaway("Five-star reviews grew nearly six-fold, and one-star reviews fell from two thirds of all reviews to four per cent.",
                "Public App Store and Play Store data. Lexus Link+; MyToyota shows the same pattern."))
 
@@ -297,7 +297,7 @@ def ctx():
     return figure(A,"Case three &middot; the failure that taught me the most","fill","Nothing was broken. The prompt had grown six times.",
       "Quality started degrading around the fourth session per user. Context had simply accumulated until the model was drowning in its own history.",
       body,
-      takeaway("The fix was architectural, not cosmetic: hard character budgets, enforced regardless of how many sessions a user has had.",
+      takeaway("The fix was architectural. A bounded prompt with hard character budgets, enforced however many sessions a user has had.",
                "Sessions two and three are shown as accumulation rather than measured points. The two figures are the ones I recorded."))
 
 # ---------------------------------------------------------------- complaint timeline (dark)

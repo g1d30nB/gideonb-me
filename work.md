@@ -65,7 +65,7 @@ Then our largest programme closed overnight, taking revenue and team structure w
 ::: case1-leading
 Stepping out of the daily craft to lead at scale was a choice, and I made it early. I owned the standard, the strategic context and the operating model. I owned the quality bar and held it at review points. I owned the investment, the protection of the team's time, and the cover for the hard calls. The leads owned the daily design decisions, the customer-facing detail, the craft end to end, and their own development inside a written progression framework.
 
-When executives wanted to understand a specific change, I brought the designer who had made it. Their accuracy, their ownership, their exposure to leadership. A function where the leader presents everybody's work has a single point of failure, and it is the leader.
+When executives wanted to understand a specific change, I brought the designer who had made it. Their accuracy, their ownership, their exposure to leadership.
 :::
 
 ::: case1-people
