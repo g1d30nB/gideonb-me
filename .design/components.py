@@ -114,7 +114,7 @@ def ladder():
     for x,d in zip(xs,disc):
         s.append(f'<path d="M250,250 C250,215 {x},215 {x},190 L{x},120" fill="none" stroke="#9a6a34" stroke-width="1.6"></path>')
         s.append(f'<circle cx="{x}" cy="190" r="3.5" fill="#9a6a34"></circle><circle cx="{x}" cy="120" r="3.5" fill="#9a6a34"></circle>')
-        s.append(f'<text x="{x}" y="108" text-anchor="start" transform="rotate(-90 {x} 108)" {F} font-size="10" letter-spacing="0.6" fill="#8a7d6e">{d.upper()}</text>')
+        s.append(f'<text x="{x}" y="108" text-anchor="start" transform="rotate(-90 {x} 108)" {F} font-size="9.5" letter-spacing="0.6" fill="#8a7d6e">{d.upper()}</text>')
     s.append(f'<text x="138" y="124" text-anchor="end" {F} font-size="12.5" fill="#9a6a34">Principal designer</text>')
     s.append(f'<text x="138" y="194" text-anchor="end" {F} font-size="12.5" fill="#9a6a34">Lead designer, practice</text>')
     # people track
@@ -123,8 +123,8 @@ def ladder():
         s.append(f'<circle cx="440" cy="{y}" r="4" fill="#3f7d7a"></circle><text x="456" y="{y+4}" {F} font-size="12.5" fill="#3f7d7a">{l}</text>')
     # the crossover between tracks at Lead, dashed
     s.append('<line x1="350" y1="190" x2="440" y2="190" stroke="#3f7d7a" stroke-width="1" stroke-dasharray="3 4"></line>')
-    s.append(f'<text x="170" y="34" {F} font-size="11" font-weight="700" letter-spacing="1.3" fill="#9a6a34">PRACTITIONER LEADERSHIP</text>')
-    s.append(f'<text x="440" y="34" text-anchor="middle" {F} font-size="11" font-weight="700" letter-spacing="1.3" fill="#3f7d7a">PEOPLE LEADERSHIP</text>')
+    s.append(f'<text x="150" y="14" {F} font-size="11" font-weight="700" letter-spacing="1.3" fill="#9a6a34">PRACTITIONER LEADERSHIP</text>')
+    s.append(f'<text x="440" y="14" text-anchor="middle" {F} font-size="11" font-weight="700" letter-spacing="1.3" fill="#3f7d7a">PEOPLE LEADERSHIP</text>')
     s.append('</svg>')
     return "".join(s)
 

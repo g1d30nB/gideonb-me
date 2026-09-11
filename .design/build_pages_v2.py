@@ -67,10 +67,10 @@ S["DeskOneA"]=[marker("Continues from the opening"), opener(c1,AD,"fill"),
   F(rail(c1["info"]["narrative-label"],A,"fill",P(narr[:2]),sub="Narrative"), pt=64), F(D.arc(), pt=56),
   F(rail("The turn",A,"fill",P(narr[2:3])+quote("A disjointed end-to-end experience is usually a faithful reflection of a disjointed business, and this one was faithful.")), pt=64, pb=88)]
 S["DeskOneB"]=[marker("Case one continues"), BAND(D.gap()),
-  F(rail("What it left behind",A,"fill",P(narr[3:4])+
+  F(rail("What it left behind",A,"fill",P([narr[3].split(" What they went on to build",1)[0]])+
     f'<div style="margin:var(--s6) 0;background:var(--paper-team);border:1px solid oklch(0.87 0.020 195);padding:var(--s5);">'
     f'<div style="display:flex;align-items:center;gap:11px;margin-bottom:var(--s3);">{D.dot(T,"ring",11)}<p class="lbl" style="color:{T};">The team&rsquo;s work</p></div>'
-    f'<p style="font-size:17px;line-height:1.8;color:oklch(0.36 0.022 195);margin:0;">{narr[3].split("What they went on to build",1)[0] and "What they went on to build, blueprints, reusable service patterns and playbooks, mattered less than what it did to the conversation. Business units that had never designed anything together started working on the same journey."}</p></div>'+
+    f'<p style="font-size:17px;line-height:1.8;color:oklch(0.36 0.022 195);margin:0;">What they went on to build{narr[3].split(" What they went on to build",1)[1]}</p></div>'+
     P(narr[4:6])), pt=76),
   F(rail(c1["info"]["leading-label"],A,"fill",P(W.paras(W.SEC["case1-leading"]))), pt=88), F(C.ownership(), pt=48),
   F(rail(c1["info"]["people-label"],A,"fill",P(W.paras(W.SEC["case1-people"]))), pt=88), F(C.people(), pt=48, pb=88)]
@@ -87,10 +87,7 @@ S["DeskTwoA"]=[marker("Continues from case one"), opener(c2,TD,"ring"),
   F(f'<div style="display:grid;grid-template-columns:180px 1fr;gap:44px;align-items:start;"><div><div style="display:flex;align-items:center;gap:10px;">{D.dot(T,"ring",10)}<p class="lbl" style="color:{T};">Authorship</p></div></div>'
     f'<div style="max-width:840px;border-top:2px solid {T};border-bottom:1px solid var(--rule);padding:var(--s6) 0;"><p class="d2" style="margin-bottom:var(--s5);">I did not design this app.</p>'
     f'<p style="font-size:18px;line-height:1.8;color:var(--body);max-width:700px;margin:0;">{role2[0].split("I did not design this app. ",1)[-1]}</p></div></div>', pt=60),
-  F(rail("What I did instead",A,"fill",P(role2[1:])), pt=52), F(rail("How",A,"fill",defgrid(c2["approach"])), pt=60),
-  F(D.figure(A,"Case two &middot; what the research bought","fill","Before a single screen was redrawn",
-    "UX research was not part of Toyota&rsquo;s playbook. I pitched its value and funded a dedicated research team inside the app organisation. This is what that bought.",
-    f'<div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--s5);">{resh}</div>',""), pt=60, pb=88)]
+  F(rail("What I did instead",A,"fill",P(role2[1:])), pt=52), F(rail("How",A,"fill",defgrid(c2["approach"])), pt=60, pb=88)]
 PH=[("mytoyota-01-home.jpg","MyToyota, home","Public App Store listing"),("lexus-01-dashboard.jpg","Lexus Link+, home","Public App Store listing"),
     ("mytoyota-03-car-status.jpg","MyToyota, vehicle status","Public App Store listing"),("lexus-03-vehicle-status.jpg","Lexus Link+, vehicle status","Public App Store listing")]
 phones="".join(f'<div style="margin-top:{[0,40,16,56][i]}px;">{C.plate(s,w,p,aspect="9 / 16",fit="cover",pos="top")}</div>' for i,(s,w,p) in enumerate(PH))
