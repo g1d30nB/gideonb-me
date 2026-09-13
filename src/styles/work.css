@@ -13,7 +13,7 @@
 .wk p{margin:0}
 .wk a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule-2);text-underline-offset:3px}
 .wk a:hover{text-decoration-color:var(--ink)}
-.wk .d1{font-size:clamp(44px,6.2vw,84px);line-height:1.03;font-weight:800;letter-spacing:-0.035em;color:var(--ink)}
+.wk .d1{font-size:clamp(42px,6vw,58px);line-height:1.1;font-weight:700;letter-spacing:-0.02em;color:var(--ink)}
 .wk .d2{font-size:clamp(32px,3.6vw,48px);line-height:1.1;font-weight:700;letter-spacing:-0.028em;color:var(--ink)}
 .wk .d3{font-size:clamp(24px,2.4vw,32px);line-height:1.2;font-weight:700;letter-spacing:-0.022em;color:var(--ink)}
 .wk .d4{font-size:clamp(19px,1.55vw,22px);line-height:1.35;font-weight:600;letter-spacing:-0.012em;color:var(--ink)}
