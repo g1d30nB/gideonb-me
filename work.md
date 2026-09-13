@@ -1,13 +1,13 @@
 ---
 label: Selected Work
-title: Three cases
+title: Four cases
 og: /images/headshot-frames/all-four-faces-gemini-face02.png
 ---
 
 ::: intro
-Three cases at three distances from the work. In the first, the organisation is mine and everything in it was my decision. In the second, I won the work and built the team, and other people did the designing. In the third there was nobody else.
+Four cases, at three distances from the work. In the first, the organisation is mine and everything in it was my decision. In the second, the team I built shipped it, and the designers on it did the designing. In the third and fourth I designed the products myself. Two products a decade ago, one at scale and one from nothing, and two AI products this year with nobody else in the room.
 
-Design leadership at this level is mostly the first two. The third is how I keep honest about what the first two are for.
+Design leadership at this level is mostly the first two. The last two keep my judgement current.
 
 Toyota work is shown at the level it can be shown publicly. Internal commercial figures and unreleased interface work are held back. Happy to go deeper in person.
 :::
@@ -20,62 +20,57 @@ dates: 2018 to 2026
 narrative-label: How the capability grew
 leading-label: Leading at a distance
 people-label: Growing people
-role: Head of Design, Toyota Experience Design. Built from nothing, run for seven years with full P&L.
+role: Head of UX and Product Design, Toyota Experience Design (TXD). Built from nothing, run for seven years with full P&L.
 :::
 
 ::: case1-narrative
-Service design did not exist at Toyota. Not in Europe, and not anywhere else in the organisation I could find.
+Service design did not exist anywhere in Toyota that I could find.
 
-It was not the first thing I built. UX research came first, because nothing could be argued without evidence. Then UX and interface design, then product design as the team moved closer to the core business. Each capability earned the next: we were handed a wider brief because the last one had worked.
+When I arrived, the app belonged to the marketing and growth side of the business, which had handed the whole thing to an agency. No UX research had been done. My team's first job was UI design in support of Connected Technologies, the product division TXD served as an internal client.
 
-Service design arrived when the question changed. Once we were close enough to the Connected Technologies business to see how it actually operated, it became clear that it owned one slice of the customer's experience and behaved as though it owned all of it. The slices either side belonged to other business units and nobody was accountable for the joins. A disjointed end-to-end experience is usually a faithful reflection of a disjointed business, and this one was faithful.
+Service design came out of that ownership. Once Connected Technologies owned the European companion app, the points either side of it belonged to other divisions and nobody was accountable for the joins. Working with those divisions is what made service design possible to introduce.
 
-So I made the case for a capability nobody had asked for, and hired service designers into a company that had never employed one. What they went on to build, blueprints, reusable service patterns and playbooks, mattered less than what it did to the conversation. Business units that had never designed anything together started working on the same journey.
+So I made the case for service design, and hired service designers into a company that had never employed one.
 
-They are still doing it, which is the part I am most confident about, because it outlasted me.
+What they went on to build, blueprints, reusable service patterns and playbooks, mattered less than what it did to the conversation. Business units that had never designed anything together started working on the same journey.
 
-Colleagues running design elsewhere in Toyota North America asked how I had got it established, and did not manage it in their own organisations. At the time it felt obvious rather than clever. It was obvious to me because I was close enough to the business to see the gap, which is a different thing from it being obvious.
+They are still doing it. Colleagues running design in Toyota North America asked how I had got it established, and were unable to replicate it in their own.
 :::
 
 ::: case1-challenge
 Toyota Connected Europe had no digital design capability. Products moved through waterfall cycles with no consistent research, no discovery and no experience ownership. Design was bought in from agencies and treated as a downstream service, called in after the decisions had already been made.
 
-The brief I gave myself was not to hire designers. It was to make design a thing the business could not run without.
+The brief I gave myself was to make design a thing the business could not run without.
 :::
 
 ::: case1-role
-I built the function from nothing and ran it for seven years, with full P&L accountability, across Europe, Japan and North America. I brought in every person on the team, and I sold every engagement they worked on.
+I built the function from nothing and ran it for seven years, with full P&L accountability, across Europe, Japan and North America. I was accountable for every hire, and I sold every engagement the team worked on.
 :::
 
-::: case1-approach
-- **Build it as a consultancy, not a service desk.** Six disciplines under one roof: product design, design systems, UX research, service design, content and creative, and design leadership. Four engagement models so partner teams could buy the right depth, from long-term embedded partnerships through to time-boxed studio work, specialist augmentation and innovation sprints. A service catalogue, explicit positioning, and a P&L. Design's commercial contribution became visible to senior leadership for the first time.
-- **Sell it, then grow it.** I ran business development across the Toyota ecosystem, held the senior and executive relationships, and expanded the remit into new markets and service areas. Land and expand, in an organisation that had defaulted to agencies for a decade. Every designer I hired was paid for by work I had won, which is a different job from asking for headcount and a materially harder one.
-- **Operations as the floor.** DesignOps was the first dedicated operational support the team had. Tooling, capacity planning, project tracking, quality governance. Designers got their time back.
-- **Then position.** I got design into the Connected Technologies strategy team, which owned Gate 0 of the delivery pipeline: strategic research and service design as the entry condition for any product or service idea. Design stopped reporting into strategy and became the strategy's evidence base. Roadmaps and investment decisions started from the problem set my team curated. When a full-scale app launch was on the table, I argued for a staged, research-led one. That reframing became the validation model for every engagement after it. The 2025/26 strategic plan connected design's goals to the business strategy, and the senior leadership team endorsed it.
-- **Method, standardised.** Continuous discovery in place of the double diamond, a standard validation matrix, three-level journey mapping and content modelling, run as one operating system across the portfolio rather than improvised per project. Quality had a written definition. A scoring method, design pairing alongside critiques, and UX checkpoints inside client delivery pipelines. Service design was made requestable as an internal service with a price against it, which is what turned a capability into an offer.
-- **Innovation as a service.** A senior designer got 48 hours to organise and run an AI innovation initiative. It produced three approved proposals and around £3.5m of projected investment from Toyota's global AI fund. The wider innovation programme generated 29 ideas, and eight of them are now being pursued by Toyota globally, including work for the Paris 2024 Olympics and a product inside Toyota's commercial fleet platform.
+::: case1-commercial
+Design becomes a core competency or it becomes a cost line, and the difference is whether design leadership can talk about margin as fluently as it talks about craft. I ran the function on a full P&L, at £10m+ of annual internal revenue at peak, and every designer I hired was paid for by an engagement I had won. A published service catalogue and explicit positioning meant partner teams bought the depth they needed.
+
+Our largest programme closed overnight, taking its revenue and team structure with it. I ran a structured retrospective that turned the wind-down into a documented reassignment method, and it became the standard for every client transition that followed.
 :::
 
-::: case1-hard
-Designers were embedded in client teams across three regions, often working alone. Cohesion was the hardest thing to sustain, so I ran town halls, a cross-team leads forum, showcases and the listening cycle to keep a distributed team feeling like one team.
+::: case1-position
+We got design into the Connected Technologies strategy team, which owned the first gate of the delivery pipeline. Strategic research and service design became the entry condition for any product or service idea, and roadmaps and investment decisions started from the problem set my team curated.
 
-Then our largest programme closed overnight, taking revenue and team structure with it. I ran a structured retrospective that turned the shock into a documented wind-down and reassignment method. It became the standard playbook for every client transition that followed. The next disruption was a process rather than a crisis.
+I built the strategic case for a federated global design system and took it to executive level, one of two design system initiatives across Toyota worldwide.
+
+A principal designer on my team asked whether he should run two days of idea generation for a worldwide Toyota AI initiative that Toyota Connected Europe had decided not to take part in. I told him to go ahead. I knew what he was capable of, that he would bring product and engineering in alongside design, and that the time would be well spent. **Seeing what someone can do and giving them the room is a large part of the job. Three approved proposals came out of it, and around £3.5m of projected investment from Toyota's global AI fund. On the strength of what came back, Toyota Connected Europe entered the initiative it had declined. The wider programme generated 29 ideas, and eight are being pursued by Toyota globally.**
 :::
 
 ::: case1-leading
-Stepping out of the daily craft to lead at scale was a choice, and I made it early. I owned the standard, the strategic context and the operating model. I owned the quality bar and held it at review points. I owned the investment, the protection of the team's time, and the cover for the hard calls. The leads owned the daily design decisions, the customer-facing detail, the craft end to end, and their own development inside a written progression framework.
+I stepped out of the daily craft early and on purpose. The split is below.
 
 When executives wanted to understand a specific change, I brought the designer who had made it. Their accuracy, their ownership, their exposure to leadership.
 :::
 
 ::: case1-people
-I hired every one of the 40+. I built two progression pathways, practitioner leadership and people leadership, both legitimate, converging at Lead, with written expectations at every level covering what people do, how they decide, how they engage clients, and what the next level asks for. Leadership endorsed it as aligned to global talent strategy, and it became the backbone of the retention number. The pathways were deliberately flexible. Designers moved between them as their strengths developed, and some of the best outcomes came from people who stayed on the practitioner track and became genuine specialists.
+The organisation grew from two people to over 40. I was accountable for that growth and built the structure it happened inside, and my design managers ran the teams day to day and made most of the hires. Two progression pathways, written expectations at every level, and a framework leadership endorsed as aligned to global talent strategy.
 
-Two examples of the work itself. I coached a design manager through a significant leadership transition over several months, with documented one-to-ones, structured feedback and coaching on the stakeholders involved, and the transition held. When a discord in one team was heading towards a resignation, I stepped in, dealt with the causes, and kept both the person and the client relationship.
-
-An annual listening cycle turned 185 pieces of feedback into ten themes and fourteen initiatives across three horizons, each with a named owner and each traceable to the feedback that prompted it. People could see their own words in the plan.
-
-The function held the highest permanent retention rate of any department in the company. I shifted it from roughly half contract to two thirds permanent without growing headcount. Several of the team describe it as the best team they have worked in, and the service design capability I created is still running without me.
+**The function held the highest permanent retention rate of any department in the company.** I shifted it from roughly half contract to two thirds permanent without growing headcount. Several of the team describe it as the best team they have worked in.
 :::
 
 ::: case1-stats
@@ -86,47 +81,38 @@ The function held the highest permanent retention rate of any department in the 
 :::
 
 ::: case1-impact
-Design displaced the incumbent agencies and became one of three recognised core competencies of the business. The chief executive of Toyota Connected Europe called the team "the hidden jewel of the business". The team, the framework and the service design capability are all still there, which is the outcome I am most attached to.
+Design displaced the incumbent agencies and became one of three recognised core competencies of the business. The chief executive of Toyota Connected Europe called the team "the hidden jewel of the business". The team, the framework and the service design capability are all still there.
 :::
 
 ::: case2-meta
 number: Case Two
-title: An app at two stars, and the team I built to fix it
+title: A US app in Europe, from 1.9 stars to 4.6
 company: MyToyota and Lexus Link+
 dates: 2023 to 2026
 aside-label: What the team built
-role: I won the engagement, staffed it, framed the problems and held the bar. A design manager led the team day to day, and the design leads made the calls.
+role: I ran this team myself for three or four years, then put design managers in my place as the function scaled. The rebuild is their work and the work of the designers under them.
 :::
 
 ::: case2-challenge
-A US-built app was repurposed and launched into the European market. It landed at 1.9 stars. Design dominated the complaint list: navigation customers could not learn, information displays they could not read, no dark mode, driving analytics nobody understood, and an EV experience scattered across four different places in the app.
+When the US app came to Europe, the team was already in place. It had UX research running, a deep understanding of the European app being replaced and of the European customer, and three to four years inside Connected Technologies' product organisation. The app landed at 1.9 stars. Design dominated the complaint list: navigation customers could not learn, information displays they could not read, no dark mode, driving analytics nobody understood, and an EV experience scattered across four places. For European customers it felt like a step back from the app being sunset.
 
-This is the case that tests whether the first one was worth building. An organisation is only as good as what comes out of it, and none of what follows was mine to draw.
+An organisation is only as good as what comes out of it.
 :::
 
 ::: case2-role
-I did not design this app. I want to be precise about that, because the distinction matters at this level and because the people who did design it deserve the credit.
+For the first three or four years I ran this team myself, as design manager for our largest engagement while also holding the Head of Design role. When the function and the other engagements scaled, I could no longer do both, so I hired a design manager into the seat I had been holding, and later a second for our North American engagement. When that engagement closed, the second manager took over the app team. From then on they ran it day to day, with design leads and a design system manager under them, and they had the client's trust because they had earned it.
 
-What I did was win the engagement and then grow it, staff it with a design manager and design leads embedded in each regional product team, argue UX research into a business that had never funded it, frame the two problems that mattered from the customer data, hold the quality bar at review points, and protect the time and money the work needed when there was pressure to ship without it.
-
-When executives wanted to understand a specific change, my default was to bring the designer who had made it rather than present their work myself. Their accuracy, their ownership, their exposure to leadership.
+In my first years at Toyota I designed the UX and UI of the previous European app myself. I did not design the rebuild. What I held was the engagement itself, the relationship and governance with Connected Technologies, the resourcing and the financial performance, the quality bar at review points, and the shape and size of the team year on year. I had been raising My Garage as a problem for some time before the rebuild. The EV problem was understood jointly by the Connected Technologies product team and my designers, and what my design managers and I did was put the right people on it. Everything downstream of that was theirs.
 :::
 
 ::: case2-approach
-- **Won the work, then expanded it.** The European app engagement was not ours by default. I sold it, held the senior relationships, and grew the remit across regions until my organisation was responsible for the companion app across Europe and Japan, supporting design leadership for the US app as well. Displacing an incumbent agency inside Toyota is a commercial argument before it is a design one.
-- **Staffed it so it could hold its own line.** A design manager running the team, design leads placed inside each regional product team alongside their product and engineering counterparts, and six disciplines available to draw on rather than one generalist per squad. Embedded, not consulted.
-- **Argued research into a business that did not buy it.** UX research was not part of Toyota's playbook. I pitched its value, funded a dedicated research team inside the app organisation, and got stakeholders who had never used insight to see it shape product and business strategy. What that bought, before a single screen was redrawn: 2,321 users surveyed, 266 app store reviews analysed, 19 customer interviews and 20 hours of contextual research, four nationwide dealership visits, 12 competitor teardowns and two quantitative data sources including call centre data.
-- **Framed the two problems, then left them alone.** From the customer data I framed My Garage as the home screen problem, an overloaded menu paradigm with no hierarchy that made people read everything to find anything. And I held the line in the EV workshop that EV had to be solved as one experience rather than patched feature by feature. Those were my calls. Everything downstream of them was not.
-- **Held the bar and paid for the evidence.** The work did not ship until task performance hit target, and getting there took four rounds of moderated usability testing. Backing that, against a delivery schedule, is most of what a design leader is actually for.
-- **Backed the system pitch.** When the team made the case for a design system, I took it up the organisation and funded it. It became the first design system in any Toyota app globally, with tokens linked to the development repository, multi-brand theming across Toyota and Lexus, and accessibility governed ahead of the European Accessibility Act.
+- **Research already in place.** By the time the US app arrived the team had UX research running inside the app organisation, which I had argued for years earlier. A lead UX researcher we had hired ran four rounds of moderated usability testing on the same tasks, with a research team of contractors covering different research skills. By then the value of research was accepted and the lead had the trust and scope to do the work. The redesign did not ship until task completion hit its target.
+- **Two problems, and who saw them.** I had been raising My Garage as a problem for some time. The EV problem was framed jointly by the Connected Technologies product team and my designers in the EV workshop. My design managers and I staffed it. Both solutions were the team's.
+- **Rebuilt with a design system underneath.** The design system manager on my team made the case for a design system as part of the rebuild and sold it to Connected Technologies, who funded it. He had the agency and autonomy to own it. Over six months he defined what the US app needed to meet European expectations, and the team built the design system into the rebuild at the same time, design system thinking and front-end architecture together. The first design system in any Toyota app globally, multi-brand across Toyota and Lexus, with accessibility governed ahead of the European Accessibility Act.
 :::
 
 ::: case2-hard
 The team built one EV domain in place of four scattered locations: a single place for charging status and scheduling, real-time updates, and a live session view mirroring what was happening at the car. The complexity of vehicle generations, home charger integrations and software constraints did not go away, they moved it behind the experience rather than into the customer's hands. They validated it across four rounds against a fixed task set, with System Usability Scale scores climbing from 73 to 79 to 80.
-
-They removed My Garage and redistributed vehicle information into a clean dedicated switcher, then unified remote climate control and scheduling into a single space that mirrors the in-vehicle experience. And they built the design system underneath all of it.
-
-The design manager and lead designers who did this work are named on request and are among the references I would offer.
 :::
 
 ::: case2-stats
@@ -137,75 +123,108 @@ The design manager and lead designers who did this work are named on request and
 :::
 
 ::: case2-impact
-Within thirteen months the language in customer feedback moved from unintuitive and confusing to intuitive, simple and effective. In June 2025 an internal customer-experience report credited reduced complaint volume directly to intuitive design, the first time design had been named as the cause rather than the problem. By August 2025 design had dropped out of the top five complaint categories entirely, displaced by backend and connectivity issues outside design's ownership. The public rating data is the cleanest proof: the rating more than doubled, five-star reviews grew nearly six-fold, and one-star reviews fell from two thirds of all reviews to four per cent.
+**I had brought AppFollow in during 2021 so the team could read how customers were experiencing the app, which is where the shift was measured.** Within thirteen months the language in customer feedback moved from unintuitive and confusing to intuitive, simple and effective. In June 2025 an internal customer-experience report credited reduced complaint volume directly to intuitive design. By August 2025 design had dropped out of the top five complaint categories entirely.
 
-The point of the case is not the chart. It is that the organisation in case one produced a commercial outcome without me touching the work, which is the only test of whether you have built a function or just assembled a team.
+The result came from a good design team, across UX research, product design, UI design and service design, that had earned the client's trust. That is what case one built.
 :::
 
 ::: case3-meta
 number: Case Three
-title: Where the signal stops and the design starts
-company: PrepCall and Emotrix
-dates: 2026
-narrative-label: The thesis
-aside-label: Where Emotrix stands
-role: Solo on both. Every decision is mine, including the bad ones.
+title: Two products, two markets, as designer and as leader
+company: Songkick and Dopay
+dates: 2008 to 2018
+role: Eight years at Songkick as employee number seven and VP of Design, on the executive team from seed through Series C to the Warner Music Group acquisition. Then Chief Design Officer at Dopay, taking a fintech for unbanked workers in Egypt from concept to a live commercial service. In both, I designed the product.
 :::
 
-::: case3-challenge
-Twenty five years of directing the work. Somewhere in there, the answer to what good looks like when a system is generative and probabilistic stopped being something I could give honestly from the sidelines.
+::: case3-songkick
+Employee number seven at the concert discovery platform, hired by the three founders after Y Combinator. I created the logo, the brand, the brand book and the visual language, and led product design across web, iOS and Android from a web-first launch to a mobile-first platform. The company grew to 130 people and 15 million users, and the platform scaled to 10 million monthly active users and over $100m in gross ticket revenue.
 
-Emotion models sharpened the question. Voice and face engines now read hesitation, nervousness and confidence with real accuracy, and they hand that reading straight to a product with no idea what to do with it. I built two things this year to work on that gap. PrepCall answers it for one narrow case. Emotrix generalises it.
+I built and led the design organisation, worked alongside the CPO on product strategy and on scaling the product organisation, and brought analytics and research, remote and in person, quantitative and qualitative, into how ideas were de-risked. The mobile-first strategy I drove delivered a 43 per cent increase in active users, with mobile passing 60 per cent of traffic. I oversaw design for the distribution partnerships with Spotify, YouTube, Facebook, SoundCloud and MTV.
+
+- Apple Editors' Choice
+- UK App of the Week
+- Webby Award, best music mobile site or app
+- Billboard App of the Month
+- Music Week Consumer Digital Service of the Year
+- Fast Company's fifth most innovative company in music
+- $16.6m Series C, then acquisition by Warner Music Group
 :::
 
-::: case3-role
-Solo on both. Product strategy, the voice interaction model, every flow, the report architecture, the dashboards, the build on Hume's Empathic Voice Interface and the Anthropic API, the deployment, and the compliance work.
-:::
+::: case3-dopay
+Chief Design Officer, London and Cairo, on a fintech delivering mobile payroll to unbanked workers in Egypt, where 67 per cent of the population had no bank account. Concept to live commercial service.
 
-::: case3-narrative
-Signal is not meaning. A raised brow means one thing in a usability test and another in heavy traffic. A pause means one thing inside an interview answer and another while somebody is parking. The engines emit a reading. Something still has to decide what that reading means in this context before a product can act on it.
-
-The thesis started inside Toyota. I authored the proposal to Toyota's Global AI Initiative for an AI-powered facial action coding system for in-cabin monitoring, and ran the internal accuracy testing behind it. Accuracy was never the bottleneck. Context was. Nothing in the stack did the interpretation, and every product team was left to invent it for themselves.
-
-PrepCall takes the narrow version. Twenty minutes of live conversation on Hume's Empathic Voice Interface, then a coaching report grounded in what someone said and how they said it. The design work lives in the layer between a raw emotional reading and a response a person can use. Emotrix takes the general version and sits above the engines as an interpretation layer, engine agnostic by design.
-:::
-
-::: case3-approach
-- **Empathic voice in production.** Live streaming voice, session state, interruption handling and feedback loops, running for real users over full twenty minute sessions. Working with an empathic voice model in production showed me where the design questions actually sit, and almost none of them are on a screen.
-- **The failure that taught me most.** Around the fourth session per user, quality started degrading and it took a while to see why. Everything was working. The system prompt had grown from roughly 5,600 characters at session one to over 34,000 by session four. Context accumulated until the model was drowning in its own history.
-- **The fix was architectural.** A bounded prompt with hard character budgets, enforced however many sessions a user has had. Designing for a probabilistic system is largely this work, deciding what the model is allowed to carry. The interface is the easy part. The hard part is a product that behaves differently on Tuesday than it did on Monday, and the constraints that keep it trustworthy anyway.
-- **Turning a reading into a response.** One emotional reading supports many possible responses and most of them feel like surveillance. Choosing the one that feels supportive is a design decision, taken every time, and it is most of what the product is.
-- **Regulation as a design input.** PrepCall coaches the candidate. Article 5 of the EU AI Act prohibits emotion inference in the workplace, so assessing someone on behalf of an employer was closed from the start. The regulation chose the product, and it chose well. I owned the compliance layer personally, including the classification and the data protection impact assessment.
-- **A review interface for the interpretation layer.** Emotrix needed a way to see what the engines report and what the reducer makes of it, on one timeline. I designed and built the session review interface that does this. Five construct lanes carry the raw readings, each scored against the participant's own baseline. Two interpreted lines sit above them, an emotion line and a cognitive load line, with a story line at a longer time constant and the turning points it detects. Where the face is lost the lanes are hatched and no reading is asserted. The moments the reducer flags, the transcript, the research protocol and the observer's notes sit on the same axis, so any reading can be checked against its evidence.
-:::
-
-::: case3-hard
-Early stage. No product in market, no legal entity, no funding, and no results to report. What exists is a thesis, an architecture, a working session review interface, and a live pilot under NDA.
-
-It is here for the design thinking. Anyone wanting the commercial substance should wait until there is some.
+I directed the design and launch of the Dopay for Business platform and the iOS and Android employee apps, which reached 85 per cent adoption within three weeks of launch, and designed the physical Mastercard prepaid card that gave thousands of workers a first banking identity. I built the design practice and research operations from scratch. The product underpinned a €1m investment and an $18m Series A, with McDonald's Egypt and SWVL among the enterprise clients.
 :::
 
 ::: case3-stats
-- 5.6k to 34k+ | prompt characters, session one to four
-- 20 min | live empathic voice conversation per session
-- Article 5 | the constraint that chose the product
-- 2 products | designed, built, deployed and complied with solo
+- #7 | employee at Songkick, from seed to acquisition
+- 10m | monthly active users on Songkick
+- 85% | adoption three weeks after Dopay launched
+- $18m | Series A that followed at Dopay
 :::
 
-::: case3-impact
-PrepCall is live with real users. No revenue and no paying customers. It stands as craft evidence and I would rather say so plainly.
+::: case4-meta
+number: Case Four
+title: Two AI products this year, one shipped and one in pilot
+company: PrepCall and Emotrix
+dates: 2026
+narrative-label: What the two products do
+aside-label: Where Emotrix stands
+role: I designed and built both on my own, and every decision in them is mine. PrepCall is live. Emotrix is in a pilot under NDA.
+:::
 
-What the year bought me is a point of view I could not have borrowed. Seven years of leadership and a year of building. Most of what I now think about designing with AI comes from shipping it.
+::: case4-challenge
+After twenty five years of directing design work, I could no longer say with confidence what good looked like when the system underneath was generative and probabilistic. I needed to build with it myself.
+
+Voice and face engines now read hesitation, nervousness and confidence with real accuracy, and they hand that reading straight to a product with no idea what to do with it. I built two things this year to work on that gap. PrepCall answers it for one narrow case. Emotrix generalises it.
+:::
+
+::: case4-role
+I did all of it, on both products. Product strategy, the voice interaction model, every flow, the report architecture, the dashboards, the build on Hume's Empathic Voice Interface and the Anthropic API, the deployment, and the compliance work.
+:::
+
+::: case4-narrative
+A signal and its meaning are two different things. A raised brow means one thing in a usability test and another in heavy traffic. A pause means one thing inside an interview answer and another while somebody is parking. The engines emit a reading. Something still has to decide what that reading means in this context before a product can act on it.
+
+The thesis started inside Toyota. I authored the proposal to Toyota's Global AI Initiative for an AI-powered facial action coding system for in-cabin monitoring, and ran the internal accuracy testing behind it. The engines were accurate enough. The limit was context. PrepCall takes the narrow version, twenty minutes of live conversation on Hume's Empathic Voice Interface and a coaching report grounded in what someone said and how they said it. Emotrix takes the general version, an interpretation layer above the engines, engine agnostic by design.
+:::
+
+::: case4-approach
+- **The failure that taught me most.** Around the fourth session per user, quality started degrading and it took a while to see why. Everything was working. The system prompt had grown from roughly 5,600 characters at session one to over 34,000 by session four. Context accumulated until the model was drowning in its own history.
+- **The fix was architectural.** A bounded prompt with hard character budgets, enforced however many sessions a user has had. Designing for a probabilistic system is largely this work, deciding what the model is allowed to carry. The interface is the easy part.
+- **Regulation as a design input.** PrepCall coaches the candidate. Article 5 of the EU AI Act prohibits emotion inference in the workplace, so assessing someone on behalf of an employer was closed from the start. The regulation set the product's direction, and it was the right direction. I owned the compliance layer personally, including the classification and the data protection impact assessment.
+- **A review interface for the interpretation layer.** Emotrix needed a way to see what the engines report and what the reducer makes of it, on one timeline. I designed and built the session review interface. Five construct lanes carry the raw readings, each scored against the participant's own baseline, with an emotion line and a cognitive load line above them. Where the face is lost the lanes are hatched and no reading is asserted. The flagged moments, the transcript and the observer's notes sit on the same axis, so any reading can be checked against its evidence.
+:::
+
+::: case4-hard
+Emotrix is a thesis with working software behind it. The interpretation layer is designed, the architecture is built, and the session review interface runs. A pilot is under way under NDA. Everything shown here is the real interface on a synthetic session, because the pilot data stays with the partner.
+:::
+
+::: case4-stats
+- 5.6k to 34k+ | prompt characters, session one to four
+- 20 min | live empathic voice conversation per session
+- Article 5 | the EU AI Act rule that set the product's direction
+- 2 products | designed and built, one live, one in pilot
+:::
+
+::: case4-impact
+PrepCall is live with real users at prepcall.me. I built it to keep my own judgement current and to give the thesis a product to run in.
+
+The year gave me a point of view on designing with AI that is my own. Seven years of leadership and a year of building. Most of what I now think about designing with AI comes from shipping it.
+:::
+
+::: governance
+On PrepCall I made the Article 5 classification and wrote the data protection impact assessment myself. Article 5 of the EU AI Act prohibits emotion recognition in the workplace, so PrepCall coaches the candidate and never assesses anyone for an employer. The product is better for it. At Toyota I built the European Accessibility Act governance for the whole design function and turned compliance into a four-tier service. Everything in the first two cases was delivered inside regulated automotive programmes, and Dopay was a regulated payments product in Egypt.
 :::
 
 ::: closing
-The pattern across all three is the same. Find the thing that is actually broken, which is usually structural rather than visual. Build the system that stops it recurring. Measure it in the language the business already uses. Then hand it to the people closest to the work and hold the bar.
+Find the thing that is broken, which is usually structural. Build the system that stops it recurring. Measure it in the language the business already uses. Then hand it to the people closest to the work and hold the bar.
 
-The last part is the one people underestimate. Most of what I am proudest of was drawn by somebody else.
+The last part is the one people underestimate. Much of what I am proudest of was designed by somebody else.
 :::
 
 ::: contact
-I'm looking for a VP, Head of Design or Design Director role in London, where design needs to become a real function rather than a service desk, and where the AI question is live rather than theoretical. Available now.
+I'm looking for a VP, Head of Design or Design Director role in London, where design has to become a real function, and where the AI question is live. Available now.
 
 Email gideonb@me.com, connect on LinkedIn, or download my CV.
 :::

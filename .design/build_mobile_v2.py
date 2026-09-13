@@ -2,7 +2,9 @@
 import workmd as W, diagrams as D, components as C, os, sys
 A="var(--amber)"; T="var(--teal)"; INK="var(--ink)"; AD="var(--amber-d)"; TD="var(--teal-d)"; PAD=22
 HEAD=open("_head.part").read(); TAIL=open("_tail.part").read()
-c1,c2,c3=W.C1,W.C2,W.C3
+c1,c2,c3,c4=W.C1,W.C2,W.C3,W.C4
+COMP=W.paras(W.SEC["case1-commercial"])[0]; COM=[COMP.split(". I ran",1)[0]+".", "I ran"+COMP.split(". I ran",1)[1]]
+GOV=W.paras(W.SEC["governance"])
 def F(h,pt=0,pb=0,bg=None): return f'<div style="{"background:"+bg+";" if bg else ""}padding:{pt}px {PAD}px {pb}px;box-sizing:border-box;">{h}</div>'
 def B(h,pt=48,pb=44): return f'<div style="background:var(--night);color:var(--night-body);padding:{pt}px {PAD}px {pb}px;box-sizing:border-box;">{h}</div>'
 def head(label,colour,kind):
@@ -32,13 +34,14 @@ SVGF='font-family="Schibsted Grotesk,Helvetica,sans-serif"'
 
 O=[f'<div style="border-bottom:1px solid var(--rule);padding:16px {PAD}px;display:flex;justify-content:space-between;align-items:center;"><p style="font-size:14px;font-weight:600;color:var(--ink);margin:0;">Gideon Bullock</p>'
    '<div style="display:flex;gap:16px;"><p class="lbl" style="font-size:10px;font-weight:500;">Home</p><p class="lbl" style="font-size:10px;font-weight:500;color:var(--ink);">Work</p><p class="lbl" style="font-size:10px;font-weight:500;">Writing</p></div></div>',
-   F('<p class="lbl" style="margin-bottom:var(--s3);">Selected Work</p><p class="d1" style="margin-bottom:var(--s5);">Three cases</p>'
+   F(f'<p class="lbl" style="margin-bottom:var(--s3);">Selected Work</p><p class="d1" style="margin-bottom:var(--s5);">{W.META.get("title","Three cases")}</p>'
      f'<p style="font-size:17.5px;line-height:1.7;color:var(--body);margin:0 0 var(--s4);">{W.INTRO[0]}</p><p style="font-size:15px;line-height:1.8;color:var(--muted);margin:0;">{W.INTRO[1]}</p>', pt=48)]
 g=[]
 for i,(lb,t,m,n,col,k) in enumerate([("Case one","The organisation",f'{c1["info"]["company"]} &middot; {c1["info"]["dates"]}',"Everything here is mine. Built from nothing, run for seven years, sold engagement by engagement.",A,"fill"),
     ("Case two","What the organisation shipped",f'{c2["info"]["company"]} &middot; {c2["info"]["dates"]}',"I won it, staffed it, framed it and held the bar. Other people designed it.",T,"ring"),
-    ("Case three","The craft, and the thesis",f'{c3["info"]["company"]} &middot; {c3["info"]["dates"]}',"Built solo. There was nobody else.",INK,"fill")]):
-    stem='<div style="width:1px;flex-grow:1;min-height:64px;background:var(--rule);"></div>' if i<2 else ""
+    ("Case three","One decision inside it, measured",f'{c3["info"]["company"]} &middot; {c3["info"]["dates"]}',"My research team ran the study. The standard and the decision were mine.",T,"ring"),
+    ("Case four","The craft, and the thesis",f'{c4["info"]["company"]} &middot; {c4["info"]["dates"]}',"Built solo. There was nobody else.",INK,"fill")]):
+    stem='<div style="width:1px;flex-grow:1;min-height:64px;background:var(--rule);"></div>' if i<3 else ""
     g.append(f'<div style="display:grid;grid-template-columns:22px 1fr;gap:14px;align-items:start;padding:var(--s5) 0;border-top:1px solid var(--rule);"><div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding-top:3px;">{D.dot(col,k,12)}{stem}</div>'
       f'<div><p class="lbl" style="color:{col};font-size:10.5px;margin-bottom:6px;">{lb}</p><p class="d4" style="font-size:23px;margin-bottom:7px;">{t}</p><p style="font-size:12.5px;line-height:1.6;color:var(--muted);margin:0 0 9px;">{m}</p><p style="font-size:15px;line-height:1.7;color:var(--body);margin:0;">{n}</p></div></div>')
 O.append(F('<p class="lbl" style="font-size:9.5px;margin-bottom:var(--s1);">The business behind the work</p>'+"".join(g)+
@@ -47,7 +50,7 @@ O.append("@@SPLIT@@")
 
 # ---- case one ----
 narr=c1["narrative"]
-O.append(opener(c1,AD,"fill")); O.append(blk("The challenge",A,"fill",P(c1["challenge"]))); O.append(blk("My role",A,"fill",P(c1["role"]),pt=34))
+O.append(opener(c1,AD,"fill")); O.append(blk("The challenge",A,"fill",P(c1["challenge"]))); O.append(blk("My role",A,"fill",P(c1["role"]),pt=34)); O.append(blk("The commercial line",A,"fill",quote(COM[0],cls="d4")+'<div style="height:var(--s4);"></div>'+P([COM[1]]),pt=34))
 O.append(blk(c1["info"]["narrative-label"],A,"fill",P(narr[:2])))
 rows=[]
 for i,(k,n,why,earn,_,_,_) in enumerate(D.ARC_STEPS):
@@ -55,7 +58,7 @@ for i,(k,n,why,earn,_,_,_) in enumerate(D.ARC_STEPS):
     if last: rows.append('<div style="display:flex;align-items:center;gap:10px;margin:var(--s5) 0;"><div style="flex-grow:1;height:1px;background:repeating-linear-gradient(to right,oklch(0.575 0.075 62) 0 5px,transparent 5px 11px);"></div><p class="lbl" style="color:var(--amber);font-size:9.5px;white-space:nowrap;">The question changed</p><div style="flex-grow:1;height:1px;background:repeating-linear-gradient(to right,oklch(0.575 0.075 62) 0 5px,transparent 5px 11px);"></div></div>')
     rows.append(f'<div style="border-top:{"3px solid var(--amber)" if last else "2px solid var(--rule-2)"};padding-top:var(--s3);margin-bottom:var(--s5);"><p class="lbl" style="color:{A if last else "var(--faint)"};font-size:10px;margin-bottom:7px;">{k}</p><p class="d4" style="font-size:20px;margin-bottom:var(--s2);">{n}</p>'
       f'<p style="font-size:13.5px;line-height:1.6;color:var(--body);margin:0 0 10px;">{why}</p><div style="height:9px;background:oklch(0.93 0.030 68);width:{w}%;margin-bottom:7px;"></div><p style="font-size:12px;line-height:1.5;color:var(--muted);margin:0;"><span style="color:{A};font-weight:600;">Earned &rarr;</span> {earn}</p></div>')
-O.append(F(fig("Case one &middot; the spine",A,"fill","How the capability grew","Four capabilities, in the order they were established. Each one earned the next. The bar under each is how much of the customer&rsquo;s experience design was allowed to own.","".join(rows),foot="The widest brief was the one nobody had asked for."),pt=40))
+O.append(F(fig("Case one &middot; the spine",A,"fill","How the capability grew","Four capabilities in the order they were established. Each earned the next. The bar under each is how much of the customer&rsquo;s experience design was allowed to own.","".join(rows),foot="Each brief was wider than the last because the last one had worked."),pt=40))
 O.append(blk("The turn",A,"fill",P(narr[2:3])+quote("A disjointed end-to-end experience is usually a faithful reflection of a disjointed business, and this one was faithful.")))
 O.append("@@SPLIT@@")
 sl=[]
@@ -68,14 +71,14 @@ O.append(B(f'<div style="display:flex;align-items:center;gap:9px;padding-top:var
  '<p class="lbl" style="color:var(--night-muted);font-size:10px;margin-bottom:var(--s3);">Before &middot; one slice, behaving as though it owned all of them</p>'+"".join(sl)+
  f'<p class="lbl" style="color:{TD};font-size:10px;margin:var(--s6) 0 var(--s3);">After &middot; one journey, owned together</p><div style="border:1.5px solid {TD};background:oklch(0.225 0.022 190);border-radius:3px;padding:13px;margin-bottom:10px;"><p style="font-size:13.5px;font-weight:600;color:var(--night-ink);margin:0 0 4px;">One end-to-end journey</p><p style="font-size:11.5px;color:{TD};margin:0;">Blueprinted front stage and back, reusable as service patterns</p></div>'+after+
  '<p style="font-size:15.5px;line-height:1.75;color:var(--night-ink);margin:var(--s5) 0 var(--s5);font-weight:500;">Business units that had never designed anything together started working on the same journey. They are still doing it, which is the part I am most confident about, because it outlasted me.</p>'
- f'<div style="border-top:1px solid var(--night-rule);padding-top:var(--s4);display:flex;gap:11px;align-items:flex-start;">{D.dot(TD,"ring",10)}<p style="font-size:14px;line-height:1.7;color:{TD};margin:-4px 0 0;">The blueprints, the reusable service patterns and the playbooks were built by the service designers who were hired to make them. What I did was make the case for a capability nobody had asked for, and hire into it.</p></div>'))
+ f'<div style="border-top:1px solid var(--night-rule);padding-top:var(--s4);display:flex;gap:11px;align-items:flex-start;">{D.dot(TD,"ring",10)}<p style="font-size:14px;line-height:1.7;color:{TD};margin:-4px 0 0;">The blueprints, the reusable service patterns and the playbooks were built by the service designers who were hired to make them. What I did was make the case for it and hire into it.</p></div>'))
 O.append(blk("What it left behind",A,"fill",P([narr[3].split(" What they went on to build",1)[0]])+f'<div style="margin:var(--s5) 0;background:var(--paper-team);border:1px solid oklch(0.87 0.020 195);padding:var(--s4);"><div style="display:flex;align-items:center;gap:9px;margin-bottom:9px;">{D.dot(T,"ring",10)}<p class="lbl" style="color:{T};font-size:10px;">The team&rsquo;s work</p></div><p style="font-size:15.5px;line-height:1.75;color:oklch(0.38 0.022 195);margin:0;">What they went on to build, blueprints, reusable service patterns and playbooks, mattered less than what it did to the conversation. Business units that had never designed anything together started working on the same journey.</p></div>'+P(narr[4:6])))
 # leading at a distance
 def ownlist(label,colour,kind,items):
     return (f'<div style="margin-bottom:var(--s5);"><div style="display:flex;align-items:center;gap:9px;margin-bottom:var(--s3);">{D.dot(colour,kind,10)}<p class="lbl" style="color:{colour};font-size:10.5px;">{label}</p></div>'
             + "".join(f'<div style="display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--rule);">{D.dot(colour,kind,8)}<p style="font-size:14.5px;line-height:1.6;color:var(--ink);margin:-3px 0 0;">{t}</p></div>' for t in items)+'</div>')
 O.append(blk(c1["info"]["leading-label"],A,"fill",P(W.paras(W.SEC["case1-leading"]))))
-O.append(F(fig("Case one &middot; leading at a distance",A,"fill","What I owned, and what the leads owned","Stepping out of the daily craft was a choice. The split below is what it meant in practice.",
+O.append(F(fig("Case one &middot; leading at a distance",A,"fill","What I owned, and what the leads owned","The split, as it ran day to day.",
   ownlist("I owned",A,"fill",C.OWNED_ME)+ownlist("The leads owned",T,"ring",C.OWNED_LEADS),foot="When executives wanted to understand a specific change, I brought the designer who had made it."),pt=40))
 O.append("@@SPLIT@@")
 # growing people
@@ -127,34 +130,44 @@ for i,(d,h,t,last) in enumerate(D.BEATS):
     bt.append(f'<div style="display:grid;grid-template-columns:18px 1fr;gap:14px;align-items:start;padding-bottom:var(--s6);"><div style="display:flex;flex-direction:column;align-items:center;gap:5px;padding-top:4px;">{mark}{stem}</div><div><p class="lbl" style="color:{TD if last else AD};font-size:10px;margin-bottom:var(--s2);">{d}</p><p style="font-size:16.5px;font-weight:600;color:var(--night-ink);margin:0 0 var(--s2);line-height:1.35;letter-spacing:-0.012em;">{h}</p><p style="font-size:13px;line-height:1.7;color:var(--night-muted);margin:0;">{t}</p></div></div>')
 O.append(B(f'<div style="display:flex;align-items:center;gap:9px;padding-top:var(--s3);border-top:2px solid {AD};margin-bottom:var(--s3);">{D.dot(AD,"fill",9)}<p class="lbl" style="color:{AD};font-size:10.5px;">Case two &middot; the outcome</p></div><p class="d3" style="color:var(--night-ink);margin-bottom:var(--s3);">Thirteen months from complaint driver to differentiator</p><p style="font-size:14px;line-height:1.75;color:var(--night-muted);margin:0 0 var(--s6);">Design dominated the complaint list when the repurposed app landed. Then it left the list altogether.</p>'+"".join(bt),pt=48,pb=32))
 O.append(F(fig("Case two &middot; the public proof",A,"fill","The public rating data","The rating, and the share of reviews behind it.",
-  '<div style="display:flex;align-items:flex-end;gap:14px;margin-bottom:var(--s6);"><div><p class="lbl" style="color:var(--faint);font-size:10px;margin-bottom:2px;">At launch</p><p class="stat" style="font-size:40px;color:var(--muted);">1.9&#9733;</p></div><p style="font-size:24px;color:var(--rule-2);padding-bottom:6px;margin:0;">&rarr;</p>'
-  f'<div><p class="lbl" style="color:{A};font-size:10px;margin-bottom:2px;">August 2025</p><p class="stat" style="font-size:40px;">4.6&#9733;</p></div></div>'
-  '<p class="lbl" style="font-size:10px;padding-bottom:9px;border-bottom:1px solid var(--rule-2);margin-bottom:var(--s4);">Share of reviews, by star rating</p><p style="font-size:12.5px;font-weight:600;color:var(--muted);margin:0 0 6px;">Before</p><div style="display:flex;height:38px;border-radius:3px;overflow:hidden;margin-bottom:var(--s4);"><div style="width:67%;background:oklch(0.955 0.011 80);border:1px solid oklch(0.875 0.014 80);box-sizing:border-box;display:flex;align-items:center;padding-left:8px;"><p style="font-size:12px;color:var(--muted);margin:0;">1&#9733; 67%</p></div><div style="width:19%;background:oklch(0.835 0.055 72);"></div><div style="width:14%;background:oklch(0.475 0.085 62);"></div></div>'
-  '<p style="font-size:12.5px;font-weight:600;color:var(--ink);margin:0 0 6px;">After</p><div style="display:flex;height:38px;border-radius:3px;overflow:hidden;"><div style="width:4%;background:oklch(0.955 0.011 80);border:1px solid oklch(0.875 0.014 80);box-sizing:border-box;"></div><div style="width:16%;background:oklch(0.835 0.055 72);"></div><div style="width:80%;background:oklch(0.475 0.085 62);display:flex;align-items:center;padding-left:10px;"><p style="font-size:12px;color:oklch(0.96 0.010 80);margin:0;">5&#9733; 80%</p></div></div><p style="font-size:12.5px;font-weight:600;color:var(--ink);margin:var(--s4) 0 0;">One star: 2 in 3 &rarr; 1 in 25</p>',
+  '<div style="display:flex;align-items:flex-end;gap:14px;margin-bottom:var(--s6);"><div><p class="lbl" style="color:var(--faint);font-size:10px;margin-bottom:2px;">At launch</p><p class="stat" style="font-size:40px;color:var(--muted);">1.9<span style="font-size:0.5em;color:#f2b632;vertical-align:0.35em;margin-left:0.06em;">&#9733;</span></p></div><p style="font-size:24px;color:var(--rule-2);padding-bottom:6px;margin:0;">&rarr;</p>'
+  f'<div><p class="lbl" style="color:{A};font-size:10px;margin-bottom:2px;">August 2025</p><p class="stat" style="font-size:40px;">4.6<span style="font-size:0.5em;color:#f2b632;vertical-align:0.35em;margin-left:0.06em;">&#9733;</span></p></div></div>'
+  '<p class="lbl" style="font-size:10px;padding-bottom:9px;border-bottom:1px solid var(--rule-2);margin-bottom:var(--s4);">Share of reviews, by star rating</p><p style="font-size:12.5px;font-weight:600;color:var(--muted);margin:0 0 6px;">Before</p><div style="display:flex;height:38px;border-radius:3px;overflow:hidden;margin-bottom:var(--s4);"><div style="width:67%;background:#ec7b72;display:flex;align-items:center;padding-left:8px;"><p style="font-size:12px;color:#fff;margin:0;">1&#9733; 67%</p></div><div style="width:19%;background:#f6d56b;"></div><div style="width:14%;background:#7bbf84;"></div></div>'
+  '<p style="font-size:12.5px;font-weight:600;color:var(--ink);margin:0 0 6px;">After</p><div style="display:flex;height:38px;border-radius:3px;overflow:hidden;"><div style="width:5%;background:#ec7b72;"></div><div style="width:17%;background:#f6d56b;"></div><div style="width:78%;background:#7bbf84;display:flex;align-items:center;padding-left:10px;"><p style="font-size:12px;color:#fff;margin:0;">5&#9733; 78%</p></div></div><p style="font-size:12.5px;font-weight:600;color:var(--ink);margin:var(--s4) 0 0;">One star: 2 in 3 &rarr; 1 in 20</p>',
   foot="Public App Store and Play Store data. Lexus Link+; MyToyota shows the same pattern."),pt=40))
 O.append(blk("What changed",A,"fill",P(c2["impact"][:1])+quote(c2["impact"][1],cls="d4"))); O.append('<div style="height:56px;"></div>'); O.append("@@SPLIT@@")
 
-# ---- case three ----
-pair=(f'<div style="margin-bottom:var(--s5);">{plate("emotrix-timeline.jpg","The reading arrives. Five constructs against the participant&rsquo;s own baseline, two interpreted lines above them, hatched where no reading is asserted.","Emotrix, real interface, synthetic session",dark=True)}</div>'
+# ---- case three, EV ----
+O.append(opener(c3,TD,"ring")); O.append(blk("The challenge",A,"fill",P(c3["challenge"]))); O.append(blk("Whose work",T,"ring",P(c3["role"]),pt=34))
+O.append(F(C.ev_measure(mobile=True),pt=40))
+O.append(blk("What was found, and what was decided",A,"fill",deflist(c3["approach"]))); O.append(blk("What changed",A,"fill",P(c3["impact"],size=17,colour="var(--ink)"),pt=34))
+O.append('<div style="height:56px;"></div>'); O.append("@@SPLIT@@")
+
+# ---- case four ----
+pair=(f'<div style="margin-bottom:var(--s5);">{plate("emotrix-timeline.jpg","The reading. Five constructs against the participant&rsquo;s own baseline, two interpreted lines above them, hatched where no reading is asserted.","Emotrix, real interface, synthetic session",dark=True)}</div>'
       f'<div style="margin-bottom:var(--s5);">{plate("prepcall-report-listening.jpg","What the product does with it. The listening half of a coaching report.","PrepCall, illustrative report (real frame to follow)",dark=True)}</div>'
-      f'<p style="font-size:15.5px;line-height:1.7;font-weight:500;color:var(--night-ink);margin:0 0 var(--s6);">Signal above, meaning below. The design work is the layer between them, and it is the same layer in both products.</p>')
-O.append(opener(c3,"var(--night-ink)","fill",extra=pair)); O.append(blk("The challenge",INK,"fill",P(c3["challenge"]))); O.append(blk("My role",INK,"fill",P(c3["role"]),pt=34))
-O.append(blk(c3["info"]["narrative-label"],INK,"fill",P(c3["narrative"])))
+      f'<p style="font-size:15.5px;line-height:1.7;font-weight:500;color:var(--night-ink);margin:0 0 var(--s6);">Signal above, meaning below. The design work is the layer between them, in both products.</p>')
+O.append(opener(c4,"var(--night-ink)","fill",extra=pair)); O.append(blk("The challenge",INK,"fill",P(c4["challenge"]))); O.append(blk("My role",INK,"fill",P(c4["role"]),pt=34))
+O.append(blk(c4["info"]["narrative-label"],INK,"fill",P(c4["narrative"])))
 O.append(F(f'<div style="margin-bottom:var(--s5);">{plate("emotrix-stage.jpg","Emotrix session review. The video pane is withheld; the readings, the moments and the channel quality sit beside it.","Real interface, synthetic session")}</div>{plate("emotrix-cloud-hero.jpg","emotrix.cloud. The thesis, stated in public.","Live site, September 2026")}',pt=40))
-O.append(blk("What I learned building it",INK,"fill",deflist(c3["approach"])))
-O.append(F(fig("Case three &middot; the failure that taught me most",A,"fill","Nothing was broken. The prompt had grown six times.","Quality started degrading around the fourth session per user. Context had simply accumulated until the model was drowning in its own history.",
+O.append(blk("What I learned building it",INK,"fill",deflist(c4["approach"])))
+O.append(F(fig("Case three &middot; the failure that taught me most",A,"fill","Everything was working. The prompt had grown six times.","Quality started degrading around the fourth session per user. Context had simply accumulated until the model was drowning in its own history.",
   '<svg viewBox="0 0 300 200" width="100%" height="200" preserveAspectRatio="none" style="display:block;" aria-label="System prompt characters growing session one to four"><line x1="0" y1="1" x2="300" y2="1" stroke="#e8e2da"></line><line x1="0" y1="100" x2="300" y2="100" stroke="#e8e2da"></line><line x1="0" y1="199" x2="300" y2="199" stroke="#d5cabb"></line><polygon points="70,168 230,20 230,199 70,199" fill="#efe9e1"></polygon><rect x="24" y="168" width="46" height="31" fill="#c5b9a8"></rect><rect x="230" y="12" width="46" height="187" fill="#1e1a16"></rect><line x1="0" y1="154" x2="300" y2="154" stroke="#a97739" stroke-width="2" stroke-dasharray="6 5"></line>'
   f'<text x="297" y="149" text-anchor="end" {SVGF} font-size="9.5" font-weight="700" fill="#a97739">BOUNDED PROMPT: HARD BUDGET</text><text x="47" y="160" text-anchor="middle" {SVGF} font-size="13" font-weight="700" fill="#1e1a16">5,600</text><text x="253" y="6" text-anchor="middle" {SVGF} font-size="13" font-weight="700" fill="#1e1a16">34,000+</text></svg>'
   '<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:7px;"><p class="lbl" style="font-size:9.5px;text-align:center;">S1</p><p class="lbl" style="font-size:9.5px;text-align:center;color:var(--faint);">2</p><p class="lbl" style="font-size:9.5px;text-align:center;color:var(--faint);">3</p><p class="lbl" style="font-size:9.5px;text-align:center;">S4</p></div>',
   foot="The fix was architectural. A bounded prompt with hard character budgets, enforced however many sessions a user has had."),pt=40))
-O.append(blk(c3["info"]["aside-label"],INK,"fill",f'<div style="border:1px solid var(--rule-2);padding:var(--s4);">{P(c3["hard"],size=15)}</div>'))
-O.append(blk("Where it stands",INK,"fill",P(c3["impact"],size=17,colour="var(--ink)"))); O.append('<div style="height:64px;"></div>')
+O.append(blk(c4["info"]["aside-label"],INK,"fill",f'<div style="border:1px solid var(--rule-2);padding:var(--s4);">{P(c4["hard"],size=15)}</div>'))
+O.append(blk("Where it stands",INK,"fill",P(c4["impact"],size=17,colour="var(--ink)")))
+O.append(blk("Governance",INK,"fill",P(GOV,size=15.5)+'<div style="margin-top:var(--s5);">'+"".join(
+  f'<div style="border-top:1px solid var(--rule);padding:var(--s3) 0;"><p style="font-size:14px;font-weight:600;color:var(--ink);margin:0 0 3px;">{a}</p><p style="font-size:12.5px;line-height:1.5;color:var(--muted);margin:0;">{b}</p></div>'
+  for a,b in [("EU AI Act, Article 5","Classification and the data protection impact assessment, on a shipped product"),("European Accessibility Act","Governance across a whole design function, turned into a four-tier service"),("Regulated automotive delivery","Every programme in the first three cases")])+'</div>'))
+O.append('<div style="height:64px;"></div>')
 O.append(B(f'<p class="lbl" style="color:{AD};font-size:10.5px;margin-bottom:var(--s4);">The pattern</p><p style="font-size:17px;line-height:1.8;color:var(--night-body);margin:0 0 var(--s6);">{W.CLOSING[0]}</p><p style="font-size:15px;line-height:1.8;color:var(--night-muted);margin:0 0 var(--s5);">The last part is the one people underestimate.</p><p class="d2" style="color:var(--night-ink);margin:0;">Most of what I am proudest of was drawn by somebody else.</p>',pt=64,pb=64))
 O.append(F(f'<p class="lbl" style="margin-bottom:var(--s3);">Contact</p><p class="d4" style="font-size:20px;margin-bottom:var(--s4);">{W.CONTACT[0]}</p><p style="font-size:16px;line-height:1.8;color:var(--body);margin:0;">{W.CONTACT[1]}</p>',pt=56,pb=48))
 O.append(f'<div style="padding:20px {PAD}px 40px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;"><p class="t3" style="color:var(--faint);">&copy; 2026 Gideon Bullock</p><p class="t3" style="color:var(--faint);">gideonb.me</p></div>')
 
-NAMES=["Mobile","MobOneA","MobOneB","MobOneC","MobTwoA","MobTwoB","MobThree"]
-LABELS=["","Continues from the opening","Case one continues","Case one continues","Continues from case one","Case two continues","Continues from case two"]
+NAMES=["Mobile","MobOneA","MobOneB","MobOneC","MobTwoA","MobTwoB","MobEV","MobThree"]
+LABELS=["","Continues from the opening","Case one continues","Case one continues","Continues from case one","Case two continues","Continues from case two","Continues from case three"]
 segs=[[]]
 for item in O:
     if item=="@@SPLIT@@": segs.append([])

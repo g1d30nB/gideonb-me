@@ -26,8 +26,7 @@ const leftCol = paragraphs(sections['left-column']);
 const rightCol = paragraphs(sections['right-column']);
 const about = paragraphs(sections['about']);
 const earlierWork = paragraphs(sections['earlier-work']);
-const case1 = parseKV(sections['case-1']);
-const case2 = parseKV(sections['case-2']);
+const cases = paragraphs(sections['cases']);
 const craft = sections['craft-delivery'];
 const org = sections['organisation-operations'];
 const leadership = sections['leadership-influence'];
@@ -37,8 +36,8 @@ const projects = Object.keys(sections)
 const contact = paragraphs(sections['contact']);
 ---
 <Base
-  title="Gideon Bullock — Product & Design Leader"
-  description="I build AI-native products and the design organisations that ship them. Twenty-five years across consumer platforms, regulated global enterprise and early-stage ventures."
+  title="Gideon Bullock · Product & Design Leader"
+  description="Twenty-five years building design and product organisations, leading transformation and the innovation pathways that decide what gets funded. Employee seven at Songkick, a forty-person function with its own P&L at Toyota."
   ogImage="/images/headshot-frames/all-four-faces-gemini-face02.png"
   path="/"
   nav="home"
@@ -56,9 +55,7 @@ const contact = paragraphs(sections['contact']);
             {meta.proof && <p class="hero-proof">{meta.proof}</p>}
           </div>
           <div class="portrait-wrapper">
-            <img src="/images/headshot-frames/all-four-faces-gemini-face02.png" alt="">
-            <img src="/images/headshot-frames/all-four-faces-gemini-face02.png" alt="Gideon Bullock" class="active">
-            <img src="/images/headshot-frames/all-four-faces-gemini-face01.png" alt="Gideon Bullock">
+            <img src="/images/portrait.png" alt="Gideon Bullock" width="600" height="600">
           </div>
         </div>
 
@@ -84,93 +81,33 @@ const contact = paragraphs(sections['contact']);
 
         <div class="logos-section reveal" style="margin-top:40px;padding:0">
           <p class="section-label">Places I've Worked</p>
-          <img src="/images/logos-prev.png" alt="Logos of the BBC, Skype and Toyota" style="height:36px;margin-top:12px;opacity:0.7">
+          <img src="/images/logos-prev.png" alt="Logos of the BBC, Skype, Songkick and Toyota" style="height:65px;margin-top:12px;opacity:0.7">
         </div>
       </div>
     </section>
 
-    <!-- Section Anchors -->
-    <nav class="section-anchors hero-animate">
-      <div class="container">
-        <a href="#work">Work</a>
-        <span class="anchor-dot">·</span>
-        <a href="/work/">Case Studies</a>
-        <span class="anchor-dot">·</span>
-        <a href="#projects">Projects</a>
-        <span class="anchor-dot">·</span>
-        <a href="#expertise">Expertise</a>
-        <span class="anchor-dot">·</span>
-        <a href="#approach">Approach</a>
-        <span class="anchor-dot">·</span>
-        <a href="#writing">Writing</a>
-        <span class="anchor-dot">·</span>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-
-    <div class="divider"></div>
-
     <!-- Work -->
-    <section id="work" style="padding-top:56px">
+    <section id="work" style="padding-top:32px">
       <div class="container">
-        <p class="section-label reveal">Work</p>
-        <h2 class="reveal">Leadership case snapshots</h2>
-
         <div class="case-study reveal">
           <div class="case-header">
             <div>
-              <p class="case-number">Case One</p>
-              <p class="case-company">{case1['company']}</p>
-              {case1['dates'] && <p class="case-dates">{case1['dates']}</p>}
+              <p class="case-number">Work</p>
             </div>
             <div>
-              <div class="case-block">
-                <p class="case-block-label">Context</p>
-                <p set:html={inlineMd(case1['context'])} />
-              </div>
-              <div class="case-block">
-                <p class="case-block-label">What I Built</p>
-                <p set:html={inlineMd(case1['what-i-built'])} />
-              </div>
-              <div class="case-block">
-                <p class="case-block-label">What Changed</p>
-                <p set:html={inlineMd(case1['what-changed'])} />
+              {cases.map((p) => (
+                <div class="case-block">
+                  <p set:html={inlineMd(p)} />
+                </div>
+              ))}
+              <div style="margin-top:8px">
+                <a href="/work/" class="view-all-link">Read the four cases <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
               </div>
             </div>
           </div>
         </div>
 
         <div class="divider" style="margin:0"></div>
-
-        <div class="case-study reveal">
-          <div class="case-header">
-            <div>
-              <p class="case-number">Case Two</p>
-              <p class="case-company">{case2['company']}</p>
-              {case2['dates'] && <p class="case-dates">{case2['dates']}</p>}
-            </div>
-            <div>
-              <div class="case-block">
-                <p class="case-block-label">Context</p>
-                <p set:html={inlineMd(case2['context'])} />
-              </div>
-              <div class="case-block">
-                <p class="case-block-label">What I Built</p>
-                <p set:html={inlineMd(case2['what-i-built'])} />
-              </div>
-              <div class="case-block">
-                <p class="case-block-label">What Changed</p>
-                <p set:html={inlineMd(case2['what-changed'])} />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="divider" style="margin:0"></div>
-
-        <div class="reveal" style="margin-top:8px;margin-bottom:8px">
-          <a href="/work/" class="view-all-link">Read the full case studies <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="vertical-align:middle"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        </div>
 
         <div class="case-study reveal">
           <div class="case-header">
@@ -220,6 +157,12 @@ const contact = paragraphs(sections['contact']);
                 )}
                 {!p['link'] && p['status'] && <p class="project-status">{p['status']}</p>}
               </div>
+              {p['image'] && (
+                <figure class="product-frame">
+                  <div><img src={p['image']} alt={p['image-alt']} width="1172" height="628" /></div>
+                  <figcaption><span>{p['image-caption']}</span><span>{p['image-prov']}</span></figcaption>
+                </figure>
+              )}
             </div>
           </div>
         ))}
@@ -235,13 +178,11 @@ const contact = paragraphs(sections['contact']);
         <div class="expertise-intro">
           <p class="section-label reveal">Expertise</p>
           <h2 class="reveal">What I focus on</h2>
-          <p class="body-text reveal" style="margin-top:16px" set:html={inlineMd(sections['expertise-intro'])} />
         </div>
 
         <div class="skill-group reveal">
           <h3>Craft &amp; Delivery</h3>
           <div>
-            <p class="body-text" style="margin-bottom:20px" set:html={inlineMd(paragraphs(craft)[0])} />
             <ul class="skill-list">
               {bullets(craft).map((li) => <li set:html={inlineMd(li)} />)}
             </ul>
@@ -250,7 +191,6 @@ const contact = paragraphs(sections['contact']);
         <div class="skill-group reveal">
           <h3>Organisation &amp; Operations</h3>
           <div>
-            <p class="body-text" style="margin-bottom:20px" set:html={inlineMd(paragraphs(org)[0])} />
             <ul class="skill-list">
               {bullets(org).map((li) => <li set:html={inlineMd(li)} />)}
             </ul>
@@ -259,7 +199,6 @@ const contact = paragraphs(sections['contact']);
         <div class="skill-group reveal">
           <h3>Leadership &amp; Influence</h3>
           <div>
-            <p class="body-text" style="margin-bottom:20px" set:html={inlineMd(paragraphs(leadership)[0])} />
             <ul class="skill-list">
               {bullets(leadership).map((li) => <li set:html={inlineMd(li)} />)}
             </ul>
@@ -283,7 +222,7 @@ const contact = paragraphs(sections['contact']);
           </div>
           <div>
             {rightCol.map((p, i) => (
-              <p class="body-text reveal reveal-delay-1" style={i > 0 ? 'margin-top:24px' : undefined} set:html={inlineMd(p)} />
+              <p class="body-text reveal" style={i > 0 ? 'margin-top:24px' : undefined} set:html={inlineMd(p)} />
             ))}
           </div>
         </div>

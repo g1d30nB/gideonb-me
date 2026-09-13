@@ -17,7 +17,7 @@ gauge=('<svg viewBox="0 0 1120 66" width="100%" height="66" preserveAspectRatio=
  '<circle cx="560" cy="30" r="7" fill="none" stroke="#3f7d7a" stroke-width="2.5"></circle>'
  '<circle cx="947" cy="30" r="7" fill="#1e1a16"></circle>'
  '<text x="0" y="16" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#8a7d6e">THE BUSINESS BEHIND THE WORK</text>'
- '<text x="1120" y="16" text-anchor="end" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#8a7d6e">THE DRAWING ITSELF</text></svg>')
+ '<text x="1120" y="16" text-anchor="end" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#8a7d6e">THE WORK</text></svg>')
 gcards="".join(f'<div><p class="lbl" style="color:{c};margin-bottom:var(--s2);">{lb}</p>'
   f'<p class="d4" style="font-size:25px;margin-bottom:var(--s2);">{t}</p>'
   f'<p style="font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 10px;">{m}</p>'

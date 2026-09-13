@@ -44,7 +44,7 @@ def case(n):
     return dict(info=kv(SEC.get(k+"-meta")),challenge=paras(SEC.get(k+"-challenge")),role=paras(SEC.get(k+"-role")),
                 narrative=paras(SEC.get(k+"-narrative")),approach=bullets(SEC.get(k+"-approach")),hard=paras(SEC.get(k+"-hard")),
                 stats=stats(SEC.get(k+"-stats")),impact=paras(SEC.get(k+"-impact")))
-C1,C2,C3=case(1),case(2),case(3)
+C1,C2,C3,C4=case(1),case(2),case(3),case(4)
 INTRO=paras(SEC.get("intro")); CLOSING=paras(SEC.get("closing")); CONTACT=paras(SEC.get("contact"))
 if __name__=="__main__":
     for n,c in [(1,C1),(2,C2),(3,C3)]:

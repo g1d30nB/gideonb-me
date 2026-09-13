@@ -3,7 +3,7 @@
 import workmd as W, diagrams as D, components as C, os, sys
 A="var(--amber)"; T="var(--teal)"; INK="var(--ink)"; AD="var(--amber-d)"; TD="var(--teal-d)"
 HEAD=open("_head.part").read(); TAIL=open("_tail.part").read()
-c1,c2,c3=W.C1,W.C2,W.C3
+c1,c2,c3,c4=W.C1,W.C2,W.C3,W.C4
 def write(n,b): open(n,"w").write(HEAD+b+"\n"+TAIL)
 def F(h,pt=0,pb=0): return f'<div style="padding:{pt}px 120px {pb}px;box-sizing:border-box;">{h}</div>'
 def BAND(h,pt=72,pb=64): return f'<div style="background:var(--night);color:var(--night-body);padding:{pt}px 120px {pb}px;box-sizing:border-box;">{h}</div>'
@@ -43,27 +43,31 @@ HEADER=('<div style="border-bottom:1px solid var(--rule);padding:22px 120px;disp
   '<div style="display:flex;gap:30px;"><p class="lbl" style="font-weight:500;color:var(--muted);">Home</p><p class="lbl" style="font-weight:500;color:var(--ink);">Work</p><p class="lbl" style="font-weight:500;color:var(--muted);">Writing</p></div></div>')
 GAUGE=[("Case one","The organisation",f'{c1["info"]["company"]} &nbsp;&middot;&nbsp; {c1["info"]["dates"]}',"Everything here is mine. Built from nothing, run for seven years, sold engagement by engagement.",A,"fill"),
        ("Case two","What the organisation shipped",f'{c2["info"]["company"]} &nbsp;&middot;&nbsp; {c2["info"]["dates"]}',"I won it, staffed it, framed it and held the bar. Other people designed it.",T,"ring"),
-       ("Case three","The craft, and the thesis",f'{c3["info"]["company"]} &nbsp;&middot;&nbsp; {c3["info"]["dates"]}',"Built solo. There was nobody else.",INK,"fill")]
+       ("Case three","One decision inside it, measured",f'{c3["info"]["company"]} &nbsp;&middot;&nbsp; {c3["info"]["dates"]}',"My research team ran the study. The standard and the decision were mine.",T,"ring"),
+       ("Case four","The craft, and the thesis",f'{c4["info"]["company"]} &nbsp;&middot;&nbsp; {c4["info"]["dates"]}',"Built solo. There was nobody else.",INK,"fill")]
 cards="".join(f'<div><p class="lbl" style="color:{c};margin-bottom:var(--s2);">{lb}</p><p class="d4" style="font-size:26px;margin-bottom:10px;">{t}</p>'
   f'<p style="font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 11px;">{m}</p><p style="font-size:15.5px;line-height:1.7;color:var(--body);margin:0;">{n}</p></div>' for lb,t,m,n,c,k in GAUGE)
 gauge=('<svg viewBox="0 0 1200 66" width="100%" height="66" preserveAspectRatio="none" style="display:block;" aria-label="Three cases placed by distance from the drawing">'
- '<line x1="0" y1="30" x2="1200" y2="30" stroke="#d5cabb" stroke-width="1.5"></line><line x1="186" y1="30" x2="186" y2="66" stroke="#c5b9a8"></line>'
- '<line x1="600" y1="30" x2="600" y2="66" stroke="#c5b9a8"></line><line x1="1014" y1="30" x2="1014" y2="66" stroke="#c5b9a8"></line>'
- '<circle cx="186" cy="30" r="7" fill="#9a6a34"></circle><circle cx="600" cy="30" r="7" fill="none" stroke="#3f7d7a" stroke-width="2.5"></circle><circle cx="1014" cy="30" r="7" fill="#1e1a16"></circle>'
+ '<line x1="0" y1="30" x2="1200" y2="30" stroke="#d5cabb" stroke-width="1.5"></line><line x1="0" y1="30" x2="0" y2="66" stroke="#c5b9a8"></line>'
+ '<line x1="308.5" y1="30" x2="308.5" y2="66" stroke="#c5b9a8"></line><line x1="617" y1="30" x2="617" y2="66" stroke="#c5b9a8"></line><line x1="925.5" y1="30" x2="925.5" y2="66" stroke="#c5b9a8"></line>'
+ '<circle cx="0" cy="30" r="7" fill="#9a6a34"></circle><circle cx="308.5" cy="30" r="7" fill="none" stroke="#3f7d7a" stroke-width="2.5"></circle><circle cx="617" cy="30" r="7" fill="none" stroke="#3f7d7a" stroke-width="2.5"></circle><circle cx="925.5" cy="30" r="7" fill="#1e1a16"></circle>'
  '<text x="0" y="16" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#8a7d6e">THE BUSINESS BEHIND THE WORK</text>'
- '<text x="1200" y="16" text-anchor="end" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#8a7d6e">THE DRAWING ITSELF</text></svg>')
+ '<text x="1200" y="16" text-anchor="end" font-family="Schibsted Grotesk,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4" fill="#8a7d6e">THE WORK</text></svg>')
 
+COMP=W.paras(W.SEC["case1-commercial"])[0]; COM=[COMP.split(". I ran",1)[0]+".", "I ran"+COMP.split(". I ran",1)[1]]
+GOV=W.paras(W.SEC["governance"])
 S={}
 S["Main"]=[HEADER,
-  F('<p class="lbl" style="margin-bottom:var(--s4);">Selected Work</p><p class="d1" style="margin-bottom:var(--s6);">Three cases</p>'
+  F(f'<p class="lbl" style="margin-bottom:var(--s4);">Selected Work</p><p class="d1" style="margin-bottom:var(--s6);">{W.META.get("title","Three cases")}</p>'
     f'<p style="font-size:21px;line-height:1.65;color:var(--body);max-width:720px;margin:0 0 var(--s5);">{W.INTRO[0]}</p>'
     f'<p style="font-size:16px;line-height:1.8;color:var(--muted);max-width:720px;margin:0;">{W.INTRO[1]}</p>', pt=96),
-  F(gauge+f'<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:42px;margin-top:var(--s2);">{cards}</div>'
+  F(gauge+f'<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px;margin-top:var(--s2);">{cards}</div>'
     f'<div style="margin-top:var(--s7);padding-top:var(--s5);border-top:1px solid var(--rule);max-width:840px;"><p class="t3" style="font-size:14px;">{W.INTRO[2]}</p></div>', pt=64, pb=96)]
 
 narr=c1["narrative"]
 S["DeskOneA"]=[marker("Continues from the opening"), opener(c1,AD,"fill"),
   F(rail("The challenge",A,"fill",P(c1["challenge"])), pt=76), F(rail("My role",A,"fill",P(c1["role"])), pt=48),
+  F(rail("The commercial line",A,"fill",quote(COM[0],cls="d4")+'<div style="height:var(--s5);"></div>'+P([COM[1]])), pt=56),
   F(rail(c1["info"]["narrative-label"],A,"fill",P(narr[:2]),sub="Narrative"), pt=64), F(D.arc(), pt=56),
   F(rail("The turn",A,"fill",P(narr[2:3])+quote("A disjointed end-to-end experience is usually a faithful reflection of a disjointed business, and this one was faithful.")), pt=64, pb=88)]
 S["DeskOneB"]=[marker("Case one continues"), BAND(D.gap()),
@@ -105,20 +109,30 @@ S["DeskTwoB"]=[marker("Case two continues"),
   BAND(D.timeline()),
   F(f'<div style="display:grid;grid-template-columns:700px 1fr;gap:56px;align-items:start;">{D.rating()}<div><p class="lbl" style="color:{A};margin-bottom:var(--s4);">What changed</p>{P(c2["impact"][:1],size=16)}{quote(c2["impact"][1],cls="d4")}</div></div>', pt=72, pb=104)]
 
-n3=c3["narrative"]
-S["DeskThree"]=[marker("Continues from case two"),
-  opener(c3,"var(--night-ink)","fill", extra=C.pairing("emotrix-timeline.jpg","prepcall-report-listening.jpg")+'<div style="height:56px;"></div>'),
-  F(rail("The challenge",INK,"fill",P(c3["challenge"])), pt=76), F(rail("My role",INK,"fill",P(c3["role"])), pt=48),
-  F(rail(c3["info"]["narrative-label"],INK,"fill",P(n3)), pt=64),
+S["DeskEV"]=[marker("Continues from case two"), opener(c3,TD,"ring"),
+  F(rail("The challenge",A,"fill",P(c3["challenge"])), pt=76), F(rail("Whose work",T,"ring",P(c3["role"])), pt=48),
+  F(C.ev_measure(), pt=64),
+  F(rail("What was found, and what was decided",A,"fill",defgrid(c3["approach"])), pt=72),
+  F(rail("What changed",A,"fill",P(c3["impact"],size=18,colour="var(--ink)")), pt=56, pb=96)]
+
+n3=c4["narrative"]
+S["DeskThree"]=[marker("Continues from case three"),
+  opener(c4,"var(--night-ink)","fill", extra=C.pairing("emotrix-timeline.jpg","prepcall-report-listening.jpg")+'<div style="height:56px;"></div>'),
+  F(rail("The challenge",INK,"fill",P(c4["challenge"])), pt=76), F(rail("My role",INK,"fill",P(c4["role"])), pt=48),
+  F(rail(c4["info"]["narrative-label"],INK,"fill",P(n3)), pt=64),
   F(f'<div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;">'
     f'{C.plate("emotrix-stage.jpg","Emotrix session review. The video pane is withheld; the readings, the moments and the channel quality sit beside it.","Real interface, synthetic session")}'
     f'{C.plate("emotrix-cloud-hero.jpg","emotrix.cloud. The thesis, stated in public.","Live site, September 2026")}</div>', pt=64),
-  F(rail("What I learned building it",INK,"fill",defgrid(c3["approach"])), pt=72),
+  F(rail("What I learned building it",INK,"fill",defgrid(c4["approach"])), pt=72),
   F(f'<div style="display:grid;grid-template-columns:700px 1fr;gap:56px;align-items:start;">{D.ctx()}<div><p class="lbl" style="color:{A};margin-bottom:var(--s4);">Why it matters</p>'
     f'<p style="font-size:17px;line-height:1.8;color:var(--body);margin:0 0 18px;">Designing for a probabilistic system is largely this work, deciding what the model is allowed to carry. The interface is the easy part.</p>'
     f'<p class="d4" style="margin:0;">The hard part is a product that behaves differently on Tuesday than it did on Monday, and the constraints that keep it trustworthy anyway.</p></div></div>', pt=64),
-  F(rail(c3["info"]["aside-label"],INK,"fill",f'<div style="border:1px solid var(--rule-2);padding:var(--s5);">{P(c3["hard"],size=16)}</div>'), pt=72),
-  F(rail("Where it stands",INK,"fill",P(c3["impact"],size=18,colour="var(--ink)")), pt=60, pb=112),
+  F(rail(c4["info"]["aside-label"],INK,"fill",f'<div style="border:1px solid var(--rule-2);padding:var(--s5);">{P(c4["hard"],size=16)}</div>'), pt=72),
+  F(rail("Where it stands",INK,"fill",P(c4["impact"],size=18,colour="var(--ink)")), pt=60, pb=96),
+  F(rail("Governance",INK,"fill",P(GOV,size=17)+
+    '<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5);margin-top:var(--s6);">'+"".join(
+      f'<div style="border-top:1px solid var(--rule);padding-top:var(--s3);"><p style="font-size:14px;font-weight:600;color:var(--ink);margin:0 0 4px;">{a}</p><p style="font-size:12.5px;line-height:1.5;color:var(--muted);margin:0;">{b}</p></div>'
+      for a,b in [("EU AI Act, Article 5","Classification and the data protection impact assessment, on a shipped product"),("European Accessibility Act","Governance across a whole design function, turned into a four-tier service"),("Regulated automotive delivery","Every programme in the first three cases")])+'</div>'), pt=72, pb=112),
   BAND(f'<p class="lbl" style="color:{AD};margin-bottom:var(--s5);">The pattern</p><p style="font-size:20px;line-height:1.8;color:var(--night-body);max-width:840px;margin:0 0 var(--s7);">{W.CLOSING[0]}</p>'
     f'<p style="font-size:17px;line-height:1.8;color:var(--night-muted);max-width:840px;margin:0 0 var(--s6);">The last part is the one people underestimate.</p>'
     f'<p class="d2" style="color:var(--night-ink);max-width:1080px;margin:0;">Most of what I am proudest of was drawn by somebody else.</p>', pt=96, pb=96),
@@ -128,7 +142,7 @@ S["DeskThree"]=[marker("Continues from case two"),
 
 for name,parts in S.items(): write(f"{name}.dc.html", page(parts))
 # one continuous page for the real render (markers stripped)
-full="".join(p for name in ["Main","DeskOneA","DeskOneB","DeskOneC","DeskTwoA","DeskTwoB","DeskThree"] for p in S[name] if not p.startswith('<div style="background:var(--paper-2);padding:9px 120px'))
+full="".join(p for name in ["Main","DeskOneA","DeskOneB","DeskOneC","DeskTwoA","DeskTwoB","DeskEV","DeskThree"] for p in S[name] if not p.startswith('<div style="background:var(--paper-2);padding:9px 120px'))
 out=sys.argv[1] if len(sys.argv)>1 else "."
 open(os.path.join(out,"full-desktop.dc.html"),"w").write(HEAD+page([full])+"\n"+TAIL)
 print("desktop sections:", ", ".join(S.keys()))

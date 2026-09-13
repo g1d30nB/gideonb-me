@@ -27,6 +27,10 @@ function rehypeSiteLinks() {
 
 export default defineConfig({
   site: 'https://gideonb.me',
+  devToolbar: { enabled: false },
+  // Dev-only: lets Chrome DevTools connect the project folder as a workspace so
+  // Styles-pane edits write straight back to src/styles/global.css.
+  experimental: { chromeDevtoolsWorkspace: true },
   integrations: [sitemap()],
   markdown: {
     processor: satteri({

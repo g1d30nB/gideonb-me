@@ -1,0 +1,15 @@
+---
+// A product frame: hairline plate on the page's own ground, two caption lines.
+interface Props { src: string; what: string; prov: string; tall?: boolean; dark?: boolean; bare?: boolean }
+const { src, what, prov, tall = false, dark = false, bare = false } = Astro.props;
+---
+<figure class:list={['wk-plate', { tall, dark, bare }]}>
+  <div><img src={src} alt="" /></div>
+  <figcaption><span>{what}</span><span>{prov}</span></figcaption>
+</figure>
+<style>
+  .wk-plate.bare>div{border:0;background:transparent}
+  .wk-plate.dark>div{border-color:var(--night-rule);background:var(--night-2)}
+  .wk-plate.dark figcaption span:first-child{color:var(--night-ink)}
+  .wk-plate.dark figcaption span:last-child{color:var(--night-muted)}
+</style>
