@@ -1,7 +1,7 @@
 ---
 label: Product & Design Leader
 name: Gideon Bullock
-tagline: Twenty-five years building design and product organisations, leading transformation and the innovation pathways that decide what gets funded. Employee seven at Songkick, a forty-person function with its own P&L at Toyota. I design and build, and this year I have shipped AI products end to end. An engine can read a face or a voice accurately and still have no idea what the reading means. That gap is the problem I am building for.
+tagline: Twenty-five years building design and product organisations, leading transformation and the innovation pathways that decide what gets funded. Employee seven at Songkick. A forty-person function with its own P&L at Toyota. I design and build, and this year I have shipped two AI products end to end.
 proof: Built design at Toyota from zero to 40+ · £10m annual internal revenue with full P&L · Employee #7 at Songkick, seed stage to the Warner Music Group sale · Shipped an AI voice product this year, now building multimodal emotion middleware
 ---
 
