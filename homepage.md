@@ -98,6 +98,8 @@ image-prov: Live product, September 2026
 name: Emotrix
 description: Middleware for multimodal emotion intelligence. The engines that read faces and voices are improving fast. A raised brow still means one thing in a usability test and another in heavy traffic, and Emotrix is the interpretation layer that supplies the missing context, engine-agnostic by design.
 status: Early stage, in a live pilot under NDA
+link: https://emotrix.cloud/
+link-text: Visit project
 image: /images/work/emotrix-site.jpg
 image-alt: The Emotrix website
 image-caption: Emotrix, the site.
