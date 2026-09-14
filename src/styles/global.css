@@ -313,7 +313,7 @@ section { padding: 80px 0; }
 @media (max-width: 760px) { .project-header { grid-template-columns: 1fr; gap: 24px; } }
 .product-frame { margin: 0; max-width: 420px; }
 .product-frame > div { border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(20,16,10,0.06), 0 10px 30px rgba(20,16,10,0.12); }
-.product-frame img { display: block; width: 100%; height: auto; }
+.product-frame img { display: block; width: 100%; height: auto; aspect-ratio: 1172 / 628; object-fit: fill; }
 .product-frame figcaption { display: flex; flex-direction: column; gap: 4px; padding-top: 10px; }
 .product-frame figcaption span:first-child { font-size: 12.5px; line-height: 1.5; color: #1e1a16; font-weight: 500; }
 .product-frame figcaption span:last-child { font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #8a7d6e; line-height: 1.5; }

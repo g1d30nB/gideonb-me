@@ -86,6 +86,10 @@ image-prov: Live product, September 2026
 name: Emotrix
 description: Middleware for multimodal emotion intelligence. The engines that read faces and voices are improving fast. A raised brow still means one thing in a usability test and another in heavy traffic, and Emotrix is the interpretation layer that supplies the missing context, engine-agnostic by design.
 status: Early stage, in a live pilot under NDA
+image: /images/work/emotrix-site.jpg
+image-alt: The Emotrix website
+image-caption: Emotrix, the site.
+image-prov: Early stage, September 2026
 :::
 
 ::: project-nudge
@@ -93,6 +97,10 @@ name: Nudge
 description: A bookmarklet for the last stretch of building with an agent, the small visual corrections that are painful to describe in words. Drag on the running page and it turns each change into an exact measurement, ready to paste into your coding agent. Built and shipped as an open source project in September 2026.
 link: https://github.com/g1d30nB/nudge
 link-text: View on GitHub
+image: /images/work/nudge-install.png
+image-alt: The Nudge install page
+image-caption: Nudge, the install page.
+image-prov: Open source, September 2026
 :::
 
 ::: project-vs-skill
