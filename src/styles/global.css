@@ -674,7 +674,7 @@ a.article-row { color: inherit; }
 /* Homepage shares the /work frame width; long-form blocks keep a reading measure */
 #home-page .container { max-width: 1200px; }
 #home-page .divider { max-width: 1200px; }
-#home-page .case-header > div:last-child { max-width: 720px; }
+#home-page .case-header > div:last-child { max-width: 733px; }
 #home-page .contact .body-text { max-width: 720px; }
 
 /* Writing index and article pages sit on the same 1200px frame as home and work.
