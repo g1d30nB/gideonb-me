@@ -7,7 +7,7 @@
   --night:oklch(0.185 0.010 70); --night-2:oklch(0.245 0.016 68); --night-ink:oklch(0.930 0.008 82); --night-body:oklch(0.795 0.010 80);
   --night-muted:oklch(0.640 0.012 80); --night-rule:oklch(0.315 0.010 72); --amber-d:oklch(0.775 0.085 68); --teal-d:oklch(0.775 0.070 190);
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
-  font-family:'Schibsted Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:15.5px; line-height:1.7; color:var(--body);
+  font-family:'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif; font-size:15.5px; line-height:1.7; color:var(--body);
   background:var(--paper); text-wrap:pretty; -webkit-font-smoothing:antialiased;
 }
 .wk p{margin:0}
