@@ -14,6 +14,7 @@ const site = 'https://gideonb.me';
 const canonical = site + path;
 const ogImageAbs = site + ogImage;
 import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
 ---
 <!doctype html>
 <html lang="en">
@@ -76,5 +77,6 @@ import '../styles/global.css';
   </div>
 
   <script is:inline src="/site.js"></script>
+  <Analytics />
 </body>
 </html>
