@@ -88,9 +88,11 @@ description: Middleware for multimodal emotion intelligence. The engines that re
 status: Early stage, in a live pilot under NDA
 :::
 
-::: project-n8n
-name: n8n community workflow
-description: A workflow that reads the n8n community forum and GitHub issues, runs each post through a fixed seven-bucket taxonomy with a language model, and sends a weekly digest of where new users get stuck. Built in September 2026 as a personal project on n8n Cloud. The first run covered fourteen posts. The first-run flag came back at zero per cent, which says more about the GitHub source than about the users, and it needs investigating before the numbers mean anything.
+::: project-nudge
+name: Nudge
+description: A bookmarklet for the last stretch of building with an agent, the small visual corrections that are painful to describe in words. Drag on the running page and it turns each change into an exact measurement, ready to paste into your coding agent. Built and shipped as an open source project in September 2026.
+link: https://github.com/g1d30nB/nudge
+link-text: View on GitHub
 :::
 
 ::: project-vs-skill
