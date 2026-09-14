@@ -5,7 +5,7 @@ og: /images/headshot-frames/all-four-faces-gemini-face02.png
 ---
 
 ::: intro
-Four cases, at three distances from the work. In the first, the organisation is mine and everything in it was my decision. In the second, the team I built shipped it, and the designers on it did the designing. In the third and fourth I designed the products myself. Two products a decade ago, one at scale and one from nothing, and two AI products this year with nobody else in the room.
+Four cases, at three distances from the work. In the first, the organisation is mine and everything in it was my decision. In the second, the team I built shipped it, and the designers on it did the designing. In the third and fourth I designed the products myself. Two products a decade ago, one at scale and one from nothing, and two AI products this year, one shipped and one in pilot.
 
 Design leadership at this level is mostly the first two. The last two keep my judgement current.
 
