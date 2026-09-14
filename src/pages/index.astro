@@ -25,6 +25,8 @@ const homeList = homepageArticles(articles);
 const leftCol = paragraphs(sections['left-column']);
 const rightCol = paragraphs(sections['right-column']);
 const about = paragraphs(sections['about']);
+const aiHeading = sections['ai-behaviour-heading'].trim();
+const aiBehaviour = paragraphs(sections['ai-behaviour']);
 const earlierWork = paragraphs(sections['earlier-work']);
 const cases = paragraphs(sections['cases']);
 const craft = sections['craft-delivery'];
@@ -222,6 +224,15 @@ const contact = paragraphs(sections['contact']);
           </div>
           <div>
             {rightCol.map((p, i) => (
+              <p class="body-text reveal" style={i > 0 ? 'margin-top:24px' : undefined} set:html={inlineMd(p)} />
+            ))}
+          </div>
+          <h3 class="project-name approach-subhead reveal">{aiHeading}</h3>
+          <div>
+            <p class="body-text reveal" set:html={inlineMd(aiBehaviour[0])} />
+          </div>
+          <div>
+            {aiBehaviour.slice(1).map((p, i) => (
               <p class="body-text reveal" style={i > 0 ? 'margin-top:24px' : undefined} set:html={inlineMd(p)} />
             ))}
           </div>

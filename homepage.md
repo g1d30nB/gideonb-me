@@ -30,6 +30,18 @@ I ran the Toyota function on a full P&L, and I have sat in investment discussion
 The part of the job I care most about is developing people. Setting a clear bar, then giving people the context and autonomy to meet it. Several of the team I built at Toyota have told me it was the best team they'd ever worked in. That matters more to me than most metrics.
 :::
 
+::: ai-behaviour-heading
+Designing AI behaviour
+:::
+
+::: ai-behaviour
+When a product runs on a model, behaviour is the larger half of the design problem. What the system attempts. What it declines. How it responds to a signal it can't read. What it does once it has been running long enough to have a history. That behaviour is a surface in its own right and it needs designing with the same rigour as anything visible.
+
+I designed how an empathic voice should respond in an interview practice session, then again for a clinical companion where the bounds are tighter. When PrepCall's quality started degrading by the fourth session, the cause was a system prompt that had grown six-fold on accumulated history. Hard character budgets now hold it inside a fixed envelope. Emotrix works a layer below that, on what a system is entitled to conclude from a signal before anything acts on it.
+
+Few designers are doing this work yet. It's the part of the job I want next.
+:::
+
 ::: about
 I studied graphic design in the early nineties, when there was one computer with internet access between forty of us and nobody had a mobile phone. The web arrived while I was learning about typography, print, and communication from Paul Rand and Dieter Rams. I've been working in interactive media ever since, through every wave from CD-ROMs and rave flyers to connected vehicles and AI agents. London has been home throughout.
 

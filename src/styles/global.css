@@ -243,6 +243,7 @@ section { padding: 80px 0; }
 .philosophy .bold-statement { margin-bottom: 40px; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 48px; }
 @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+.two-col .approach-subhead { grid-column: 1 / -1; margin: 24px 0 -24px; }
 
 /* ───── Logos ───── */
 .logos-section { padding: 48px 0; }
