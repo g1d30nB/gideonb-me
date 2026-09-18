@@ -1,3 +1,12 @@
+# RETIRED on 2026-09-18. Do not run, do not revive.
+# This script regenerated all 17 files in src/components/work/ from diagrams.py, components.py
+# and mobile_figures.py. Those files are now hand-maintained: their colours resolve through the
+# --dg-* tokens and their type through the .dg-* classes in src/styles/work.css. Running this
+# would overwrite that work, and it was already stale (it still emitted Schibsted Grotesk,
+# replaced by hand in 25b39c6). Edit src/components/work/*.html directly. See CLAUDE.md.
+import sys
+sys.exit("RETIRED: src/components/work/ is hand-maintained. This script would overwrite it. See CLAUDE.md.")
+
 # Writes every diagram as a static HTML fragment for the Astro page. Copy blocks stay in work.md;
 # these are the drawn pieces, regenerated from here when a figure changes.
 import re, os, diagrams as D, components as C, mobile_figures as M
