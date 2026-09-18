@@ -4,6 +4,7 @@
   --ink:oklch(0.229 0.008 65); --body:oklch(0.435 0.015 78); --muted:oklch(0.586 0.018 78); --faint:oklch(0.712 0.032 74);
   --rule:oklch(0.906 0.008 80); --rule-2:oklch(0.845 0.013 80);
   --amber:oklch(0.575 0.075 62); --teal:oklch(0.575 0.075 195);
+  --amber-wash:oklch(0.93 0.030 68); /* --amber's wash; .wk-case2 swaps both for grey */
   --night:oklch(0.185 0.010 70); --night-2:oklch(0.245 0.016 68); --night-ink:oklch(0.930 0.008 82); --night-body:oklch(0.795 0.010 80);
   --night-muted:oklch(0.640 0.012 80); --night-rule:oklch(0.315 0.010 72); --amber-d:oklch(0.775 0.085 68); --teal-d:oklch(0.775 0.070 190);
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
