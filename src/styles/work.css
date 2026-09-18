@@ -7,6 +7,29 @@
   --night:oklch(0.185 0.010 70); --night-2:oklch(0.245 0.016 68); --night-ink:oklch(0.930 0.008 82); --night-body:oklch(0.795 0.010 80);
   --night-muted:oklch(0.640 0.012 80); --night-rule:oklch(0.315 0.010 72); --amber-d:oklch(0.775 0.085 68); --teal-d:oklch(0.775 0.070 190);
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
+  /* Diagram roles, used only by src/components/work. Declared here and nowhere else, so the
+     band and case-two overrides never reach them; an alias resolves once, on .wk. */
+  /* chart structure */
+  --dg-ink:#1e1a16; --dg-label:#8a7d6e; --dg-scale:#b5a08a; --dg-tick:#c5b9a8; --dg-axis:#d5cabb;
+  --dg-grid:#e8e2da; --dg-area:#efe9e1; --dg-connector:#b09a80; --dg-knockout:#f8f6f2;
+  /* primary series (the amber role) and secondary series (the teal role) */
+  --dg-accent:#a97739; --dg-accent-mark:#9a6a34; --dg-accent-ink:#7a5327; --dg-accent-area:#f0e3d0;
+  --dg-accent-2:#3f7d7a; --dg-accent-2-ink:#2f5f5c;
+  /* bars and highlighted cells */
+  --dg-bar:var(--amber); --dg-bar-start:oklch(0.55 0.075 62); --dg-bar-end:oklch(0.48 0.085 62); --dg-on-bar:oklch(0.97 0.008 80);
+  --dg-highlight:oklch(0.93 0.030 68); --dg-highlight-edge:oklch(0.86 0.045 70);
+  --dg-placeholder:oklch(0.93 0.006 82); --dg-screen:oklch(0.985 0.004 85);
+  /* the focused state: one surface, its chips and rule */
+  --dg-focus-surface:oklch(0.975 0.010 195); --dg-focus-surface-m:oklch(0.985 0.008 195); --dg-focus-rule:oklch(0.84 0.025 195);
+  --dg-chip:oklch(0.995 0.002 195); --dg-chip-edge:oklch(0.86 0.022 195); --dg-chip-ink:oklch(0.42 0.020 195);
+  /* diagrams drawn on the night ground */
+  --dg-night-panel:oklch(0.225 0.022 190); --dg-night-edge:oklch(0.33 0.020 190); --dg-night-link:oklch(0.42 0.030 190);
+  --dg-unowned:oklch(0.50 0.035 70); --dg-unowned-ink:oklch(0.60 0.040 70);
+  /* rating scale */
+  --dg-rating-low:#ec7b72; --dg-rating-mid:#f6d56b; --dg-rating-high:#7bbf84; --dg-star:#f2b632;
+  --dg-on-rating:oklch(0.99 0 0); --dg-on-rating-mid:oklch(0.35 0.06 80);
+  /* elevation */
+  --dg-shadow-contact:rgba(0,0,0,0.3); --dg-shadow-cast:rgba(0,0,0,0.35);
   font-family:'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif; font-size:15.5px; line-height:1.7; color:var(--body);
   background:var(--paper); text-wrap:pretty; -webkit-font-smoothing:antialiased;
 }
@@ -22,6 +45,14 @@
 .wk .stat{font-size:38px;line-height:1;font-weight:700;letter-spacing:-0.035em;color:var(--ink);font-variant-numeric:tabular-nums}
 .wk .body{font-size:17px;line-height:1.75;color:var(--body)} .wk .body+.body{margin-top:18px}
 .wk .body.big{font-size:18px;color:var(--ink)}
+/* Diagram type steps. Size only, so they sit beside .lbl, .stat, .d4 and .t3 as modifiers and leave
+   weight, tracking and colour to the element. They follow the classes above so they win the tie. */
+.wk .dg-micro{font-size:9.5px} .wk .dg-axis{font-size:10px} .wk .dg-tag{font-size:10.5px} .wk .dg-mark{font-size:11px}
+.wk .dg-note{font-size:11.5px} .wk .dg-cell{font-size:12px} .wk .dg-detail{font-size:12.5px} .wk .dg-small{font-size:13px}
+.wk .dg-copy{font-size:13.5px} .wk .dg-copy-l{font-size:14px} .wk .dg-lead{font-size:14.5px} .wk .dg-body{font-size:15.5px}
+.wk .dg-value{font-size:16px} .wk .dg-takeaway{font-size:16.5px} .wk .dg-beat{font-size:17.5px} .wk .dg-head{font-size:19px}
+.wk .dg-head-l{font-size:20px} .wk .dg-fig-s{font-size:26px} .wk .dg-fig{font-size:30px} .wk .dg-arrow{font-size:32px}
+.wk .dg-fig-l{font-size:40px} .wk .dg-fig-xl{font-size:54px} .wk .dg-sup{font-size:0.5em}
 
 .wk-frame{max-width:1200px;margin:0 auto;padding-left:24px;padding-right:24px}
 .wk-band{background:var(--night);color:var(--night-body);--ink:var(--night-ink);--body:var(--night-body);--muted:var(--night-muted);--faint:oklch(0.56 0.012 80);--rule:var(--night-rule);--rule-2:oklch(0.38 0.012 72);--paper:var(--night);--paper-2:var(--night-2);--amber:var(--amber-d);--teal:var(--teal-d)}
@@ -88,7 +119,7 @@
   .wk-fig [style*="grid-template-columns"]:not(.keep){grid-template-columns:1fr !important}
   .wk-fig [style*="translateX(-100%)"]{transform:none !important;text-align:left !important;padding:0 !important}
   .wk-fig [style*="display:flex"]:not(:has(svg)){flex-wrap:wrap}
-  .wk-fig .stat[style*="font-size:54px"]{font-size:40px !important}
+  .wk-fig .stat.dg-fig-xl{font-size:40px !important}
   .wk-fig [style*="max-width:190px"]{margin-left:0 !important;text-align:left !important}
 }
 
