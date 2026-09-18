@@ -18,6 +18,7 @@ title: Building a design organisation, then widening what it was allowed to own
 company: Toyota Connected Europe
 dates: 2018 to 2026
 narrative-label: How the capability grew
+operating-label: How it was run
 leading-label: Leading at a distance
 people-label: Growing people
 role: Head of UX and Product Design, Toyota Experience Design (TXD). Built from nothing, run for seven years with full P&L.
@@ -61,10 +62,22 @@ I built the strategic case for a federated global design system and took it to e
 A principal designer on my team asked whether he should run two days of idea generation for a worldwide Toyota AI initiative that Toyota Connected Europe had decided not to take part in. I told him to go ahead. I knew what he was capable of, that he would bring product and engineering in alongside design, and that the time would be well spent. **Seeing what someone can do and giving them the room is a large part of the job. Three approved proposals came out of it, and around £3.5m of projected investment from Toyota's global AI fund. On the strength of what came back, Toyota Connected Europe entered the initiative it had declined. The wider programme generated 29 ideas, and eight are being pursued by Toyota globally.**
 :::
 
+::: case1-operating
+The function ran on a written operating system. Continuous discovery replaced the double diamond, alongside a standard validation matrix, three-level journey mapping and content modelling, applied across the whole portfolio.
+
+Quality had a written definition. A scoring method, design pairing alongside critiques, and UX checkpoints inside client delivery pipelines.
+
+DesignOps was the first dedicated operational support the team had. Tooling, capacity planning, project tracking, quality governance. Designers got their time back.
+
+Service design became requestable as an internal service with a price against it, which is what turned a capability into an offer.
+:::
+
 ::: case1-leading
 I stepped out of the daily craft early and on purpose. The split is below.
 
 When executives wanted to understand a specific change, I brought the designer who had made it. Their accuracy, their ownership, their exposure to leadership.
+
+Designers were embedded in client teams across three regions, often working alone. Cohesion was the hardest thing to sustain. I ran town halls, a cross-team leads forum, showcases and the annual listening cycle to hold a distributed team together.
 :::
 
 ::: case1-people

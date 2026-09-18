@@ -1,6 +1,7 @@
 ---
 // Case one: the design organisation. `extended` adds the service gap diagram after the
-// service design narrative; the single-scroll view leaves it out.
+// service design narrative and the operating model under "How it was run"; the
+// single-scroll view leaves both out.
 import Plate from '../Plate.astro';
 import { inlineMd } from '../../../lib/homepage.mjs';
 import arc from '../arc.html?raw';
@@ -9,6 +10,7 @@ import ownership from '../ownership.html?raw';
 import people from '../people.html?raw';
 import gap from '../gap.html?raw';
 import gapM from '../gap_m.html?raw';
+import opmodel from '../opmodel.html?raw';
 interface Props { w: any; extended?: boolean }
 const { w, extended = false } = Astro.props;
 const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
@@ -45,6 +47,10 @@ const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
       {narr.slice(creditIdx + 1).map((p) => <p class="body" set:html={inlineMd(p)} />)}
     </div></div></div>
 
+    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">{c1.info['operating-label']}</p></div><div>{P('case1-operating').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    {extended && (
+    <div class="wk-frame wk-fig reveal" style="padding-top:56px"><Fragment set:html={opmodel} /><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s5);"><p class="dg-takeaway" style="line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">Four engagement models, so partner teams could buy the right depth. Long-term embedded partnerships, time-boxed studio work, specialist augmentation, innovation sprints.</p></div></div>
+    )}
     <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">{c1.info['leading-label']}</p></div><div>{P('case1-leading').map((p) => <p class="body" set:html={inlineMd(p)} />)}<div style="margin-top:var(--s6)"><Plate src="/images/work/txd-service-catalogue.png" what="The service catalogue, once the team was fully formed. Three practices, from concept to market." prov="Toyota Experience Design, internal" bare /></div></div></div></div>
     <section class="wk-band wk-band-grad reveal" style="margin-top:88px"><div class="wk-frame wk-fig" style="padding-top:88px"><Fragment set:html={ownership} /></div>
     <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--amber-d)"><span class="wk-dot fill"></span><p class="lbl">{c1.info['people-label']}</p></div><div>{P('case1-people').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
