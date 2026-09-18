@@ -1,39 +1,42 @@
-/* /work — direction E. Scoped to .wk so the rest of the site is untouched. */
-.wk{
-  --paper:oklch(0.968 0.006 85); --paper-2:oklch(0.945 0.013 82); --paper-team:oklch(0.962 0.011 195);
-  --ink:oklch(0.229 0.008 65); --body:oklch(0.435 0.015 78); --muted:oklch(0.586 0.018 78); --faint:oklch(0.712 0.032 74);
-  --rule:oklch(0.906 0.008 80); --rule-2:oklch(0.845 0.013 80);
-  --amber:oklch(0.575 0.075 62); --teal:oklch(0.575 0.075 195);
-  --amber-wash:oklch(0.93 0.030 68); /* --amber's wash; .wk-case2 swaps both for grey */
-  --night:oklch(0.185 0.010 70); --night-2:oklch(0.245 0.016 68); --night-ink:oklch(0.930 0.008 82); --night-body:oklch(0.795 0.010 80);
-  --night-muted:oklch(0.640 0.012 80); --night-rule:oklch(0.315 0.010 72); --amber-d:oklch(0.775 0.085 68); --teal-d:oklch(0.775 0.070 190);
+/* /work. Scoped to .wk so the rest of the site is untouched. Colour comes from tokens.css.
+   The names below are the roles the seventeen diagram components and the section templates were
+   written against, aliased onto the token set. They are declared on .wk and again on every
+   [data-theme] element inside it, so a dark band re-resolves each alias against its own theme
+   (a custom property set to var() resolves where it is declared, not where it is read). */
+.wk,.wk [data-theme]{
+  --paper:var(--surface); --paper-2:var(--warm-100); --paper-team:var(--warm-100);
+  --body:var(--ink-muted); --muted:var(--ink-faint); --faint:var(--ink-faint);
+  --rule-2:var(--ground-grey);
+  /* the two authorship steps. Amber and teal retire; the names stay for the components */
+  --amber:var(--warm-400); --teal:var(--warm-300); --amber-d:var(--warm-400); --teal-d:var(--warm-300);
+  --amber-wash:var(--warm-100);
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
-  /* Diagram roles, used only by src/components/work. Declared here and nowhere else, so the
-     band and case-two overrides never reach them; an alias resolves once, on .wk. */
-  /* chart structure */
-  --dg-ink:#1e1a16; --dg-label:#8a7d6e; --dg-scale:#b5a08a; --dg-tick:#c5b9a8; --dg-axis:#d5cabb;
-  --dg-grid:#e8e2da; --dg-area:#efe9e1; --dg-connector:#b09a80; --dg-knockout:#f8f6f2;
-  /* primary series (the amber role) and secondary series (the teal role) */
-  --dg-accent:#a97739; --dg-accent-mark:#9a6a34; --dg-accent-ink:#7a5327; --dg-accent-area:#f0e3d0;
-  --dg-accent-2:#3f7d7a; --dg-accent-2-ink:#2f5f5c;
-  /* bars and highlighted cells */
-  --dg-bar:var(--amber); --dg-bar-start:oklch(0.55 0.075 62); --dg-bar-end:oklch(0.48 0.085 62); --dg-on-bar:oklch(0.97 0.008 80);
-  --dg-highlight:oklch(0.93 0.030 68); --dg-highlight-edge:oklch(0.86 0.045 70);
-  --dg-placeholder:oklch(0.93 0.006 82); --dg-screen:oklch(0.985 0.004 85);
+  /* Diagram roles, used only by src/components/work. Mapping recorded in the phase-one report. */
+  /* chart structure: cool neutrals */
+  --dg-ink:var(--ink); --dg-label:var(--ink-muted); --dg-scale:var(--ink-faint); --dg-tick:var(--ground-grey-deep); --dg-axis:var(--ground-grey);
+  --dg-grid:var(--rule-faint); --dg-area:var(--rule-faint); --dg-connector:var(--ink-faint); --dg-knockout:var(--surface);
+  /* primary series (the amber role) on warm-400, secondary (the teal role) on warm-300 */
+  --dg-accent:var(--warm-400); --dg-accent-mark:var(--warm-500); --dg-accent-ink:var(--warm-500); --dg-accent-area:var(--warm-100);
+  --dg-accent-2:var(--warm-300); --dg-accent-2-ink:var(--warm-400);
+  /* bars and highlighted cells: warm greys */
+  --dg-bar:var(--warm-400); --dg-bar-start:var(--warm-400); --dg-bar-end:var(--warm-500); --dg-on-bar:var(--surface);
+  --dg-highlight:var(--warm-100); --dg-highlight-edge:var(--warm-200);
+  --dg-placeholder:var(--rule-faint); --dg-screen:var(--surface);
   /* the focused state: one surface, its chips and rule */
-  --dg-focus-surface:oklch(0.975 0.010 195); --dg-focus-surface-m:oklch(0.985 0.008 195); --dg-focus-rule:oklch(0.84 0.025 195);
-  --dg-chip:oklch(0.995 0.002 195); --dg-chip-edge:oklch(0.86 0.022 195); --dg-chip-ink:oklch(0.42 0.020 195);
-  /* diagrams drawn on the night ground */
-  --dg-night-panel:oklch(0.225 0.022 190); --dg-night-edge:oklch(0.33 0.020 190); --dg-night-link:oklch(0.42 0.030 190);
-  --dg-unowned:oklch(0.50 0.035 70); --dg-unowned-ink:oklch(0.60 0.040 70);
-  /* rating scale */
-  --dg-rating-low:#ec7b72; --dg-rating-mid:#f6d56b; --dg-rating-high:#7bbf84; --dg-star:#f2b632;
-  --dg-on-rating:oklch(0.99 0 0); --dg-on-rating-mid:oklch(0.35 0.06 80);
+  --dg-focus-surface:var(--warm-100); --dg-focus-surface-m:var(--warm-100); --dg-focus-rule:var(--warm-200);
+  --dg-chip:var(--surface); --dg-chip-edge:var(--warm-200); --dg-chip-ink:var(--ink-muted);
+  /* diagrams drawn on a charcoal band: warm greys at their dark values */
+  --dg-night-panel:var(--warm-100); --dg-night-edge:var(--warm-200); --dg-night-link:var(--warm-200);
+  --dg-unowned:var(--warm-300); --dg-unowned-ink:var(--warm-400);
+  /* rating scale, the one colour exception */
+  --dg-rating-low:var(--rating-low); --dg-rating-mid:var(--rating-mid); --dg-rating-high:var(--rating-high); --dg-star:var(--rating-mid);
+  --dg-on-rating:var(--accent-on); --dg-on-rating-mid:var(--ink);
   /* elevation */
   --dg-shadow-contact:rgba(0,0,0,0.3); --dg-shadow-cast:rgba(0,0,0,0.35);
-  font-family:'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif; font-size:15.5px; line-height:1.7; color:var(--body);
-  background:var(--paper); text-wrap:pretty; -webkit-font-smoothing:antialiased;
 }
+/* The --night-* names the components reference inside bands. Aliases onto the dark theme, not values. */
+.wk [data-theme="dark"]{--night:var(--surface);--night-2:var(--warm-100);--night-ink:var(--ink);--night-body:var(--ink-muted);--night-muted:var(--ink-faint);--night-rule:var(--rule);--rule-2:var(--rule)}
+.wk{font-family:var(--font-display);font-size:15.5px;line-height:1.7;color:var(--body);background:var(--paper);text-wrap:pretty;-webkit-font-smoothing:antialiased}
 .wk p{margin:0}
 .wk a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule-2);text-underline-offset:3px}
 .wk a:hover{text-decoration-color:var(--ink)}
@@ -41,24 +44,26 @@
 .wk .d2{font-size:clamp(32px,3.6vw,48px);line-height:1.1;font-weight:700;letter-spacing:-0.028em;color:var(--ink)}
 .wk .d3{font-size:clamp(24px,2.4vw,32px);line-height:1.2;font-weight:700;letter-spacing:-0.022em;color:var(--ink)}
 .wk .d4{font-size:clamp(19px,1.55vw,22px);line-height:1.35;font-weight:600;letter-spacing:-0.012em;color:var(--ink)}
-.wk .t1{font-size:17px;line-height:1.75;color:var(--body)} .wk .t2{font-size:15.5px;line-height:1.7;color:var(--body)} .wk .t3{font-size:13px;line-height:1.6;color:var(--muted)}
-.wk .lbl{font-size:11px;letter-spacing:0.13em;text-transform:uppercase;font-weight:600;color:var(--muted);margin:0}
-.wk .stat{font-size:38px;line-height:1;font-weight:700;letter-spacing:-0.035em;color:var(--ink);font-variant-numeric:tabular-nums}
+.wk .t1{font-size:17px;line-height:1.75;color:var(--body)} .wk .t2{font-size:15px;line-height:1.7;color:var(--body)} .wk .t3{font-size:13px;line-height:1.6;color:var(--muted)}
+.wk .lbl{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;font-weight:400;color:var(--muted);margin:0}
+.wk .stat{font-family:var(--font-mono);font-size:38px;line-height:1;font-weight:400;letter-spacing:-0.02em;color:var(--ink);font-variant-numeric:tabular-nums}
 .wk .body{font-size:17px;line-height:1.75;color:var(--body)} .wk .body+.body{margin-top:18px}
 .wk .body.big{font-size:18px;color:var(--ink)}
 /* Diagram type steps. Size only, so they sit beside .lbl, .stat, .d4 and .t3 as modifiers and leave
    weight, tracking and colour to the element. They follow the classes above so they win the tie. */
-.wk .dg-micro{font-size:9.5px} .wk .dg-axis{font-size:10px} .wk .dg-tag{font-size:10.5px} .wk .dg-mark{font-size:11px}
-.wk .dg-note{font-size:11.5px} .wk .dg-cell{font-size:12px} .wk .dg-detail{font-size:12.5px} .wk .dg-small{font-size:13px}
-.wk .dg-copy{font-size:13.5px} .wk .dg-copy-l{font-size:14px} .wk .dg-lead{font-size:14.5px} .wk .dg-body{font-size:15.5px}
-.wk .dg-value{font-size:16px} .wk .dg-takeaway{font-size:16.5px} .wk .dg-beat{font-size:17.5px} .wk .dg-head{font-size:19px}
-.wk .dg-head-l{font-size:20px} .wk .dg-fig-s{font-size:26px} .wk .dg-fig{font-size:30px} .wk .dg-arrow{font-size:32px}
-.wk .dg-fig-l{font-size:40px} .wk .dg-fig-xl{font-size:54px} .wk .dg-sup{font-size:0.5em}
+/* Diagram type steps, collapsed onto the tokens.css scale: 12 label, 15 body-small, 17 body, 19 subheading,
+   24 heading, 40 display-m. Six steps stay as they were, listed in the phase-one report. */
+.wk .dg-tag,.wk .dg-mark,.wk .dg-note,.wk .dg-cell,.wk .dg-detail{font-size:12px}
+.wk .dg-small,.wk .dg-copy,.wk .dg-copy-l,.wk .dg-lead,.wk .dg-body{font-size:15px}
+.wk .dg-value,.wk .dg-takeaway,.wk .dg-beat{font-size:17px}
+.wk .dg-head,.wk .dg-head-l{font-size:19px}
+.wk .dg-fig-s{font-size:24px} .wk .dg-fig-l{font-size:40px}
+.wk .dg-micro{font-size:9.5px} .wk .dg-axis{font-size:10px} .wk .dg-fig{font-size:30px} .wk .dg-arrow{font-size:32px} .wk .dg-fig-xl{font-size:54px} .wk .dg-sup{font-size:0.5em}
 
 .wk-frame{max-width:1200px;margin:0 auto;padding-left:24px;padding-right:24px}
-.wk-band{background:var(--night);color:var(--night-body);--ink:var(--night-ink);--body:var(--night-body);--muted:var(--night-muted);--faint:oklch(0.56 0.012 80);--rule:var(--night-rule);--rule-2:oklch(0.38 0.012 72);--paper:var(--night);--paper-2:var(--night-2);--amber:var(--amber-d);--teal:var(--teal-d)}
-.wk-band .body{color:var(--night-body)}
-.wk-band-grad{background:linear-gradient(to bottom, oklch(0.275 0.011 70) 0%, var(--night) 60%)}
+.wk-band{background:var(--surface);color:var(--ink-muted)}
+.wk-band .body{color:var(--ink-muted)}
+.wk-band-grad{background:linear-gradient(to bottom, var(--rule-faint) 0%, var(--surface) 60%)}
 .wk-team{background:var(--paper-team)}
 .wk-dot{display:inline-block;width:10px;height:10px;border-radius:50%;flex-shrink:0}
 .wk-dot.fill{background:var(--c,var(--amber))} .wk-dot.ring{border:2px solid var(--c,var(--teal));box-sizing:border-box}
@@ -74,11 +79,11 @@
 .wk-defgrid>div{border-top:1px solid var(--rule);padding-top:var(--s4)} .wk-defgrid .d4{margin-bottom:var(--s2)}
 .wk-defgrid p.t2{margin:0}
 .wk-quote{width:48px;height:3px;background:var(--amber);margin:var(--s6) 0 var(--s4)}
-.wk-stats{display:flex;flex-wrap:wrap;row-gap:var(--s6);border-top:1px solid var(--night-rule);padding-top:var(--s6)}
-.wk-stats>div{padding:0 var(--s6)} .wk-stats>div:first-child{padding-left:0} .wk-stats>div+div{border-left:1px solid var(--night-rule)}
-.wk-stats .stat{color:var(--night-ink);font-size:40px;margin-bottom:10px} .wk-stats p.t3{color:var(--night-muted);max-width:200px}
-.wk-opener{padding:84px 0 76px} .wk-opener .d2{color:var(--night-ink);max-width:1000px;margin-bottom:var(--s5)}
-.wk-opener .meta{font-size:14px;color:var(--night-muted);margin-bottom:14px} .wk-opener .role{font-size:18px;line-height:1.8;color:var(--night-body);max-width:760px;margin-bottom:var(--s8)}
+.wk-stats{display:flex;flex-wrap:wrap;row-gap:var(--s6);border-top:1px solid var(--rule);padding-top:var(--s6)}
+.wk-stats>div{padding:0 var(--s6)} .wk-stats>div:first-child{padding-left:0} .wk-stats>div+div{border-left:1px solid var(--rule)}
+.wk-stats .stat{color:var(--ink);font-size:40px;margin-bottom:10px} .wk-stats p.t3{color:var(--ink-faint);max-width:200px}
+.wk-opener{padding:84px 0 76px} .wk-opener .d2{color:var(--ink);max-width:1000px;margin-bottom:var(--s5)}
+.wk-opener .meta{font-size:14px;color:var(--ink-faint);margin-bottom:14px} .wk-opener .role{font-size:18px;line-height:1.8;color:var(--ink-muted);max-width:760px;margin-bottom:var(--s8)}
 .wk-gauge{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto auto auto;gap:0 34px;margin-top:var(--s2)}
 .wk-gauge>div{display:grid;grid-template-rows:subgrid;grid-row:span 4;row-gap:0;align-content:start}
 .wk-gauge .lbl{margin-bottom:var(--s2)} .wk-gauge .d4{font-size:26px;margin-bottom:10px;align-self:start} .wk-gauge .t3{margin-bottom:11px}
@@ -90,16 +95,16 @@
 .wk-plate{margin:0} .wk-plate>div{border:1px solid var(--rule-2);background:var(--paper-2)} .wk-plate img{display:block;width:100%;height:auto}
 .wk-plate.tall img{aspect-ratio:9/16;object-fit:cover;object-position:top}
 .wk-plate.bare>div{border:0 !important;background:transparent !important}
-.wk-uniform .wk-plate>div{border:0;background:transparent;border-radius:10px;overflow:hidden;box-shadow:0 1px 2px rgba(20,16,10,0.06),0 10px 30px rgba(20,16,10,0.12)} .wk-uniform .wk-plate img{aspect-ratio:1172/628;object-fit:cover;object-position:center bottom}
+.wk-uniform .wk-plate>div{border:0;background:transparent;border-radius:10px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,0.06),0 10px 30px rgba(0,0,0,0.12)} .wk-uniform .wk-plate img{aspect-ratio:1172/628;object-fit:cover;object-position:center bottom}
 .wk-plate figcaption{display:flex;flex-direction:column;gap:5px;padding-top:10px}
 .wk-plate figcaption span:first-child{font-size:12.5px;line-height:1.5;color:var(--ink);font-weight:500}
-.wk-plate figcaption span:last-child{font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);line-height:1.5}
+.wk-plate figcaption span:last-child{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);line-height:1.5}
 .wk-rail-3{grid-template-columns:180px minmax(0,680px) 1fr;gap:44px} .wk-rail-3>div:nth-child(2){max-width:680px}
 .wk-side{display:grid;grid-template-columns:minmax(0,904px) 1fr;gap:44px;align-items:start} .wk-side>div:first-child .wk-rail>div:last-child{max-width:680px}
-.wk-phone{margin:0;justify-self:end;width:100%;max-width:250px} .wk-phone img{display:block;width:100%;height:auto;border-radius:9%/4.2%;overflow:hidden;background:var(--night)}
-.wk-phone figcaption{display:flex;flex-direction:column;gap:5px;padding-top:10px} .wk-phone figcaption span:first-child{font-size:12.5px;line-height:1.5;color:var(--ink);font-weight:500} .wk-phone figcaption span:last-child{font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);line-height:1.5}
-.wk-inset{background:var(--paper-team);border:1px solid oklch(0.87 0.020 195);padding:var(--s5);margin:var(--s6) 0}
-.wk-inset .body{color:oklch(0.36 0.022 195)}
+.wk-phone{margin:0;justify-self:end;width:100%;max-width:250px} .wk-phone img{display:block;width:100%;height:auto;border-radius:9%/4.2%;overflow:hidden;background:var(--ground-charcoal)}
+.wk-phone figcaption{display:flex;flex-direction:column;gap:5px;padding-top:10px} .wk-phone figcaption span:first-child{font-size:12.5px;line-height:1.5;color:var(--ink);font-weight:500} .wk-phone figcaption span:last-child{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);line-height:1.5}
+.wk-inset{background:var(--paper-team);border:1px solid var(--warm-200);padding:var(--s5);margin:var(--s6) 0}
+.wk-inset .body{color:var(--ink)}
 .wk-box{border:1px solid var(--rule-2);padding:var(--s5)}
 .wk-gov{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5);margin-top:var(--s6)}
 .wk-gov>div{border-top:1px solid var(--rule);padding-top:var(--s3)}
@@ -129,13 +134,13 @@
 .wk-video .wk-video-src{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:saturate(0.85);opacity:0;transition:opacity 0.6s ease-out}
 .wk-video .wk-video-src.is-ready{opacity:1}
 .wk-video .wk-video-wash{position:absolute;inset:0;z-index:1;background:
-  radial-gradient(circle at center, rgba(12,10,8,0.0) 0.9px, rgba(12,10,8,0.55) 1.0px) 0 0/5px 5px,
-  linear-gradient(rgba(12,10,8,0.66), rgba(12,10,8,0.74))}
+  radial-gradient(circle at center, oklch(from var(--ground-charcoal-deep) l c h / 0) 0.9px, oklch(from var(--ground-charcoal-deep) l c h / 0.55) 1.0px) 0 0/5px 5px,
+  linear-gradient(oklch(from var(--ground-charcoal-deep) l c h / 0.66), oklch(from var(--ground-charcoal-deep) l c h / 0.74))}
 .wk-video>.wk-frame{position:relative;z-index:2}
-.wk-video .meta,.wk-video .wk-stats p.t3{color:oklch(0.78 0.010 80)}
-.wk-video .role{color:oklch(0.86 0.008 82)}
+.wk-video .meta,.wk-video .wk-stats p.t3{color:var(--ink-muted)}
+.wk-video .role{color:var(--ink)}
 .wk-video .wk-stats{border-top-color:rgba(255,255,255,0.18)} .wk-video .wk-stats>div+div{border-left-color:rgba(255,255,255,0.18)}
-@media (prefers-reduced-motion: reduce){ .wk-video .wk-video-src{display:none} .wk-video{background:var(--night) url(/video/txd-poster.jpg) center/cover} }
+@media (prefers-reduced-motion: reduce){ .wk-video .wk-video-src{display:none} .wk-video{background:var(--ground-charcoal) url(/video/txd-poster.jpg) center/cover} }
 
 /* The capability arc builds left to right once it is in view */
 .wk-arc{--step:0.42s;--ease:cubic-bezier(0.22,1,0.36,1)}
@@ -165,8 +170,8 @@
 /* A still behind a band gets the same wash; brighter photos take a heavier one */
 .wk-video img.wk-video-src{opacity:1}
 .wk-photo .wk-video-wash{background:
-  radial-gradient(circle at center, rgba(12,10,8,0.0) 0.9px, rgba(12,10,8,0.6) 1.0px) 0 0/5px 5px,
-  linear-gradient(rgba(12,10,8,0.62), rgba(12,10,8,0.72))}
+  radial-gradient(circle at center, oklch(from var(--ground-charcoal-deep) l c h / 0) 0.9px, oklch(from var(--ground-charcoal-deep) l c h / 0.6) 1.0px) 0 0/5px 5px,
+  linear-gradient(oklch(from var(--ground-charcoal-deep) l c h / 0.62), oklch(from var(--ground-charcoal-deep) l c h / 0.72))}
 @media (prefers-reduced-motion: reduce){ .wk-photo .wk-video-src{display:block} }
 
 /* Case two mood board: findings knocked back, the charging animation laid over them */
@@ -175,8 +180,8 @@
 .wk-mood-findings{position:absolute;left:0;top:0;width:76%;height:auto;opacity:0.45;filter:saturate(0.6)}
 .wk-mood-gif{position:absolute;right:6%;top:6%;width:24%;height:auto;border-radius:6%/3.5%;box-shadow:0 30px 60px rgba(0,0,0,0.45)}
 .wk-mood-caption{display:flex;flex-direction:column;gap:5px;max-width:1000px;margin:var(--s4) auto 0}
-.wk-mood-caption span:first-child{font-size:12.5px;line-height:1.5;color:var(--night-ink);font-weight:500}
-.wk-mood-caption span:last-child{font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--night-muted);line-height:1.5}
+.wk-mood-caption span:first-child{font-size:12.5px;line-height:1.5;color:var(--ink);font-weight:500}
+.wk-mood-caption span:last-child{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-faint);line-height:1.5}
 @media (max-width:820px){ .wk-mood-stage{aspect-ratio:auto} .wk-mood-findings{position:static;width:100%;display:block} .wk-mood-gif{position:static;width:46%;margin:var(--s5) 0 0 auto;display:block} }
 
 /* The thirteen-month timeline builds when in view */
@@ -198,8 +203,10 @@
   .wk-tl .tl-path{stroke-dashoffset:0;transition:none}
 }
 
-/* Case two sits on a light grey ground with grey accents in place of amber */
-.wk-case2{background:oklch(0.948 0.003 80);--amber:oklch(0.50 0.008 80);--amber-wash:oklch(0.89 0.005 80);--paper:oklch(0.948 0.003 80);--paper-2:oklch(0.905 0.004 80)}
+/* Case two steps off the paper, with the muted ink in place of the amber step. The old ground sat 0.02
+   below paper; --rule-faint is the nearest token. --ground-grey is the ladder's own step and is the
+   phase-two choice, but the axis and rule tokens are that same grey and disappear on it. */
+.wk-case2{background:var(--rule-faint);--surface:var(--rule-faint);--paper:var(--rule-faint);--amber:var(--ink-muted);--amber-wash:var(--ground-grey)}
 
 /* plain lists in copy */
 .wk-list{list-style:none;margin:var(--s5) 0 0;padding:0}
@@ -214,7 +221,7 @@
 .wk-phones-stack .ph1{position:absolute;left:5%;top:20%;width:56%;height:auto}
 .wk-phones-stack figcaption{display:flex;flex-direction:column;gap:5px;padding-top:10px}
 .wk-phones-stack figcaption span:first-child{font-size:12.5px;line-height:1.5;color:var(--ink);font-weight:500}
-.wk-phones-stack figcaption span:last-child{font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);line-height:1.5}
+.wk-phones-stack figcaption span:last-child{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);line-height:1.5}
 
 .wk-blend img{mix-blend-mode:multiply}
 
@@ -240,16 +247,16 @@
 .wk-card-stats{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3) var(--s4);border-top:1px solid var(--rule);padding-top:var(--s4);margin-bottom:var(--s4)}
 .wk-card-stats .stat{font-size:26px;margin-bottom:4px} .wk-card-stats .t3{font-size:12px;line-height:1.45}
 .wk-cards .t2{margin-bottom:var(--s3)}
-.wk-card-link{display:inline-flex;align-items:center;gap:4px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;color:var(--muted);transition:color 0.3s}
+.wk-card-link{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;font-weight:500;color:var(--muted);transition:color 0.3s}
 .wk-card:hover .wk-card-link,a.wk-card-link:hover{color:var(--ink)} .wk-card-link svg{transition:transform 0.3s} .wk-card:hover .wk-card-link svg{transform:translateX(2px)}
 .wk-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6) var(--s5)}
 .wk-projects .wk-plate{margin-bottom:var(--s4)} .wk-projects .d4{margin-bottom:var(--s2)} .wk-projects .t2{margin-bottom:var(--s2)} .wk-projects>.wk-card>.t3{margin-bottom:var(--s3)}
-.wk-projects .wk-card-link{color:var(--night-muted)} .wk-projects .wk-card:hover .wk-card-link{color:var(--night-ink)}
+.wk-projects .wk-card-link{color:var(--ink-faint)} .wk-projects .wk-card:hover .wk-card-link{color:var(--ink)}
 /* Case and project pages: the way back to the hub, and the way on to the other cases */
-.wk-crumb{padding-top:40px} .wk-crumb a{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;color:var(--muted);text-decoration:none} .wk-crumb a:hover{color:var(--ink)}
+.wk-crumb{padding-top:40px} .wk-crumb a{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;font-weight:500;color:var(--muted);text-decoration:none} .wk-crumb a:hover{color:var(--ink)}
 .wk-more{padding-top:72px} .wk-more>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5);margin-top:var(--s4)}
-.wk-more a{display:block;border-top:1px solid var(--rule);padding-top:var(--s3);text-decoration:none;font-size:11px;letter-spacing:0.13em;text-transform:uppercase;font-weight:600;color:var(--muted)}
-.wk-more a span{display:block;margin-top:var(--s2);font-size:15.5px;line-height:1.5;letter-spacing:0;text-transform:none;font-weight:500;color:var(--ink)} .wk-more a:hover span{text-decoration:underline;text-decoration-color:var(--rule-2);text-underline-offset:3px}
+.wk-more a{display:block;border-top:1px solid var(--rule);padding-top:var(--s3);text-decoration:none;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;font-weight:400;color:var(--muted)}
+.wk-more a span{display:block;margin-top:var(--s2);font-family:var(--font-display);font-size:15.5px;line-height:1.5;letter-spacing:0;text-transform:none;font-weight:500;color:var(--ink)} .wk-more a:hover span{text-decoration:underline;text-decoration-color:var(--rule-2);text-underline-offset:3px}
 @media (max-width:820px){
   .wk-cards{grid-template-columns:1fr;gap:var(--s6) 0} .wk-cards>.wk-card{grid-template-rows:auto;grid-row:auto}
   .wk-projects,.wk-more>div{grid-template-columns:1fr}

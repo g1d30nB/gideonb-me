@@ -31,7 +31,6 @@ const others = kind === 'case' ? CASES.filter((x) => x.n !== n) : [];
 const external = (l) => /^https?:/.test(l);
 ---
 <Base title={title} description={description} ogImage={ogImage} path={`/work/${Astro.params.slug}/`} nav="work">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" />
   <main id="work-page" class="page active wk">
     {kind === 'case' && (
       <Fragment>

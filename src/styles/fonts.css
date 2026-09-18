@@ -1,0 +1,45 @@
+/* Self-hosted faces. Geist and Geist Mono are subset to the characters the site uses
+   (Basic Latin, Latin-1, the curly quotes and dashes, £ € ★ ◆), one variable file each.
+   Material Symbols Outlined is subset to the ten glyphs the spec names and keeps all four
+   axes so weight can animate; it is declared here and fetched only once something uses it.
+   Regenerate with pyftsubset; the recipe is in the phase-one commit message. */
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist-subset.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-subset.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  src: url('/fonts/MaterialSymbolsOutlined-subset.woff2') format('woff2');
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: block;
+}
+/* An icon: <span class="msym">arrow_forward</span>. Weight steps with size and grade flips
+   with ground, per the spec; the defaults here are the 20px step on a light ground. */
+.msym {
+  font-family: 'Material Symbols Outlined';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  display: inline-block;
+  vertical-align: middle;
+  font-optical-sizing: auto;
+  font-variation-settings: 'FILL' 0, 'GRAD' 0;
+  -webkit-font-smoothing: antialiased;
+}
+[data-theme="dark"] .msym { font-variation-settings: 'FILL' 0, 'GRAD' -25; }

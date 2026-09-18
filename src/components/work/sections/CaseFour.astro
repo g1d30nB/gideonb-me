@@ -10,8 +10,8 @@ const { w, extended = false } = Astro.props;
 const { P, B, c4, gov } = w;
 ---
     <!-- Case four -->
-    <section id="case-four" class="wk-band reveal"><div class="wk-frame wk-opener wk-fig">
-      <div class="wk-lab" style="--c:var(--night-ink);margin-bottom:var(--s5)"><span class="wk-dot fill"></span><p class="lbl">{c4.info.number}</p></div>
+    <section id="case-four" data-theme="dark" class="wk-band reveal"><div class="wk-frame wk-opener wk-fig">
+      <div class="wk-lab" style="--c:var(--ink);margin-bottom:var(--s5)"><span class="wk-dot fill"></span><p class="lbl">{c4.info.number}</p></div>
       <h2 class="d2">{c4.info.title}</h2>
       <p class="meta">{c4.info.company} &nbsp;·&nbsp; {c4.info.dates}</p>
       <p class="role">{c4.info.role}</p>

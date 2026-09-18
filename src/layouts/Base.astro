@@ -13,6 +13,8 @@ const { title, description, ogImage, ogType = 'website', path, nav = 'home' } = 
 const site = 'https://gideonb.me';
 const canonical = site + path;
 const ogImageAbs = site + ogImage;
+import '../styles/fonts.css';
+import '../../tokens.css';
 import '../styles/global.css';
 import Analytics from '@vercel/analytics/astro';
 ---
@@ -57,9 +59,8 @@ import Analytics from '@vercel/analytics/astro';
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImageAbs} />
   <link rel="sitemap" href="/sitemap-index.xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/fonts/Geist-subset.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/GeistMono-subset.woff2" as="font" type="font/woff2" crossorigin />
 </head>
 <body class:list={{ "wide-page": nav === "work" }}>
 
@@ -73,8 +74,8 @@ import Analytics from '@vercel/analytics/astro';
             Home
           </a>
         )}
-        <a href="/work/" style={nav === 'work' ? 'color:#1e1a16' : undefined}>Work &amp; Projects</a>
-        <a href="/writing/" style={nav === 'writing' ? 'color:#1e1a16' : undefined}>Writing</a>
+        <a href="/work/" style={nav === 'work' ? 'color:var(--ink)' : undefined}>Work &amp; Projects</a>
+        <a href="/writing/" style={nav === 'writing' ? 'color:var(--ink)' : undefined}>Writing</a>
       </nav>
     </div>
   </header>

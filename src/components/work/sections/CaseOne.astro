@@ -16,7 +16,7 @@ const { w, extended = false } = Astro.props;
 const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
 ---
     <!-- Case one -->
-    <section id="case-one" class="wk-band wk-video reveal">
+    <section id="case-one" data-theme="dark" class="wk-band wk-video reveal">
       <video class="wk-video-src" autoplay muted loop playsinline preload="metadata" poster="/video/txd-poster.jpg" aria-hidden="true"><source src="/video/txd.mp4" type="video/mp4" /></video>
       <div class="wk-video-wash" aria-hidden="true"></div>
       <script is:inline>document.querySelectorAll('.wk-video-src').forEach((v) => { v.playbackRate = 0.4; v.addEventListener('play', () => { v.playbackRate = 0.4; }); const ready = () => v.classList.add('is-ready'); if (v.readyState >= 3) ready(); else v.addEventListener('canplay', ready, { once: true }); });</script>
@@ -37,7 +37,7 @@ const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
     <div class="wk-frame wk-fig reveal" style="padding-top:56px"><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
     <div class="wk-frame" style="padding-top:64px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">Where service design came from</p></div><div><p class="body" set:html={inlineMd(narr[turnIdx])} /><div class="wk-quote"></div><p class="d3" style="max-width:660px">A disjointed end-to-end experience is usually a faithful reflection of a disjointed business.</p></div></div></div>
     {extended && (
-    <section class="wk-band reveal" style="margin-top:76px"><div class="wk-frame wk-fig" style="padding-top:72px;padding-bottom:80px"><div class="wk-desk"><Fragment set:html={gap} /></div><div class="wk-mob"><Fragment set:html={gapM} /></div></div></section>
+    <section data-theme="dark" class="wk-band reveal" style="margin-top:76px"><div class="wk-frame wk-fig" style="padding-top:72px;padding-bottom:80px"><div class="wk-desk"><Fragment set:html={gap} /></div><div class="wk-mob"><Fragment set:html={gapM} /></div></div></section>
     )}
 
 
@@ -52,7 +52,7 @@ const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
     <div class="wk-frame wk-fig reveal" style="padding-top:56px"><Fragment set:html={opmodel} /><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s5);"><p class="dg-takeaway" style="line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">Four engagement models, so partner teams could buy the right depth. Long-term embedded partnerships, time-boxed studio work, specialist augmentation, innovation sprints.</p></div></div>
     )}
     <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">{c1.info['leading-label']}</p></div><div>{P('case1-leading').map((p) => <p class="body" set:html={inlineMd(p)} />)}<div style="margin-top:var(--s6)"><Plate src="/images/work/txd-service-catalogue.png" what="The service catalogue, once the team was fully formed. Three practices, from concept to market." prov="Toyota Experience Design, internal" bare /></div></div></div></div>
-    <section class="wk-band wk-band-grad reveal" style="margin-top:88px"><div class="wk-frame wk-fig" style="padding-top:88px"><Fragment set:html={ownership} /></div>
+    <section data-theme="dark" class="wk-band wk-band-grad reveal" style="margin-top:88px"><div class="wk-frame wk-fig" style="padding-top:88px"><Fragment set:html={ownership} /></div>
     <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--amber-d)"><span class="wk-dot fill"></span><p class="lbl">{c1.info['people-label']}</p></div><div>{P('case1-people').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
     <div class="wk-frame wk-fig" style="padding-top:56px;padding-bottom:88px"><Fragment set:html={people} /></div></section>
     <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">Position and innovation</p></div><div>{P('case1-position').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
