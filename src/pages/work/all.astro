@@ -1,0 +1,34 @@
+---
+// The single-scroll view and the print path: every section, in order, on one page.
+import Base from '../../layouts/Base.astro';
+import Footer from '../../layouts/Footer.astro';
+import '../../styles/work.css';
+import { loadWork } from '../../lib/work.mjs';
+import Opening from '../../components/work/sections/Opening.astro';
+import CaseOne from '../../components/work/sections/CaseOne.astro';
+import CaseTwo from '../../components/work/sections/CaseTwo.astro';
+import CaseThree from '../../components/work/sections/CaseThree.astro';
+import CaseFour from '../../components/work/sections/CaseFour.astro';
+import Closing from '../../components/work/sections/Closing.astro';
+import Contact from '../../components/work/sections/Contact.astro';
+const w = loadWork();
+---
+<Base
+  title={`${w.meta.title}, on one page · Gideon Bullock`}
+  description="Four cases at three distances from the work: the design organisation built at Toyota, the app it shipped, two earlier products designed by hand, and two AI products built this year."
+  ogImage="/images/work/txd-service-catalogue.png"
+  path="/work/all/"
+  nav="work"
+>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" />
+  <main id="work-page" class="page active wk">
+    <Opening w={w} />
+    <CaseOne w={w} />
+    <CaseTwo w={w} />
+    <CaseThree w={w} />
+    <CaseFour w={w} />
+    <Closing w={w} />
+    <Contact w={w} />
+  </main>
+  <Footer />
+</Base>

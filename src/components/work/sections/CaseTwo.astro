@@ -1,0 +1,51 @@
+---
+// Case two: the app the organisation shipped. Everything after the opener sits inside
+// .wk-case2, which swaps --amber and --amber-wash for grey; the timeline depends on it.
+// `extended` adds the EV before-and-after above the SUS chart.
+import Plate from '../Plate.astro';
+import { inlineMd } from '../../../lib/homepage.mjs';
+import sus from '../sus.html?raw';
+import rating from '../rating.html?raw';
+import timeline from '../timeline.html?raw';
+import ev from '../ev.html?raw';
+import evM from '../ev_m.html?raw';
+interface Props { w: any; extended?: boolean }
+const { w, extended = false } = Astro.props;
+const { P, B, c2, role2 } = w;
+---
+    <!-- Case two -->
+    <section id="case-two" class="wk-band wk-video wk-photo reveal">
+      <img class="wk-video-src" src="/images/work/myt-hand.jpg" alt="" aria-hidden="true" />
+      <div class="wk-video-wash" aria-hidden="true"></div>
+      <div class="wk-frame wk-opener">
+      <div class="wk-lab" style="--c:var(--teal-d);margin-bottom:var(--s5)"><span class="wk-dot ring"></span><p class="lbl">{c2.info.number}</p></div>
+      <h2 class="d2">{c2.info.title}</h2>
+      <p class="meta">{c2.info.company} &nbsp;·&nbsp; {c2.info.dates}</p>
+      <p class="role">{c2.info.role}</p>
+      <div class="wk-stats">{c2.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
+    </div></section>
+    <section class="wk-case2">
+    <div class="wk-frame" style="padding-top:76px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">The challenge</p></div><div>{P('case2-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:48px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--teal)"><span class="wk-dot ring"></span><p class="lbl">Who designed it</p></div><div>{role2.map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:60px;padding-bottom:40px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">What that involved</p></div><div class="wk-defgrid" style="max-width:none">{B('case2-approach').map((b) => <div><p class="d4">{b.lead}</p><p class="t2" set:html={inlineMd(b.body)} /></div>)}</div></div></div>
+
+    <div class="wk-frame wk-fig reveal" style="padding-top:40px;padding-bottom:0">
+      <h2 class="d2" style="max-width:900px;margin-bottom:var(--s5)">What the team designed</h2>
+      <p class="body" style="max-width:700px;margin-bottom:var(--s7)">The team rebuilt the app for European customers. The home screen was redesigned around the tasks people came for, EV charging was brought into one place with live status, and a design system was built underneath both. The chart is their testing and the phone is their home screen.</p>
+      {extended && (
+      <div style="margin-bottom:var(--s8)"><div class="wk-desk"><Fragment set:html={ev} /></div><div class="wk-mob"><Fragment set:html={evM} /></div></div>
+      )}
+      <div class="wk-row" style="grid-template-columns:minmax(0,700px) minmax(0,220px);gap:var(--s8);align-items:start;border-top:2px solid var(--teal);padding-top:var(--s5)"><div><Fragment set:html={sus} /></div>
+        <div style="align-self:center"><Plate src="/images/work/home-after.png" what="Home, as the team rebuilt it." prov="MyToyota, Europe" bare /></div>
+      </div>
+    </div>
+    <div class="wk-frame" style="padding-top:56px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--teal)"><span class="wk-dot ring"></span><p class="lbl">One finding, and what it taught</p></div><div class="wk-inset"><p class="body">In testing, 92 per cent of participants completed the charge scheduling task and rated its ease at 5.15 against a benchmark of 5.5. The task passed on the numbers, and the sessions still showed a problem. The control that set the schedule said nothing about its outcome, so people set it and could not tell what they had done. One change, a control that states what it will do, served new users and advanced users alike.</p></div></div></div>
+
+    <div class="wk-frame wk-fig reveal" style="padding-top:88px"><Fragment set:html={timeline} /></div>
+    <div class="wk-frame wk-fig reveal" style="padding-top:72px;padding-bottom:104px"><div class="wk-row wk-row-2" style="border-top:2px solid var(--amber);padding-top:var(--s5)"><div><Fragment set:html={rating} /></div><div>
+      <p class="lbl" style="color:var(--amber);margin-bottom:var(--s4)">What changed</p>
+      <p class="body" style="font-size:16px" set:html={inlineMd(P('case2-impact')[0])} />
+      <div class="wk-quote"></div><p class="d4" style="max-width:660px" set:html={inlineMd(P('case2-impact')[1])} />
+    </div></div></div>
+
+    </section>

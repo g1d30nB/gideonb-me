@@ -1,0 +1,63 @@
+---
+// The hub: four case cards on the authorship scale, three project cards, nothing at length.
+import Base from '../../layouts/Base.astro';
+import Footer from '../../layouts/Footer.astro';
+import '../../styles/work.css';
+import { inlineMd } from '../../lib/homepage.mjs';
+import { loadWork, CASES, caseHref } from '../../lib/work.mjs';
+import Contact from '../../components/work/sections/Contact.astro';
+import gauge from '../../components/work/gauge.html?raw';
+const w = loadWork();
+const { meta, intro, gaugeCards, colour, cases, projects } = w;
+const firstSentence = (s) => s.split(/(?<=\.)\s/)[0];
+---
+<Base
+  title={`${meta.title} · Gideon Bullock`}
+  description="Four cases at three distances from the work: the design organisation built at Toyota, the app it shipped, two earlier products designed by hand, and two AI products built this year."
+  ogImage={meta.og}
+  path="/work/"
+  nav="work"
+>
+  <main id="work-page" class="page active wk">
+    <div class="wk-frame" style="padding-top:96px">
+      <p class="lbl" style="margin-bottom:var(--s4)">Work &amp; Projects</p>
+      <h1 class="d1" style="margin-bottom:var(--s6)">{meta.title}</h1>
+      <p style="font-size:21px;line-height:1.65;color:var(--body);max-width:720px" set:html={inlineMd(intro[0])} />
+    </div>
+    <div class="wk-frame" style="padding-top:64px;padding-bottom:96px">
+      <div class="wk-desk"><Fragment set:html={gauge} /></div>
+      <div class="wk-cards">
+        {gaugeCards.map(([n, , , note, col, kind], i) => (
+          <a class="wk-card" href={caseHref(i + 1)}>
+            <div class="wk-lab" style={`--c:${colour[col]}`}><span class:list={['wk-dot', kind]}></span><p class="lbl">{n}</p></div>
+            <p class="d4">{cases[i].info.title}</p>
+            <p class="t3">{cases[i].info.company} &nbsp;·&nbsp; {cases[i].info.dates}</p>
+            <div class="wk-card-stats">{cases[i].stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
+            <p class="t2">{note}</p>
+            <span class="wk-card-link">Read the case <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        ))}
+      </div>
+      <div style="margin-top:var(--s7);padding-top:var(--s5);border-top:1px solid var(--rule);max-width:840px"><p class="t3" style="font-size:14px">{intro[2]} <a href="/work/all/">Read all four cases on one page.</a></p></div>
+    </div>
+
+    <section id="projects" class="wk-band reveal"><div class="wk-frame" style="padding-top:88px;padding-bottom:96px">
+      <p class="lbl" style="color:var(--amber-d);margin-bottom:var(--s4)">Projects</p>
+      <h2 class="d2" style="margin-bottom:var(--s7)">Things I've built</h2>
+      <div class="wk-projects">
+        {projects.map((p) => (
+          <a class="wk-card" href={`/work/${p.slug}/`}>
+            <figure class="wk-plate bare"><div><img src={p.image} alt={p['image-alt']} width="1172" height="628" loading="lazy" /></div></figure>
+            <p class="d4">{p.name}</p>
+            <p class="t2">{firstSentence(p.description)}</p>
+            {p.status && <p class="t3">{p.status}</p>}
+            <span class="wk-card-link">Read more <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        ))}
+      </div>
+    </div></section>
+
+    <Contact w={w} />
+  </main>
+  <Footer />
+</Base>

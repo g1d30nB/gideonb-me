@@ -1,0 +1,37 @@
+---
+// Case three: Songkick and Dopay.
+import Plate from '../Plate.astro';
+import { inlineMd, bullets } from '../../../lib/homepage.mjs';
+interface Props { w: any }
+const { w } = Astro.props;
+const { P, S, c3 } = w;
+---
+    <!-- Case three -->
+    <section id="case-three" class="wk-band wk-video wk-photo reveal">
+      <img class="wk-video-src" src="/images/work/songkick-live.jpg" alt="" aria-hidden="true" />
+      <div class="wk-video-wash" aria-hidden="true"></div>
+      <div class="wk-frame wk-opener">
+      <div class="wk-lab" style="--c:var(--amber-d);margin-bottom:var(--s5)"><span class="wk-dot fill"></span><p class="lbl">{c3.info.number}</p></div>
+      <h2 class="d2">{c3.info.title}</h2>
+      <p class="meta">{c3.info.company} &nbsp;·&nbsp; {c3.info.dates}</p>
+      <p class="role">{c3.info.role}</p>
+      <div class="wk-stats">{c3.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
+    </div></section>
+    <div class="wk-frame" style="padding-top:76px;padding-bottom:96px"><div class="wk-row-2">
+      <div>
+        <img class="wk-logo" src="/images/work/songkick-logo.png" alt="Songkick" width="523" height="157" />
+        <p class="lbl" style="margin-bottom:var(--s4)">2008 to 2016</p>
+        {P('case3-songkick').filter((p) => !p.startsWith('- ')).map((p) => <p class="body" set:html={inlineMd(p)} />)}
+        <ul class="wk-list">{bullets(S('case3-songkick')).map((b) => <li set:html={inlineMd(b)} />)}</ul>
+        <figure class="wk-phones-stack">
+          <div class="stage"><img class="ph2" src="/images/work/songkick-phone-2.png" alt="" /><img class="ph1" src="/images/work/songkick-phone-1.png" alt="" /></div>
+          <figcaption><span>Songkick on iOS.</span><span>Shipped product</span></figcaption>
+        </figure>
+      </div>
+      <div>
+        <img class="wk-logo" src="/images/work/dopay-logo.png" alt="Dopay" width="375" height="134" />
+        <p class="lbl" style="margin-bottom:var(--s4)">2017 to 2018</p>
+        {P('case3-dopay').map((p) => <p class="body" set:html={inlineMd(p)} />)}
+        <div style="margin-top:var(--s6)"><div class="wk-blend"><Plate src="/images/work/dopay-01.webp" what="Dopay for Business and the employee app." prov="Shipped product" bare /></div></div>
+      </div>
+    </div></div>

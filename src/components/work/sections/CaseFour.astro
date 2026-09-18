@@ -1,0 +1,40 @@
+---
+// Case four: PrepCall and Emotrix, with the governance block that closes it.
+// `extended` adds the context growth chart after "What I learned building it".
+import Plate from '../Plate.astro';
+import { inlineMd } from '../../../lib/homepage.mjs';
+import pairing from '../pairing.html?raw';
+import ctx from '../ctx.html?raw';
+interface Props { w: any; extended?: boolean }
+const { w, extended = false } = Astro.props;
+const { P, B, c4, gov } = w;
+---
+    <!-- Case four -->
+    <section id="case-four" class="wk-band reveal"><div class="wk-frame wk-opener wk-fig">
+      <div class="wk-lab" style="--c:var(--night-ink);margin-bottom:var(--s5)"><span class="wk-dot fill"></span><p class="lbl">{c4.info.number}</p></div>
+      <h2 class="d2">{c4.info.title}</h2>
+      <p class="meta">{c4.info.company} &nbsp;·&nbsp; {c4.info.dates}</p>
+      <p class="role">{c4.info.role}</p>
+      <Fragment set:html={pairing} />
+      <div style="height:56px"></div>
+      <div class="wk-stats">{c4.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
+    </div></section>
+    <div class="wk-frame" style="padding-top:76px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--ink)"><span class="wk-dot fill"></span><p class="lbl">The challenge</p></div><div>{P('case4-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:48px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--ink)"><span class="wk-dot fill"></span><p class="lbl">My role</p></div><div>{P('case4-role').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:64px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--ink)"><span class="wk-dot fill"></span><p class="lbl">{c4.info['narrative-label']}</p></div><div>{P('case4-narrative').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:64px"><div class="wk-row-2 wk-uniform">
+      <Plate src="/images/work/emotrix-site.jpg" what="emotrix.cloud, the page on method. The timeline is illustrative, hatched where the face was not resolvable." prov="Live site, September 2026" />
+      <Plate src="/images/work/prepcall-home.jpg" what="PrepCall, the front page." prov="Live product, September 2026" />
+    </div></div>
+    <div class="wk-frame" style="padding-top:72px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--ink)"><span class="wk-dot fill"></span><p class="lbl">What I learned building it</p></div><div class="wk-defgrid" style="max-width:none">{B('case4-approach').map((b) => <div><p class="d4">{b.lead}</p><p class="t2" set:html={inlineMd(b.body)} /></div>)}</div></div></div>
+    {extended && (
+    <div class="wk-frame wk-fig reveal" style="padding-top:64px"><div style="max-width:748px"><Fragment set:html={ctx} /></div></div>
+    )}
+    <div class="wk-frame" style="padding-top:72px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--ink)"><span class="wk-dot fill"></span><p class="lbl">{c4.info['aside-label']}</p></div><div class="wk-box">{P('case4-hard').map((p) => <p class="body" style="font-size:16px" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:60px;padding-bottom:0"><div class="wk-rail"><div class="wk-lab" style="--c:var(--ink)"><span class="wk-dot fill"></span><p class="lbl">Where PrepCall stands</p></div><div>{P('case4-impact').map((p) => <p class="body big" set:html={inlineMd(p)} />)}</div></div></div>
+
+    <!-- Governance -->
+    <div class="wk-frame" style="padding-top:72px;padding-bottom:112px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--ink)"><span class="wk-dot fill"></span><p class="lbl">Governance</p></div><div>
+      {P('governance').map((p) => <p class="body" set:html={inlineMd(p)} />)}
+      <div class="wk-gov">{gov.map(([a, b]) => <div><p style="font-size:14px;font-weight:600;color:var(--ink);margin-bottom:4px">{a}</p><p class="t3" style="font-size:12.5px">{b}</p></div>)}</div>
+    </div></div></div>

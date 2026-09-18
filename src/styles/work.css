@@ -231,3 +231,26 @@
   .wk-own-h{padding-top:var(--s6)}
   .wk-own-band{padding:var(--s5)}
 }
+
+/* The hub. Case cards on the authorship gauge, project cards on the night band; whole card is the link. */
+.wk-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto auto auto auto auto;gap:0 34px;margin-top:var(--s2)}
+.wk-cards>.wk-card{display:grid;grid-template-rows:subgrid;grid-row:span 6;row-gap:0;align-content:start}
+.wk a.wk-card{color:inherit;text-decoration:none} .wk a.wk-card:hover{text-decoration:none}
+.wk-cards .wk-lab{margin-bottom:var(--s2)} .wk-cards .d4{font-size:22px;margin-bottom:10px} .wk-cards>.wk-card>.t3{margin-bottom:var(--s4)}
+.wk-card-stats{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3) var(--s4);border-top:1px solid var(--rule);padding-top:var(--s4);margin-bottom:var(--s4)}
+.wk-card-stats .stat{font-size:26px;margin-bottom:4px} .wk-card-stats .t3{font-size:12px;line-height:1.45}
+.wk-cards .t2{margin-bottom:var(--s3)}
+.wk-card-link{display:inline-flex;align-items:center;gap:4px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;color:var(--muted);transition:color 0.3s}
+.wk-card:hover .wk-card-link,a.wk-card-link:hover{color:var(--ink)} .wk-card-link svg{transition:transform 0.3s} .wk-card:hover .wk-card-link svg{transform:translateX(2px)}
+.wk-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6) var(--s5)}
+.wk-projects .wk-plate{margin-bottom:var(--s4)} .wk-projects .d4{margin-bottom:var(--s2)} .wk-projects .t2{margin-bottom:var(--s2)} .wk-projects>.wk-card>.t3{margin-bottom:var(--s3)}
+.wk-projects .wk-card-link{color:var(--night-muted)} .wk-projects .wk-card:hover .wk-card-link{color:var(--night-ink)}
+/* Case and project pages: the way back to the hub, and the way on to the other cases */
+.wk-crumb{padding-top:40px} .wk-crumb a{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;color:var(--muted);text-decoration:none} .wk-crumb a:hover{color:var(--ink)}
+.wk-more{padding-top:72px} .wk-more>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5);margin-top:var(--s4)}
+.wk-more a{display:block;border-top:1px solid var(--rule);padding-top:var(--s3);text-decoration:none;font-size:11px;letter-spacing:0.13em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.wk-more a span{display:block;margin-top:var(--s2);font-size:15.5px;line-height:1.5;letter-spacing:0;text-transform:none;font-weight:500;color:var(--ink)} .wk-more a:hover span{text-decoration:underline;text-decoration-color:var(--rule-2);text-underline-offset:3px}
+@media (max-width:820px){
+  .wk-cards{grid-template-columns:1fr;gap:var(--s6) 0} .wk-cards>.wk-card{grid-template-rows:auto;grid-row:auto}
+  .wk-projects,.wk-more>div{grid-template-columns:1fr}
+}
