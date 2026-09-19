@@ -76,13 +76,13 @@ A principal designer on my team asked whether he should run two days of idea gen
 ::: case1-operating
 The function ran on a written operating system. Continuous discovery replaced the double diamond, alongside a standard validation matrix, three-level journey mapping and content modelling, applied across the whole portfolio.
 
+Four engagement models sat behind it: long-term embedded partnerships, time-boxed studio work, specialist augmentation, and innovation sprints.
+
 Quality had a written definition. A scoring method, design pairing alongside critiques, and UX checkpoints inside client delivery pipelines.
 
 DesignOps was the first dedicated operational support the team had. Tooling, capacity planning, project tracking, quality governance. Designers got their time back.
 
 Service design became requestable as an internal service with a price against it, which is what turned a capability into an offer.
-
-Four engagement models sat behind it: long-term embedded partnerships, time-boxed studio work, specialist augmentation, and innovation sprints.
 :::
 
 ::: case1-leading
