@@ -220,10 +220,8 @@
   .wk-tl .tl-path{stroke-dashoffset:0;transition:none}
 }
 
-/* Case two steps off the paper, with the muted ink in place of the amber step. The old ground sat 0.02
-   below paper; --rule-faint is the nearest token. --ground-grey is the ladder's own step and is the
-   phase-two choice, but the axis and rule tokens are that same grey and disappear on it. */
-.wk-case2{background:var(--rule-faint);--surface:var(--rule-faint);--paper:var(--rule-faint);--amber:var(--ink-muted);--amber-wash:var(--ground-grey)}
+/* Case two sits on the paper like every other case. It is told apart by its authorship marker and its
+   rail labels; a per-case ground vanished strokes and cost contrast, so there is none. */
 
 /* plain lists in copy */
 .wk-list{list-style:none;margin:var(--s5) 0 0;padding:0}

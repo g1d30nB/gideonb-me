@@ -45,7 +45,7 @@ npm run verify -- --base https://<url>   # run checks against a deployed URL
 | `/work/` | Hub: four case cards on the authorship gauge, three project cards | `work/index.astro` |
 | `/work/all/` | Every section on one page; the print path | `work/all.astro` |
 | `/work/design-organisation/` | Case one | `work/[slug].astro`, `CaseOne` with `extended` |
-| `/work/mytoyota-lexus/` | Case two (keeps `.wk-case2`, which the timeline's grey depends on) | `CaseTwo` with `extended` |
+| `/work/mytoyota-lexus/` | Case two. On the paper ground like the rest; `.wk-case2` is a bare hook with no styles | `CaseTwo` with `extended` |
 | `/work/songkick-dopay/` | Case three | `CaseThree` |
 | `/work/ai-products/` | Case four and governance | `CaseFour` with `extended` |
 | `/work/prepcall/`, `/work/emotrix/`, `/work/nudge/` | Project stubs from `homepage.md` `project-*` sections | `work/[slug].astro` |

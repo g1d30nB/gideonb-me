@@ -65,9 +65,13 @@ labels and metadata at 12px and above, and `ink-faint`, which is **non-text only
 hairlines and chart furniture. `ink-faint` never carries a glyph. `fill-300` is a stroke colour,
 never a text colour.
 
-Every contrast figure in the token notes was calculated by hand. Verify with a checker as part of
-this work. `accent` on `ground-grey` is the weakest pairing at roughly 2.5:1: on that ground the blue
-is a mark, not text.
+Measured, not estimated: `accent` on `ground-grey` is **2.84:1** and fails the 3:1 non-text minimum,
+and `accent-text` on `ground-grey` is 4.41:1 and fails the 4.5:1 text minimum. So the two never
+meet. No accent mark, focus-ring target or prose link sits on `ground-grey`, which means
+`ground-grey` is not used behind a diagram that carries a mark or behind running prose with links.
+On the other grounds the accent clears: 3.94 on paper, 3.46 on `rule-faint`, 3.21 on `fill-100`,
+6.44 on charcoal. A per-case ground was tried for case two and withdrawn: it vanished the chart
+furniture that shares its grey and pulled the label step under 4.5:1.
 
 ### Accent budget
 
