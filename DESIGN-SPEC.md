@@ -50,14 +50,12 @@ A component inside a charcoal band sets `data-theme="dark"` on the band element 
 token names. This is the pattern the existing `--night-*` tokens in `work.css` already follow; fold
 those into the theme blocks rather than keeping a parallel set.
 
-### The temperature mechanic
+### One hue
 
-The `fill-*` family is near-neutral with a slight warm lean: hue 85 at chroma 0.005 to 0.007,
-matched to the cool neutrals (chroma 0.004 to 0.008 at hue 250) so the two read as one material at
-two temperatures. Two earlier versions were more chromatic (0.012 to 0.022, at hue 70 and then 85)
-and read as a separate colour, pink and then beige, against the cool greys. The lean is a
-temperature, not a colour: do not raise the chroma to make it "warmer", and do not flatten the cool
-side to zero to "clean it up". The effect depends on both sets of numbers.
+The `fill-*` family sits on the same hue as the grounds and inks (250, chroma 0.004 to 0.006) and
+lightness alone carries the difference. The site is neutral greys, the rating scale and the accent,
+and nothing else. A warm lean for the fills was tried three times (hue 70, then 85 at two chromas)
+and read as pink, then beige, then brown on the dark panels; it is withdrawn.
 
 ### Accessibility
 

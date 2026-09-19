@@ -16,9 +16,6 @@ export const PROJECTS = [
   { key: 'nudge', slug: 'nudge' },
 ];
 export const caseHref = (n) => `/work/${CASES[n - 1].slug}/`;
-// Figures the hub card leaves out (three per card). Keyed by case number, matched on the value.
-export const HUB_OMIT = { 4: ['2 products'] };
-export const hubStats = (n, stats) => stats.filter((s) => !(HUB_OMIT[n] || []).includes(s.value));
 
 export function loadWork() {
   const { meta, sections } = loadPage('work.md');
