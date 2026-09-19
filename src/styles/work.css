@@ -288,3 +288,39 @@
 @media (max-width:820px){
   .wk-projects,.wk-more>div{grid-template-columns:1fr}
 }
+
+/* ───── The document register (phase 3a). Three tracks at the spec frame: a 170px rail for the
+   section label, the prose at 68ch, 180px of supplementary metadata, then space. Evidence breaks
+   out to the frame. Only /work/design-organisation/ uses it so far. The grid's own font-size is the
+   prose size, so 68ch is measured in the face and size the prose is set in. */
+.wk-doc-page .wk-frame{max-width:var(--frame)}
+body:has(.wk-doc-page) .header-inner,body:has(.wk-doc-page) footer .container{max-width:var(--frame)}
+.doc{display:grid;grid-template-columns:var(--rail) minmax(0,var(--measure)) var(--meta);justify-content:start;column-gap:var(--s7);row-gap:0;align-items:start;font-size:17px;padding-top:var(--s7)}
+.doc-opener+.doc{padding-top:0}
+.wk .doc-rail{grid-column:1;padding-top:8px;line-height:1.4}
+.doc-body{grid-column:2;min-width:0} .doc-body>.body:first-child{margin-top:0}
+.doc-meta{grid-column:3;text-align:right;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;line-height:1.5;color:var(--ink-label);padding-top:8px}
+.doc-group{row-gap:var(--s7)} .doc-group .doc-rail{grid-column:1} .doc-group .doc-body{grid-column:2}
+.doc-group .doc-figure{grid-column:3;grid-row:1 / span 3;justify-self:end;max-width:var(--meta);margin:0}
+/* Evidence: diagrams and stat bands take the frame. They were drawn at 1152 and keep that width so
+   nothing in them is restretched; they share the rail's left edge. */
+.doc-evidence{padding-top:var(--s8)} .doc-evidence>*{max-width:1152px}
+/* Section openers: a mono kicker, then the section name at display scale, then the tracks. */
+.doc-opener{padding-top:var(--s10);padding-bottom:var(--s7)}
+.wk .doc-kicker{margin-bottom:var(--s4)}
+.wk .doc-heading{color:var(--ink);max-width:18ch;margin:0}
+/* Numbered sets: a mono numeral above each heading in the content track, the rail label once. */
+.doc-num{display:block;font-family:var(--font-mono);font-size:40px;line-height:1;font-weight:300;color:var(--ink-label);margin-bottom:var(--s3)}
+@media (max-width:1099px){
+  .doc{grid-template-columns:var(--rail) minmax(0,var(--measure))}
+  .doc-meta{grid-column:2;text-align:left;padding-top:var(--s4)}
+  .doc-group .doc-figure{grid-column:2;grid-row:auto;justify-self:start;max-width:200px;margin-top:var(--s5)}
+}
+@media (max-width:759px){
+  .doc{grid-template-columns:minmax(0,1fr);column-gap:0}
+  .wk .doc-rail{grid-column:1;padding-top:0;margin-bottom:var(--s3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .wk .doc-rail:empty{display:none}
+  .doc-body,.doc-meta,.doc-group .doc-body,.doc-group .doc-figure{grid-column:1}
+  .doc-group{row-gap:0} .doc-group .doc-body{margin-bottom:var(--s7)}
+  .doc-opener{padding-top:var(--s8);padding-bottom:var(--s5)}
+}

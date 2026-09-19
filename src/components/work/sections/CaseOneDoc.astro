@@ -1,0 +1,95 @@
+---
+// Case one in the document register (phase 3a): three tracks, section openers, evidence at the
+// frame width. Built for /work/design-organisation/ only; /work/all/ still renders CaseOne.astro.
+// Every copy binding is the one CaseOne.astro uses. Nothing here is new text except that the four
+// work.md section labels are also set at display scale as the opener headings.
+import Plate from '../Plate.astro';
+import { inlineMd } from '../../../lib/homepage.mjs';
+import arc from '../arc.html?raw';
+import arcM from '../arc_m.html?raw';
+import ownership from '../ownership.html?raw';
+import people from '../people.html?raw';
+import gap from '../gap.html?raw';
+import gapM from '../gap_m.html?raw';
+import opmodel from '../opmodel.html?raw';
+interface Props { w: any }
+const { w } = Astro.props;
+const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
+---
+    <!-- Case one -->
+    <section id="case-one" data-theme="dark" class="wk-band wk-video reveal">
+      <video class="wk-video-src" autoplay muted loop playsinline preload="metadata" poster="/video/txd-poster.jpg" aria-hidden="true"><source src="/video/txd.mp4" type="video/mp4" /></video>
+      <div class="wk-video-wash" aria-hidden="true"></div>
+      <script is:inline>document.querySelectorAll('.wk-video-src').forEach((v) => { v.playbackRate = 0.4; v.addEventListener('play', () => { v.playbackRate = 0.4; }); const ready = () => v.classList.add('is-ready'); if (v.readyState >= 3) ready(); else v.addEventListener('canplay', ready, { once: true }); });</script>
+      <div class="wk-frame wk-opener">
+      <div class="wk-lab" style="margin-bottom:var(--s5)"><span class="wk-auth mine"><i aria-hidden="true"></i>my call</span><p class="lbl">{c1.info.number} &nbsp;·&nbsp; the organisation</p></div>
+      <h2 class="d2">{c1.title.quiet && <span class="tt-quiet">{c1.title.quiet}</span>}{c1.title.quiet && ' '}{c1.title.loud}</h2>
+      <p class="meta">{c1.info.company} &nbsp;·&nbsp; {c1.info.dates}</p>
+      <p class="role">{c1.info.role}</p>
+      <div class="wk-stats">{c1.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
+    </div></section>
+
+    <!-- The brief: three rails under the page header, the phone beside them -->
+    <div class="wk-frame doc doc-group" style="padding-top:76px">
+      <p class="lbl doc-rail">The challenge</p>
+      <div class="doc-body">{P('case1-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+      <p class="lbl doc-rail">My role</p>
+      <div class="doc-body">{P('case1-role').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+      <p class="lbl doc-rail">Commercial accountability</p>
+      <div class="doc-body"><p class="d4" style="max-width:660px">{com1}</p><p class="body" style="margin-top:var(--s5)">{com2}</p>{P('case1-commercial').slice(1).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+      <figure class="wk-phone doc-figure"><img src="/images/work/toyota-app.gif" alt="" width="450" height="964" /><figcaption><span>MyToyota, the home screen</span><span>US build, public app</span></figcaption></figure>
+    </div>
+
+    <!-- Opener: how the capability grew -->
+    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{c1.info['narrative-label']}</h2></div>
+    <div class="wk-frame doc">
+      <p class="lbl doc-rail"></p>
+      <div class="doc-body">{narr.slice(0, turnIdx).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+    </div>
+    <div class="wk-frame doc-evidence wk-fig reveal"><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
+    <div class="wk-frame doc">
+      <p class="lbl doc-rail">Where service design came from</p>
+      <div class="doc-body"><p class="body" set:html={inlineMd(narr[turnIdx])} /><div class="wk-quote"></div><p class="d3" style="max-width:660px">A disjointed end-to-end experience is usually a faithful reflection of a disjointed business.</p></div>
+    </div>
+    <section data-theme="dark" class="wk-band reveal" style="margin-top:76px"><div class="wk-frame doc-evidence wk-fig" style="padding-top:72px;padding-bottom:80px"><div class="wk-desk"><Fragment set:html={gap} /></div><div class="wk-mob"><Fragment set:html={gapM} /></div></div></section>
+    <div class="wk-frame doc" style="padding-top:76px">
+      <p class="lbl doc-rail">What it led to</p>
+      <div class="doc-body">
+        <p class="body" set:html={inlineMd(narr3a)} />
+        <div class="wk-inset"><div class="wk-lab" style="margin-bottom:var(--s3)"><span class="wk-auth team"><i aria-hidden="true"></i>the team&rsquo;s work</span></div><p class="body" set:html={inlineMd(narr3b)} /></div>
+        {narr.slice(creditIdx + 1).map((p) => <p class="body" set:html={inlineMd(p)} />)}
+      </div>
+    </div>
+
+    <!-- Opener: how it was run -->
+    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{c1.info['operating-label']}</h2></div>
+    <div class="wk-frame doc">
+      <p class="lbl doc-rail"></p>
+      <div class="doc-body">{P('case1-operating').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+    </div>
+    <div class="wk-frame doc-evidence wk-fig reveal"><Fragment set:html={opmodel} /><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s5);"><p class="dg-takeaway" style="line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">Four engagement models, so partner teams could buy the right depth. Long-term embedded partnerships, time-boxed studio work, specialist augmentation, innovation sprints.</p></div></div>
+
+    <!-- Opener: leading at a distance -->
+    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{c1.info['leading-label']}</h2></div>
+    <div class="wk-frame doc">
+      <p class="lbl doc-rail"></p>
+      <div class="doc-body">{P('case1-leading').map((p) => <p class="body" set:html={inlineMd(p)} />)}<div style="margin-top:var(--s6)"><Plate src="/images/work/txd-service-catalogue.png" what="The service catalogue, once the team was fully formed. Three practices, from concept to market." prov="Toyota Experience Design, internal" bare /></div></div>
+    </div>
+    <section data-theme="dark" class="wk-band wk-band-grad reveal" style="margin-top:88px"><div class="wk-frame doc-evidence wk-fig" style="padding-top:88px"><Fragment set:html={ownership} /></div>
+
+    <!-- Opener: growing people, inside the band -->
+    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{c1.info['people-label']}</h2></div>
+    <div class="wk-frame doc">
+      <p class="lbl doc-rail"></p>
+      <div class="doc-body">{P('case1-people').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+    </div>
+    <div class="wk-frame doc-evidence wk-fig" style="padding-bottom:88px"><Fragment set:html={people} /></div></section>
+
+    <div class="wk-frame doc" style="padding-top:88px">
+      <p class="lbl doc-rail">Position and innovation</p>
+      <div class="doc-body">{P('case1-position').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+    </div>
+    <div class="wk-frame doc" style="padding-top:56px;padding-bottom:96px">
+      <p class="lbl doc-rail">What changed</p>
+      <div class="doc-body">{P('case1-impact').map((p) => <p class="body big" set:html={inlineMd(p)} />)}</div>
+    </div>

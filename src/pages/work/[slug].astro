@@ -7,6 +7,7 @@ import Plate from '../../components/work/Plate.astro';
 import '../../styles/work.css';
 import { loadWork, CASES, PROJECTS, caseHref } from '../../lib/work.mjs';
 import CaseOne from '../../components/work/sections/CaseOne.astro';
+import CaseOneDoc from '../../components/work/sections/CaseOneDoc.astro';
 import CaseTwo from '../../components/work/sections/CaseTwo.astro';
 import CaseThree from '../../components/work/sections/CaseThree.astro';
 import CaseFour from '../../components/work/sections/CaseFour.astro';
@@ -31,11 +32,11 @@ const others = kind === 'case' ? CASES.filter((x) => x.n !== n) : [];
 const external = (l) => /^https?:/.test(l);
 ---
 <Base title={title} description={description} ogImage={ogImage} path={`/work/${Astro.params.slug}/`} nav="work">
-  <main id="work-page" class="page active wk">
+  <main id="work-page" class:list={['page', 'active', 'wk', { 'wk-doc-page': kind === 'case' && n === 1 }]}>
     {kind === 'case' && (
       <Fragment>
         <div class="wk-frame wk-crumb"><a href="/work/">Work &amp; Projects</a></div>
-        <CaseSection w={w} extended />
+        {n === 1 ? <CaseOneDoc w={w} /> : <CaseSection w={w} extended />}
         <div class="wk-frame wk-more"><p class="lbl">The other cases</p><div>{others.map((o) => <a href={caseHref(o.n)}>{w.cases[o.n - 1].info.number}<span>{w.cases[o.n - 1].title.plain}</span></a>)}</div></div>
       </Fragment>
     )}
