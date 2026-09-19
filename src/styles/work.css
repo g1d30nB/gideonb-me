@@ -4,30 +4,30 @@
    [data-theme] element inside it, so a dark band re-resolves each alias against its own theme
    (a custom property set to var() resolves where it is declared, not where it is read). */
 .wk,.wk [data-theme]{
-  --paper:var(--surface); --paper-2:var(--warm-100); --paper-team:var(--warm-100);
+  --paper:var(--surface); --paper-2:var(--fill-100); --paper-team:var(--fill-100);
   --body:var(--ink-muted); --muted:var(--ink-label); --faint:var(--ink-label);
   --rule-2:var(--ground-grey);
-  /* the two authorship steps: mine on warm-500, the team's on warm-400. The names stay for the components */
-  --amber:var(--warm-500); --teal:var(--warm-400); --amber-d:var(--warm-500); --teal-d:var(--warm-400);
-  --amber-wash:var(--warm-100);
+  /* the two authorship steps: mine on fill-500, the team's on fill-400. The names stay for the components */
+  --amber:var(--fill-500); --teal:var(--fill-400); --amber-d:var(--fill-500); --teal-d:var(--fill-400);
+  --amber-wash:var(--fill-100);
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
   /* Diagram roles, used only by src/components/work. Mapping recorded in the phase-one report. */
   /* chart structure: cool neutrals */
   --dg-ink:var(--ink); --dg-label:var(--ink-muted); --dg-scale:var(--ink-label); --dg-tick:var(--ground-grey-deep); --dg-axis:var(--ground-grey);
   --dg-grid:var(--rule-faint); --dg-area:var(--rule-faint); --dg-connector:var(--ink-faint); --dg-knockout:var(--surface);
-  /* primary series (the amber role) on warm-400, secondary (the teal role) on warm-300 */
-  --dg-accent:var(--warm-500); --dg-accent-mark:var(--warm-500); --dg-accent-ink:var(--warm-500); --dg-accent-area:var(--warm-100);
-  --dg-accent-2:var(--warm-400); --dg-accent-2-ink:var(--warm-500);
-  /* bars and highlighted cells: warm greys */
-  --dg-bar:var(--warm-500); --dg-bar-start:var(--warm-400); --dg-bar-end:var(--warm-500); --dg-on-bar:var(--surface);
-  --dg-highlight:var(--warm-100); --dg-highlight-edge:var(--warm-200);
+  /* primary series (the amber role) on fill-500, secondary (the teal role) on fill-400 */
+  --dg-accent:var(--fill-500); --dg-accent-mark:var(--fill-500); --dg-accent-ink:var(--fill-500); --dg-accent-area:var(--fill-100);
+  --dg-accent-2:var(--fill-400); --dg-accent-2-ink:var(--fill-500);
+  /* bars and highlighted cells: the fill family */
+  --dg-bar:var(--fill-500); --dg-bar-start:var(--fill-400); --dg-bar-end:var(--fill-500); --dg-on-bar:var(--surface);
+  --dg-highlight:var(--fill-100); --dg-highlight-edge:var(--fill-200);
   --dg-placeholder:var(--rule-faint); --dg-screen:var(--surface);
   /* the focused state: one surface, its chips and rule */
-  --dg-focus-surface:var(--warm-100); --dg-focus-surface-m:var(--warm-100); --dg-focus-rule:var(--warm-200);
-  --dg-chip:var(--surface); --dg-chip-edge:var(--warm-200); --dg-chip-ink:var(--ink-muted);
-  /* diagrams drawn on a charcoal band: warm greys at their dark values */
-  --dg-night-panel:var(--warm-100); --dg-night-edge:var(--warm-200); --dg-night-link:var(--warm-200);
-  --dg-unowned:var(--warm-300); --dg-unowned-ink:var(--warm-400);
+  --dg-focus-surface:var(--fill-100); --dg-focus-surface-m:var(--fill-100); --dg-focus-rule:var(--fill-200);
+  --dg-chip:var(--surface); --dg-chip-edge:var(--fill-200); --dg-chip-ink:var(--ink-muted);
+  /* diagrams drawn on a charcoal band: fills at their dark values */
+  --dg-night-panel:var(--fill-100); --dg-night-edge:var(--fill-200); --dg-night-link:var(--fill-200);
+  --dg-unowned:var(--fill-300); --dg-unowned-ink:var(--fill-400);
   /* rating scale, the one colour exception */
   --dg-rating-low:var(--rating-low); --dg-rating-mid:var(--rating-mid); --dg-rating-high:var(--rating-high); --dg-star:var(--rating-mid);
   --dg-on-rating:var(--accent-on); --dg-on-rating-mid:var(--ink);
@@ -35,7 +35,7 @@
   --dg-shadow-contact:rgba(0,0,0,0.3); --dg-shadow-cast:rgba(0,0,0,0.35);
 }
 /* The --night-* names the components reference inside bands. Aliases onto the dark theme, not values. */
-.wk [data-theme="dark"]{--night:var(--surface);--night-2:var(--warm-100);--night-ink:var(--ink);--night-body:var(--ink-muted);--night-muted:var(--ink-label);--night-rule:var(--rule);--rule-2:var(--rule)}
+.wk [data-theme="dark"]{--night:var(--surface);--night-2:var(--fill-100);--night-ink:var(--ink);--night-body:var(--ink-muted);--night-muted:var(--ink-label);--night-rule:var(--rule);--rule-2:var(--rule)}
 .wk{font-family:var(--font-display);font-size:15.5px;line-height:1.7;color:var(--body);background:var(--paper);text-wrap:pretty;-webkit-font-smoothing:antialiased}
 .wk p{margin:0}
 .wk a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule-2);text-underline-offset:3px}
@@ -103,7 +103,7 @@
 .wk-side{display:grid;grid-template-columns:minmax(0,904px) 1fr;gap:44px;align-items:start} .wk-side>div:first-child .wk-rail>div:last-child{max-width:680px}
 .wk-phone{margin:0;justify-self:end;width:100%;max-width:250px} .wk-phone img{display:block;width:100%;height:auto;border-radius:9%/4.2%;overflow:hidden;background:var(--ground-charcoal)}
 .wk-phone figcaption{display:flex;flex-direction:column;gap:5px;padding-top:10px} .wk-phone figcaption span:first-child{font-size:12.5px;line-height:1.5;color:var(--ink);font-weight:500} .wk-phone figcaption span:last-child{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);line-height:1.5}
-.wk-inset{background:var(--paper-team);border:1px solid var(--warm-200);padding:var(--s5);margin:var(--s6) 0}
+.wk-inset{background:var(--paper-team);border:1px solid var(--fill-200);padding:var(--s5);margin:var(--s6) 0}
 .wk-inset .body{color:var(--ink)}
 .wk-box{border:1px solid var(--rule-2);padding:var(--s5)}
 .wk-gov{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5);margin-top:var(--s6)}

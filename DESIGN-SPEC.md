@@ -52,17 +52,19 @@ those into the theme blocks rather than keeping a parallel set.
 
 ### The temperature mechanic
 
-Warm greys read as warm only because the neutrals are genuinely cool. Cool holds chroma 0.004 to
-0.008 at hue 250, warm holds 0.010 to 0.018 at hue 82 to 85. Hue 70 was tried first and read pink
-against the cool neutrals; the family now sits toward yellow with the chroma slightly down. Do not flatten either toward neutral to
-"clean it up". The effect depends on those numbers.
+The `fill-*` family is near-neutral with a slight warm lean: hue 85 at chroma 0.005 to 0.007,
+matched to the cool neutrals (chroma 0.004 to 0.008 at hue 250) so the two read as one material at
+two temperatures. Two earlier versions were more chromatic (0.012 to 0.022, at hue 70 and then 85)
+and read as a separate colour, pink and then beige, against the cool greys. The lean is a
+temperature, not a colour: do not raise the chroma to make it "warmer", and do not flatten the cool
+side to zero to "clean it up". The effect depends on both sets of numbers.
 
 ### Accessibility
 
 Body text holds 4.5:1 against its ground. Diagram strokes carrying meaning hold 3:1. The ink ladder
 has four steps: `ink` for headings and emphasis, `ink-muted` for body copy, `ink-label` for rail
 labels and metadata at 12px and above, and `ink-faint`, which is **non-text only**: ticks, strokes,
-hairlines and chart furniture. `ink-faint` never carries a glyph. `warm-300` is a stroke colour,
+hairlines and chart furniture. `ink-faint` never carries a glyph. `fill-300` is a stroke colour,
 never a text colour.
 
 Every contrast figure in the token notes was calculated by hand. Verify with a checker as part of
@@ -82,7 +84,7 @@ satisfied contrast alone. Replace with three signals together:
 - **Shape.** Filled square for his own decisions, open ring for the team's work, half rule for
   shared. Legible in greyscale and at small size.
 - **Label.** A mono rail label naming it in words. This is the primary signal.
-- **Weight.** `warm-500` for his own decisions against `warm-400` for the team's. `warm-300` at
+- **Weight.** `fill-500` for his own decisions against `fill-400` for the team's. `fill-300` at
   2.3:1 cannot carry a data line or a label.
 
 ### The one colour exception

@@ -31,13 +31,14 @@
   --rule:       oklch(0.880 0.005 250);
   --rule-faint: oklch(0.925 0.004 250);
 
-  /* Warm greys. The supporting family. Hue 82 to 85, chroma 0.010 to 0.018: toward yellow,
-     because at hue 70 they read pink against the cool neutrals. */
-  --warm-100:   oklch(0.905 0.010 85);
-  --warm-200:   oklch(0.815 0.013 85);
-  --warm-300:   oklch(0.670 0.015 85);
-  --warm-400:   oklch(0.520 0.018 82);
-  --warm-500:   oklch(0.400 0.016 82);
+  /* Fills. The supporting family: near-neutral greys with a slight warm lean, hue 85 at chroma
+     0.005 to 0.007, matched to the cool neutrals' chroma so they read as the same material. At
+     higher chroma (0.012 to 0.022 was tried) they read as a separate colour, pink or beige. */
+  --fill-100:   oklch(0.900 0.005 85);
+  --fill-200:   oklch(0.815 0.006 85);
+  --fill-300:   oklch(0.665 0.006 85);
+  --fill-400:   oklch(0.520 0.007 85);
+  --fill-500:   oklch(0.400 0.006 85);
 
   /* Electric blue. The single accent. */
   --accent:      oklch(0.580 0.220 255);
@@ -65,11 +66,11 @@
   --rule:       oklch(0.320 0.008 250);
   --rule-faint: oklch(0.285 0.008 250);
 
-  --warm-100:   oklch(0.350 0.012 85);
-  --warm-200:   oklch(0.445 0.014 85);
-  --warm-300:   oklch(0.565 0.016 85);
-  --warm-400:   oklch(0.700 0.016 82);
-  --warm-500:   oklch(0.820 0.013 82);
+  --fill-100:   oklch(0.348 0.006 85);
+  --fill-200:   oklch(0.445 0.007 85);
+  --fill-300:   oklch(0.565 0.007 85);
+  --fill-400:   oklch(0.700 0.007 85);
+  --fill-500:   oklch(0.820 0.006 85);
 
   --accent:      oklch(0.720 0.170 250);
   --accent-text: oklch(0.780 0.140 250);
