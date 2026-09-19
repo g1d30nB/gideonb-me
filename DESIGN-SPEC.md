@@ -127,9 +127,11 @@ the number. Three tracks in the document register: rail 170px, content at the me
 
 Breakpoints:
 
-- Below 1100px the meta column moves under the prose.
-- Below 760px the rail label moves above the prose as a single line and the measure takes the full
-  width. The rail never becomes a narrow column of wrapped text on a phone.
+- Below 1060px the meta column moves under the prose. Three tracks fit down to 1035px; 1060 leaves
+  headroom.
+- Below 760px the rail label moves above the prose as a single line. The content is still capped
+  at the measure: the measure holds at every viewport, and only narrows where the screen is narrower
+  than it. The rail never becomes a narrow column of wrapped text on a phone.
 - Display sizes step down with the clamps in `tokens.css`.
 
 Side gutter 16px minimum on phones. No horizontal page scroll at any width.

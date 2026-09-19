@@ -23,14 +23,18 @@ role-meta: Head of UX and Product Design, TXD · full P&L
 commercial-label: Commercial accountability
 commercial-meta: £10m+ annual internal revenue at peak
 narrative-label: How the capability grew
+narrative-heading: Five capabilities | each one earned the next
 narrative-meta: Five capabilities, in the order they were established
 service-label: Where service design came from
 led-label: What it led to
 operating-label: How it was run
+operating-heading: Run as a consultancy | so partner teams bought the depth they needed
 operating-meta: Six disciplines · four engagement models
 leading-label: Leading at a distance
+leading-heading: I stepped out of the craft | and wrote down where the line sat
 leading-meta: Two design managers · design leads in each product team
 people-label: Growing people
+people-heading: Every one of them hired | into a structure that kept them
 people-meta: 0 to 40+ · highest permanent retention rate in the company
 position-label: Position and innovation
 position-meta: £3.5m projected investment, Toyota global AI fund

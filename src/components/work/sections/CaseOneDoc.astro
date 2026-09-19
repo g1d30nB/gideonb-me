@@ -21,7 +21,8 @@ const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
 const L = (k) => c1.info[`${k}-label`] || '';
 const H = (k) => (c1.info[`${k}-heading`] ? splitTitle(c1.info[`${k}-heading`]) : null);
 const M = (k) => (c1.info[`${k}-meta`] || '').split(' · ').map((s) => s.trim()).filter(Boolean);
-// A rail label under an opener would repeat the opener while it still falls back to the label.
+// Under an opener with its own heading the rail keeps its label. While an opener still falls
+// back to the label (the other cases, until they get headings) the rail stays empty.
 const railUnder = (k) => (H(k) ? L(k) : '');
 ---
     <!-- Case one -->
@@ -58,7 +59,7 @@ const railUnder = (k) => (H(k) ? L(k) : '');
       <div class="doc-body">{narr.slice(0, turnIdx).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
       <aside class="doc-meta">{M('narrative').map((m) => <span>{m}</span>)}</aside>
     </div>
-    <div class:list={['wk-frame', 'doc-evidence', 'wk-fig', 'reveal', { 'drops-title': !H('narrative') }]}><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
+    <div class="wk-frame doc-evidence wk-fig reveal drops-title"><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
     <div class="wk-frame doc">
       <p class="lbl doc-rail">{L('service')}</p>
       <div class="doc-body"><p class="body" set:html={inlineMd(narr[turnIdx])} /><div class="wk-quote"></div><p class="d3">A disjointed end-to-end experience is usually a faithful reflection of a disjointed business.</p></div>

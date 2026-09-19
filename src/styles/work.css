@@ -297,12 +297,12 @@
 .doc{display:grid;grid-template-columns:var(--rail) minmax(0,var(--measure)) var(--meta);justify-content:start;column-gap:var(--s7);row-gap:0;align-items:start;font-size:17px;padding-top:var(--s7)}
 .doc-opener+.doc{padding-top:0}
 .wk .doc-rail{grid-column:1;padding-top:8px;line-height:1.4}
-.doc-body{grid-column:2;min-width:0} .doc-body>.body:first-child{margin-top:0}
+.doc-body{grid-column:2;min-width:0;max-width:var(--measure)} .doc-body>.body:first-child{margin-top:0}
 .doc-meta{grid-column:3;text-align:right;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;line-height:1.5;color:var(--ink-label);padding-top:8px}
 .doc-group{row-gap:var(--s7)} .doc-group .doc-rail{grid-column:1} .doc-group .doc-body{grid-column:2}
 .doc-group .doc-meta{grid-column:3} .doc-meta span{display:block}
 .doc-figure{justify-self:start;max-width:250px;margin:0}
-/* Where the opener names the thing, the diagram inside it drops its own title. */
+/* A diagram under an opener drops its own title: the opener and the rail label already name it. */
 .drops-title .d3{display:none}
 /* Evidence: diagrams and stat bands take the frame. They were drawn at 1152 and keep that width so
    nothing in them is restretched; they share the rail's left edge. */
@@ -313,7 +313,7 @@
 .wk .doc-heading{color:var(--ink);max-width:18ch;margin:0}
 /* Numbered sets: a mono numeral above each heading in the content track, the rail label once. */
 .doc-num{display:block;font-family:var(--font-mono);font-size:40px;line-height:1;font-weight:300;color:var(--ink-label);margin-bottom:var(--s3)}
-@media (max-width:1099px){
+@media (max-width:1059px){
   .doc{grid-template-columns:var(--rail) minmax(0,var(--measure))}
   .doc-meta,.doc-group .doc-meta{grid-column:2;text-align:left;padding-top:var(--s4)}
   .doc-meta:empty{display:none} .doc-group .doc-meta{margin-top:calc(var(--s7) * -1 + var(--s4));padding-top:0}
