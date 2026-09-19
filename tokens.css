@@ -52,7 +52,7 @@
   --geo-blur: oklch(0.220 0.006 250 / 0.04);
 
   /* App rating scale. The one place colour carries meaning. */
-  --rating-low:  oklch(0.600 0.170 25);
+  --rating-low:  oklch(0.627 0.170 25); /* light enough for ink text at 4.5:1 */
   --rating-mid:  oklch(0.700 0.140 75);
   --rating-high: oklch(0.620 0.130 150);
 }

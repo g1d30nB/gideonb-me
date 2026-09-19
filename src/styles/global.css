@@ -228,7 +228,7 @@ section { padding: 80px 0; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--ink-label);
+  color: var(--ink-muted); /* on fill-100 the label step falls under 4.5:1 */
   margin-bottom: 12px;
 }
 .status-card .card-label svg { width: 16px; height: 16px; opacity: 0.7; }
@@ -663,7 +663,7 @@ footer { padding: 24px 0 40px; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--ink-label);
+  color: var(--ink-muted); /* on fill-100 the label step falls under 4.5:1 */
 }
 .featured-card-title {
   font-size: 18px;
@@ -674,7 +674,7 @@ footer { padding: 24px 0 40px; }
 }
 .featured-card-meta {
   font-size: 13px;
-  color: var(--ink-label);
+  color: var(--ink-muted); /* on fill-100 the label step falls under 4.5:1 */
   margin-top: 12px;
 }
 

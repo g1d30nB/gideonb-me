@@ -62,7 +62,8 @@ and read as pink, then beige, then brown on the dark panels; it is withdrawn.
 Body text holds 4.5:1 against its ground. Diagram strokes carrying meaning hold 3:1. The ink ladder
 has four steps: `ink` for headings and emphasis, `ink-muted` for body copy, `ink-label` for rail
 labels and metadata at 12px and above, and `ink-faint`, which is **non-text only**: ticks, strokes,
-hairlines and chart furniture. `ink-faint` never carries a glyph. `fill-300` is a stroke colour,
+hairlines and chart furniture. `ink-faint` never carries a glyph. One exception to the label step: a
+label sitting on a `fill-100` panel takes `ink-muted`, because `ink-label` falls to 4.17:1 there. `fill-300` is a stroke colour,
 never a text colour.
 
 Measured, not estimated: `accent` on `ground-grey` is **2.84:1** and fails the 3:1 non-text minimum,
