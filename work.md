@@ -29,7 +29,7 @@ operating-heading: Run as a consultancy | so partner teams bought the depth they
 leading-label: Leading at a distance
 leading-heading: I stepped out of the craft | and wrote down where the line sat
 people-label: Growing people
-people-heading: Every one of them hired | into a structure that kept them
+people-heading: I was accountable for every hire | my managers made most of them
 position-label: Position and innovation
 changed-label: What changed
 role: Head of UX and Product Design, Toyota Experience Design (TXD). Built from nothing, run for seven years with full P&L.
@@ -60,7 +60,7 @@ I built the function from nothing and ran it for seven years, with full P&L acco
 :::
 
 ::: case1-commercial
-Design becomes a core competency or it becomes a cost line, and the difference is whether design leadership can talk about margin as fluently as it talks about craft. I ran the function on a full P&L, at £10m+ of annual internal revenue at peak, and every designer I hired was paid for by an engagement I had won. A published service catalogue and explicit positioning meant partner teams bought the depth they needed.
+Design becomes a core competency or it becomes a cost line, and the difference is whether design leadership can talk about margin as fluently as it talks about craft. I ran the function on a full P&L, at £10m+ of annual internal revenue at peak, and every designer on the team was paid for by an engagement I had won. A published service catalogue and explicit positioning meant partner teams bought the depth they needed.
 
 Our largest programme closed overnight, taking its revenue and team structure with it. I ran a structured retrospective that turned the wind-down into a documented reassignment method, and it became the standard for every client transition that followed.
 :::
@@ -81,6 +81,8 @@ Quality had a written definition. A scoring method, design pairing alongside cri
 DesignOps was the first dedicated operational support the team had. Tooling, capacity planning, project tracking, quality governance. Designers got their time back.
 
 Service design became requestable as an internal service with a price against it, which is what turned a capability into an offer.
+
+Four engagement models sat behind it: long-term embedded partnerships, time-boxed studio work, specialist augmentation, and innovation sprints.
 :::
 
 ::: case1-leading

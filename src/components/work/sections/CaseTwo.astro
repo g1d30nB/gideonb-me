@@ -29,7 +29,7 @@ const info = c2.info;
     <section class="wk-case2">
     <Block info={info} k="challenge" style="padding-top:76px">{P('case2-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
     <Block info={info} k="designed" auth="team">{role2.map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
-    <Block info={info} k="involved" auth="mine"><div class="wk-defgrid">{B('case2-approach').map((b) => <div><p class="d4">{b.lead}</p><p class="t2" set:html={inlineMd(b.body)} /></div>)}</div></Block>
+    <Block info={info} k="involved" auth="team"><div class="wk-defgrid">{B('case2-approach').map((b) => <div><p class="d4">{b.lead}</p><p class="t2" set:html={inlineMd(b.body)} /></div>)}</div></Block>
 
     <Opener info={info} k="aside" />
     <Block info={info} k="aside" under><p class="body">The team rebuilt the app for European customers. The home screen was redesigned around the tasks people came for, EV charging was brought into one place with live status, and a design system was built underneath both. The chart is their testing and the phone is their home screen.</p></Block>

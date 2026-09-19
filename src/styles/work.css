@@ -147,6 +147,8 @@
   .wk-fig [style*="display:flex"]:not(:has(svg)){flex-wrap:wrap}
   .wk-fig .stat.dg-fig-xl{font-size:40px !important}
   .wk-fig [style*="max-width:190px"]{margin-left:0 !important;text-align:left !important}
+  /* source notes wrap onto their own line here; right-aligned in a 300px box they are ragged both sides */
+  .wk .dg-source{text-align:left !important;max-width:none !important}
 }
 
 /* Case one opener: the film behind, knocked back under a dark wash and a dot screen */
