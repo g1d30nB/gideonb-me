@@ -244,22 +244,25 @@
    Project cards on the night band. Whole cell is the link. */
 .wk-cards{margin-top:var(--s2)}
 .wk .wk-row-label{border-top:1px solid var(--rule);padding-top:var(--s3);margin-bottom:var(--s6)} .wk .wk-card-row+.wk-row-label{margin-top:var(--s8)}
-.wk-card-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s7)}
+/* Seven shared row tracks across the two cells (label, heading, meta, paragraph, figures one and
+   two, link), so each row starts on the same line whatever the other cell's line count. */
+.wk-card-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(7,auto);column-gap:var(--s7)}
 .wk a.wk-card{color:inherit;text-decoration:none} .wk a.wk-card:hover{text-decoration:none}
-.wk-card-row .wk-card{display:flex;flex-direction:column;align-items:flex-start}
+.wk-card-row .wk-card{display:grid;grid-template-rows:subgrid;grid-row:span 7;align-items:start}
 .wk-card-row .wk-lab{margin-bottom:var(--s3)} .wk-card-row .d4{font-size:22px;margin-bottom:10px} .wk-card-row .wk-card>.t3{margin-bottom:var(--s4)} .wk-card-row .t2{margin-bottom:var(--s5)}
-.wk-card-figs{list-style:none;margin:0 0 var(--s5);padding:0;width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4) var(--s5)}
+.wk-card-figs{list-style:none;margin:0 0 var(--s5);padding:0;grid-row:span 2;display:grid;grid-template-rows:subgrid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--s5);row-gap:var(--s4)}
 .wk-card-figs li{border-top:1px solid var(--rule);padding-top:var(--s3)}
 .wk-card-figs .stat{display:block;font-size:24px;margin-bottom:4px;white-space:nowrap}
 .wk-card-figs .lbl{display:block;text-transform:none;line-height:1.4}
-.wk-card-row .wk-card-link{margin-top:auto}
 .wk-card-link{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;font-weight:500;color:var(--muted);transition:color 0.3s}
 .wk-card:hover .wk-card-link,a.wk-card-link:hover{color:var(--ink)} .wk-card-link svg{transition:transform 0.3s} .wk-card:hover .wk-card-link svg{transform:translateX(2px)}
 .wk-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6) var(--s5)}
 .wk-projects .wk-plate{margin-bottom:var(--s4)} .wk-projects .d4{margin-bottom:var(--s2)} .wk-projects .t2{margin-bottom:var(--s2)} .wk-projects>.wk-card>.t3{margin-bottom:var(--s3)}
 .wk-projects .wk-card-link{color:var(--ink-label)} .wk-projects .wk-card:hover .wk-card-link{color:var(--ink)}
 @media (max-width:900px){
-  .wk-card-row{grid-template-columns:1fr;gap:var(--s7)} .wk-card-figs{grid-template-columns:1fr}
+  .wk-card-row{display:flex;flex-direction:column;gap:var(--s7)}
+  .wk-card-row .wk-card{display:flex;flex-direction:column;align-items:flex-start}
+  .wk-card-figs{display:grid;grid-template-rows:auto;grid-template-columns:1fr;width:100%}
 }
 /* Case and project pages: the way back to the hub, and the way on to the other cases */
 .wk-crumb{padding-top:40px} .wk-crumb a{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;font-weight:500;color:var(--muted);text-decoration:none} .wk-crumb a:hover{color:var(--ink)}
