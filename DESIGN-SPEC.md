@@ -29,7 +29,8 @@ When a decision is not covered below, this rule decides it.
 64px and up, bleeding off the right edge, grey or charcoal ground, construction geometry visible,
 asymmetric placement.
 
-**Document.** Case bodies, project bodies, articles. Prose at `--measure` (68ch), 17px, paper ground,
+**Document.** Case bodies, project bodies, articles. Prose at `--measure` (65 to 70 rendered
+characters a line), 17px, paper ground,
 the metadata rail, hairline rules, stat bands. No bleed, no background geometry, no type tricks.
 
 They meet at section openers, where a display-scale heading introduces a document block. That
@@ -117,7 +118,11 @@ size and it is the most transferable device in the whole direction. Build it as 
 
 ## Layout
 
-Frame at `--frame` (1280px). Three tracks in the document register: rail 170px, content at 68ch, meta
+Frame at 1200px. The measure is specified in **rendered characters, 65 to 70 a line**, never in `ch`:
+`ch` is the width of the zero glyph, not of an average character, and Geist's zero is wide (0.663em),
+so `68ch` rendered 97 characters a line. In Geist at 17px the target is about 540px, which is what
+`--measure: 48ch` resolves to; if the face or the prose size changes, re-measure rather than keeping
+the number. Three tracks in the document register: rail 170px, content at the measure, meta
 180px, then space.
 
 Breakpoints:

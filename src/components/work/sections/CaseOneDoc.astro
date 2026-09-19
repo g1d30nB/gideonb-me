@@ -1,10 +1,13 @@
 ---
 // Case one in the document register (phase 3a): three tracks, section openers, evidence at the
 // frame width. Built for /work/design-organisation/ only; /work/all/ still renders CaseOne.astro.
-// Every copy binding is the one CaseOne.astro uses. Nothing here is new text except that the four
-// work.md section labels are also set at display scale as the opener headings.
+// Every label, heading and meta line comes from case1-meta in work.md:
+//   <key>-label    the rail label
+//   <key>-heading  the opener heading, with the pipe convention; absent, the opener shows the label
+//   <key>-meta     the meta column, " · " between lines
 import Plate from '../Plate.astro';
 import { inlineMd } from '../../../lib/homepage.mjs';
+import { splitTitle } from '../../../lib/page.mjs';
 import arc from '../arc.html?raw';
 import arcM from '../arc_m.html?raw';
 import ownership from '../ownership.html?raw';
@@ -15,6 +18,11 @@ import opmodel from '../opmodel.html?raw';
 interface Props { w: any }
 const { w } = Astro.props;
 const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
+const L = (k) => c1.info[`${k}-label`] || '';
+const H = (k) => (c1.info[`${k}-heading`] ? splitTitle(c1.info[`${k}-heading`]) : null);
+const M = (k) => (c1.info[`${k}-meta`] || '').split(' · ').map((s) => s.trim()).filter(Boolean);
+// A rail label under an opener would repeat the opener while it still falls back to the label.
+const railUnder = (k) => (H(k) ? L(k) : '');
 ---
     <!-- Case one -->
     <section id="case-one" data-theme="dark" class="wk-band wk-video reveal">
@@ -29,31 +37,35 @@ const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
       <div class="wk-stats">{c1.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
     </div></section>
 
-    <!-- The brief: three rails under the page header, the phone beside them -->
+    <!-- The brief -->
     <div class="wk-frame doc doc-group" style="padding-top:76px">
-      <p class="lbl doc-rail">The challenge</p>
+      <p class="lbl doc-rail">{L('challenge')}</p>
       <div class="doc-body">{P('case1-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
-      <p class="lbl doc-rail">My role</p>
+      <aside class="doc-meta"><span>{c1.info.company}</span><span>{c1.info.dates}</span></aside>
+      <p class="lbl doc-rail">{L('role')}</p>
       <div class="doc-body">{P('case1-role').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
-      <p class="lbl doc-rail">Commercial accountability</p>
-      <div class="doc-body"><p class="d4" style="max-width:660px">{com1}</p><p class="body" style="margin-top:var(--s5)">{com2}</p>{P('case1-commercial').slice(1).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
-      <figure class="wk-phone doc-figure"><img src="/images/work/toyota-app.gif" alt="" width="450" height="964" /><figcaption><span>MyToyota, the home screen</span><span>US build, public app</span></figcaption></figure>
+      <aside class="doc-meta">{M('role').map((m) => <span>{m}</span>)}</aside>
+      <p class="lbl doc-rail">{L('commercial')}</p>
+      <div class="doc-body"><p class="d4">{com1}</p><p class="body" style="margin-top:var(--s5)">{com2}</p>{P('case1-commercial').slice(1).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+      <aside class="doc-meta">{M('commercial').map((m) => <span>{m}</span>)}</aside>
+      <p class="lbl doc-rail"></p>
+      <div class="doc-body"><figure class="wk-phone doc-figure"><img src="/images/work/toyota-app.gif" alt="" width="450" height="964" /><figcaption><span>MyToyota, the home screen</span><span>US build, public app</span></figcaption></figure></div>
     </div>
 
-    <!-- Opener: how the capability grew -->
-    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{c1.info['narrative-label']}</h2></div>
+    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{H('narrative') ? <Fragment>{H('narrative').quiet && <span class="tt-quiet">{H('narrative').quiet}</span>}{H('narrative').quiet && ' '}{H('narrative').loud}</Fragment> : L('narrative')}</h2></div>
     <div class="wk-frame doc">
-      <p class="lbl doc-rail"></p>
+      <p class="lbl doc-rail">{railUnder('narrative')}</p>
       <div class="doc-body">{narr.slice(0, turnIdx).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+      <aside class="doc-meta">{M('narrative').map((m) => <span>{m}</span>)}</aside>
     </div>
-    <div class="wk-frame doc-evidence wk-fig reveal"><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
+    <div class:list={['wk-frame', 'doc-evidence', 'wk-fig', 'reveal', { 'drops-title': !H('narrative') }]}><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
     <div class="wk-frame doc">
-      <p class="lbl doc-rail">Where service design came from</p>
-      <div class="doc-body"><p class="body" set:html={inlineMd(narr[turnIdx])} /><div class="wk-quote"></div><p class="d3" style="max-width:660px">A disjointed end-to-end experience is usually a faithful reflection of a disjointed business.</p></div>
+      <p class="lbl doc-rail">{L('service')}</p>
+      <div class="doc-body"><p class="body" set:html={inlineMd(narr[turnIdx])} /><div class="wk-quote"></div><p class="d3">A disjointed end-to-end experience is usually a faithful reflection of a disjointed business.</p></div>
     </div>
     <section data-theme="dark" class="wk-band reveal" style="margin-top:76px"><div class="wk-frame doc-evidence wk-fig" style="padding-top:72px;padding-bottom:80px"><div class="wk-desk"><Fragment set:html={gap} /></div><div class="wk-mob"><Fragment set:html={gapM} /></div></div></section>
     <div class="wk-frame doc" style="padding-top:76px">
-      <p class="lbl doc-rail">What it led to</p>
+      <p class="lbl doc-rail">{L('led')}</p>
       <div class="doc-body">
         <p class="body" set:html={inlineMd(narr3a)} />
         <div class="wk-inset"><div class="wk-lab" style="margin-bottom:var(--s3)"><span class="wk-auth team"><i aria-hidden="true"></i>the team&rsquo;s work</span></div><p class="body" set:html={inlineMd(narr3b)} /></div>
@@ -61,35 +73,36 @@ const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
       </div>
     </div>
 
-    <!-- Opener: how it was run -->
-    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{c1.info['operating-label']}</h2></div>
+    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{H('operating') ? <Fragment>{H('operating').quiet && <span class="tt-quiet">{H('operating').quiet}</span>}{H('operating').quiet && ' '}{H('operating').loud}</Fragment> : L('operating')}</h2></div>
     <div class="wk-frame doc">
-      <p class="lbl doc-rail"></p>
+      <p class="lbl doc-rail">{railUnder('operating')}</p>
       <div class="doc-body">{P('case1-operating').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+      <aside class="doc-meta">{M('operating').map((m) => <span>{m}</span>)}</aside>
     </div>
     <div class="wk-frame doc-evidence wk-fig reveal"><Fragment set:html={opmodel} /><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s5);"><p class="dg-takeaway" style="line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">Four engagement models, so partner teams could buy the right depth. Long-term embedded partnerships, time-boxed studio work, specialist augmentation, innovation sprints.</p></div></div>
 
-    <!-- Opener: leading at a distance -->
-    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{c1.info['leading-label']}</h2></div>
+    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{H('leading') ? <Fragment>{H('leading').quiet && <span class="tt-quiet">{H('leading').quiet}</span>}{H('leading').quiet && ' '}{H('leading').loud}</Fragment> : L('leading')}</h2></div>
     <div class="wk-frame doc">
-      <p class="lbl doc-rail"></p>
+      <p class="lbl doc-rail">{railUnder('leading')}</p>
       <div class="doc-body">{P('case1-leading').map((p) => <p class="body" set:html={inlineMd(p)} />)}<div style="margin-top:var(--s6)"><Plate src="/images/work/txd-service-catalogue.png" what="The service catalogue, once the team was fully formed. Three practices, from concept to market." prov="Toyota Experience Design, internal" bare /></div></div>
+      <aside class="doc-meta">{M('leading').map((m) => <span>{m}</span>)}</aside>
     </div>
     <section data-theme="dark" class="wk-band wk-band-grad reveal" style="margin-top:88px"><div class="wk-frame doc-evidence wk-fig" style="padding-top:88px"><Fragment set:html={ownership} /></div>
 
-    <!-- Opener: growing people, inside the band -->
-    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{c1.info['people-label']}</h2></div>
+    <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{H('people') ? <Fragment>{H('people').quiet && <span class="tt-quiet">{H('people').quiet}</span>}{H('people').quiet && ' '}{H('people').loud}</Fragment> : L('people')}</h2></div>
     <div class="wk-frame doc">
-      <p class="lbl doc-rail"></p>
+      <p class="lbl doc-rail">{railUnder('people')}</p>
       <div class="doc-body">{P('case1-people').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+      <aside class="doc-meta">{M('people').map((m) => <span>{m}</span>)}</aside>
     </div>
     <div class="wk-frame doc-evidence wk-fig" style="padding-bottom:88px"><Fragment set:html={people} /></div></section>
 
     <div class="wk-frame doc" style="padding-top:88px">
-      <p class="lbl doc-rail">Position and innovation</p>
+      <p class="lbl doc-rail">{L('position')}</p>
       <div class="doc-body">{P('case1-position').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
+      <aside class="doc-meta">{M('position').map((m) => <span>{m}</span>)}</aside>
     </div>
     <div class="wk-frame doc" style="padding-top:56px;padding-bottom:96px">
-      <p class="lbl doc-rail">What changed</p>
+      <p class="lbl doc-rail">{L('changed')}</p>
       <div class="doc-body">{P('case1-impact').map((p) => <p class="body big" set:html={inlineMd(p)} />)}</div>
     </div>

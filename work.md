@@ -17,10 +17,24 @@ number: Case One
 title: Building a design organisation | then widening what it was allowed to own
 company: Toyota Connected Europe
 dates: 2018 to 2026
+challenge-label: The challenge
+role-label: My role
+role-meta: Head of UX and Product Design, TXD · full P&L
+commercial-label: Commercial accountability
+commercial-meta: £10m+ annual internal revenue at peak
 narrative-label: How the capability grew
+narrative-meta: Five capabilities, in the order they were established
+service-label: Where service design came from
+led-label: What it led to
 operating-label: How it was run
+operating-meta: Six disciplines · four engagement models
 leading-label: Leading at a distance
+leading-meta: Two design managers · design leads in each product team
 people-label: Growing people
+people-meta: 0 to 40+ · highest permanent retention rate in the company
+position-label: Position and innovation
+position-meta: £3.5m projected investment, Toyota global AI fund
+changed-label: What changed
 role: Head of UX and Product Design, Toyota Experience Design (TXD). Built from nothing, run for seven years with full P&L.
 :::
 

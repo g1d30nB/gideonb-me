@@ -115,7 +115,7 @@
   --font-mono:    "Geist Mono", ui-monospace, SFMono-Regular, monospace;
 
   /* Layout */
-  --measure:     68ch;
+  --measure:     48ch;  /* 65 to 70 rendered characters a line in Geist at 17px. ch is the zero's width and Geist's zero is wide: 68ch was 97 characters */
   --rail:        170px;
   --meta:        180px;
   --frame:       1280px;
