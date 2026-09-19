@@ -26,7 +26,7 @@
      body copy, ink-label for labels and metadata at 12px and above, ink-faint for non-text only. */
   --ink:        oklch(0.220 0.006 250);
   --ink-muted:  oklch(0.445 0.008 250);
-  --ink-label:  oklch(0.545 0.008 250); /* the fourth step: labels and metadata, 12px and up */
+  --ink-label:  oklch(0.515 0.008 250); /* the fourth step: labels and metadata, 12px and up. Clears 4.5:1 on paper and on fill-100 */
   --ink-faint:  oklch(0.615 0.008 250); /* non-text only: ticks, strokes, hairlines, chart furniture */
   --rule:       oklch(0.880 0.005 250);
   --rule-faint: oklch(0.925 0.004 250);
@@ -62,7 +62,7 @@
 
   --ink:        oklch(0.970 0.003 250);
   --ink-muted:  oklch(0.760 0.006 250);
-  --ink-label:  oklch(0.660 0.006 250);
+  --ink-label:  oklch(0.680 0.006 250);
   --ink-faint:  oklch(0.600 0.006 250);
   --rule:       oklch(0.320 0.008 250);
   --rule-faint: oklch(0.285 0.008 250);

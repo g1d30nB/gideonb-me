@@ -29,8 +29,8 @@
   --dg-night-panel:var(--fill-100); --dg-night-edge:var(--fill-200); --dg-night-link:var(--fill-200);
   --dg-unowned:var(--fill-300); --dg-unowned-ink:var(--fill-400);
   /* rating scale, the one colour exception */
-  --dg-rating-low:var(--rating-low); --dg-rating-mid:var(--rating-mid); --dg-rating-high:var(--rating-high); --dg-star:var(--rating-mid);
-  --dg-on-rating:var(--accent-on); --dg-on-rating-mid:var(--ink);
+  --dg-rating-low:var(--rating-low); --dg-rating-mid:var(--rating-mid); --dg-rating-high:var(--rating-high); --dg-star:var(--ink);
+  --dg-on-rating:var(--ink); --dg-on-rating-mid:var(--ink);
   /* elevation */
   --dg-shadow-contact:rgba(0,0,0,0.3); --dg-shadow-cast:rgba(0,0,0,0.35);
 }
@@ -76,11 +76,14 @@
 .wk-lab{display:flex;align-items:center;gap:12px;flex-wrap:wrap} .wk-lab .lbl{color:var(--ink-label);line-height:1.1}
 .wk-lab .wk-auth+.lbl{padding-left:12px;border-left:1px solid var(--rule-2)}
 .wk-own-h .wk-mark{margin-right:10px} .wk-own-i .wk-mark{margin-top:6px}
+/* The entry mark: one 40px accent rule per page, where the reading starts. The pull-quote bars
+   (.wk-quote) stay neutral; they are structure. */
+.wk-entry{width:40px;height:3px;background:var(--accent);margin:0 0 var(--s5)}
 /* The two-tone heading: the opening clause quiet, the clause that carries the argument in ink */
 .tt-quiet{color:var(--ink-label)}
 /* The accent: emphasis, never authorship. Links in prose, the focus ring, one mark per diagram,
    one wash per page at the contact block. */
-.wk .body a,.wk .t1 a,.wk .t2 a,.wk .body-text a{color:var(--accent-text);text-decoration-color:currentColor}
+.wk .body a,.wk .t1 a,.wk .t2 a,.wk .t3 a,.wk .body-text a{color:var(--accent-text);text-decoration-color:currentColor}
 .wk .body a:hover{text-decoration-color:var(--accent)}
 .wk-contact{position:relative;overflow:hidden}
 .wk-contact::before{content:"";position:absolute;top:-30%;right:-18%;bottom:-30%;width:52%;background:radial-gradient(ellipse at 100% 55%,var(--accent-wash) 0%,transparent 62%);pointer-events:none}

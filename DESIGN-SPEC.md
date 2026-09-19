@@ -75,7 +75,9 @@ furniture that shares its grey and pulled the label step under 4.5:1.
 
 ### Accent budget
 
-One wash per page, bleeding off an edge, fading out before it reaches type. Otherwise marks only.
+One wash per page, bleeding off an edge, fading out before it reaches type. One accent rule per page,
+40px by 3px, at the entry point: it marks the thing to read first. The pull-quote bars that look like
+it stay neutral `fill-500`; one is emphasis, the others are structure. Otherwise marks only.
 Three accent appearances in a viewport is already too many. Links use `accent-text`, not `accent`.
 
 ### Authorship
