@@ -30,7 +30,7 @@ const info = c1.info;
       <div class="wk-stats">{c1.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
     </div></section>
 
-    <Block info={info} k="challenge" style="padding-top:76px">{P('case1-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}<aside slot="meta" class="doc-meta"><span>{info.company}</span><span>{info.dates}</span></aside></Block>
+    <Block info={info} k="challenge" style="padding-top:76px">{P('case1-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
     <Block info={info} k="role">{P('case1-role').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
     <Block info={info} k="commercial"><p class="d4">{com1}</p><p class="body" style="margin-top:var(--s5)">{com2}</p>{P('case1-commercial').slice(1).map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
     <Block info={info}><figure class="wk-phone doc-figure"><img src="/images/work/toyota-app.gif" alt="" width="450" height="964" /><figcaption><span>MyToyota, the home screen</span><span>US build, public app</span></figcaption></figure></Block>

@@ -44,7 +44,8 @@ an opener that says the same thing does not. A subtitle left with no job goes wi
 small mono labels stay either way.
 
 **A diagram title names what is plotted.** It never restates a stat or a sentence that appears within
-one screen of it. The argument lives in the takeaway line or in the prose, once.
+one screen of it. The argument lives in the takeaway line or in the prose, once. The same holds for
+takeaway lines: one that repeats the prose beside it, the stat band or the opener goes.
 
 ---
 
@@ -131,17 +132,21 @@ Frame at 1200px. The measure is specified in **rendered characters, 65 to 70 a l
 `ch` is the width of the zero glyph, not of an average character, and Geist's zero is wide (0.663em),
 so `68ch` rendered 97 characters a line. In Geist at 17px the target is about 540px, which is what
 `--measure: 48ch` resolves to; if the face or the prose size changes, re-measure rather than keeping
-the number. Three tracks in the document register: rail 170px, content at the measure, meta
-180px, then space.
+the number. The document register is two tracks and air: rail 170px, content at the measure, then
+space on the right. The content is not recentred; the asymmetry is the point.
 
-Breakpoints:
+There is no meta column. One was built and withdrawn on evidence: held to the rule that it carries
+only facts that qualify the block beside it, and never repeats a number already in a stat band, a
+diagram or the prose on the same screen, it produced one real entry across four cases. Where a
+block has a qualifying fact that appears nowhere else (case three's dates), it sits in the rail as a
+second mono line under the label.
 
-- Below 1060px the meta column moves under the prose. Three tracks fit down to 1035px; 1060 leaves
-  headroom.
+One breakpoint:
+
 - Below 808px the rail label moves above the prose as a single line (rail 170 + gap 48 + measure 541
-  + padding 48 = 807, so the prose never gives way to the rail). The content is still capped
-  at the measure: the measure holds at every viewport, and only narrows where the screen is narrower
-  than it. The rail never becomes a narrow column of wrapped text on a phone.
+  + padding 48 = 807, so the prose never gives way to the rail). The content is still capped at the
+  measure: the measure holds at every viewport, and only narrows where the screen is narrower than
+  it. The rail never becomes a narrow column of wrapped text on a phone.
 - Display sizes step down with the clamps in `tokens.css`.
 
 Side gutter 16px minimum on phones. No horizontal page scroll at any width.

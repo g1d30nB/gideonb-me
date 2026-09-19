@@ -289,17 +289,16 @@
   .wk-projects,.wk-more>div{grid-template-columns:1fr}
 }
 
-/* ───── The document register (phase 3a). Three tracks inside the 1200 frame: a 170px rail for the
-   section label, the prose at --measure (set by rendered characters, not by ch), 180px of
-   supplementary metadata, then space. Evidence breaks
+/* ───── The document register (phase 3a). Inside the 1200 frame: a 170px rail for the section
+   label, the prose at --measure (set by rendered characters, not by ch), then air. The content is
+   not recentred; the asymmetry is the point. Evidence breaks
    out to the frame. Every case section renders through it (doc/Opener.astro, doc/Block.astro). The grid's own font-size is the
    prose size, so --measure is resolved in the face and size the prose is set in. */
-.doc{display:grid;grid-template-columns:var(--rail) minmax(0,var(--measure)) var(--meta);justify-content:start;column-gap:var(--s7);row-gap:0;align-items:start;font-size:17px;padding-top:var(--s7)}
+.doc{display:grid;grid-template-columns:var(--rail) minmax(0,var(--measure));justify-content:start;column-gap:var(--s7);row-gap:0;align-items:start;font-size:17px;padding-top:var(--s7)}
 .doc-opener+.doc{padding-top:0}
 .doc-rail{grid-column:1;padding-top:8px;display:flex;flex-direction:column;align-items:flex-start;gap:var(--s2)} .wk .doc-rail .lbl{line-height:1.4}
 .doc-body{grid-column:2;min-width:0;max-width:var(--measure)} .doc-body>.body:first-child{margin-top:0}
-.doc-meta{grid-column:3;text-align:right;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;line-height:1.5;color:var(--ink-label);padding-top:8px}
-.doc-meta span{display:block}
+.doc-rail-meta{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;line-height:1.4;color:var(--ink-label);margin:0}
 /* Headed lists inside the prose hold the measure in one column; narrow evidence keeps its width. */
 .doc-body .wk-defgrid,.doc-body .wk-gov{grid-template-columns:minmax(0,1fr);max-width:none} .doc-body .wk-gov{margin-top:var(--s6)}
 .doc-narrow{max-width:700px}
@@ -319,15 +318,11 @@
 .wk .doc-heading{color:var(--ink);max-width:18ch;margin:0}
 /* Numbered sets: a mono numeral above each heading in the content track, the rail label once. */
 .doc-num{display:block;font-family:var(--font-mono);font-size:40px;line-height:1;font-weight:300;color:var(--ink-label);margin-bottom:var(--s3)}
-@media (max-width:1059px){
-  .doc{grid-template-columns:var(--rail) minmax(0,var(--measure))}
-  .doc-meta{grid-column:2;text-align:left;padding-top:var(--s4)}
-}
 @media (max-width:807px){
   .doc{grid-template-columns:minmax(0,1fr);column-gap:0}
   .doc-rail{grid-column:1;padding-top:0;margin-bottom:var(--s3);flex-direction:row;align-items:center;gap:12px;flex-wrap:wrap}
   .wk .doc-rail .lbl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
   .doc-rail:empty{display:none}
-  .doc-body,.doc-meta{grid-column:1}
+  .doc-body{grid-column:1}
   .doc-opener{padding-top:var(--s8);padding-bottom:var(--s5)}
 }

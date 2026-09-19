@@ -24,7 +24,6 @@ const info = c3.info;
     <Opener info={info} k="songkick" />
     <Block info={info} k="songkick" under>
       <img class="wk-logo" src="/images/work/songkick-logo.png" alt="Songkick" width="523" height="157" />
-      <p class="lbl" style="margin-bottom:var(--s4)">2008 to 2016</p>
       {P('case3-songkick').filter((p) => !p.startsWith('- ')).map((p) => <p class="body" set:html={inlineMd(p)} />)}
       <ul class="wk-list">{bullets(S('case3-songkick')).map((b) => <li set:html={inlineMd(b)} />)}</ul>
       <figure class="wk-phones-stack">
@@ -34,7 +33,6 @@ const info = c3.info;
     </Block>
     <Block info={info} k="dopay" style="padding-top:var(--s9);padding-bottom:96px">
       <img class="wk-logo" src="/images/work/dopay-logo.png" alt="Dopay" width="375" height="134" />
-      <p class="lbl" style="margin-bottom:var(--s4)">2017 to 2018</p>
       {P('case3-dopay').map((p) => <p class="body" set:html={inlineMd(p)} />)}
       <div style="margin-top:var(--s6)"><div class="wk-blend"><Plate src="/images/work/dopay-01.webp" what="Dopay for Business and the employee app." prov="Shipped product" bare /></div></div>
     </Block>

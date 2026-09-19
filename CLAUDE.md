@@ -32,7 +32,7 @@ npm run verify -- --base https://<url>   # run checks against a deployed URL
 | Pages | `src/pages/` (`index`, `writing/index`, `writing/[slug]`, `work/index`, `work/all`, `work/[slug]`, `404`) |
 | Work copy | `work.md` (repo root, `::: section` markers), read by `src/lib/work.mjs` |
 | Work sections | `src/components/work/sections/` (`Opening`, `CaseOne` to `CaseFour`, `Closing`, `Contact`), composed by every /work page |
-| Document register | `src/components/work/doc/` (`Opener`, `Block`): the three tracks every case section is built from. Rail labels, opener headings and meta lines come from `<key>-label`, `<key>-heading` (pipe splits quiet from loud) and `<key>-meta` in each `caseN-meta` block of `work.md` |
+| Document register | `src/components/work/doc/` (`Opener`, `Block`): the three tracks every case section is built from. Two tracks and air: rail, prose at the measure, no meta column. Rail labels and opener headings come from `<key>-label` and `<key>-heading` (pipe splits quiet from loud) in each `caseN-meta` block of `work.md`; `<key>-meta`, where present, is a second line in the rail |
 | Work diagrams | `src/components/work/*.html`, hand-maintained (see below) |
 | Collection schema | `src/content.config.ts` |
 | Images / files | `public/images/`, `public/files/` |
@@ -67,6 +67,7 @@ Known and left alone on purpose; fix in a pass of their own.
 - `evmeasure.html` labels itself "Case three" (it was built for the standalone EV case) and reports 3 rounds and a SUS of 76; `sus.html`, live in case two, shows four rounds at 73, 79 and 80. Placing both without a copy decision puts two contradicting charts in one case.
 - Two of the five `[style*=]` mobile rules match nothing today (`translateX(-100%)`, `border-top`) and switch on silently if a matching inline value is ever written.
 - Every /work page still loads Schibsted Grotesk from Google Fonts; nothing uses it since `25b39c6`.
+- **Latent: two diagram titles restate their section.** `arc.html` ("How the capability grew") and `opmodel.html` ("Run as an internal consultancy") break the title rule in DESIGN-SPEC.md. Both are dropped under their openers everywhere they appear today, so nothing shows. If either is ever shown bare, retitle it to name what is plotted; do not relax the rule.
 - **3b: the hierarchy inverts on `/work/all/`.** Section openers are 64px and the case titles in the header bands are 48px, so an opener outranks the title of the case it belongs to, four times down one page. The resolution is that the case headers move up into the display register and the openers step down one. It is not that the openers shrink.
 - `npm run verify` fails checks 4, 7 and 8 on `main` (console 404s, text and visual drift on home and writing against the pre-migration baseline). Not caused by the /work work.
 - `.design/*.py` carry absolute paths to this machine (`workmd.py`, the retired exporter).
