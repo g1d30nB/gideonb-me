@@ -25,6 +25,14 @@ export function loadPage(filename) {
   return { meta, sections };
 }
 
+// A title with a pipe is two-tone: the quiet clause before it, the clause that carries the
+// argument after it. Plain is the one-tone form for <title>, og:title and link text.
+export function splitTitle(title = '') {
+  const i = title.indexOf(' | ');
+  if (i < 0) return { quiet: '', loud: title, plain: title };
+  return { quiet: title.slice(0, i).trim(), loud: title.slice(i + 3).trim(), plain: title.replace(' | ', ', ') };
+}
+
 // Stat bullets are written as `- value | label`.
 export function statPairs(text) {
   if (!text) return [];

@@ -14,12 +14,24 @@ Toyota work is shown at the level it can be shown publicly. Internal commercial 
 
 ::: case1-meta
 number: Case One
-title: Building a design organisation, then widening what it was allowed to own
+title: Building a design organisation | then widening what it was allowed to own
 company: Toyota Connected Europe
 dates: 2018 to 2026
+challenge-label: The challenge
+role-label: My role
+commercial-label: Commercial accountability
 narrative-label: How the capability grew
+narrative-heading: Five capabilities | each one earned the next
+service-label: Where service design came from
+led-label: What it led to
+operating-label: How it was run
+operating-heading: Run as a consultancy | so partner teams bought the depth they needed
 leading-label: Leading at a distance
+leading-heading: I stepped out of the craft | and wrote down where the line sat
 people-label: Growing people
+people-heading: I was accountable for every hire | my managers made most of them
+position-label: Position and innovation
+changed-label: What changed
 role: Head of UX and Product Design, Toyota Experience Design (TXD). Built from nothing, run for seven years with full P&L.
 :::
 
@@ -48,7 +60,7 @@ I built the function from nothing and ran it for seven years, with full P&L acco
 :::
 
 ::: case1-commercial
-Design becomes a core competency or it becomes a cost line, and the difference is whether design leadership can talk about margin as fluently as it talks about craft. I ran the function on a full P&L, at £10m+ of annual internal revenue at peak, and every designer I hired was paid for by an engagement I had won. A published service catalogue and explicit positioning meant partner teams bought the depth they needed.
+Design becomes a core competency or it becomes a cost line, and the difference is whether design leadership can talk about margin as fluently as it talks about craft. I ran the function on a full P&L, at £10m+ of annual internal revenue at peak, and every designer on the team was paid for by an engagement I had won. A published service catalogue and explicit positioning meant partner teams bought the depth they needed.
 
 Our largest programme closed overnight, taking its revenue and team structure with it. I ran a structured retrospective that turned the wind-down into a documented reassignment method, and it became the standard for every client transition that followed.
 :::
@@ -61,10 +73,24 @@ I built the strategic case for a federated global design system and took it to e
 A principal designer on my team asked whether he should run two days of idea generation for a worldwide Toyota AI initiative that Toyota Connected Europe had decided not to take part in. I told him to go ahead. I knew what he was capable of, that he would bring product and engineering in alongside design, and that the time would be well spent. **Seeing what someone can do and giving them the room is a large part of the job. Three approved proposals came out of it, and around £3.5m of projected investment from Toyota's global AI fund. On the strength of what came back, Toyota Connected Europe entered the initiative it had declined. The wider programme generated 29 ideas, and eight are being pursued by Toyota globally.**
 :::
 
+::: case1-operating
+The function ran on a written operating system. Continuous discovery replaced the double diamond, alongside a standard validation matrix, three-level journey mapping and content modelling, applied across the whole portfolio.
+
+Four engagement models sat behind it: long-term embedded partnerships, time-boxed studio work, specialist augmentation, and innovation sprints.
+
+Quality had a written definition. A scoring method, design pairing alongside critiques, and UX checkpoints inside client delivery pipelines.
+
+DesignOps was the first dedicated operational support the team had. Tooling, capacity planning, project tracking, quality governance. Designers got their time back.
+
+Service design became requestable as an internal service with a price against it, which is what turned a capability into an offer.
+:::
+
 ::: case1-leading
 I stepped out of the daily craft early and on purpose. The split is below.
 
 When executives wanted to understand a specific change, I brought the designer who had made it. Their accuracy, their ownership, their exposure to leadership.
+
+Designers were embedded in client teams across three regions, often working alone. Cohesion was the hardest thing to sustain. I ran town halls, a cross-team leads forum, showcases and the annual listening cycle to hold a distributed team together.
 :::
 
 ::: case1-people
@@ -86,10 +112,16 @@ Design displaced the incumbent agencies and became one of three recognised core 
 
 ::: case2-meta
 number: Case Two
-title: A US app in Europe, from 1.9 stars to 4.6
+title: A US app in Europe | from 1.9 stars to 4.6
 company: MyToyota and Lexus Link+
 dates: 2023 to 2026
+challenge-label: The challenge
+designed-label: Who designed it
+involved-label: What that involved
 aside-label: What the team built
+aside-heading: One EV domain instead of four | and it did not ship until it tested right
+finding-label: One finding, and what it taught
+changed-label: What changed
 role: I ran this team myself for three or four years, then put design managers in my place as the function scaled. The rebuild is their work and the work of the designers under them.
 :::
 
@@ -130,9 +162,14 @@ The result came from a good design team, across UX research, product design, UI 
 
 ::: case3-meta
 number: Case Three
-title: Two products, two markets, as designer and as leader
+title: Two products, two markets | as designer and as leader
 company: Songkick and Dopay
 dates: 2008 to 2018
+songkick-label: At Songkick
+songkick-meta: 2008 to 2016
+songkick-heading: I drew it and I ran it | for eight years from seed to acquisition
+dopay-label: At Dopay
+dopay-meta: 2017 to 2018
 role: Eight years at Songkick as employee number seven and VP of Design, on the executive team from seed through Series C to the Warner Music Group acquisition. Then Chief Design Officer at Dopay, taking a fintech for unbanked workers in Egypt from concept to a live commercial service. In both, I designed the product.
 :::
 
@@ -165,11 +202,17 @@ I directed the design and launch of the Dopay for Business platform and the iOS 
 
 ::: case4-meta
 number: Case Four
-title: Two AI products this year, one shipped and one in pilot
+title: Two AI products this year | one shipped and one in pilot
 company: PrepCall and Emotrix
 dates: 2026
+challenge-label: The challenge
+role-label: My role
 narrative-label: What the two products do
+narrative-heading: One narrow and one general | both deciding what a reading means
+learned-label: What I learned building it
 aside-label: Where Emotrix stands
+prepcall-label: Where PrepCall stands
+governance-label: Governance
 role: I designed and built both on my own, and every decision in them is mine. PrepCall is live. Emotrix is in a pilot under NDA.
 :::
 

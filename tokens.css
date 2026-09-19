@@ -1,0 +1,155 @@
+/* ═══════════════════════════════════════════════════════════════
+   gideonb.me — design tokens
+   Generated from the design system, draft two. Geist settled.
+   Replaces the warm-paper palette site-wide.
+
+   Load order: this file, then global.css, then work.css.
+   Fonts: Geist and Geist Mono, subset and self-hosted.
+   Material Symbols Outlined, variable, subset to the ten glyphs used.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ───── Colour ───── */
+
+:root,
+[data-theme="light"] {
+  /* Grounds. Absolute: a charcoal band is the same charcoal on any page. */
+  --ground-paper:         oklch(0.968 0.004 250);
+  --ground-grey:          oklch(0.862 0.005 250);
+  --ground-grey-deep:     oklch(0.780 0.006 250);
+  --ground-charcoal:      oklch(0.245 0.007 250);
+  --ground-charcoal-deep: oklch(0.175 0.008 250);
+
+  /* The ground the current context sits on. Components read this. */
+  --surface:    var(--ground-paper);
+
+  /* Text and rules. These flip. Four ink steps: ink for headings and emphasis, ink-muted for
+     body copy, ink-label for labels and metadata at 12px and above, ink-faint for non-text only. */
+  --ink:        oklch(0.220 0.006 250);
+  --ink-muted:  oklch(0.445 0.008 250);
+  --ink-label:  oklch(0.515 0.008 250); /* the fourth step: labels and metadata, 12px and up. Clears 4.5:1 on paper and on fill-100 */
+  --ink-faint:  oklch(0.615 0.008 250); /* non-text only: ticks, strokes, hairlines, chart furniture */
+  --rule:       oklch(0.880 0.005 250);
+  --rule-faint: oklch(0.925 0.004 250);
+
+  /* Fills. The supporting family: five neutral greys on the same hue as the grounds and inks,
+     so lightness alone carries the difference. Panels, bars, cells, marks and the two authorship
+     steps. A warm lean was tried three times (hue 70, then 85 at two chromas) and read as pink,
+     beige, then brown on the dark panels; do not reintroduce one. */
+  --fill-100:   oklch(0.900 0.004 250);
+  --fill-200:   oklch(0.815 0.005 250);
+  --fill-300:   oklch(0.665 0.005 250);
+  --fill-400:   oklch(0.520 0.006 250);
+  --fill-500:   oklch(0.400 0.005 250);
+
+  /* Electric blue. The single accent. */
+  --accent:      oklch(0.580 0.220 255);
+  --accent-text: oklch(0.480 0.200 258);
+  --accent-on:   oklch(0.980 0.004 250);
+  --accent-wash: oklch(0.580 0.220 255 / 0.10);
+
+  /* Background geometry. Never carries the accent. */
+  --geo-line: oklch(0.220 0.006 250 / 0.08);
+  --geo-blur: oklch(0.220 0.006 250 / 0.04);
+
+  /* App rating scale. The one place colour carries meaning. */
+  --rating-low:  oklch(0.627 0.170 25); /* light enough for ink text at 4.5:1 */
+  --rating-mid:  oklch(0.700 0.140 75);
+  --rating-high: oklch(0.620 0.130 150);
+}
+
+[data-theme="dark"] {
+  --surface:    var(--ground-charcoal);
+
+  --ink:        oklch(0.970 0.003 250);
+  --ink-muted:  oklch(0.760 0.006 250);
+  --ink-label:  oklch(0.680 0.006 250);
+  --ink-faint:  oklch(0.600 0.006 250);
+  --rule:       oklch(0.320 0.008 250);
+  --rule-faint: oklch(0.285 0.008 250);
+
+  --fill-100:   oklch(0.310 0.005 250);
+  --fill-200:   oklch(0.400 0.005 250);
+  --fill-300:   oklch(0.520 0.006 250);
+  --fill-400:   oklch(0.690 0.006 250);
+  --fill-500:   oklch(0.820 0.005 250);
+
+  --accent:      oklch(0.720 0.170 250);
+  --accent-text: oklch(0.780 0.140 250);
+  --accent-on:   oklch(0.175 0.008 250);
+  --accent-wash: oklch(0.720 0.170 250 / 0.14);
+
+  --geo-line: oklch(0.970 0.003 250 / 0.09);
+  --geo-blur: oklch(0.970 0.003 250 / 0.05);
+
+  --rating-low:  oklch(0.700 0.150 25);
+  --rating-mid:  oklch(0.780 0.130 75);
+  --rating-high: oklch(0.740 0.120 150);
+}
+
+/* ───── Spacing, radius, motion, families ───── */
+
+:root {
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+  --space-11: 192px;
+
+  --radius-none: 0;
+  --radius-sm:   2px;
+  --radius-pill: 999px;
+
+  --dur-state:   220ms;
+  --dur-reveal:  520ms;
+  --dur-stagger: 60ms;
+  --dur-ambient: 60s;
+  --ease:        cubic-bezier(.4, 0, .2, 1);
+
+  --font-display: Geist, system-ui, -apple-system, sans-serif;
+  --font-mono:    "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Layout */
+  --measure:     48ch;  /* 65 to 70 rendered characters a line in Geist at 17px. ch is the zero's width and Geist's zero is wide: 68ch was 97 characters */
+  --rail:        170px;
+  --frame:       1280px;
+}
+
+/* ───── Type scale ───── */
+
+.display-xxl { font-family: var(--font-display); font-size: 140px; line-height: 0.92; font-weight: 600; letter-spacing: -0.035em; }
+.display-xl  { font-family: var(--font-display); font-size: 96px;  line-height: 0.94; font-weight: 600; letter-spacing: -0.03em; }
+.display-l   { font-family: var(--font-display); font-size: 64px;  line-height: 0.98; font-weight: 600; letter-spacing: -0.025em; }
+.display-m   { font-family: var(--font-display); font-size: 40px;  line-height: 1.06; font-weight: 600; letter-spacing: -0.02em; }
+
+.heading     { font-family: var(--font-display); font-size: 24px; line-height: 1.30; font-weight: 600; letter-spacing: -0.01em; }
+.subheading  { font-family: var(--font-display); font-size: 19px; line-height: 1.45; font-weight: 600; }
+.body        { font-family: var(--font-display); font-size: 17px; line-height: 1.65; font-weight: 400; }
+.body-small  { font-family: var(--font-display); font-size: 15px; line-height: 1.60; font-weight: 400; }
+
+.label       { font-family: var(--font-mono); font-size: 12px; line-height: 1.4; font-weight: 400; letter-spacing: 0.04em; }
+.numeral     { font-family: var(--font-mono); font-size: 44px; line-height: 1;   font-weight: 300; }
+.figure      { font-family: var(--font-mono); font-size: 56px; line-height: 1;   font-weight: 400; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+
+/* Display sizes step down on narrow viewports. */
+@media (max-width: 900px) {
+  .display-xxl { font-size: clamp(56px, 13vw, 140px); }
+  .display-xl  { font-size: clamp(44px, 10vw, 96px); }
+  .display-l   { font-size: clamp(36px, 8vw, 64px); }
+  .display-m   { font-size: clamp(28px, 6vw, 40px); }
+  .figure      { font-size: clamp(36px, 9vw, 56px); }
+  .numeral     { font-size: clamp(32px, 8vw, 44px); }
+}
+
+/* ───── Motion ───── */
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-state: 1ms; --dur-reveal: 1ms; --dur-stagger: 0ms; }
+  /* Ambient background loops are removed entirely, not shortened. */
+  .geo-layer *, .geo-blob { animation: none !important; }
+}

@@ -1,0 +1,38 @@
+---
+// Case three: Songkick and Dopay, in the document register. One opener, over Songkick; Dopay
+// takes a rail label only. Labels and the heading come from case3-meta like every other case.
+import Plate from '../Plate.astro';
+import Opener from '../doc/Opener.astro';
+import Block from '../doc/Block.astro';
+import { inlineMd, bullets } from '../../../lib/homepage.mjs';
+interface Props { w: any }
+const { w } = Astro.props;
+const { P, S, c3 } = w;
+const info = c3.info;
+---
+    <!-- Case three -->
+    <section id="case-three" data-theme="dark" class="wk-band wk-video wk-photo reveal">
+      <img class="wk-video-src" src="/images/work/songkick-live.jpg" alt="" aria-hidden="true" />
+      <div class="wk-video-wash" aria-hidden="true"></div>
+      <div class="wk-frame wk-opener">
+      <div class="wk-lab" style="margin-bottom:var(--s5)"><span class="wk-auth mine"><i aria-hidden="true"></i>my call</span><p class="lbl">{c3.info.number}</p></div>
+      <h2 class="d2">{c3.title.quiet && <span class="tt-quiet">{c3.title.quiet}</span>}{c3.title.quiet && ' '}{c3.title.loud}</h2>
+      <p class="meta">{c3.info.company} &nbsp;·&nbsp; {c3.info.dates}</p>
+      <p class="role">{c3.info.role}</p>
+      <div class="wk-stats">{c3.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
+    </div></section>
+    <Opener info={info} k="songkick" />
+    <Block info={info} k="songkick" under>
+      <img class="wk-logo" src="/images/work/songkick-logo.png" alt="Songkick" width="523" height="157" />
+      {P('case3-songkick').filter((p) => !p.startsWith('- ')).map((p) => <p class="body" set:html={inlineMd(p)} />)}
+      <ul class="wk-list">{bullets(S('case3-songkick')).map((b) => <li set:html={inlineMd(b)} />)}</ul>
+      <figure class="wk-phones-stack">
+        <div class="stage"><img class="ph2" src="/images/work/songkick-phone-2.png" alt="" /><img class="ph1" src="/images/work/songkick-phone-1.png" alt="" /></div>
+        <figcaption><span>Songkick on iOS.</span><span>Shipped product</span></figcaption>
+      </figure>
+    </Block>
+    <Block info={info} k="dopay" style="padding-top:var(--s9);padding-bottom:96px">
+      <img class="wk-logo" src="/images/work/dopay-logo.png" alt="Dopay" width="375" height="134" />
+      {P('case3-dopay').map((p) => <p class="body" set:html={inlineMd(p)} />)}
+      <div style="margin-top:var(--s6)"><div class="wk-blend"><Plate src="/images/work/dopay-01.webp" what="Dopay for Business and the employee app." prov="Shipped product" bare /></div></div>
+    </Block>

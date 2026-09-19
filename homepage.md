@@ -49,13 +49,7 @@ I'm at a point in my career where the work I find most rewarding is helping othe
 :::
 
 ::: earlier-work
-Employee number seven at **Songkick** (2008–2016). Led design from seed stage to the Warner Music Group acquisition. Apple Editors' Choice, UK App of the Week, a Webby, Billboard App of the Month, Fast Company's most innovative in music.
-
-Six years at the **BBC** (1998–2004), where I led design on the bbc.co.uk homepage and global navigation, Radio 1 and Doctor Who's first websites, and the project that became iPlayer. Partnered with RNIB to pioneer screen reader accessibility and worked alongside Neville Brody on BBC Digital branding. UX and usability testing were new disciplines at the time.
-
-Part of a small design team at **Skype** (2004–2007) during its growth from 11 million to over 200 million users. Designed the onboarding flow and the viral referral loop that helped drive near-zero-cost user acquisition. Built early mobile experiences on Nokia devices before the App Store existed.
-
-Chief Design Officer at **Dopay** (2017–2018), a zero-to-one fintech launch in Egypt providing mobile payroll for unbanked workers. The product reached 85% adoption within three weeks of launch. Clients included McDonald's Egypt. The work laid the foundation for a subsequent $18 million Series A.
+Songkick and Dopay are case three, where I designed the product myself. Six years at the **BBC** (1998–2004) on the homepage, global navigation and the project that became iPlayer, and three at **Skype** (2004–2007) on onboarding and the referral loop, are in the Previously card above.
 :::
 
 ::: craft-delivery
@@ -84,6 +78,7 @@ Chief Design Officer at **Dopay** (2017–2018), a zero-to-one fintech launch in
 :::
 
 ::: project-prepcall
+slug: prepcall
 name: PrepCall
 description: An AI voice coach for interview practice. You speak with it for twenty minutes and it returns a coaching report grounded in what you said and how you said it. I designed and built it end to end, including the voice interaction model, the report architecture, and the EU AI Act compliance work.
 link: https://prepcall.me
@@ -95,6 +90,7 @@ image-prov: Live product, September 2026
 :::
 
 ::: project-emotrix
+slug: emotrix
 name: Emotrix
 description: Middleware for multimodal emotion intelligence. The engines that read faces and voices are improving fast. A raised brow still means one thing in a usability test and another in heavy traffic, and Emotrix is the interpretation layer that supplies the missing context, engine-agnostic by design.
 status: Early stage, in a live pilot under NDA
@@ -107,6 +103,7 @@ image-prov: Early stage, September 2026
 :::
 
 ::: project-nudge
+slug: nudge
 name: Nudge
 description: A bookmarklet for the last stretch of building with an agent, the small visual corrections that are painful to describe in words. Drag on the running page and it turns each change into an exact measurement, ready to paste into your coding agent. Built and shipped as an open source project in September 2026.
 link: https://github.com/g1d30nB/nudge

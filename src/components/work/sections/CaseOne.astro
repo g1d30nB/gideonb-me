@@ -1,0 +1,65 @@
+---
+// Case one: the design organisation, in the document register. `extended` adds the service gap
+// and the operating model, which the single-scroll view leaves out.
+import Plate from '../Plate.astro';
+import Opener from '../doc/Opener.astro';
+import Block from '../doc/Block.astro';
+import { inlineMd } from '../../../lib/homepage.mjs';
+import arc from '../arc.html?raw';
+import arcM from '../arc_m.html?raw';
+import ownership from '../ownership.html?raw';
+import people from '../people.html?raw';
+import gap from '../gap.html?raw';
+import gapM from '../gap_m.html?raw';
+import opmodel from '../opmodel.html?raw';
+interface Props { w: any; extended?: boolean }
+const { w, extended = false } = Astro.props;
+const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
+const info = c1.info;
+---
+    <!-- Case one -->
+    <section id="case-one" data-theme="dark" class="wk-band wk-video reveal">
+      <video class="wk-video-src" autoplay muted loop playsinline preload="metadata" poster="/video/txd-poster.jpg" aria-hidden="true"><source src="/video/txd.mp4" type="video/mp4" /></video>
+      <div class="wk-video-wash" aria-hidden="true"></div>
+      <script is:inline>document.querySelectorAll('.wk-video-src').forEach((v) => { v.playbackRate = 0.4; v.addEventListener('play', () => { v.playbackRate = 0.4; }); const ready = () => v.classList.add('is-ready'); if (v.readyState >= 3) ready(); else v.addEventListener('canplay', ready, { once: true }); });</script>
+      <div class="wk-frame wk-opener">
+      <div class="wk-lab" style="margin-bottom:var(--s5)"><span class="wk-auth mine"><i aria-hidden="true"></i>my call</span><p class="lbl">{c1.info.number} &nbsp;·&nbsp; the organisation</p></div>
+      <h2 class="d2">{c1.title.quiet && <span class="tt-quiet">{c1.title.quiet}</span>}{c1.title.quiet && ' '}{c1.title.loud}</h2>
+      <p class="meta">{c1.info.company} &nbsp;·&nbsp; {c1.info.dates}</p>
+      <p class="role">{c1.info.role}</p>
+      <div class="wk-stats">{c1.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
+    </div></section>
+
+    <Block info={info} k="challenge" style="padding-top:76px">{P('case1-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    <Block info={info} k="role">{P('case1-role').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    <Block info={info} k="commercial"><p class="d4">{com1}</p><p class="body" style="margin-top:var(--s5)">{com2}</p>{P('case1-commercial').slice(1).map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    <Block info={info}><figure class="wk-phone doc-figure"><img src="/images/work/toyota-app.gif" alt="" width="450" height="964" /><figcaption><span>MyToyota, the home screen</span><span>US build, public app</span></figcaption></figure></Block>
+
+    <Opener info={info} k="narrative" />
+    <Block info={info} k="narrative" under>{narr.slice(0, turnIdx).map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    <div class="wk-frame doc-evidence wk-fig reveal drops-title drops-sub"><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
+    <Block info={info} k="service"><p class="body" set:html={inlineMd(narr[turnIdx])} /><div class="wk-quote"></div><p class="d3">A disjointed end-to-end experience is usually a faithful reflection of a disjointed business.</p></Block>
+    {extended && (
+    <section data-theme="dark" class="wk-band reveal" style="margin-top:76px"><div class="wk-frame doc-evidence wk-fig" style="padding-top:72px;padding-bottom:80px"><div class="wk-desk"><Fragment set:html={gap} /></div><div class="wk-mob"><Fragment set:html={gapM} /></div></div></section>
+    )}
+    <Block info={info} k="led" style="padding-top:76px">
+      <p class="body" set:html={inlineMd(narr3a)} />
+      <div class="wk-inset"><div class="wk-lab" style="margin-bottom:var(--s3)"><span class="wk-auth team"><i aria-hidden="true"></i>the team&rsquo;s work</span></div><p class="body" set:html={inlineMd(narr3b)} /></div>
+      {narr.slice(creditIdx + 1).map((p) => <p class="body" set:html={inlineMd(p)} />)}
+    </Block>
+
+    <Opener info={info} k="operating" />
+    <Block info={info} k="operating" under>{P('case1-operating').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    {extended && (
+    <div class="wk-frame doc-evidence wk-fig reveal drops-title"><Fragment set:html={opmodel} /></div>
+    )}
+
+    <Opener info={info} k="leading" />
+    <Block info={info} k="leading" under>{P('case1-leading').map((p) => <p class="body" set:html={inlineMd(p)} />)}<div style="margin-top:var(--s6)"><Plate src="/images/work/txd-service-catalogue.png" what="The service catalogue, once the team was fully formed. Three practices, from concept to market." prov="Toyota Experience Design, internal" bare /></div></Block>
+    <section data-theme="dark" class="wk-band wk-band-grad reveal" style="margin-top:88px"><div class="wk-frame doc-evidence wk-fig" style="padding-top:88px"><Fragment set:html={ownership} /></div>
+    <Opener info={info} k="people" />
+    <Block info={info} k="people" under>{P('case1-people').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    <div class="wk-frame doc-evidence wk-fig drops-title" style="padding-bottom:88px"><Fragment set:html={people} /></div></section>
+
+    <Block info={info} k="position" style="padding-top:88px">{P('case1-position').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    <Block info={info} k="changed" style="padding-top:56px;padding-bottom:96px">{P('case1-impact').map((p) => <p class="body big" set:html={inlineMd(p)} />)}</Block>
