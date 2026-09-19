@@ -43,6 +43,9 @@ design managers and leads owned" names a diagram and stays; "Run as an internal 
 an opener that says the same thing does not. A subtitle left with no job goes with its title. The
 small mono labels stay either way.
 
+**A diagram title names what is plotted.** It never restates a stat or a sentence that appears within
+one screen of it. The argument lives in the takeaway line or in the prose, once.
+
 ---
 
 ## Colour

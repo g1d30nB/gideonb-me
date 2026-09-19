@@ -123,6 +123,7 @@ challenge-label: The challenge
 designed-label: Who designed it
 involved-label: What that involved
 aside-label: What the team built
+aside-heading: One EV domain instead of four | and it did not ship until it tested right
 finding-label: One finding, and what it taught
 changed-label: What changed
 role: I ran this team myself for three or four years, then put design managers in my place as the function scaled. The rebuild is their work and the work of the designers under them.
@@ -168,6 +169,9 @@ number: Case Three
 title: Two products, two markets | as designer and as leader
 company: Songkick and Dopay
 dates: 2008 to 2018
+songkick-label: At Songkick
+songkick-heading: I drew it and I ran it | for eight years from seed to acquisition
+dopay-label: At Dopay
 role: Eight years at Songkick as employee number seven and VP of Design, on the executive team from seed through Series C to the Warner Music Group acquisition. Then Chief Design Officer at Dopay, taking a fintech for unbanked workers in Egypt from concept to a live commercial service. In both, I designed the product.
 :::
 
@@ -206,6 +210,7 @@ dates: 2026
 challenge-label: The challenge
 role-label: My role
 narrative-label: What the two products do
+narrative-heading: One narrow and one general | both deciding what a reading means
 learned-label: What I learned building it
 aside-label: Where Emotrix stands
 prepcall-label: Where PrepCall stands
