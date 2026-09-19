@@ -22,19 +22,22 @@
   /* The ground the current context sits on. Components read this. */
   --surface:    var(--ground-paper);
 
-  /* Text and rules. These flip. */
+  /* Text and rules. These flip. Four ink steps: ink for headings and emphasis, ink-muted for
+     body copy, ink-label for labels and metadata at 12px and above, ink-faint for non-text only. */
   --ink:        oklch(0.220 0.006 250);
-  --ink-muted:  oklch(0.480 0.008 250);
-  --ink-faint:  oklch(0.615 0.008 250);
+  --ink-muted:  oklch(0.445 0.008 250);
+  --ink-label:  oklch(0.545 0.008 250); /* the fourth step: labels and metadata, 12px and up */
+  --ink-faint:  oklch(0.615 0.008 250); /* non-text only: ticks, strokes, hairlines, chart furniture */
   --rule:       oklch(0.880 0.005 250);
   --rule-faint: oklch(0.925 0.004 250);
 
-  /* Warm greys. The supporting family. Hue 70, chroma 0.012 to 0.022. */
-  --warm-100:   oklch(0.900 0.012 70);
-  --warm-200:   oklch(0.800 0.016 70);
-  --warm-300:   oklch(0.660 0.018 70);
-  --warm-400:   oklch(0.520 0.020 70);
-  --warm-500:   oklch(0.400 0.018 70);
+  /* Warm greys. The supporting family. Hue 82 to 85, chroma 0.010 to 0.018: toward yellow,
+     because at hue 70 they read pink against the cool neutrals. */
+  --warm-100:   oklch(0.905 0.010 85);
+  --warm-200:   oklch(0.815 0.013 85);
+  --warm-300:   oklch(0.670 0.015 85);
+  --warm-400:   oklch(0.520 0.018 82);
+  --warm-500:   oklch(0.400 0.016 82);
 
   /* Electric blue. The single accent. */
   --accent:      oklch(0.580 0.220 255);
@@ -56,16 +59,17 @@
   --surface:    var(--ground-charcoal);
 
   --ink:        oklch(0.970 0.003 250);
-  --ink-muted:  oklch(0.745 0.006 250);
+  --ink-muted:  oklch(0.760 0.006 250);
+  --ink-label:  oklch(0.660 0.006 250);
   --ink-faint:  oklch(0.600 0.006 250);
   --rule:       oklch(0.320 0.008 250);
   --rule-faint: oklch(0.285 0.008 250);
 
-  --warm-100:   oklch(0.345 0.014 70);
-  --warm-200:   oklch(0.440 0.016 70);
-  --warm-300:   oklch(0.560 0.018 70);
-  --warm-400:   oklch(0.700 0.018 70);
-  --warm-500:   oklch(0.820 0.014 70);
+  --warm-100:   oklch(0.350 0.012 85);
+  --warm-200:   oklch(0.445 0.014 85);
+  --warm-300:   oklch(0.565 0.016 85);
+  --warm-400:   oklch(0.700 0.016 82);
+  --warm-500:   oklch(0.820 0.013 82);
 
   --accent:      oklch(0.720 0.170 250);
   --accent-text: oklch(0.780 0.140 250);

@@ -53,14 +53,17 @@ those into the theme blocks rather than keeping a parallel set.
 ### The temperature mechanic
 
 Warm greys read as warm only because the neutrals are genuinely cool. Cool holds chroma 0.004 to
-0.008 at hue 250, warm holds 0.012 to 0.022 at hue 70. Do not flatten either toward neutral to
+0.008 at hue 250, warm holds 0.010 to 0.018 at hue 82 to 85. Hue 70 was tried first and read pink
+against the cool neutrals; the family now sits toward yellow with the chroma slightly down. Do not flatten either toward neutral to
 "clean it up". The effect depends on those numbers.
 
 ### Accessibility
 
-Body text holds 4.5:1 against its ground. Diagram strokes carrying meaning hold 3:1. `ink-faint`
-clears 3:1 and nothing more, so it is for rail labels and metadata at 12px and above, never body
-copy. `warm-300` is a stroke colour, never a text colour.
+Body text holds 4.5:1 against its ground. Diagram strokes carrying meaning hold 3:1. The ink ladder
+has four steps: `ink` for headings and emphasis, `ink-muted` for body copy, `ink-label` for rail
+labels and metadata at 12px and above, and `ink-faint`, which is **non-text only**: ticks, strokes,
+hairlines and chart furniture. `ink-faint` never carries a glyph. `warm-300` is a stroke colour,
+never a text colour.
 
 Every contrast figure in the token notes was calculated by hand. Verify with a checker as part of
 this work. `accent` on `ground-grey` is the weakest pairing at roughly 2.5:1: on that ground the blue
@@ -79,7 +82,8 @@ satisfied contrast alone. Replace with three signals together:
 - **Shape.** Filled square for his own decisions, open ring for the team's work, half rule for
   shared. Legible in greyscale and at small size.
 - **Label.** A mono rail label naming it in words. This is the primary signal.
-- **Weight.** `warm-500` against `warm-300`.
+- **Weight.** `warm-500` for his own decisions against `warm-400` for the team's. `warm-300` at
+  2.3:1 cannot carry a data line or a label.
 
 ### The one colour exception
 

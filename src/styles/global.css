@@ -76,7 +76,7 @@ h3 { font-size: 16px; font-weight: 600; color: var(--ink); }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   margin-bottom: 8px;
 }
 .bold-statement {
@@ -122,7 +122,7 @@ nav a {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -153,19 +153,19 @@ section { padding: 80px 0; }
 .hero-proof {
   font-size: 14px;
   line-height: 1.7;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   margin-top: 16px;
   max-width: min(711px, var(--hero-measure));
 }
 
 /* ───── Case dates ───── */
-.case-dates { font-size: 13px; color: var(--ink-faint); margin-top: 4px; }
+.case-dates { font-size: 13px; color: var(--ink-label); margin-top: 4px; }
 
 /* ───── Project status (unlinked projects) ───── */
 .project-status {
   font-size: 14px;
   font-weight: 500;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   font-style: italic;
 }
 
@@ -226,7 +226,7 @@ section { padding: 80px 0; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   margin-bottom: 12px;
 }
 .status-card .card-label svg { width: 16px; height: 16px; opacity: 0.7; }
@@ -259,7 +259,7 @@ section { padding: 80px 0; }
 .case-study { padding: 40px 0 8px 0; }
 .case-header { display: grid; grid-template-columns: 200px 1fr; gap: 40px; }
 .case-number { font-weight: 600; color: var(--ink); }
-.case-company { font-size: 14px; color: var(--ink-faint); margin-top: 2px; }
+.case-company { font-size: 14px; color: var(--ink-label); margin-top: 2px; }
 .case-block { margin-bottom: 28px; }
 .case-block-label {
   font-family: var(--font-mono);
@@ -267,7 +267,7 @@ section { padding: 80px 0; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   margin-bottom: 8px;
 }
 .case-block p { font-size: 15px; color: var(--ink-muted); line-height: 1.7; }
@@ -321,7 +321,7 @@ section { padding: 80px 0; }
 .product-frame img { display: block; width: 100%; height: auto; aspect-ratio: 1172 / 628; object-fit: fill; }
 .product-frame figcaption { display: flex; flex-direction: column; gap: 4px; padding-top: 10px; }
 .product-frame figcaption span:first-child { font-size: 12.5px; line-height: 1.5; color: var(--ink); font-weight: 500; }
-.product-frame figcaption span:last-child { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-faint); line-height: 1.5; }
+.product-frame figcaption span:last-child { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-label); line-height: 1.5; }
 .project-name {
   font-size: 17px;
   font-weight: 600;
@@ -341,7 +341,7 @@ section { padding: 80px 0; }
 .project-row:last-child { border-bottom: 1px solid var(--rule); }
 .project-row .project-name { margin-bottom: 4px; }
 .project-row .project-name a { color: inherit; text-decoration: none; transition: color 0.3s; }
-.project-row .project-name a:hover { color: var(--ink-faint); }
+.project-row .project-name a:hover { color: var(--ink-label); }
 .project-row .project-description { margin-bottom: 0; }
 .project-link {
   display: inline-flex;
@@ -349,7 +349,7 @@ section { padding: 80px 0; }
   gap: 6px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -394,9 +394,9 @@ section { padding: 80px 0; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--ink-faint);
+  color: var(--ink-label);
 }
-.article-read-time { font-size: 13px; color: var(--ink-faint); }
+.article-read-time { font-size: 13px; color: var(--ink-label); }
 .article-thumb {
   width: 72px;
   height: 52px;
@@ -431,7 +431,7 @@ section { padding: 80px 0; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   text-decoration: none;
   transition: color 0.3s;
   padding: 12px 0;
@@ -447,12 +447,12 @@ section { padding: 80px 0; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   border: 1px solid var(--rule);
   border-radius: 20px;
   padding: 4px 14px;
 }
-.article-readtime { font-size: 14px; color: var(--ink-faint); }
+.article-readtime { font-size: 14px; color: var(--ink-label); }
 .article-subtitle {
   font-size: 17px;
   color: var(--ink-muted);
@@ -508,7 +508,7 @@ section { padding: 80px 0; }
 }
 .article-body .attribution {
   font-size: 14px;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   margin-top: -16px;
   margin-bottom: 28px;
   padding-left: 27px;
@@ -550,7 +550,7 @@ section { padding: 80px 0; }
 }
 .article-body .note {
   font-size: 14px;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   font-style: italic;
   margin-top: 32px;
   padding-top: 24px;
@@ -580,7 +580,7 @@ section { padding: 80px 0; }
 /* ───── Footer ───── */
 footer { padding: 24px 0 40px; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; }
-.footer-copy { font-size: 13px; color: var(--ink-faint); }
+.footer-copy { font-size: 13px; color: var(--ink-label); }
 .footer-social { display: flex; gap: 16px; }
 .footer-social a { color: var(--ink-faint); transition: color 0.3s; }
 .footer-social a:hover { color: var(--ink); }
@@ -655,7 +655,7 @@ footer { padding: 24px 0 40px; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--ink-faint);
+  color: var(--ink-label);
 }
 .featured-card-title {
   font-size: 18px;
@@ -666,7 +666,7 @@ footer { padding: 24px 0 40px; }
 }
 .featured-card-meta {
   font-size: 13px;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   margin-top: 12px;
 }
 
@@ -674,7 +674,7 @@ footer { padding: 24px 0 40px; }
 .view-all-link {
   font-size: 15px;
   font-weight: 500;
-  color: var(--ink-faint);
+  color: var(--ink-label);
   text-decoration: none;
   transition: color 0.3s;
 }

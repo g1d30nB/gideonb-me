@@ -5,21 +5,21 @@
    (a custom property set to var() resolves where it is declared, not where it is read). */
 .wk,.wk [data-theme]{
   --paper:var(--surface); --paper-2:var(--warm-100); --paper-team:var(--warm-100);
-  --body:var(--ink-muted); --muted:var(--ink-faint); --faint:var(--ink-faint);
+  --body:var(--ink-muted); --muted:var(--ink-label); --faint:var(--ink-label);
   --rule-2:var(--ground-grey);
-  /* the two authorship steps. Amber and teal retire; the names stay for the components */
-  --amber:var(--warm-400); --teal:var(--warm-300); --amber-d:var(--warm-400); --teal-d:var(--warm-300);
+  /* the two authorship steps: mine on warm-500, the team's on warm-400. The names stay for the components */
+  --amber:var(--warm-500); --teal:var(--warm-400); --amber-d:var(--warm-500); --teal-d:var(--warm-400);
   --amber-wash:var(--warm-100);
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
   /* Diagram roles, used only by src/components/work. Mapping recorded in the phase-one report. */
   /* chart structure: cool neutrals */
-  --dg-ink:var(--ink); --dg-label:var(--ink-muted); --dg-scale:var(--ink-faint); --dg-tick:var(--ground-grey-deep); --dg-axis:var(--ground-grey);
+  --dg-ink:var(--ink); --dg-label:var(--ink-muted); --dg-scale:var(--ink-label); --dg-tick:var(--ground-grey-deep); --dg-axis:var(--ground-grey);
   --dg-grid:var(--rule-faint); --dg-area:var(--rule-faint); --dg-connector:var(--ink-faint); --dg-knockout:var(--surface);
   /* primary series (the amber role) on warm-400, secondary (the teal role) on warm-300 */
-  --dg-accent:var(--warm-400); --dg-accent-mark:var(--warm-500); --dg-accent-ink:var(--warm-500); --dg-accent-area:var(--warm-100);
-  --dg-accent-2:var(--warm-300); --dg-accent-2-ink:var(--warm-400);
+  --dg-accent:var(--warm-500); --dg-accent-mark:var(--warm-500); --dg-accent-ink:var(--warm-500); --dg-accent-area:var(--warm-100);
+  --dg-accent-2:var(--warm-400); --dg-accent-2-ink:var(--warm-500);
   /* bars and highlighted cells: warm greys */
-  --dg-bar:var(--warm-400); --dg-bar-start:var(--warm-400); --dg-bar-end:var(--warm-500); --dg-on-bar:var(--surface);
+  --dg-bar:var(--warm-500); --dg-bar-start:var(--warm-400); --dg-bar-end:var(--warm-500); --dg-on-bar:var(--surface);
   --dg-highlight:var(--warm-100); --dg-highlight-edge:var(--warm-200);
   --dg-placeholder:var(--rule-faint); --dg-screen:var(--surface);
   /* the focused state: one surface, its chips and rule */
@@ -35,7 +35,7 @@
   --dg-shadow-contact:rgba(0,0,0,0.3); --dg-shadow-cast:rgba(0,0,0,0.35);
 }
 /* The --night-* names the components reference inside bands. Aliases onto the dark theme, not values. */
-.wk [data-theme="dark"]{--night:var(--surface);--night-2:var(--warm-100);--night-ink:var(--ink);--night-body:var(--ink-muted);--night-muted:var(--ink-faint);--night-rule:var(--rule);--rule-2:var(--rule)}
+.wk [data-theme="dark"]{--night:var(--surface);--night-2:var(--warm-100);--night-ink:var(--ink);--night-body:var(--ink-muted);--night-muted:var(--ink-label);--night-rule:var(--rule);--rule-2:var(--rule)}
 .wk{font-family:var(--font-display);font-size:15.5px;line-height:1.7;color:var(--body);background:var(--paper);text-wrap:pretty;-webkit-font-smoothing:antialiased}
 .wk p{margin:0}
 .wk a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule-2);text-underline-offset:3px}
@@ -81,9 +81,9 @@
 .wk-quote{width:48px;height:3px;background:var(--amber);margin:var(--s6) 0 var(--s4)}
 .wk-stats{display:flex;flex-wrap:wrap;row-gap:var(--s6);border-top:1px solid var(--rule);padding-top:var(--s6)}
 .wk-stats>div{padding:0 var(--s6)} .wk-stats>div:first-child{padding-left:0} .wk-stats>div+div{border-left:1px solid var(--rule)}
-.wk-stats .stat{color:var(--ink);font-size:40px;margin-bottom:10px} .wk-stats p.t3{color:var(--ink-faint);max-width:200px}
+.wk-stats .stat{color:var(--ink);font-size:40px;margin-bottom:10px} .wk-stats p.t3{color:var(--ink-label);max-width:200px}
 .wk-opener{padding:84px 0 76px} .wk-opener .d2{color:var(--ink);max-width:1000px;margin-bottom:var(--s5)}
-.wk-opener .meta{font-size:14px;color:var(--ink-faint);margin-bottom:14px} .wk-opener .role{font-size:18px;line-height:1.8;color:var(--ink-muted);max-width:760px;margin-bottom:var(--s8)}
+.wk-opener .meta{font-size:14px;color:var(--ink-label);margin-bottom:14px} .wk-opener .role{font-size:18px;line-height:1.8;color:var(--ink-muted);max-width:760px;margin-bottom:var(--s8)}
 .wk-gauge{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto auto auto;gap:0 34px;margin-top:var(--s2)}
 .wk-gauge>div{display:grid;grid-template-rows:subgrid;grid-row:span 4;row-gap:0;align-content:start}
 .wk-gauge .lbl{margin-bottom:var(--s2)} .wk-gauge .d4{font-size:26px;margin-bottom:10px;align-self:start} .wk-gauge .t3{margin-bottom:11px}
@@ -181,7 +181,7 @@
 .wk-mood-gif{position:absolute;right:6%;top:6%;width:24%;height:auto;border-radius:6%/3.5%;box-shadow:0 30px 60px rgba(0,0,0,0.45)}
 .wk-mood-caption{display:flex;flex-direction:column;gap:5px;max-width:1000px;margin:var(--s4) auto 0}
 .wk-mood-caption span:first-child{font-size:12.5px;line-height:1.5;color:var(--ink);font-weight:500}
-.wk-mood-caption span:last-child{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-faint);line-height:1.5}
+.wk-mood-caption span:last-child{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-label);line-height:1.5}
 @media (max-width:820px){ .wk-mood-stage{aspect-ratio:auto} .wk-mood-findings{position:static;width:100%;display:block} .wk-mood-gif{position:static;width:46%;margin:var(--s5) 0 0 auto;display:block} }
 
 /* The thirteen-month timeline builds when in view */
@@ -239,25 +239,33 @@
   .wk-own-band{padding:var(--s5)}
 }
 
-/* The hub. Case cards on the authorship gauge, project cards on the night band; whole card is the link. */
-.wk-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto auto auto auto auto;gap:0 34px;margin-top:var(--s2)}
-.wk-cards>.wk-card{display:grid;grid-template-rows:subgrid;grid-row:span 6;row-gap:0;align-content:start}
+/* The hub. Two rows of two case cards, each row labelled; a card splits into copy on the left and
+   the figures as a column on the right. Project cards on the night band. Whole card is the link. */
+.wk-cards{margin-top:var(--s2)}
+.wk .wk-row-label{border-top:1px solid var(--rule);padding-top:var(--s3);margin-bottom:var(--s6)} .wk .wk-card-row+.wk-row-label{margin-top:var(--s8)}
+.wk-card-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s7)}
 .wk a.wk-card{color:inherit;text-decoration:none} .wk a.wk-card:hover{text-decoration:none}
-.wk-cards .wk-lab{margin-bottom:var(--s2)} .wk-cards .d4{font-size:22px;margin-bottom:10px} .wk-cards>.wk-card>.t3{margin-bottom:var(--s4)}
-.wk-card-stats{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3) var(--s4);border-top:1px solid var(--rule);padding-top:var(--s4);margin-bottom:var(--s4)}
-.wk-card-stats .stat{font-size:26px;margin-bottom:4px} .wk-card-stats .t3{font-size:12px;line-height:1.45}
-.wk-cards .t2{margin-bottom:var(--s3)}
+.wk-card-row .wk-card{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:var(--s5);align-items:start}
+.wk-card-main .wk-lab{margin-bottom:var(--s3)} .wk-card-main .d4{font-size:22px;margin-bottom:10px} .wk-card-main>.t3{margin-bottom:var(--s4)} .wk-card-main .t2{margin-bottom:var(--s4)}
+.wk-card-figs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:var(--s3)}
+.wk-card-figs li{display:contents}
+.wk-card-figs li>*{border-top:1px solid var(--rule);padding:10px 0}
+.wk-card-figs li:last-child>*{border-bottom:1px solid var(--rule)}
+.wk-card-figs .stat{font-size:18px;line-height:1.4;white-space:nowrap}
+.wk-card-figs .lbl{text-transform:none;line-height:1.35;padding-top:13px}
 .wk-card-link{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;font-weight:500;color:var(--muted);transition:color 0.3s}
 .wk-card:hover .wk-card-link,a.wk-card-link:hover{color:var(--ink)} .wk-card-link svg{transition:transform 0.3s} .wk-card:hover .wk-card-link svg{transform:translateX(2px)}
 .wk-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6) var(--s5)}
 .wk-projects .wk-plate{margin-bottom:var(--s4)} .wk-projects .d4{margin-bottom:var(--s2)} .wk-projects .t2{margin-bottom:var(--s2)} .wk-projects>.wk-card>.t3{margin-bottom:var(--s3)}
-.wk-projects .wk-card-link{color:var(--ink-faint)} .wk-projects .wk-card:hover .wk-card-link{color:var(--ink)}
+.wk-projects .wk-card-link{color:var(--ink-label)} .wk-projects .wk-card:hover .wk-card-link{color:var(--ink)}
+@media (max-width:900px){
+  .wk-card-row{grid-template-columns:1fr;gap:var(--s7)} .wk-card-row .wk-card{grid-template-columns:1fr;gap:var(--s5)}
+}
 /* Case and project pages: the way back to the hub, and the way on to the other cases */
 .wk-crumb{padding-top:40px} .wk-crumb a{font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;font-weight:500;color:var(--muted);text-decoration:none} .wk-crumb a:hover{color:var(--ink)}
 .wk-more{padding-top:72px} .wk-more>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5);margin-top:var(--s4)}
 .wk-more a{display:block;border-top:1px solid var(--rule);padding-top:var(--s3);text-decoration:none;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;font-weight:400;color:var(--muted)}
 .wk-more a span{display:block;margin-top:var(--s2);font-family:var(--font-display);font-size:15.5px;line-height:1.5;letter-spacing:0;text-transform:none;font-weight:500;color:var(--ink)} .wk-more a:hover span{text-decoration:underline;text-decoration-color:var(--rule-2);text-underline-offset:3px}
 @media (max-width:820px){
-  .wk-cards{grid-template-columns:1fr;gap:var(--s6) 0} .wk-cards>.wk-card{grid-template-rows:auto;grid-row:auto}
   .wk-projects,.wk-more>div{grid-template-columns:1fr}
 }
