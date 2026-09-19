@@ -44,8 +44,13 @@ an opener that says the same thing does not. A subtitle left with no job goes wi
 small mono labels stay either way.
 
 **A diagram title names what is plotted.** It never restates a stat or a sentence that appears within
-one screen of it. The argument lives in the takeaway line or in the prose, once. The same holds for
-takeaway lines: one that repeats the prose beside it, the stat band or the opener goes.
+one screen of it. The argument lives in the takeaway line or in the prose, once. 
+
+**A diagram takeaway states what the picture shows or where the data came from.** It never states why
+it matters. The opener does that, and does it better, because it sits at the top of the block rather
+than under a chart. Same rule, one layer down: a takeaway that argues is repeating the opener, the
+stat band or the prose, and in one case it contradicted them. Decided in 3a after the count: eight
+placed takeaways, eight under an opener. The survivors are captions of fact.
 
 ---
 
