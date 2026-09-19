@@ -302,8 +302,12 @@
 .doc-group{row-gap:var(--s7)} .doc-group .doc-rail{grid-column:1} .doc-group .doc-body{grid-column:2}
 .doc-group .doc-meta{grid-column:3} .doc-meta span{display:block}
 .doc-figure{justify-self:start;max-width:250px;margin:0}
-/* A diagram under an opener drops its own title: the opener and the rail label already name it. */
+/* A diagram under an opener keeps its title only when the title names what the diagram shows. One
+   that restates the section's claim goes (.drops-title), and a subtitle left with no job goes with
+   it (.drops-sub), the header row taking over the space the pair used to hold. */
 .drops-title .d3{display:none}
+.drops-sub .d3+.t2{display:none}
+.drops-sub .wk-arc>div>div:first-child{margin-bottom:var(--s7) !important}
 /* Evidence: diagrams and stat bands take the frame. They were drawn at 1152 and keep that width so
    nothing in them is restretched; they share the rail's left edge. */
 .doc-evidence{padding-top:var(--s8)} .doc-evidence>*{max-width:1152px}
@@ -318,7 +322,7 @@
   .doc-meta,.doc-group .doc-meta{grid-column:2;text-align:left;padding-top:var(--s4)}
   .doc-meta:empty{display:none} .doc-group .doc-meta{margin-top:calc(var(--s7) * -1 + var(--s4));padding-top:0}
 }
-@media (max-width:759px){
+@media (max-width:807px){
   .doc{grid-template-columns:minmax(0,1fr);column-gap:0}
   .wk .doc-rail{grid-column:1;padding-top:0;margin-bottom:var(--s3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .wk .doc-rail:empty{display:none}

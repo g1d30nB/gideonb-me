@@ -37,6 +37,12 @@ They meet at section openers, where a display-scale heading introduces a documen
 junction is what makes a two thousand word page feel composed. Build it as a component rather than
 assembling it per page.
 
+A diagram under an opener carries its own title only when that title names what the diagram shows.
+If it restates the section's claim, it goes: the opener is the title. "What I owned, and what my
+design managers and leads owned" names a diagram and stays; "Run as an internal consultancy" under
+an opener that says the same thing does not. A subtitle left with no job goes with its title. The
+small mono labels stay either way.
+
 ---
 
 ## Colour
@@ -129,7 +135,8 @@ Breakpoints:
 
 - Below 1060px the meta column moves under the prose. Three tracks fit down to 1035px; 1060 leaves
   headroom.
-- Below 760px the rail label moves above the prose as a single line. The content is still capped
+- Below 808px the rail label moves above the prose as a single line (rail 170 + gap 48 + measure 541
+  + padding 48 = 807, so the prose never gives way to the rail). The content is still capped
   at the measure: the measure holds at every viewport, and only narrows where the screen is narrower
   than it. The rail never becomes a narrow column of wrapped text on a phone.
 - Display sizes step down with the clamps in `tokens.css`.

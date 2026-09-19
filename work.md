@@ -24,7 +24,6 @@ commercial-label: Commercial accountability
 commercial-meta: £10m+ annual internal revenue at peak
 narrative-label: How the capability grew
 narrative-heading: Five capabilities | each one earned the next
-narrative-meta: Five capabilities, in the order they were established
 service-label: Where service design came from
 led-label: What it led to
 operating-label: How it was run

@@ -59,7 +59,7 @@ const railUnder = (k) => (H(k) ? L(k) : '');
       <div class="doc-body">{narr.slice(0, turnIdx).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
       <aside class="doc-meta">{M('narrative').map((m) => <span>{m}</span>)}</aside>
     </div>
-    <div class="wk-frame doc-evidence wk-fig reveal drops-title"><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
+    <div class="wk-frame doc-evidence wk-fig reveal drops-title drops-sub"><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
     <div class="wk-frame doc">
       <p class="lbl doc-rail">{L('service')}</p>
       <div class="doc-body"><p class="body" set:html={inlineMd(narr[turnIdx])} /><div class="wk-quote"></div><p class="d3">A disjointed end-to-end experience is usually a faithful reflection of a disjointed business.</p></div>
@@ -80,7 +80,7 @@ const railUnder = (k) => (H(k) ? L(k) : '');
       <div class="doc-body">{P('case1-operating').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
       <aside class="doc-meta">{M('operating').map((m) => <span>{m}</span>)}</aside>
     </div>
-    <div class="wk-frame doc-evidence wk-fig reveal"><Fragment set:html={opmodel} /><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s5);"><p class="dg-takeaway" style="line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">Four engagement models, so partner teams could buy the right depth. Long-term embedded partnerships, time-boxed studio work, specialist augmentation, innovation sprints.</p></div></div>
+    <div class="wk-frame doc-evidence wk-fig reveal drops-title"><Fragment set:html={opmodel} /><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s5);"><p class="dg-takeaway" style="line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">Four engagement models, so partner teams could buy the right depth. Long-term embedded partnerships, time-boxed studio work, specialist augmentation, innovation sprints.</p></div></div>
 
     <div class="wk-frame doc-opener"><p class="lbl doc-kicker">{c1.info.number}</p><h2 class="display-l doc-heading">{H('leading') ? <Fragment>{H('leading').quiet && <span class="tt-quiet">{H('leading').quiet}</span>}{H('leading').quiet && ' '}{H('leading').loud}</Fragment> : L('leading')}</h2></div>
     <div class="wk-frame doc">
@@ -96,7 +96,7 @@ const railUnder = (k) => (H(k) ? L(k) : '');
       <div class="doc-body">{P('case1-people').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div>
       <aside class="doc-meta">{M('people').map((m) => <span>{m}</span>)}</aside>
     </div>
-    <div class="wk-frame doc-evidence wk-fig" style="padding-bottom:88px"><Fragment set:html={people} /></div></section>
+    <div class="wk-frame doc-evidence wk-fig drops-title" style="padding-bottom:88px"><Fragment set:html={people} /></div></section>
 
     <div class="wk-frame doc" style="padding-top:88px">
       <p class="lbl doc-rail">{L('position')}</p>
