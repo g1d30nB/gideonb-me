@@ -32,6 +32,7 @@ npm run verify -- --base https://<url>   # run checks against a deployed URL
 | Pages | `src/pages/` (`index`, `writing/index`, `writing/[slug]`, `work/index`, `work/all`, `work/[slug]`, `404`) |
 | Work copy | `work.md` (repo root, `::: section` markers), read by `src/lib/work.mjs` |
 | Work sections | `src/components/work/sections/` (`Opening`, `CaseOne` to `CaseFour`, `Closing`, `Contact`), composed by every /work page |
+| Document register | `src/components/work/doc/` (`Opener`, `Block`): the three tracks every case section is built from. Rail labels, opener headings and meta lines come from `<key>-label`, `<key>-heading` (pipe splits quiet from loud) and `<key>-meta` in each `caseN-meta` block of `work.md` |
 | Work diagrams | `src/components/work/*.html`, hand-maintained (see below) |
 | Collection schema | `src/content.config.ts` |
 | Images / files | `public/images/`, `public/files/` |

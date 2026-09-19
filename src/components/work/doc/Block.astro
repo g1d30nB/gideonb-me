@@ -1,0 +1,14 @@
+---
+// One block of the document register: the rail label, the prose at the measure, the meta column.
+// Label and meta come from <k>-label and <k>-meta in the case's meta block (" · " between meta
+// lines). `under` marks the first block under an opener: its rail shows the label only once the
+// opener has its own heading, so the same words never sit twice in one screen. `auth` puts the
+// authorship unit in the rail where a block's authorship differs from its case.
+import { AUTH } from '../../../lib/work.mjs';
+interface Props { info: Record<string, string>; k?: string; under?: boolean; auth?: 'mine' | 'team' | 'shared'; style?: string }
+const { info, k = '', under = false, auth, style } = Astro.props;
+const label = k ? info[`${k}-label`] || '' : '';
+const shown = under && !info[`${k}-heading`] ? '' : label;
+const meta = k ? (info[`${k}-meta`] || '').split(' · ').map((s) => s.trim()).filter(Boolean) : [];
+---
+<div class="wk-frame doc" style={style}><div class="doc-rail">{auth && <span class:list={['wk-auth', auth]}><i aria-hidden="true"></i>{AUTH[auth]}</span>}{shown && <p class="lbl">{shown}</p>}</div><div class="doc-body"><slot /></div>{meta.length > 0 && <aside class="doc-meta">{meta.map((m) => <span>{m}</span>)}</aside>}<slot name="meta" /></div>

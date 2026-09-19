@@ -1,0 +1,10 @@
+---
+// A section opener: mono kicker, then the section at display scale, then the tracks below it.
+// The heading comes from <k>-heading in the case's meta block, with the pipe convention; where
+// that field is absent the opener shows <k>-label.
+import { splitTitle } from '../../../lib/page.mjs';
+interface Props { info: Record<string, string>; k: string }
+const { info, k } = Astro.props;
+const h = info[`${k}-heading`] ? splitTitle(info[`${k}-heading`]) : null;
+---
+<div class="wk-frame doc-opener"><p class="lbl doc-kicker">{info.number}</p><h2 class="display-l doc-heading">{h ? <Fragment>{h.quiet && <span class="tt-quiet">{h.quiet}</span>}{h.quiet && ' '}{h.loud}</Fragment> : info[`${k}-label`]}</h2></div>

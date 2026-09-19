@@ -119,7 +119,12 @@ number: Case Two
 title: A US app in Europe | from 1.9 stars to 4.6
 company: MyToyota and Lexus Link+
 dates: 2023 to 2026
+challenge-label: The challenge
+designed-label: Who designed it
+involved-label: What that involved
 aside-label: What the team built
+finding-label: One finding, and what it taught
+changed-label: What changed
 role: I ran this team myself for three or four years, then put design managers in my place as the function scaled. The rebuild is their work and the work of the designers under them.
 :::
 
@@ -198,8 +203,13 @@ number: Case Four
 title: Two AI products this year | one shipped and one in pilot
 company: PrepCall and Emotrix
 dates: 2026
+challenge-label: The challenge
+role-label: My role
 narrative-label: What the two products do
+learned-label: What I learned building it
 aside-label: Where Emotrix stands
+prepcall-label: Where PrepCall stands
+governance-label: Governance
 role: I designed and built both on my own, and every decision in them is mine. PrepCall is live. Emotrix is in a pilot under NDA.
 :::
 

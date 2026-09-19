@@ -1,8 +1,9 @@
 ---
-// Case one: the design organisation. `extended` adds the service gap diagram after the
-// service design narrative and the operating model under "How it was run"; the
-// single-scroll view leaves both out.
+// Case one: the design organisation, in the document register. `extended` adds the service gap
+// and the operating model, which the single-scroll view leaves out.
 import Plate from '../Plate.astro';
+import Opener from '../doc/Opener.astro';
+import Block from '../doc/Block.astro';
 import { inlineMd } from '../../../lib/homepage.mjs';
 import arc from '../arc.html?raw';
 import arcM from '../arc_m.html?raw';
@@ -14,6 +15,7 @@ import opmodel from '../opmodel.html?raw';
 interface Props { w: any; extended?: boolean }
 const { w, extended = false } = Astro.props;
 const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
+const info = c1.info;
 ---
     <!-- Case one -->
     <section id="case-one" data-theme="dark" class="wk-band wk-video reveal">
@@ -28,32 +30,36 @@ const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
       <div class="wk-stats">{c1.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
     </div></section>
 
-    <div class="wk-frame" style="padding-top:76px"><div class="wk-side"><div>
-      <div class="wk-rail"><div class="wk-lab"><p class="lbl">{c1.info['challenge-label']}</p></div><div>{P('case1-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
-      <div class="wk-rail" style="margin-top:48px"><div class="wk-lab"><p class="lbl">{c1.info['role-label']}</p></div><div>{P('case1-role').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
-      <div class="wk-rail" style="margin-top:56px"><div class="wk-lab"><p class="lbl">{c1.info['commercial-label']}</p></div><div><p class="d4" style="max-width:660px">{com1}</p><p class="body" style="margin-top:var(--s5)">{com2}</p>{P('case1-commercial').slice(1).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
-      <div class="wk-rail" style="margin-top:64px"><div class="wk-lab"><p class="lbl">{c1.info['narrative-label']}</p></div><div>{narr.slice(0, turnIdx).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
-    </div><figure class="wk-phone"><img src="/images/work/toyota-app.gif" alt="" width="450" height="964" /><figcaption><span>MyToyota, the home screen</span><span>US build, public app</span></figcaption></figure></div></div>
-    <div class="wk-frame wk-fig reveal" style="padding-top:56px"><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
-    <div class="wk-frame" style="padding-top:64px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">{c1.info['service-label']}</p></div><div><p class="body" set:html={inlineMd(narr[turnIdx])} /><div class="wk-quote"></div><p class="d3" style="max-width:660px">A disjointed end-to-end experience is usually a faithful reflection of a disjointed business.</p></div></div></div>
+    <Block info={info} k="challenge" style="padding-top:76px">{P('case1-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}<aside slot="meta" class="doc-meta"><span>{info.company}</span><span>{info.dates}</span></aside></Block>
+    <Block info={info} k="role">{P('case1-role').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    <Block info={info} k="commercial"><p class="d4">{com1}</p><p class="body" style="margin-top:var(--s5)">{com2}</p>{P('case1-commercial').slice(1).map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    <Block info={info}><figure class="wk-phone doc-figure"><img src="/images/work/toyota-app.gif" alt="" width="450" height="964" /><figcaption><span>MyToyota, the home screen</span><span>US build, public app</span></figcaption></figure></Block>
+
+    <Opener info={info} k="narrative" />
+    <Block info={info} k="narrative" under>{narr.slice(0, turnIdx).map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    <div class="wk-frame doc-evidence wk-fig reveal drops-title drops-sub"><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
+    <Block info={info} k="service"><p class="body" set:html={inlineMd(narr[turnIdx])} /><div class="wk-quote"></div><p class="d3">A disjointed end-to-end experience is usually a faithful reflection of a disjointed business.</p></Block>
     {extended && (
-    <section data-theme="dark" class="wk-band reveal" style="margin-top:76px"><div class="wk-frame wk-fig" style="padding-top:72px;padding-bottom:80px"><div class="wk-desk"><Fragment set:html={gap} /></div><div class="wk-mob"><Fragment set:html={gapM} /></div></div></section>
+    <section data-theme="dark" class="wk-band reveal" style="margin-top:76px"><div class="wk-frame doc-evidence wk-fig" style="padding-top:72px;padding-bottom:80px"><div class="wk-desk"><Fragment set:html={gap} /></div><div class="wk-mob"><Fragment set:html={gapM} /></div></div></section>
     )}
-
-
-    <div class="wk-frame" style="padding-top:76px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">{c1.info['led-label']}</p></div><div>
+    <Block info={info} k="led" style="padding-top:76px">
       <p class="body" set:html={inlineMd(narr3a)} />
       <div class="wk-inset"><div class="wk-lab" style="margin-bottom:var(--s3)"><span class="wk-auth team"><i aria-hidden="true"></i>the team&rsquo;s work</span></div><p class="body" set:html={inlineMd(narr3b)} /></div>
       {narr.slice(creditIdx + 1).map((p) => <p class="body" set:html={inlineMd(p)} />)}
-    </div></div></div>
+    </Block>
 
-    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">{c1.info['operating-label']}</p></div><div>{P('case1-operating').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    <Opener info={info} k="operating" />
+    <Block info={info} k="operating" under>{P('case1-operating').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
     {extended && (
-    <div class="wk-frame wk-fig reveal" style="padding-top:56px"><Fragment set:html={opmodel} /><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s5);"><p class="dg-takeaway" style="line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">Four engagement models, so partner teams could buy the right depth. Long-term embedded partnerships, time-boxed studio work, specialist augmentation, innovation sprints.</p></div></div>
+    <div class="wk-frame doc-evidence wk-fig reveal drops-title"><Fragment set:html={opmodel} /><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s5);"><p class="dg-takeaway" style="line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">Four engagement models, so partner teams could buy the right depth. Long-term embedded partnerships, time-boxed studio work, specialist augmentation, innovation sprints.</p></div></div>
     )}
-    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">{c1.info['leading-label']}</p></div><div>{P('case1-leading').map((p) => <p class="body" set:html={inlineMd(p)} />)}<div style="margin-top:var(--s6)"><Plate src="/images/work/txd-service-catalogue.png" what="The service catalogue, once the team was fully formed. Three practices, from concept to market." prov="Toyota Experience Design, internal" bare /></div></div></div></div>
-    <section data-theme="dark" class="wk-band wk-band-grad reveal" style="margin-top:88px"><div class="wk-frame wk-fig" style="padding-top:88px"><Fragment set:html={ownership} /></div>
-    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">{c1.info['people-label']}</p></div><div>{P('case1-people').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
-    <div class="wk-frame wk-fig" style="padding-top:56px;padding-bottom:88px"><Fragment set:html={people} /></div></section>
-    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">{c1.info['position-label']}</p></div><div>{P('case1-position').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
-    <div class="wk-frame" style="padding-top:56px;padding-bottom:96px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">{c1.info['changed-label']}</p></div><div>{P('case1-impact').map((p) => <p class="body big" set:html={inlineMd(p)} />)}</div></div></div>
+
+    <Opener info={info} k="leading" />
+    <Block info={info} k="leading" under>{P('case1-leading').map((p) => <p class="body" set:html={inlineMd(p)} />)}<div style="margin-top:var(--s6)"><Plate src="/images/work/txd-service-catalogue.png" what="The service catalogue, once the team was fully formed. Three practices, from concept to market." prov="Toyota Experience Design, internal" bare /></div></Block>
+    <section data-theme="dark" class="wk-band wk-band-grad reveal" style="margin-top:88px"><div class="wk-frame doc-evidence wk-fig" style="padding-top:88px"><Fragment set:html={ownership} /></div>
+    <Opener info={info} k="people" />
+    <Block info={info} k="people" under>{P('case1-people').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    <div class="wk-frame doc-evidence wk-fig drops-title" style="padding-bottom:88px"><Fragment set:html={people} /></div></section>
+
+    <Block info={info} k="position" style="padding-top:88px">{P('case1-position').map((p) => <p class="body" set:html={inlineMd(p)} />)}</Block>
+    <Block info={info} k="changed" style="padding-top:56px;padding-bottom:96px">{P('case1-impact').map((p) => <p class="body big" set:html={inlineMd(p)} />)}</Block>
