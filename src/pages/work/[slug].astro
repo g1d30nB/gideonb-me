@@ -24,7 +24,7 @@ const CaseSection = [CaseOne, CaseTwo, CaseThree, CaseFour][n - 1];
 const c = w.cases[n - 1];
 const project = w.projects.find((p) => p.key === key);
 const firstSentence = (s) => s.split(/(?<=\.)\s/)[0];
-const title = kind === 'case' ? `${c.info.title} · Gideon Bullock` : `${project.name} · Gideon Bullock`;
+const title = kind === 'case' ? `${c.title.plain} · Gideon Bullock` : `${project.name} · Gideon Bullock`;
 const description = kind === 'case' ? c.info.role : firstSentence(project.description);
 const ogImage = kind === 'case' ? og : project.image;
 const others = kind === 'case' ? CASES.filter((x) => x.n !== n) : [];
@@ -36,7 +36,7 @@ const external = (l) => /^https?:/.test(l);
       <Fragment>
         <div class="wk-frame wk-crumb"><a href="/work/">Work &amp; Projects</a></div>
         <CaseSection w={w} extended />
-        <div class="wk-frame wk-more"><p class="lbl">The other cases</p><div>{others.map((o) => <a href={caseHref(o.n)}>{w.cases[o.n - 1].info.number}<span>{w.cases[o.n - 1].info.title}</span></a>)}</div></div>
+        <div class="wk-frame wk-more"><p class="lbl">The other cases</p><div>{others.map((o) => <a href={caseHref(o.n)}>{w.cases[o.n - 1].info.number}<span>{w.cases[o.n - 1].title.plain}</span></a>)}</div></div>
       </Fragment>
     )}
     {kind === 'project' && (

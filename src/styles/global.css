@@ -4,6 +4,8 @@
 
 /* ───── Reset & Base ───── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* The focus ring is the accent's one guaranteed appearance on every page. */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-display);
@@ -569,13 +571,19 @@ section { padding: 80px 0; }
 .contact { padding: 80px 0 40px; }
 .contact .bold-statement { margin-bottom: 20px; }
 .contact a {
-  color: var(--ink);
+  color: var(--accent-text);
   text-decoration: underline;
-  text-decoration-color: var(--ground-grey);
+  text-decoration-color: currentColor;
   text-underline-offset: 3px;
   transition: text-decoration-color 0.3s;
 }
-.contact a:hover { text-decoration-color: var(--ink); }
+.contact a:hover { text-decoration-color: var(--accent); }
+/* Links in running prose take accent-text; the label-step links (nav, cards, back) stay on ink-label. */
+.article-body a, .body-text a, .case-block a, .status-card a, .article-subtitle a { color: var(--accent-text); text-decoration: underline; text-decoration-color: currentColor; text-underline-offset: 3px; }
+/* One wash per page, at the contact block, bleeding off the right edge and gone before the type. */
+.contact { position: relative; overflow: hidden; }
+.contact::before { content: ''; position: absolute; top: -30%; right: -18%; bottom: -30%; width: 52%; background: radial-gradient(ellipse at 100% 55%, var(--accent-wash) 0%, transparent 62%); pointer-events: none; }
+.contact > * { position: relative; }
 
 /* ───── Footer ───── */
 footer { padding: 24px 0 40px; }

@@ -18,16 +18,16 @@ const { P, B, c2, role2 } = w;
       <img class="wk-video-src" src="/images/work/myt-hand.jpg" alt="" aria-hidden="true" />
       <div class="wk-video-wash" aria-hidden="true"></div>
       <div class="wk-frame wk-opener">
-      <div class="wk-lab" style="--c:var(--teal-d);margin-bottom:var(--s5)"><span class="wk-dot ring"></span><p class="lbl">{c2.info.number}</p></div>
-      <h2 class="d2">{c2.info.title}</h2>
+      <div class="wk-lab" style="margin-bottom:var(--s5)"><span class="wk-auth team"><i aria-hidden="true"></i>the team&rsquo;s work</span><p class="lbl">{c2.info.number}</p></div>
+      <h2 class="d2">{c2.title.quiet && <span class="tt-quiet">{c2.title.quiet}</span>}{c2.title.quiet && ' '}{c2.title.loud}</h2>
       <p class="meta">{c2.info.company} &nbsp;·&nbsp; {c2.info.dates}</p>
       <p class="role">{c2.info.role}</p>
       <div class="wk-stats">{c2.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
     </div></section>
     <section class="wk-case2">
-    <div class="wk-frame" style="padding-top:76px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">The challenge</p></div><div>{P('case2-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
-    <div class="wk-frame" style="padding-top:48px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--teal)"><span class="wk-dot ring"></span><p class="lbl">Who designed it</p></div><div>{role2.map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
-    <div class="wk-frame" style="padding-top:60px;padding-bottom:40px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">What that involved</p></div><div class="wk-defgrid" style="max-width:none">{B('case2-approach').map((b) => <div><p class="d4">{b.lead}</p><p class="t2" set:html={inlineMd(b.body)} /></div>)}</div></div></div>
+    <div class="wk-frame" style="padding-top:76px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">The challenge</p></div><div>{P('case2-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:48px"><div class="wk-rail"><div class="wk-lab"><span class="wk-auth team"><i aria-hidden="true"></i>the team&rsquo;s work</span><p class="lbl">Who designed it</p></div><div>{role2.map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:60px;padding-bottom:40px"><div class="wk-rail"><div class="wk-lab"><span class="wk-auth mine"><i aria-hidden="true"></i>my call</span><p class="lbl">What that involved</p></div><div class="wk-defgrid" style="max-width:none">{B('case2-approach').map((b) => <div><p class="d4">{b.lead}</p><p class="t2" set:html={inlineMd(b.body)} /></div>)}</div></div></div>
 
     <div class="wk-frame wk-fig reveal" style="padding-top:40px;padding-bottom:0">
       <h2 class="d2" style="max-width:900px;margin-bottom:var(--s5)">What the team designed</h2>
@@ -39,7 +39,7 @@ const { P, B, c2, role2 } = w;
         <div style="align-self:center"><Plate src="/images/work/home-after.png" what="Home, as the team rebuilt it." prov="MyToyota, Europe" bare /></div>
       </div>
     </div>
-    <div class="wk-frame" style="padding-top:56px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--teal)"><span class="wk-dot ring"></span><p class="lbl">One finding, and what it taught</p></div><div class="wk-inset"><p class="body">In testing, 92 per cent of participants completed the charge scheduling task and rated its ease at 5.15 against a benchmark of 5.5. The task passed on the numbers, and the sessions still showed a problem. The control that set the schedule said nothing about its outcome, so people set it and could not tell what they had done. One change, a control that states what it will do, served new users and advanced users alike.</p></div></div></div>
+    <div class="wk-frame" style="padding-top:56px"><div class="wk-rail"><div class="wk-lab"><span class="wk-auth team"><i aria-hidden="true"></i>the team&rsquo;s work</span><p class="lbl">One finding, and what it taught</p></div><div class="wk-inset"><p class="body">In testing, 92 per cent of participants completed the charge scheduling task and rated its ease at 5.15 against a benchmark of 5.5. The task passed on the numbers, and the sessions still showed a problem. The control that set the schedule said nothing about its outcome, so people set it and could not tell what they had done. One change, a control that states what it will do, served new users and advanced users alike.</p></div></div></div>
 
     <div class="wk-frame wk-fig reveal" style="padding-top:88px"><Fragment set:html={timeline} /></div>
     <div class="wk-frame wk-fig reveal" style="padding-top:72px;padding-bottom:104px"><div class="wk-row wk-row-2" style="border-top:2px solid var(--amber);padding-top:var(--s5)"><div><Fragment set:html={rating} /></div><div>

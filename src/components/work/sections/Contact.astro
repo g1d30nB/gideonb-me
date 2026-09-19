@@ -6,9 +6,9 @@ const { w } = Astro.props;
 const { contact } = w;
 ---
     <!-- Contact -->
-    <div id="contact" class="wk-frame" style="padding-top:96px;padding-bottom:76px">
+    <div class="wk-contact"><div id="contact" class="wk-frame" style="padding-top:96px;padding-bottom:76px">
       <p class="lbl" style="margin-bottom:var(--s4)">Contact</p>
       <p class="d4" style="font-size:24px;max-width:760px;margin-bottom:var(--s5)" set:html={inlineMd(contact[0])} />
       <p class="body" style="max-width:760px" set:html={linkifyContact(contact[1])} />
-    </div>
+    </div></div>
     <script is:inline>(function(){function go(){var els=document.querySelectorAll('.wk-anim');if(!els.length)return;if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('is-on')});return;}els.forEach(function(e){var t=Math.min(0.98,(window.innerHeight*0.92)/Math.max(1,e.offsetHeight));var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting&&en.intersectionRatio>=t-0.01){e.classList.add('is-on');io.disconnect();}});},{threshold:[t]});io.observe(e);});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',go);}else{go();}})();</script>

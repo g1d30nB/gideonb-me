@@ -2,9 +2,10 @@
 // The intro and the authorship gauge. Used by the hub and the single-scroll view.
 import { inlineMd } from '../../../lib/homepage.mjs';
 import gauge from '../gauge.html?raw';
+import { AUTH } from '../../../lib/work.mjs';
 interface Props { w: any }
 const { w } = Astro.props;
-const { meta, intro, gaugeCards, colour } = w;
+const { meta, intro, gaugeCards } = w;
 ---
     <!-- Opening -->
     <div class="wk-frame" style="padding-top:96px">
@@ -16,9 +17,9 @@ const { meta, intro, gaugeCards, colour } = w;
     <div class="wk-frame" style="padding-top:64px;padding-bottom:96px">
       <div class="wk-desk"><Fragment set:html={gauge} /></div>
       <div class="wk-gauge">
-        {gaugeCards.map(([n, t, info, note, col, kind]) => (
+        {gaugeCards.map(([n, t, info, note, auth]) => (
           <div>
-            <div class="wk-lab" style={`--c:${colour[col]};margin-bottom:var(--s2)`}><p class="lbl">{n}</p></div>
+            <div class="wk-lab" style="margin-bottom:var(--s2)"><span class:list={['wk-auth', auth]}><i aria-hidden="true"></i>{AUTH[auth]}</span><p class="lbl">{n}</p></div>
             <p class="d4">{t}</p>
             <p class="t3">{info.company} &nbsp;·&nbsp; {info.dates}</p>
             <p class="t2">{note}</p>

@@ -11,8 +11,8 @@ const { P, S, c3 } = w;
       <img class="wk-video-src" src="/images/work/songkick-live.jpg" alt="" aria-hidden="true" />
       <div class="wk-video-wash" aria-hidden="true"></div>
       <div class="wk-frame wk-opener">
-      <div class="wk-lab" style="--c:var(--amber-d);margin-bottom:var(--s5)"><span class="wk-dot fill"></span><p class="lbl">{c3.info.number}</p></div>
-      <h2 class="d2">{c3.info.title}</h2>
+      <div class="wk-lab" style="margin-bottom:var(--s5)"><span class="wk-auth mine"><i aria-hidden="true"></i>my call</span><p class="lbl">{c3.info.number}</p></div>
+      <h2 class="d2">{c3.title.quiet && <span class="tt-quiet">{c3.title.quiet}</span>}{c3.title.quiet && ' '}{c3.title.loud}</h2>
       <p class="meta">{c3.info.company} &nbsp;·&nbsp; {c3.info.dates}</p>
       <p class="role">{c3.info.role}</p>
       <div class="wk-stats">{c3.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>

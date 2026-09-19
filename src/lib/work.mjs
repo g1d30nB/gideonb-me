@@ -1,6 +1,6 @@
 // Everything the /work pages read from work.md and homepage.md, resolved once so the
 // section components, the hub, the single-scroll view and the case pages agree.
-import { loadPage, statPairs } from './page.mjs';
+import { loadPage, statPairs, splitTitle } from './page.mjs';
 import { loadHomepage, parseKV, paragraphs, bullets } from './homepage.mjs';
 
 // The route map. Slugs are public URLs: renaming one breaks a link.
@@ -16,6 +16,8 @@ export const PROJECTS = [
   { key: 'nudge', slug: 'nudge' },
 ];
 export const caseHref = (n) => `/work/${CASES[n - 1].slug}/`;
+// The authorship device: a shape and a mono label, used together. Shape carries it in greyscale.
+export const AUTH = { mine: 'my call', team: 'the team\u2019s work', shared: 'shared' };
 
 export function loadWork() {
   const { meta, sections } = loadPage('work.md');
@@ -23,7 +25,7 @@ export function loadWork() {
   const P = (k) => paragraphs(S(k));
   const lead = (b) => { const m = b.match(/^\*\*(.+?)\*\*\s*(.*)$/s); return m ? { lead: m[1], body: m[2] } : { lead: '', body: b }; };
   const B = (k) => bullets(S(k)).map(lead);
-  const c = (n) => ({ info: parseKV(S(`case${n}-meta`)), stats: statPairs(S(`case${n}-stats`)) });
+  const c = (n) => { const info = parseKV(S(`case${n}-meta`)); return { info, title: splitTitle(info.title), stats: statPairs(S(`case${n}-stats`)) }; };
   const c1 = c(1), c2 = c(2), c3 = c(3), c4 = c(4);
 
   const intro = P('intro');
@@ -41,20 +43,19 @@ export function loadWork() {
   const contact = P('contact');
 
   const gaugeCards = [
-    ['Case one', 'The organisation', c1.info, 'Everything here is mine. Built from nothing, run for seven years, sold engagement by engagement.', 'amber', 'fill'],
-    ['Case two', 'What the organisation shipped', c2.info, 'The team I had built was already in place, run by two design managers with the client\'s trust.', 'teal', 'ring'],
-    ['Case three', 'Two products, two markets', c3.info, 'Eight years at Songkick from seed to the Warner Music Group acquisition, then Dopay from concept to a live service. On both I designed the product myself and built the design team around it.', 'amber', 'fill'],
-    ['Case four', 'Two AI products, built alone', c4.info, 'PrepCall, an AI voice coach I designed, built and shipped myself. Emotrix, the interpretation layer that came out of it, now in a live pilot under NDA.', 'ink', 'fill'],
+    ['Case one', 'The organisation', c1.info, 'Everything here is mine. Built from nothing, run for seven years, sold engagement by engagement.', 'mine'],
+    ['Case two', 'What the organisation shipped', c2.info, 'The team I had built was already in place, run by two design managers with the client\'s trust.', 'team'],
+    ['Case three', 'Two products, two markets', c3.info, 'Eight years at Songkick from seed to the Warner Music Group acquisition, then Dopay from concept to a live service. On both I designed the product myself and built the design team around it.', 'mine'],
+    ['Case four', 'Two AI products, built alone', c4.info, 'PrepCall, an AI voice coach I designed, built and shipped myself. Emotrix, the interpretation layer that came out of it, now in a live pilot under NDA.', 'mine'],
   ];
   const gov = [
     ['EU AI Act, Article 5', 'Classification and the data protection impact assessment, on a shipped product'],
     ['European Accessibility Act', 'Governance across a whole design function, turned into a four-tier service'],
     ['Regulated delivery', 'Every programme in the first two cases, and Dopay as a regulated payments product in Egypt'],
   ];
-  const colour = { amber: 'var(--amber)', teal: 'var(--teal)', ink: 'var(--ink)' };
 
   const home = loadHomepage().sections;
   const projects = PROJECTS.map((p) => ({ ...p, ...parseKV(home[`project-${p.key}`] || '') }));
 
-  return { meta, sections, S, P, B, c1, c2, c3, c4, cases: [c1, c2, c3, c4], intro, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2, role2, hard2, closing, contact, gaugeCards, gov, colour, projects };
+  return { meta, sections, S, P, B, c1, c2, c3, c4, cases: [c1, c2, c3, c4], intro, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2, role2, hard2, closing, contact, gaugeCards, gov, projects };
 }

@@ -65,9 +65,26 @@
 .wk-band .body{color:var(--ink-muted)}
 .wk-band-grad{background:linear-gradient(to bottom, var(--rule-faint) 0%, var(--surface) 60%)}
 .wk-team{background:var(--paper-team)}
-.wk-dot{display:inline-block;width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.wk-dot.fill{background:var(--c,var(--amber))} .wk-dot.ring{border:2px solid var(--c,var(--teal));box-sizing:border-box}
-.wk-lab{display:flex;align-items:center;gap:10px} .wk-lab .lbl{color:var(--c,var(--amber));line-height:1.1} .wk-lab .wk-dot{position:relative;top:-1px}
+/* The authorship device. Three shapes, each paired with its mono label: a filled square for his
+   own decisions, an open ring for the team's work, a half rule for what was held jointly. The shape
+   is decorative and the label carries the meaning; the two grey steps are close on purpose. */
+.wk-mark,.wk-auth i{display:inline-block;width:10px;height:10px;flex-shrink:0;box-sizing:border-box;position:relative;top:-1px}
+.wk-mark.mine,.wk-auth.mine i{background:var(--fill-500)}
+.wk-mark.team,.wk-auth.team i{border:2px solid var(--fill-400);border-radius:50%}
+.wk-mark.shared,.wk-auth.shared i{height:2px;top:0;background:var(--fill-400)}
+.wk-auth{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;font-weight:400;line-height:1.1;color:var(--ink);white-space:nowrap}
+.wk-lab{display:flex;align-items:center;gap:12px;flex-wrap:wrap} .wk-lab .lbl{color:var(--ink-label);line-height:1.1}
+.wk-lab .wk-auth+.lbl{padding-left:12px;border-left:1px solid var(--rule-2)}
+.wk-own-h .wk-mark{margin-right:10px} .wk-own-i .wk-mark{margin-top:6px}
+/* The two-tone heading: the opening clause quiet, the clause that carries the argument in ink */
+.tt-quiet{color:var(--ink-label)}
+/* The accent: emphasis, never authorship. Links in prose, the focus ring, one mark per diagram,
+   one wash per page at the contact block. */
+.wk .body a,.wk .t1 a,.wk .t2 a,.wk .body-text a{color:var(--accent-text);text-decoration-color:currentColor}
+.wk .body a:hover{text-decoration-color:var(--accent)}
+.wk-contact{position:relative;overflow:hidden}
+.wk-contact::before{content:"";position:absolute;top:-30%;right:-18%;bottom:-30%;width:52%;background:radial-gradient(ellipse at 100% 55%,var(--accent-wash) 0%,transparent 62%);pointer-events:none}
+.wk-contact>*{position:relative}
 .wk-rail{display:grid;grid-template-columns:180px 1fr;gap:44px;align-items:start} .wk-rail>div:last-child{max-width:680px}
 /* the label sits on the first line of whatever it labels */
 .wk-rail>div:first-child{padding-top:9px}

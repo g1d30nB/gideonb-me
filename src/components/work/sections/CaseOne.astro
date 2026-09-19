@@ -21,39 +21,39 @@ const { P, c1, narr, turnIdx, creditIdx, narr3a, narr3b, com1, com2 } = w;
       <div class="wk-video-wash" aria-hidden="true"></div>
       <script is:inline>document.querySelectorAll('.wk-video-src').forEach((v) => { v.playbackRate = 0.4; v.addEventListener('play', () => { v.playbackRate = 0.4; }); const ready = () => v.classList.add('is-ready'); if (v.readyState >= 3) ready(); else v.addEventListener('canplay', ready, { once: true }); });</script>
       <div class="wk-frame wk-opener">
-      <div class="wk-lab" style="--c:var(--amber-d);margin-bottom:var(--s5)"><span class="wk-dot fill"></span><p class="lbl">{c1.info.number} &nbsp;·&nbsp; the organisation</p></div>
-      <h2 class="d2">{c1.info.title}</h2>
+      <div class="wk-lab" style="margin-bottom:var(--s5)"><span class="wk-auth mine"><i aria-hidden="true"></i>my call</span><p class="lbl">{c1.info.number} &nbsp;·&nbsp; the organisation</p></div>
+      <h2 class="d2">{c1.title.quiet && <span class="tt-quiet">{c1.title.quiet}</span>}{c1.title.quiet && ' '}{c1.title.loud}</h2>
       <p class="meta">{c1.info.company} &nbsp;·&nbsp; {c1.info.dates}</p>
       <p class="role">{c1.info.role}</p>
       <div class="wk-stats">{c1.stats.map((s) => <div><p class="stat">{s.value}</p><p class="t3">{s.label}</p></div>)}</div>
     </div></section>
 
     <div class="wk-frame" style="padding-top:76px"><div class="wk-side"><div>
-      <div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">The challenge</p></div><div>{P('case1-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
-      <div class="wk-rail" style="margin-top:48px"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">My role</p></div><div>{P('case1-role').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
-      <div class="wk-rail" style="margin-top:56px"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">Commercial accountability</p></div><div><p class="d4" style="max-width:660px">{com1}</p><p class="body" style="margin-top:var(--s5)">{com2}</p>{P('case1-commercial').slice(1).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
-      <div class="wk-rail" style="margin-top:64px"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">{c1.info['narrative-label']}</p></div><div>{narr.slice(0, turnIdx).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
+      <div class="wk-rail"><div class="wk-lab"><p class="lbl">The challenge</p></div><div>{P('case1-challenge').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
+      <div class="wk-rail" style="margin-top:48px"><div class="wk-lab"><p class="lbl">My role</p></div><div>{P('case1-role').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
+      <div class="wk-rail" style="margin-top:56px"><div class="wk-lab"><p class="lbl">Commercial accountability</p></div><div><p class="d4" style="max-width:660px">{com1}</p><p class="body" style="margin-top:var(--s5)">{com2}</p>{P('case1-commercial').slice(1).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
+      <div class="wk-rail" style="margin-top:64px"><div class="wk-lab"><p class="lbl">{c1.info['narrative-label']}</p></div><div>{narr.slice(0, turnIdx).map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div>
     </div><figure class="wk-phone"><img src="/images/work/toyota-app.gif" alt="" width="450" height="964" /><figcaption><span>MyToyota, the home screen</span><span>US build, public app</span></figcaption></figure></div></div>
     <div class="wk-frame wk-fig reveal" style="padding-top:56px"><div class="wk-desk"><Fragment set:html={arc} /></div><div class="wk-mob"><Fragment set:html={arcM} /></div></div>
-    <div class="wk-frame" style="padding-top:64px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">Where service design came from</p></div><div><p class="body" set:html={inlineMd(narr[turnIdx])} /><div class="wk-quote"></div><p class="d3" style="max-width:660px">A disjointed end-to-end experience is usually a faithful reflection of a disjointed business.</p></div></div></div>
+    <div class="wk-frame" style="padding-top:64px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">Where service design came from</p></div><div><p class="body" set:html={inlineMd(narr[turnIdx])} /><div class="wk-quote"></div><p class="d3" style="max-width:660px">A disjointed end-to-end experience is usually a faithful reflection of a disjointed business.</p></div></div></div>
     {extended && (
     <section data-theme="dark" class="wk-band reveal" style="margin-top:76px"><div class="wk-frame wk-fig" style="padding-top:72px;padding-bottom:80px"><div class="wk-desk"><Fragment set:html={gap} /></div><div class="wk-mob"><Fragment set:html={gapM} /></div></div></section>
     )}
 
 
-    <div class="wk-frame" style="padding-top:76px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">What it led to</p></div><div>
+    <div class="wk-frame" style="padding-top:76px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">What it led to</p></div><div>
       <p class="body" set:html={inlineMd(narr3a)} />
-      <div class="wk-inset"><div class="wk-lab" style="--c:var(--teal);margin-bottom:var(--s3)"><span class="wk-dot ring"></span><p class="lbl">The team’s work</p></div><p class="body" set:html={inlineMd(narr3b)} /></div>
+      <div class="wk-inset"><div class="wk-lab" style="margin-bottom:var(--s3)"><span class="wk-auth team"><i aria-hidden="true"></i>the team&rsquo;s work</span></div><p class="body" set:html={inlineMd(narr3b)} /></div>
       {narr.slice(creditIdx + 1).map((p) => <p class="body" set:html={inlineMd(p)} />)}
     </div></div></div>
 
-    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">{c1.info['operating-label']}</p></div><div>{P('case1-operating').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">{c1.info['operating-label']}</p></div><div>{P('case1-operating').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
     {extended && (
     <div class="wk-frame wk-fig reveal" style="padding-top:56px"><Fragment set:html={opmodel} /><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s7);margin-top:var(--s5);"><p class="dg-takeaway" style="line-height:1.6;font-weight:500;color:var(--ink);max-width:660px;margin:0;">Four engagement models, so partner teams could buy the right depth. Long-term embedded partnerships, time-boxed studio work, specialist augmentation, innovation sprints.</p></div></div>
     )}
-    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">{c1.info['leading-label']}</p></div><div>{P('case1-leading').map((p) => <p class="body" set:html={inlineMd(p)} />)}<div style="margin-top:var(--s6)"><Plate src="/images/work/txd-service-catalogue.png" what="The service catalogue, once the team was fully formed. Three practices, from concept to market." prov="Toyota Experience Design, internal" bare /></div></div></div></div>
+    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">{c1.info['leading-label']}</p></div><div>{P('case1-leading').map((p) => <p class="body" set:html={inlineMd(p)} />)}<div style="margin-top:var(--s6)"><Plate src="/images/work/txd-service-catalogue.png" what="The service catalogue, once the team was fully formed. Three practices, from concept to market." prov="Toyota Experience Design, internal" bare /></div></div></div></div>
     <section data-theme="dark" class="wk-band wk-band-grad reveal" style="margin-top:88px"><div class="wk-frame wk-fig" style="padding-top:88px"><Fragment set:html={ownership} /></div>
-    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab" style="--c:var(--amber-d)"><span class="wk-dot fill"></span><p class="lbl">{c1.info['people-label']}</p></div><div>{P('case1-people').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">{c1.info['people-label']}</p></div><div>{P('case1-people').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
     <div class="wk-frame wk-fig" style="padding-top:56px;padding-bottom:88px"><Fragment set:html={people} /></div></section>
-    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">Position and innovation</p></div><div>{P('case1-position').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
-    <div class="wk-frame" style="padding-top:56px;padding-bottom:96px"><div class="wk-rail"><div class="wk-lab"><span class="wk-dot fill"></span><p class="lbl">What changed</p></div><div>{P('case1-impact').map((p) => <p class="body big" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:88px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">Position and innovation</p></div><div>{P('case1-position').map((p) => <p class="body" set:html={inlineMd(p)} />)}</div></div></div>
+    <div class="wk-frame" style="padding-top:56px;padding-bottom:96px"><div class="wk-rail"><div class="wk-lab"><p class="lbl">What changed</p></div><div>{P('case1-impact').map((p) => <p class="body big" set:html={inlineMd(p)} />)}</div></div></div>

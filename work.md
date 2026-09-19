@@ -14,7 +14,7 @@ Toyota work is shown at the level it can be shown publicly. Internal commercial 
 
 ::: case1-meta
 number: Case One
-title: Building a design organisation, then widening what it was allowed to own
+title: Building a design organisation | then widening what it was allowed to own
 company: Toyota Connected Europe
 dates: 2018 to 2026
 narrative-label: How the capability grew
@@ -99,7 +99,7 @@ Design displaced the incumbent agencies and became one of three recognised core 
 
 ::: case2-meta
 number: Case Two
-title: A US app in Europe, from 1.9 stars to 4.6
+title: A US app in Europe | from 1.9 stars to 4.6
 company: MyToyota and Lexus Link+
 dates: 2023 to 2026
 aside-label: What the team built
@@ -143,7 +143,7 @@ The result came from a good design team, across UX research, product design, UI 
 
 ::: case3-meta
 number: Case Three
-title: Two products, two markets, as designer and as leader
+title: Two products, two markets | as designer and as leader
 company: Songkick and Dopay
 dates: 2008 to 2018
 role: Eight years at Songkick as employee number seven and VP of Design, on the executive team from seed through Series C to the Warner Music Group acquisition. Then Chief Design Officer at Dopay, taking a fintech for unbanked workers in Egypt from concept to a live commercial service. In both, I designed the product.
@@ -178,7 +178,7 @@ I directed the design and launch of the Dopay for Business platform and the iOS 
 
 ::: case4-meta
 number: Case Four
-title: Two AI products this year, one shipped and one in pilot
+title: Two AI products this year | one shipped and one in pilot
 company: PrepCall and Emotrix
 dates: 2026
 narrative-label: What the two products do
